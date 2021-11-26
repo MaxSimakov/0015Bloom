@@ -488,18 +488,18 @@ iframe {
 		// box-shadow: none;
 	}
 	&:focus {
-		color: #EF8249;
+		color: #ef8249;
 		background-color: $white;
-		border-color: #EF8249;
+		border-color: #ef8249;
 		box-shadow: none;
 	}
 	&:focus:active {
 		box-shadow: none;
 	}
 	&:hover {
-		color: #EF8249;
+		color: #ef8249;
 		background-color: $white;
-		border-color: #EF8249;
+		border-color: #ef8249;
 		box-shadow: 0px rem(20) rem(24) rgba(214, 118, 68, 0.2);
 	}
 }
@@ -514,19 +514,43 @@ iframe {
 
 h1 {
 	line-height: calc(80 / 72);
+	@include media-breakpoint-up(xl) {
+		font-size: rem(72);
+	}
 }
 h2 {
 	line-height: calc(72 / 70);
+	@include media-breakpoint-up(xl) {
+		font-size: rem(70);
+	}
 }
 h3 {
 	line-height: calc(56 / 48);
+	@include media-breakpoint-up(xl) {
+		font-size: rem(48);
+	}
 }
 h4 {
-	line-height: 1
+	line-height: 1;
+	@include media-breakpoint-up(xl) {
+		font-size: rem(32);
+	}
 }
 h5 {
 	line-height: calc(32 / 24);
+	@include media-breakpoint-up(xl) {
+		font-size: rem(24);
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: rem(19);
+	}
 }
 h6 {
 	line-height: calc(24 / 18);
+	@include media-breakpoint-up(xl) {
+		font-size: rem(18);
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: rem(14);
+	}
 }
