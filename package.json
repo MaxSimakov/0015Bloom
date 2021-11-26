@@ -20,7 +20,7 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-cheerio": "^1.0.0", 
+    "gulp-cheerio": "^1.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
     "gulp-npm-dist": "^1.0.3",

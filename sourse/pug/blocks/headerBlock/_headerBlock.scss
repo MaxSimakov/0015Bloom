@@ -14,6 +14,14 @@
 		margin-bottom: 1px;
 	}
 
+	p {
+		font-size: rem(18);
+	}
+	.medium {
+		font-weight: 500;
+		font-size: rem(18);
+	}
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
