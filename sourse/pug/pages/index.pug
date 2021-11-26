@@ -3,29 +3,38 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sAccess/_sAccess.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+include ../blocks/footer-main/_footer-main.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
 
 block title
-	- let  title= 'title'
+	- let  title= 'Главная'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 	+header()
-	+top-nav()
-	+topLine()
-
-	.container
-		p Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur.
-		p.medium Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum commodi molestias itaque nostrum obcaecati odit quod, mollitia eligendi voluptatem iusto incidunt, vitae deleniti distinctio odio, eum deserunt voluptate veritatis neque.
-		.btn.btn-primary(href="#") Читать статьи
-		.btn.btn-outline-primary(href="#") Задать вопрос
+	//- +top-nav()
+	//- +topLine()
 	+headerBlock()
-	+sForm()
-	+sContact()
-	+footer()
+	+sCategories()
+	+sCardHorisontal()
+	+sYouNeedUs()
+	+sTeam()
+	+sAccess()
+	+sQuestions()
+	+sReviews()
+	//- +sForm()
+	//- +sContact()
+	+footer-main()
 
 
 

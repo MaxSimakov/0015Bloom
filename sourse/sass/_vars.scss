@@ -388,7 +388,7 @@ sans-serif,
 "Segoe UI Emoji",
 "Segoe UI Symbol",
 "Noto Color Emoji" !default;
-$font-family-monospace: SFMono-Regular,
+$font-family-monospace: Lovelace, SFMono-Regular,
 Menlo,
 Monaco,
 Consolas,
@@ -603,16 +603,15 @@ $btn-font-size-lg: $input-btn-font-size-lg !default;
 $btn-border-width: $input-btn-border-width !default;
 
 $btn-font-weight: $font-weight-normal !default;
-$btn-box-shadow: inset 0 1px 0 rgba($white, .15),
-0 1px 1px rgba($black, .075) !default;
+$btn-box-shadow: null !default;
 $btn-focus-width: $input-btn-focus-width !default;
-$btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity: .65 !default;
-$btn-active-box-shadow: inset 0 3px 5px rgba($black, .125) !default;
+$btn-focus-box-shadow: null !default;
+$btn-disabled-opacity: 1 !default;
+$btn-active-box-shadow: null !default;
 
 $btn-link-color: $link-color !default;
 $btn-link-hover-color: $link-hover-color !default;
-$btn-link-disabled-color: $gray-600 !default;
+$btn-link-disabled-color: $gray-dark !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: $border-radius !default;
