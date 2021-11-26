@@ -461,16 +461,31 @@ iframe {
 
 .btn-primary {
 	color: $white !important;
-	box-shadow: none !important;
 	&:hover {
 		background-color: #ef8249;
 		border-color: #ef8249;
+		box-shadow: 0px 20px 24px rgba(214, 118, 68, 0.2);
 	}
 	&:active {
 		background-color: $primary;
 		border-color: $primary;
+		box-shadow: none;
 	}
 	&:focus {
+	}
+}
+.btn-outline-primary {
+	&:hover {
+		color: #EF8249;
+		background-color: $white;
+		border-color: #EF8249;
+		box-shadow: 0px 20px 24px rgba(214, 118, 68, 0.2);
+	}
+	&:active {
+		// background-color: $primary;
+		border-color: $primary;
+		color: $primary;
+		box-shadow: none;
 	}
 }
 
