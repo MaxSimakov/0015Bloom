@@ -1,9 +1,24 @@
 mixin sCategories(data)
 	// start sCategories
-	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+	+b.sCategories.section#sCategories&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCategories
-				
-			.row
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide(i, l, ...items)
+						+e.slide.swiper-slide
+							+e.item(href=`${l}`)
+								+e.img-wrap
+									img(src=`img/svg/sCategories-${i}.svg`, alt="" loading="lazy")
+								+e.caption
+									each item in items
+										span!= item
+								+e.btn
+									+icon('shevron-right')
+									
+					+slide(1, `#`, `Тренировки`, `и реабилитация`)
+					+slide(2, `#`, `Сексуальное`, `образование`)
+					+slide(3, `#`, `Консультации`, `с врачами`)
+					+slide(4, `#`, `Статьи`, `и Лекции`)
+					+slide(5, `#`, `Вопросы`, `и ответы`)
+
 	// end sCategories

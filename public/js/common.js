@@ -350,15 +350,16 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
+	const sCategories = new Swiper('.sCategories__slider--js', {
 		// slidesPerView: 5,
-		...defaultSl,
+		// ...defaultSl,
 		slidesPerView: 'auto',
 		freeMode: true,
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
+		spaceBetween: 24,
 
 	});
 	// modal window
