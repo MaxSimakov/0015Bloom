@@ -332,7 +332,7 @@ $border-color: $gray-300 !default;
 
 // scss-docs-start border-radius-variables
 $border-radius: rem(8) !default;
-$border-radius-sm: .2rem !default;
+$border-radius-sm: rem(8) !default;
 $border-radius-lg: .3rem !default;
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
@@ -592,9 +592,9 @@ $btn-font-size: rem(22) !default;
 $btn-line-height: calc(24 / 22) !default;
 $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm: $input-btn-padding-y-sm !default;
-$btn-padding-x-sm: $input-btn-padding-x-sm !default;
-$btn-font-size-sm: $input-btn-font-size-sm !default;
+$btn-padding-y-sm: rem(8) !default;
+$btn-padding-x-sm: rem(8) !default;
+$btn-font-size-sm: rem(17) !default;
 
 $btn-padding-y-lg: $input-btn-padding-y-lg !default;
 $btn-padding-x-lg: $input-btn-padding-x-lg !default;
@@ -615,7 +615,7 @@ $btn-link-disabled-color: $gray-dark !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: $border-radius !default;
-$btn-border-radius-sm: $border-radius-sm !default;
+$btn-border-radius-sm: $border-radius !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 
 $btn-transition: color .15s ease-in-out,

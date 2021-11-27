@@ -1,14 +1,197 @@
 // start .sAccess
 .sAccess {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	--spacing: #{rem(8)};
+	--sTPB: #{rem(24)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(55)};
+	}
+	.container {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(900);
+		}
+	}
+	.row {
+		--bs-gutter-x: 0;
+	}
+	.section-title {
+		h2 {
+			color: $primary;
+			max-width: 10em;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(md) {
+				max-width: 100%;
+			}
+		}
+		p {
+			@extend .medium-subtitle;
+			max-width: 16.7em;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(sm) {
+				max-width: 20.7em;
+			}
+			@include media-breakpoint-up(md) {
+				max-width: 27.7em;
+			}
+		}
+	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: rem(328);
+		padding: calc(var(--spacing) * 4) calc(var(--spacing) * 2) calc(var(--spacing) * 5);
+		margin-left: auto;
+		margin-right: auto;
+		height: 100%;
+		@include media-breakpoint-up(sm) {
+			max-width: rem(400);
+		}
+		@include media-breakpoint-up(md) {
+			border-radius: rem(16);
+			margin-left: 0;
+			margin-right: 0;
+		}
+		ul {
+			list-style: none;
+			margin-bottom: rem(45);
+			li {
+				position: relative;
+				padding-left: calc(var(--spacing) * 3);
+				&::before {
+					content: "";
+					position: absolute;
+					width: calc(var(--spacing) * 2);
+					height: calc(var(--spacing) * 2);
+					left: 0;
+					background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.00133 8.47139L11.7656 12.2357L12.237 11.7643L8.47273 7.99999L12.237 4.23569L11.7656 3.76428L8.00133 7.52858L4.23703 3.76428L3.76562 4.23569L7.52992 7.99999L3.76562 11.7643L4.23703 12.2357L8.00133 8.47139Z' fill='%23C0B1AA'/%3e%3c/svg%3e ");
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+
+				&.check {
+					&::before {
+						background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.66797 8.33333L6.33464 11L12.3346 5' stroke='%23653E28'/%3e%3c/svg%3e ");
+					}
+				}
+				&:not(.check) {
+					color: $gray-medium;
+					span {
+					}
+				}
+				&:nth-child(odd) {
+					padding-top: calc(var(--spacing) * 2);
+					padding-bottom: var(--spacing);
+					// border-top: 1px solid $gray-light;
+					&::before {
+						top: calc(var(--spacing) * 2 + 1px);
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						width: calc(100% + calc(var(--spacing) * 2));
+						height: 1px;
+						left: calc(-1 * var(--spacing));
+						top: 0;
+						background-color: $gray-light;
+						@include media-breakpoint-up(md) {
+							width: calc(100% - calc(var(--spacing) * 3));
+							left: calc(var(--spacing) * 3);
+						}
+					}
+					span {
+					}
+				}
+				&:nth-child(even) {
+					padding-bottom: calc(var(--spacing) * 2);
+					padding-top: var(--spacing);
+					&::before {
+						top: var(--spacing);
+					}
+					span {
+					}
+				}
+
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__item-heading {
+		padding-left: calc(var(--spacing) * 3);
+		h4 {
+			font-family: "FuturaPT";
+			font-weight: 500;
+		}
+		p {
+			@include rfs(rem(16));
+			line-height: calc(24 / 17);
+			font-weight: 500;
+			margin-bottom: var(--spacing);
+			// border-bottom: 1px solid $gray-light;
+			@include media-breakpoint-up(xl) {
+				font-size: rem(17);
+			}
+		}
+	}
+
+	&__item-content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	&__item-footer {
+		margin-top: auto;
+	}
+
+	&__price-wrap {
+		text-align: center;
+	}
+	&__btn-wrap {
+		text-align: center;
+	}
+
+	&__benefit {
+		// @extend .btn, .btn-outline-primary;
+		display: inline-block;
+		padding: rem(4) rem(8);
+		border: 1px solid #d67644;
+		border-radius: $border-radius;
+		color: $primary;
+	}
+	&__price {
+		font-family: "Lovelace";
+	}
+	&__conditions {
+		display: flex;
+		flex-direction: column;
+	}
+	&__btn {
+		// @include mt;
+		display: inline-block;
+		width: 100%;
+		border: 1px solid;
+		max-width: rem(226);
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sAccess

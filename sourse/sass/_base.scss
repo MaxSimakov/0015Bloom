@@ -505,10 +505,15 @@ iframe {
 }
 
 .btn {
+	text-align: center;
 	&.disabled {
 		border-color: $gray-light;
 		background-color: $gray-light;
 		color: $gray-dark;
+	}
+	&-sm {
+		text-align: center;
+		line-height: calc(24 / 17);
 	}
 }
 
@@ -552,5 +557,14 @@ h6 {
 	}
 	@include media-breakpoint-down(sm) {
 		font-size: rem(14);
+	}
+}
+
+.medium-subtitle {
+	@include rfs(rem(19));
+	line-height: calc(24 / 22);
+	font-weight: 500;
+	@include media-breakpoint-up(xl) {
+		font-size: rem(22);
 	}
 }
