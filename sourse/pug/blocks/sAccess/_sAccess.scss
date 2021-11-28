@@ -97,13 +97,20 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+		@include media-breakpoint-only(md) {
+			font-size: rem(14);
+		}
+
 		&--popular {
 			background-image: radial-gradient(167.29% 93.4% at 96.1% 8.61%, #fffdfc 0%, #f9edda 70.24%, #ffd4c1 100%);
 		}
 
 		ul {
 			list-style: none;
+			margin-bottom: calc(var(--spacing) * 2);
+			@include media-breakpoint-up(md) {
 			margin-bottom: calc(var(--spacing) * 5.6);
+			}
 			li {
 				position: relative;
 				padding-left: calc(var(--spacing) * 3);
@@ -179,7 +186,7 @@
 			font-weight: 500;
 		}
 		p {
-			@include rfs(rem(16));
+			// @include rfs(rem(16));
 			line-height: calc(24 / 17);
 			font-weight: 500;
 			margin-bottom: var(--spacing);
