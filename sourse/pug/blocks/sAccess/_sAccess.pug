@@ -22,14 +22,12 @@ mixin sAccess(data)
 								li Упражнения с учетом акушерских рекомендаций
 							+e.item-footer
 								+e.price-wrap
-									+e.price 5900
-										//- +icon('currency')
-										sup ₽
-										span /год
+									+e.price 
+										+e.num 0
+											span ₽
 								+e.btn-wrap
 									+e.conditions
-										span При оплате каждый месяц - 6400₽
-										span При оплате полгода - 6000₽
+										span Начните изучать доступный материал или откройте больше возможностей
 									+e.btn.btn-sm.btn-outline-primary(href="#") Оформить подписку
 				.col-md-4
 					+e.item
@@ -47,14 +45,13 @@ mixin sAccess(data)
 								li Упражнения с учетом акушерских рекомендаций
 							+e.item-footer
 								+e.price-wrap
-									+e.price 5900
-										//- +icon('currency')
-										sup ₽
-										span /год
+									+e.price 
+										span от 
+										+e.num 900
+											span ₽
 								+e.btn-wrap
 									+e.conditions
-										span При оплате каждый месяц - 6400₽
-										span При оплате полгода - 6000₽
+										span Начните изучать доступный материал или откройте больше возможностей
 									+e.btn.btn-sm.btn-outline-primary(href="#") Оформить подписку
 				.col-md-4
 					+e.item
@@ -73,18 +70,15 @@ mixin sAccess(data)
 							+e.item-footer
 								+e.price-wrap
 									+e.benefit Выгода #[span 6000 ₽]
-									+e.price 5900
-										//- +icon('currency')
-										sup ₽
+									+e.price 
+										+e.num 5900
+											span ₽
 										span /год
-									.small При оплате годовой подписки
+									.small.text-primary При оплате годовой подписки
 								+e.btn-wrap
 									+e.conditions
 										span При оплате каждый месяц - 6400₽
 										span При оплате полгода - 6000₽
 									+e.btn.btn-sm.btn-primary(href="#") Оформить подписку
-
-
-
 
 	// end sAccess

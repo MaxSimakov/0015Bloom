@@ -7,6 +7,10 @@
 	@include media-breakpoint-up(md) {
 		--sTPB: #{rem(55)};
 	}
+	@include media-breakpoint-only(md) {
+		--spacing: #{rem(6)};
+
+	}
 	.container {
 		@include media-breakpoint-up(lg) {
 			max-width: rem(900);
@@ -55,9 +59,10 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+	
 		ul {
 			list-style: none;
-			margin-bottom: rem(45);
+			margin-bottom: calc(var(--spacing) * 5.6);
 			li {
 				position: relative;
 				padding-left: calc(var(--spacing) * 3);
@@ -152,6 +157,14 @@
 
 	&__price-wrap {
 		text-align: center;
+		position: relative;
+		margin-bottom: var(--spacing);
+		.small {
+			position: absolute;
+			@include a-cent(x);
+			bottom: 0;
+			line-height: calc(16 / 14);
+		}
 	}
 	&__btn-wrap {
 		text-align: center;
@@ -159,18 +172,53 @@
 
 	&__benefit {
 		// @extend .btn, .btn-outline-primary;
+		position: absolute;
+		@include a-cent(x);
+		top: 0;
 		display: inline-block;
 		padding: rem(4) rem(8);
 		border: 1px solid #d67644;
+		max-width: rem(120);
 		border-radius: $border-radius;
 		color: $primary;
 	}
 	&__price {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		color: $primary;
+		padding-top: calc(var(--spacing) * 5.6);
+		padding-bottom: calc(var(--spacing) * 3.375);
+		span {
+			display: inline-block;
+			line-height: 1;
+		}
+		& > span {
+			&:first-child {
+				margin-right: 0.5em;
+			}
+			&:last-child {
+				margin-left: -0.5em;
+			}
+		}
+	}
+
+	&__num {
+		display: flex;
 		font-family: "Lovelace";
+		@include rfs(62px);
+
+		line-height: calc(52 / 62);
+		span {
+			font-size: 0.5em;
+			margin-left: 0.13em;
+		}
 	}
 	&__conditions {
 		display: flex;
 		flex-direction: column;
+		color: $gray-medium;
+		
 	}
 	&__btn {
 		// @include mt;
@@ -178,6 +226,7 @@
 		width: 100%;
 		border: 1px solid;
 		max-width: rem(226);
+		margin-top: calc(var(--spacing) * 2);
 	}
 
 	@include media-breakpoint-up(xl) {
