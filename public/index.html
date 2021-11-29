@@ -56,10 +56,50 @@
 			<!-- start sYouNeedUs-->
 			<section class="sYouNeedUs section" id="sYouNeedUs">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sYouNeedUs</h2>
+					<div class="row justify-content-center">
+						<div class="col-12">
+							<div class="youNeedUsWrraper">
+								<!-- picture-->
+								<picture class="youNeedUsWrraper__img text-center"> 
+									<source type="image/avif" srcset="img/@2x/avif/youNeedUsIMG.avif" media="(min-width:576px)"/>
+									<source type="image/avif" srcset="img/@1x/avif/youNeedUsIMG.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/youNeedUsIMG.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/youNeedUsIMG.webp"/>
+									<source type="image/jpg" srcset="img/@2x/avif/youNeedUsIMG.jpg" media="(min-width:576px)"/>
+									<source type="image/jpg" srcset="img/@1x/avif/youNeedUsIMG.jpg"/><img src="img/@2x/youNeedUsIMG.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h2 class="youNeedUsWrraper__title text-center">Мы&nbsp;нужны вам, если
+								</h2>
+								<ul class="youNeedUsWrraper__list d-flex justify-content-around">
+									<li class="youNeedUsWrraper__item"> 
+										<p class="youNeedUsWrraper__subtitle">вы не успеваете заняться своим здоровьем
+										</p>
+										<p class="youNeedUsWrraper__text">и ходите ко врачам только в самых крайних случаях, но регулярно испытываете боли/дискомфорт
+										</p>
+									</li>
+									<li class="youNeedUsWrraper__item"> 
+										<p class="youNeedUsWrraper__subtitle">вы не знаете, к какому врачу обратиться
+										</p>
+										<p class="youNeedUsWrraper__text">за помощью, вас не устраивает их подход, советы в интернете вызывают сомнения
+										</p>
+									</li>
+									<li class="youNeedUsWrraper__item"> 
+										<p class="youNeedUsWrraper__subtitle">если у вас встречаются следующие признаки:
+										</p>
+										<p class="youNeedUsWrraper__text">болит спина, бывает недержание мочи, есть диастаз, попадает воздух во влагалище, есть проблемы с достижением оргазма
+										</p>
+									</li>
+									<li class="youNeedUsWrraper__item"> 
+										<p class="youNeedUsWrraper__subtitle">вы хотите понимать свое тело
+										</p>
+										<p class="youNeedUsWrraper__text">и ищете спорт не для «похудеть», а для здоровья
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sYouNeedUs-->
@@ -86,10 +126,21 @@
 			<!-- start sQuestions-->
 			<section class="sQuestions section" id="sQuestions">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sQuestions</h2>
+					<div class="row">
+						<div class="col-12">
+							<div class="question-block text-center"> 
+								<h2 class="question-block__title">Остались вопросы? 
+								</h2>
+								<p class="question-block__subtitle">Напишите нам  - мы всегда на связи
+								</p>
+								<button class="question-block__btn" type="button">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg><span class="question-block__span">WhatsApp</span>
+								</button>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sQuestions-->
@@ -104,12 +155,39 @@
 			</section>
 			<!-- end sReviews-->
 			<!-- start footer-main-->
-			<section class="footer-main section" id="footer-main">
+			<section class="footer-main section bg-wrap" id="footer-main">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/mainFooterBG.webp"/><img class="object-fit-js" src="img/@2x/mainFooterBG.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>footer-main</h2>
+					<div class="section-title text-center m-auto">
+						<h2>Давайте<br>заботиться<br>о здоровье<br>вместе!</h2>
 					</div>
-					<div class="row"></div>
+					<div class="footer-main__links">
+						<a class="footer-main__mail" href="mailto:bloom@gmail.com">bloom@gmail.com
+						</a>
+						<a class="footer-main__tel" href="tel:+89057934646">8 905 793-46-46
+						</a>
+						<div class="soc">
+							<a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg>
+							</a>
+							<a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg>
+							</a>
+							<a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-whatsapp ">
+									<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end footer-main-->

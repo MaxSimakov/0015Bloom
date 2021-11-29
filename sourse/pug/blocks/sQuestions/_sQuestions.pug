@@ -2,8 +2,12 @@ mixin sQuestions(data)
 	// start sQuestions
 	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sQuestions
-				
 			.row
+				.col-12
+					+b.question-block.text-center 
+						+e.H2.title Остались вопросы? 
+						+e.P.subtitle Напишите нам  - мы всегда на связи
+						+e.BUTTON(type='button').btn
+							+icon('whatsapp')
+							+e.SPAN.span WhatsApp
 	// end sQuestions

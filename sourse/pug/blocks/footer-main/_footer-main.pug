@@ -1,9 +1,15 @@
 mixin footer-main(data)
 	// start footer-main
-	+b.SECTION.footer-main.section#footer-main&attributes(attributes)
+	+b.SECTION.footer-main.section#footer-main&attributes(attributes).bg-wrap
+		+pic('mainFooterBG.jpg', 'bg', 0).picture-bg
 		.container
-			+b.section-title.text-center
-				h2 footer-main
-				
-			.row
+			+b.section-title.text-center.m-auto
+				h2 Давайте<br>заботиться<br>о здоровье<br>вместе!
+			+e.links
+				+e.mail(href="mailto:bloom@gmail.com") bloom@gmail.com
+				+e.tel(href="tel:+89057934646") 8 905 793-46-46
+				+soc()
+					+item-sos('instagram')
+					+item-sos('telegram')
+					+item-sos('whatsapp')
 	// end footer-main

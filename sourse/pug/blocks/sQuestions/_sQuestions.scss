@@ -7,8 +7,42 @@
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+
+	}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		.question-block__btn {
+			width: 90%;
+		}
+	}
+
+
+	.question-block {
+		border: 1px solid $primary;
+		border-radius: 24px;
+		padding: 37px 0 46px;
+		&__title {
+			color: $primary;
+			margin-bottom: 18px;
+		}
+		&__subtitle {
+			font-size: 22px;
+			margin-bottom: 26px;
+		}
+		&__btn {
+			border: none;
+			background: $primary;
+			border-radius: 8px;
+			color: $white;
+			font-size: 22px;
+			padding: 12px 25px 11px 22px;
+			svg {
+				font-size: 27px;
+				margin-right: 4px;
+			}
+		}
+	}
 } // end.sQuestions

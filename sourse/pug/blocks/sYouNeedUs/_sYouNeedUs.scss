@@ -1,5 +1,6 @@
 // start .sYouNeedUs
 .sYouNeedUs {
+	background-color: $background;
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
@@ -11,4 +12,30 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+
+	.youNeedUsWrraper {
+		background: #DAC8AB;
+		border-radius: 16px;
+		&__title {
+			color: $primary;
+			margin-top: -66px;
+		}
+		&__list {
+			list-style-type: none;
+		}
+		&__item {
+			max-width: 270px;
+			color: $dark;
+			margin-top: 1.5rem;
+		}
+		&__subtitle {
+			font-weight: 500;
+			font-size: 1.375rem;
+			line-height: 1.09em;
+		}
+		&__text {
+			font-size: 1rem;
+			line-height: 1em;
+		}
+	}
 } // end.sYouNeedUs

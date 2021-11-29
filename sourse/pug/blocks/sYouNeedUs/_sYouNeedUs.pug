@@ -2,8 +2,22 @@ mixin sYouNeedUs(data)
 	// start sYouNeedUs
 	+b.SECTION.sYouNeedUs.section#sYouNeedUs&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sYouNeedUs
-				
-			.row
+			.row.justify-content-center
+				.col-12
+					+b.youNeedUsWrraper
+						+pic('youNeedUsIMG').youNeedUsWrraper__img.text-center
+						+e.H2.title.text-center Мы&nbsp;нужны вам, если
+						+e.UL.list.d-flex.justify-content-around
+							+e.LI.item 
+								+e.P.subtitle вы не успеваете заняться своим здоровьем
+								+e.P.text и ходите ко врачам только в самых крайних случаях, но регулярно испытываете боли/дискомфорт
+							+e.LI.item 
+								+e.P.subtitle вы не знаете, к какому врачу обратиться
+								+e.P.text за помощью, вас не устраивает их подход, советы в интернете вызывают сомнения
+							+e.LI.item 
+								+e.P.subtitle если у вас встречаются следующие признаки:
+								+e.P.text болит спина, бывает недержание мочи, есть диастаз, попадает воздух во влагалище, есть проблемы с достижением оргазма
+							+e.LI.item 
+								+e.P.subtitle вы хотите понимать свое тело
+								+e.P.text и ищете спорт не для «похудеть», а для здоровья
 	// end sYouNeedUs
