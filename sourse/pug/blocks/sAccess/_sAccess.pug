@@ -6,12 +6,14 @@ mixin sAccess(data)
 				h2 Доступ к платформе
 				p Платный доступ позволяет нам поддерживать работу платформы, чтобы как можно больше женщин смогли позаботиться о&nbsp;себе
 			.row
-				+e.col.col-md-4
+				+e.col.col-md-4.order-md-last
 					+e.item--popular
 						+e.SPAN.label Популярный
 						+e.item-heading
 							h4 Personal
 							p Ежемесячная подписка откроет доступ на&nbsp;все материалы сайта
+							+e.BUTTON.btn-accordion
+								+icon('shevron-down')
 							+e.price 
 								+e.num 5900
 									span ₽
@@ -44,6 +46,8 @@ mixin sAccess(data)
 						+e.item-heading
 							h4 Free
 							p Доступ к&nbsp;базовым статьям и&nbsp;лекциям после рагистрации
+							+e.BUTTON.btn-accordion
+								+icon('shevron-down')
 							+e.price 
 								+e.num 0
 									span ₽
@@ -70,6 +74,8 @@ mixin sAccess(data)
 						+e.item-heading
 							h4 Base
 							p Доступ ко&nbsp;всему контенту на&nbsp;3&nbsp;месяца после покупки курса
+							+e.BUTTON.btn-accordion
+								+icon('shevron-down')
 							+e.price 
 								span от 
 								+e.num 900
