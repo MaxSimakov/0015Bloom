@@ -11,6 +11,7 @@
 	text-align: center;
 	img{
 		@extend .res-i;
+		margin-top: -15%;
 		// mix-blend-mode: multiply;
 	}
 	p{
@@ -37,7 +38,7 @@
 		z-index: 2;
 		padding-top: rem(92);
 		@include rfs(96px);
-		margin-bottom: -2.6em;
+		// margin-bottom: -2.6em;
 	}
 	&__text-1{
 		
