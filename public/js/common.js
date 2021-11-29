@@ -363,7 +363,10 @@ function eventHandler() {
 
 	});
 	// modal window
-
+	$(".sAccess__btn-accordion" ).click(function() {
+		$(this).toggleClass('on')
+		.parents('.sAccess__item').find( ".sAccess__item-content").slideToggle();
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
