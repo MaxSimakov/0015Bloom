@@ -63,14 +63,14 @@
 		&:first-child {
 			.sAccess__item {
 				@include media-breakpoint-down(md) {
-					border-radius: rem(24) rem(24) 0 0;
+					border-radius: $border-radius-lg $border-radius-lg 0 0;
 				}
 			}
 		}
 		&:last-child {
 			.sAccess__item {
 				@include media-breakpoint-down(md) {
-					border-radius: 0 0 rem(24) rem(24);
+					border-radius: 0 0 $border-radius-lg $border-radius-lg;
 				}
 			}
 		}

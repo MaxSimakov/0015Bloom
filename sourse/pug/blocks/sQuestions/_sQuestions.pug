@@ -2,8 +2,10 @@ mixin sQuestions(data)
 	// start sQuestions
 	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sQuestions
-				
-			.row
+			+e.inner.text-center
+				h2 Остались вопросы?
+				+e.subtitle Напишите нам&nbsp;- мы&nbsp;всегда на&nbsp;связи
+				+e.btn
+					+icon('whatsapp')
+					span WhatsApp
 	// end sQuestions
