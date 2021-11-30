@@ -27,13 +27,11 @@ mixin sCardHorisontal(data)
 						.swiper-wrapper
 							+e.slide.swiper-slide
 								+cardText(`Мы уверены, что это нужно менять`,`Поэтому наша платформа&nbsp;&mdash; о&nbsp;вас и&nbsp;обо всем, что происходит в&nbsp;женском теле.`)
-								
 							+e.slide.swiper-slide
 								+cardText(`Мы&nbsp;собрали команду экспертов`,`Записали с&nbsp;ними лекции, тренировки, ведем консультации и&nbsp;занятия онлайн.`)
 							+e.slide.swiper-slide
 								+cardText(`Наша платформа&nbsp;&mdash; это ваше пространство`,`Где вы&nbsp;можете поговорить о&nbsp;себе, найти ответы на&nbsp;свои вопросы и&nbsp;не&nbsp;бояться  их&nbsp;задавать.`)
-						.col-12
-							+cardText(``,`Зарегистрируйтесь, чтобы получить доступ к&nbsp;личному кабинету с&nbsp;лекциями  и&nbsp;полезными упражнениями`)
+					p Зарегистрируйтесь, чтобы получить доступ к&nbsp;личному кабинету с&nbsp;лекциями  и&nbsp;полезными упражнениями
 				//- +e.btns
 				//- 	+e.btn(href="#").btn-primary Зарегистрироваться
 				//- 	+e.btn(href="#").btn-outline-primary
@@ -73,7 +71,7 @@ mixin sCardHorisontal(data)
 	
 mixin sCardHorisontal2(data)
 	// start sCardHorisontal
-	+b.sCardHorisontal&attributes(attributes)
+	+b.sCardHorisontal--reverse&attributes(attributes)
 		.container
 			+card(`card-4.png`,`Тренировки и&nbsp;реабилитация`,`Разные виды занятий&nbsp;&mdash; для разных целей. Помогут вам восстановиться после родов, операций. Подойдут тем, кто хочет укрепить мышцы и&nbsp;поработать над своим балансом. Силовые тренировки для тех, кто любит активный тренинг.`)
 				+e.body
