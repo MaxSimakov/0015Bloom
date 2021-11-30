@@ -13,113 +13,429 @@
 	</head>
 	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
-			<!-- start header-->
-			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<h1>Lorem ipsum dolor sit amet.</h1>
-			<h2>Lorem ipsum dolor sit amet.</h2>
-			<h3>Lorem ipsum dolor sit amet.</h3>
-			<h4>Lorem ipsum dolor sit amet.</h4>
-			<h5>Lorem ipsum dolor sit amet.</h5>
-			<h6>Lorem ipsum dolor sit amet.</h6>
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
 				<div class="container">
-					<div class="section-title text-center">
-						<h1>Команда BLOOM</h1>
-					</div>
 					<div class="row"></div>
 				</div>
 			</div>
-			<!-- end headerBlock-->
-			<!-- start sCategories-->
-			<section class="sCategories section" id="sCategories">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sCategories</h2>
+			<!-- end top-nav-->
+			<div class="bg-background">
+				<!-- start headerBlock-->
+				<div class="headerBlock section" id="headerBlock">
+					<div class="container">
+						<div class="headerBlock__head">
+							<div class="headerBlock__text-1">С ЗАБОТОЙ
+							</div>
+							<div class="headerBlock__text-2"> О ЖЕНСКОМ
+							</div>
+							<div class="headerBlock__text-3">ЗДОРОВЬЕ
+							</div>
+						</div><img src="img/head-img.png" alt=""/>
+						<p>Тренировки, лекции, консультации врачей  и&nbsp;реабилитологов для вас</p>
 					</div>
-					<div class="row"></div>
 				</div>
-			</section>
-			<!-- end sCategories-->
-			<!-- start sCardHorisontal-->
-			<section class="sCardHorisontal section" id="sCardHorisontal">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sCardHorisontal</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end sCardHorisontal-->
-			<!-- start sYouNeedUs-->
-			<section class="sYouNeedUs section" id="sYouNeedUs">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-12">
-							<div class="youNeedUsWrraper">
-								<!-- picture-->
-								<picture class="youNeedUsWrraper__img text-center"> 
-									<source type="image/avif" srcset="img/@2x/avif/youNeedUsIMG.avif" media="(min-width:576px)"/>
-									<source type="image/avif" srcset="img/@1x/avif/youNeedUsIMG.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/youNeedUsIMG.webp" media="(min-width:576px)"/>
-									<source type="image/webp" srcset="img/@1x/webp/youNeedUsIMG.webp"/>
-									<source type="image/jpg" srcset="img/@2x/avif/youNeedUsIMG.jpg" media="(min-width:576px)"/>
-									<source type="image/jpg" srcset="img/@1x/avif/youNeedUsIMG.jpg"/><img src="img/@2x/youNeedUsIMG.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<h2 class="youNeedUsWrraper__title text-center">Мы&nbsp;нужны вам, если
-								</h2>
-								<ul class="youNeedUsWrraper__list d-flex justify-content-around">
-									<li class="youNeedUsWrraper__item"> 
-										<p class="youNeedUsWrraper__subtitle">вы не успеваете заняться своим здоровьем
-										</p>
-										<p class="youNeedUsWrraper__text">и ходите ко врачам только в самых крайних случаях, но регулярно испытываете боли/дискомфорт
-										</p>
-									</li>
-									<li class="youNeedUsWrraper__item"> 
-										<p class="youNeedUsWrraper__subtitle">вы не знаете, к какому врачу обратиться
-										</p>
-										<p class="youNeedUsWrraper__text">за помощью, вас не устраивает их подход, советы в интернете вызывают сомнения
-										</p>
-									</li>
-									<li class="youNeedUsWrraper__item"> 
-										<p class="youNeedUsWrraper__subtitle">если у вас встречаются следующие признаки:
-										</p>
-										<p class="youNeedUsWrraper__text">болит спина, бывает недержание мочи, есть диастаз, попадает воздух во влагалище, есть проблемы с достижением оргазма
-										</p>
-									</li>
-									<li class="youNeedUsWrraper__item"> 
-										<p class="youNeedUsWrraper__subtitle">вы хотите понимать свое тело
-										</p>
-										<p class="youNeedUsWrraper__text">и ищете спорт не для «похудеть», а для здоровья
-										</p>
-									</li>
-								</ul>
+				<!-- end headerBlock-->
+				<!-- start sCategories-->
+				<div class="sCategories section" id="sCategories">
+					<div class="container">
+						<div class="sCategories__slider sCategories__slider--js swiper">
+							<div class="swiper-wrapper">
+									<div class="sCategories__slide swiper-slide">
+										<a class="sCategories__item" href="#">
+											<div class="sCategories__img-wrap"><img src="img/svg/sCategories-1.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCategories__caption"><span>Тренировки</span><span>и реабилитация</span>
+											</div>
+											<div class="sCategories__btn">
+												<svg class="icon icon-shevron-right ">
+													<use xlink:href="img/svg/sprite.svg#shevron-right"></use>
+												</svg>
+											</div>
+										</a>
+									</div>
+									<div class="sCategories__slide swiper-slide">
+										<a class="sCategories__item" href="#">
+											<div class="sCategories__img-wrap"><img src="img/svg/sCategories-2.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCategories__caption"><span>Сексуальное</span><span>образование</span>
+											</div>
+											<div class="sCategories__btn">
+												<svg class="icon icon-shevron-right ">
+													<use xlink:href="img/svg/sprite.svg#shevron-right"></use>
+												</svg>
+											</div>
+										</a>
+									</div>
+									<div class="sCategories__slide swiper-slide">
+										<a class="sCategories__item" href="#">
+											<div class="sCategories__img-wrap"><img src="img/svg/sCategories-3.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCategories__caption"><span>Консультации</span><span>с врачами</span>
+											</div>
+											<div class="sCategories__btn">
+												<svg class="icon icon-shevron-right ">
+													<use xlink:href="img/svg/sprite.svg#shevron-right"></use>
+												</svg>
+											</div>
+										</a>
+									</div>
+									<div class="sCategories__slide swiper-slide">
+										<a class="sCategories__item" href="#">
+											<div class="sCategories__img-wrap"><img src="img/svg/sCategories-4.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCategories__caption"><span>Статьи</span><span>и Лекции</span>
+											</div>
+											<div class="sCategories__btn">
+												<svg class="icon icon-shevron-right ">
+													<use xlink:href="img/svg/sprite.svg#shevron-right"></use>
+												</svg>
+											</div>
+										</a>
+									</div>
+									<div class="sCategories__slide swiper-slide">
+										<a class="sCategories__item" href="#">
+											<div class="sCategories__img-wrap"><img src="img/svg/sCategories-5.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sCategories__caption"><span>Вопросы</span><span>и ответы</span>
+											</div>
+											<div class="sCategories__btn">
+												<svg class="icon icon-shevron-right ">
+													<use xlink:href="img/svg/sprite.svg#shevron-right"></use>
+												</svg>
+											</div>
+										</a>
+									</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end sYouNeedUs-->
-			<!-- start sTeam-->
-			<section class="sTeam section" id="sTeam">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sTeam</h2>
+				<!-- end sCategories-->
+				<!-- start sCardHorisontal-->
+				<div class="sCardHorisontal">
+					<div class="container">
+						<div class="sCardHorizontalItem">
+							<div class="sCardHorizontalItem__row row">
+								<div class="col-lg-6">
+									<!-- picture-->
+									<picture> 
+										<source type="image/avif" srcset="img/@2x/avif/card-1.avif" media="(min-width:576px)"/>
+										<source type="image/avif" srcset="img/@1x/avif/card-1.avif"/>
+										<source type="image/webp" srcset="img/@2x/webp/card-1.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/card-1.webp"/>
+										<source type="image/png" srcset="img/@2x/avif/card-1.png" media="(min-width:576px)"/>
+										<source type="image/png" srcset="img/@1x/avif/card-1.png"/><img src="img/@2x/card-1.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="col-lg-6"> 
+									<div class="sCardHorizontalItem__caption">
+										<div class="sCardHorizontalItem__head">
+											<h2>59% женщин</h2>
+											<p><span>Во&nbsp;всем мире не&nbsp;говорят о&nbsp;своем здоровье: это неприлично, неуместно, некомфортно. Они сталкиваются с&nbsp;осуждением, негативными реакциями и&nbsp;прибегают  к&nbsp;советами, которые не&nbsp;имеют отношения к&nbsp;медицине  и&nbsp;могут только ухудшить состояние.</span></p>
+										</div>
+										<div class="sCardHorizontalItem__body">
+											<div class="row">
+												<div class="col-12">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Мы уверены, что это нужно менять</strong></p>
+														<p>Поэтому наша платформа&nbsp;&mdash; о&nbsp;вас и&nbsp;обо всем, что происходит в&nbsp;женском теле.</p>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Мы&nbsp;собрали команду экспертов</strong></p>
+														<p>Записали с&nbsp;ними лекции, тренировки, ведем консультации и&nbsp;занятия онлайн.</p>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Наша платформа&nbsp;&mdash; это ваше пространство</strong></p>
+														<p>Где вы&nbsp;можете поговорить о&nbsp;себе, найти ответы на&nbsp;свои вопросы и&nbsp;не&nbsp;бояться  их&nbsp;задавать.</p>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="sCardHorizontalItem__text-block">
+														<p>Зарегистрируйтесь, чтобы получить доступ к&nbsp;личному кабинету с&nbsp;лекциями  и&nbsp;полезными упражнениями</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCardHorizontalItem__btns">
+											<a class="sCardHorizontalItem__btn btn-primary" href="#">Зарегистрироваться
+											</a>
+											<a class="sCardHorizontalItem__btn btn-outline-primary" href="#">
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>Смотреть видео
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sCardHorizontalItem">
+							<div class="sCardHorizontalItem__row row">
+								<div class="col-lg-6">
+									<!-- picture-->
+									<picture> 
+										<source type="image/avif" srcset="img/@2x/avif/card-2.avif" media="(min-width:576px)"/>
+										<source type="image/avif" srcset="img/@1x/avif/card-2.avif"/>
+										<source type="image/webp" srcset="img/@2x/webp/card-2.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/card-2.webp"/>
+										<source type="image/png" srcset="img/@2x/avif/card-2.png" media="(min-width:576px)"/>
+										<source type="image/png" srcset="img/@1x/avif/card-2.png"/><img src="img/@2x/card-2.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="col-lg-6"> 
+									<div class="sCardHorizontalItem__caption">
+										<div class="sCardHorizontalItem__head">
+											<h2>Наши ценности и&nbsp;методики</h2>
+											<p><span>Наша главная цель&nbsp;&mdash; помочь вам узнать свое тело, как оно работает, и&nbsp;что ему нужно.</span></p>
+										</div> 
+										<div class="sCardHorizontalItem__body">
+											<div class="row">
+												<div class="col-6">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Экспертность</strong></p>
+														<p>В&nbsp;нашей команде гинекологи, проктологи, психотерапевты, сексологи, физиотерапевты, реабилитологи и&nbsp;тренеры</p>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Работаем со&nbsp;всем телом</strong></p>
+														<p>Укрепляем спину, живот и&nbsp;мышцы тазового дна вместо &laquo;качаем пресс&raquo; и&nbsp;упражнений для &laquo;упругих ягодиц&raquo;</p>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Говорим обо всем</strong></p>
+														<p>Секспросвет это не&nbsp;табу, а&nbsp;важная часть нашей работы и&nbsp;вашей жизни</p>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Понятный язык</strong></p>
+														<p>Отвечаем на&nbsp;вопросы по-человечески, а&nbsp;не&nbsp;терминами</p>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Мультидисциплинарный подход</strong></p>
+														<p>Решаем одну проблему вместе с&nbsp;врачами и&nbsp;специалистами разных специальностей</p>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="sCardHorizontalItem__text-block">
+														<p><strong>Не тратим время на лишние услуги</strong></p>
+														<p>Проконсультируем и&nbsp;направим вас к&nbsp;тому специалисту, который нужен</p>
+													</div>
+												</div>
+											</div>
+											<div class="sCardHorizontalItem__btns">
+												<a class="sCardHorizontalItem__btn btn-primary" href="#">Статьи и лекции
+												</a>
+												<a class="sCardHorizontalItem__btn btn-outline-primary" href="#">Тренировки и реабилитация
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
-			</section>
-			<!-- end sTeam-->
+				<!-- end sCardHorisontal-->
+				<!-- start sYouNeedUs-->
+				<section class="sYouNeedUs section" id="sYouNeedUs">
+					<div class="container">
+						<div class="sYouNeedUs__wrraper">
+							<!-- picture-->
+							<picture class="text-center"> 
+								<source type="image/avif" srcset="img/@2x/avif/youNeedUsIMG.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/youNeedUsIMG.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/youNeedUsIMG.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/youNeedUsIMG.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/youNeedUsIMG.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/youNeedUsIMG.jpg"/><img src="img/@2x/youNeedUsIMG.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<h2 class="sYouNeedUs__title text-center">Мы&nbsp;нужны вам, если
+							</h2>
+							<div class="sYouNeedUs__slider sYouNeedUs__slider--js swiper">
+								<!-- Additional required wrapper-->
+								<div class="swiper-wrapper">
+									<!-- Slides-->
+										<div class="sYouNeedUs__slide swiper-slide">
+											<div class="sYouNeedUs__item"> 
+												<div class="medium-subtitle">вы&nbsp;не&nbsp;успеваете заняться своим здоровьем</div>
+												<p>и ходите ко врачам только в самых крайних случаях, но регулярно испытываете боли/дискомфорт</p>
+											</div>
+										</div>
+										<div class="sYouNeedUs__slide swiper-slide">
+											<div class="sYouNeedUs__item"> 
+												<div class="medium-subtitle">вы&nbsp;не&nbsp;знаете, к&nbsp;какому врачу обратиться</div>
+												<p>за&nbsp;помощью, вас не&nbsp;устраивает их&nbsp;подход, советы в&nbsp;интернете вызывают сомнения</p>
+											</div>
+										</div>
+										<div class="sYouNeedUs__slide swiper-slide">
+											<div class="sYouNeedUs__item"> 
+												<div class="medium-subtitle">если у&nbsp;вас встречаются следующие признаки:</div>
+												<p>болит спина, бывает недержание мочи, есть диастаз, попадает воздух во&nbsp;влагалище, есть проблемы с&nbsp;достижением оргазма</p>
+											</div>
+										</div>
+										<div class="sYouNeedUs__slide swiper-slide">
+											<div class="sYouNeedUs__item"> 
+												<div class="medium-subtitle">вы&nbsp;хотите понимать свое тело</div>
+												<p>и&nbsp;ищете спорт не&nbsp;для &laquo;похудеть&raquo;,а&nbsp;для здоровья</p>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sYouNeedUs-->
+			</div>
 			<!-- start sAccess-->
 			<section class="sAccess section" id="sAccess">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sAccess</h2>
+						<h2>Доступ к платформе</h2>
+						<p>Платный доступ позволяет нам поддерживать работу платформы, чтобы как можно больше женщин смогли позаботиться о&nbsp;себе</p>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+						<div class="sAccess__col col-md-4 order-md-last">
+							<div class="sAccess__item sAccess__item--popular"><span class="sAccess__label">Популярный</span>
+								<div class="sAccess__item-heading">
+									<h4>Personal</h4>
+									<p>Ежемесячная подписка откроет доступ на&nbsp;все материалы сайта</p>
+									<button class="sAccess__btn-accordion">
+										<svg class="icon icon-shevron-down ">
+											<use xlink:href="img/svg/sprite.svg#shevron-down"></use>
+										</svg>
+									</button>
+									<div class="sAccess__price"> 
+										<div class="sAccess__num">5900<span>₽</span>
+										</div><span>/год</span>
+									</div>
+								</div>
+								<div class="sAccess__item-content">
+									<ul>
+										<li class="check">Огромное количество статей и&nbsp;лекций</li>
+										<li class="check">Раздел &laquo;Сексуальное образование&raquo;</li>
+										<li>Выстраивание правильной техники упражнений</li>
+										<li>Тренировки с&nbsp;собственным весом</li>
+										<li>Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем</li>
+										<li>Поддержание хорошего самочувствия все 9&nbsp;месяцев</li>
+										<li>Упражнения с&nbsp;учетом акушерских рекомендаций</li>
+									</ul>
+									<div class="sAccess__item-footer">
+										<div class="sAccess__price-wrap">
+											<div class="sAccess__benefit">Выгода <span>6000 ₽</span>
+											</div>
+											<div class="sAccess__price"> 
+												<div class="sAccess__num">5900<span>₽</span>
+												</div><span>/год</span>
+											</div>
+											<div class="small text-primary">При оплате годовой подписки</div>
+										</div>
+										<div class="sAccess__btn-wrap">
+											<div class="sAccess__conditions"><span>При оплате каждый месяц - 6400₽</span><span>При оплате полгода - 6000₽</span>
+											</div>
+											<a class="sAccess__btn btn-sm btn-primary" href="#">Оформить подписку
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sAccess__col col-md-4">
+							<div class="sAccess__item">
+								<div class="sAccess__item-heading">
+									<h4>Free</h4>
+									<p>Доступ к&nbsp;базовым статьям и&nbsp;лекциям после рагистрации</p>
+									<button class="sAccess__btn-accordion">
+										<svg class="icon icon-shevron-down ">
+											<use xlink:href="img/svg/sprite.svg#shevron-down"></use>
+										</svg>
+									</button>
+									<div class="sAccess__price"> 
+										<div class="sAccess__num">0<span>₽</span>
+										</div>
+									</div>
+								</div>
+								<div class="sAccess__item-content">
+									<ul>
+										<li class="check">Ограниченное количество статей и&nbsp;лекций</li>
+										<li class="check">Несколько статей из&nbsp;раздела &laquo;Сексуальное образование&raquo;</li>
+										<li>Выстраивание правильной техники упражнений</li>
+										<li>Тренировки с&nbsp;собственным весом</li>
+										<li>Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем</li>
+										<li>Поддержание хорошего самочувствия все 9&nbsp;месяцев</li>
+										<li>Упражнения с&nbsp;учетом акушерских рекомендаций</li>
+									</ul>
+									<div class="sAccess__item-footer">
+										<div class="sAccess__price-wrap">
+											<div class="sAccess__price"> 
+												<div class="sAccess__num">0<span>₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="sAccess__btn-wrap">
+											<div class="sAccess__conditions"><span>Начните изучать доступный материал или откройте больше возможностей</span>
+											</div>
+											<a class="sAccess__btn btn-sm btn-outline-primary" href="#">Зарегистрироваться
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sAccess__col col-md-4">
+							<div class="sAccess__item">
+								<div class="sAccess__item-heading">
+									<h4>Base</h4>
+									<p>Доступ ко&nbsp;всему контенту на&nbsp;3&nbsp;месяца после покупки курса</p>
+									<button class="sAccess__btn-accordion">
+										<svg class="icon icon-shevron-down ">
+											<use xlink:href="img/svg/sprite.svg#shevron-down"></use>
+										</svg>
+									</button>
+									<div class="sAccess__price"> <span>от </span>
+										<div class="sAccess__num">900<span>₽</span>
+										</div>
+									</div>
+								</div>
+								<div class="sAccess__item-content">
+									<ul>
+										<li class="check">Огромное количество статей и&nbsp;лекций</li>
+										<li class="check">Раздел &laquo;Сексуальное образование&raquo;</li>
+										<li>Выстраивание правильной техники упражнений</li>
+										<li>Тренировки с&nbsp;собственным весом</li>
+										<li>Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем</li>
+										<li>Поддержание хорошего самочувствия все 9&nbsp;месяцев</li>
+										<li>Упражнения с&nbsp;учетом акушерских рекомендаций</li>
+									</ul>
+									<div class="sAccess__item-footer">
+										<div class="sAccess__price-wrap">
+											<div class="sAccess__price"> <span>от </span>
+												<div class="sAccess__num">900<span>₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="sAccess__btn-wrap">
+											<div class="sAccess__conditions"><span>Начните изучать доступный материал или откройте больше возможностей</span>
+											</div>
+											<a class="sAccess__btn btn-sm btn-outline-primary" href="#">Выбрать курс
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sAccess-->
@@ -154,6 +470,178 @@
 				</div>
 			</section>
 			<!-- end sReviews-->
+			<!-- start sCardHorisontal-->
+			<div class="sCardHorisontal">
+				<div class="container">
+					<div class="sCardHorizontalItem">
+						<div class="sCardHorizontalItem__row row">
+							<div class="col-lg-6">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/card-4.avif" media="(min-width:576px)"/>
+									<source type="image/avif" srcset="img/@1x/avif/card-4.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-4.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/card-4.webp"/>
+									<source type="image/png" srcset="img/@2x/avif/card-4.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/avif/card-4.png"/><img src="img/@2x/card-4.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="col-lg-6"> 
+								<div class="sCardHorizontalItem__caption">
+									<div class="sCardHorizontalItem__head">
+										<h2>Тренировки и&nbsp;реабилитация</h2>
+										<p><span>Разные виды занятий&nbsp;&mdash; для разных целей. Помогут вам восстановиться после родов, операций. Подойдут тем, кто хочет укрепить мышцы и&nbsp;поработать над своим балансом. Силовые тренировки для тех, кто любит активный тренинг.</span></p>
+									</div>
+									<div class="sCardHorizontalItem__body">
+										<div class="row">
+											<div class="col-6">
+												<div class="sCardHorizontalItem__text-block">
+													<p><strong>Реабилитация</strong></p>
+													<p>Для тех, у&nbsp;кого есть проблемы в&nbsp;области органов малого таза: недержание мочи, нарушение работы кишечника, боль во&nbsp;время секса, боль в&nbsp;пояснице, диастаз и&nbsp;другие</p>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="sCardHorizontalItem__text-block">
+													<p><strong>Здоровая спина</strong></p>
+													<p>Подходит тем, кто проводит много времени в&nbsp;дороге или за&nbsp;компьютером, хочет укрепить свои мышцы и&nbsp;поправить осанку</p>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="sCardHorizontalItem__text-block">
+													<p><strong>15-минутные тренировки</strong></p>
+													<p>Для всех, кто спешит, не&nbsp;успевает на&nbsp;регулярные длинные тренировки и&nbsp;хочет позаботиться о&nbsp;себе</p>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="sCardHorizontalItem__text-block">
+													<p><strong>Интенсивный курс</strong></p>
+													<p>PRO занятия для женщин, которые чувствуют свои мышцы и&nbsp;хотят дополнительных силовых нагрузок, которые могут заменить походы в&nbsp;фитнес</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sCardHorizontalItem__btns">
+										<a class="sCardHorizontalItem__btn btn-primary" href="#"> Подробнее о тренировках
+										</a>
+										<a class="sCardHorizontalItem__btn btn-outline-primary" href="#">Зарегистрироваться
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sCardHorizontalItem">
+						<div class="sCardHorizontalItem__row row">
+							<div class="col-lg-6">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/card-5.avif" media="(min-width:576px)"/>
+									<source type="image/avif" srcset="img/@1x/avif/card-5.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-5.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/card-5.webp"/>
+									<source type="image/png" srcset="img/@2x/avif/card-5.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/avif/card-5.png"/><img src="img/@2x/card-5.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="col-lg-6"> 
+								<div class="sCardHorizontalItem__caption">
+									<div class="sCardHorizontalItem__head">
+										<h2>Сексуальное образование</h2>
+										<p><span>Мы&nbsp;собрали статьи про самые популярные вопросы о&nbsp;сексе:</span></p>
+									</div>
+									<div class="sCardHorizontalItem__body">
+										<ul>
+											<li>что делать, вы испытываете боль во время секса;</li>
+											<li>что делать, если после родов пропал секс;</li>
+											<li>что такое оргазм и как его достичь;</li>
+											<li>какие бывают виды контрацепции и как их подобрать; </li>
+											<li>что продается в магазинах 18+ и зачем это вам; </li>
+											<li>как защититься от ИППП;</li>
+											<li>и многое другое</li>
+										</ul>
+									</div>
+									<div class="sCardHorizontalItem__btns">
+										<a class="sCardHorizontalItem__btn btn-primary" href="#"> Читать статьи
+										</a>
+										<a class="sCardHorizontalItem__btn btn-outline-primary" href="#">Задать вопрос
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sCardHorizontalItem">
+						<div class="sCardHorizontalItem__row row">
+							<div class="col-lg-6">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/card-6.avif" media="(min-width:576px)"/>
+									<source type="image/avif" srcset="img/@1x/avif/card-6.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-6.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/card-6.webp"/>
+									<source type="image/png" srcset="img/@2x/avif/card-6.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/avif/card-6.png"/><img src="img/@2x/card-6.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="col-lg-6"> 
+								<div class="sCardHorizontalItem__caption">
+									<div class="sCardHorizontalItem__head">
+										<h2>Консультации  с&nbsp;врачами</h2>
+										<p><span>Наши врачи могут провести для вас онлайн или офлайн консультацию</span></p>
+									</div> 
+									<div class="sCardHorizontalItem__btns">
+										<a class="sCardHorizontalItem__btn btn-primary" href="#"> Записаться
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sCardHorizontalItem">
+						<div class="sCardHorizontalItem__row row">
+							<div class="col-lg-6">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/card-7.avif" media="(min-width:576px)"/>
+									<source type="image/avif" srcset="img/@1x/avif/card-7.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-7.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/card-7.webp"/>
+									<source type="image/png" srcset="img/@2x/avif/card-7.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/avif/card-7.png"/><img src="img/@2x/card-7.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="col-lg-6"> 
+								<div class="sCardHorizontalItem__caption">
+									<div class="sCardHorizontalItem__head">
+										<h2>Статьи  и&nbsp;лекции</h2>
+										<p><span>Врачи и&nbsp;эксперты в&nbsp;формате мини-лекций рассказывают о&nbsp;том, как работает женский организм. Вот о&nbsp;чем мы&nbsp;уже поговорили:</span></p>
+									</div>
+									<div class="sCardHorizontalItem__body">
+										<ul>
+											<li>Что такое дисфункция тазового дна после родов</li>
+											<li>О цистите, геморрое и недержании мочи</li>
+											<li>Какие могут быть последствия акушерской травмы</li>
+											<li>Почему возникает хроническая тазовая боль и как ее лечить</li>
+										</ul>
+										<p class="small">В разделе <a href="#">«Вопрос-ответ»</a> можно анонимно задать вопрос специалистам: мы ответим вам лично или запишем мини-лекцию по этой теме</p>
+									</div>
+									<div class="sCardHorizontalItem__btns">
+										<a class="sCardHorizontalItem__btn btn-primary" href="#"> Читать статьи
+										</a>
+										<a class="sCardHorizontalItem__btn btn-outline-primary" href="#">Задать вопрос
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sCardHorisontal-->
 			<!-- start footer-main-->
 			<section class="footer-main section bg-wrap" id="footer-main">
 				<!-- picture-->

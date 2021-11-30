@@ -2,8 +2,10 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h1 Команда BLOOM
-			.row
-
+			+e.head
+				+e.text-1 С ЗАБОТОЙ
+				+e.text-2  О ЖЕНСКОМ
+				+e.text-3 ЗДОРОВЬЕ
+			img(src="img/head-img.png" , alt="")
+			p Тренировки, лекции, консультации врачей  и&nbsp;реабилитологов для вас
 	// end headerBlock

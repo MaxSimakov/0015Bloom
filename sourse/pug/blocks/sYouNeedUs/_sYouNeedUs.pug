@@ -2,22 +2,21 @@ mixin sYouNeedUs(data)
 	// start sYouNeedUs
 	+b.SECTION.sYouNeedUs.section#sYouNeedUs&attributes(attributes)
 		.container
-			.row.justify-content-center
-				.col-12
-					+b.youNeedUsWrraper
-						+pic('youNeedUsIMG').youNeedUsWrraper__img.text-center
-						+e.H2.title.text-center Мы&nbsp;нужны вам, если
-						+e.UL.list.d-flex.justify-content-around
-							+e.LI.item 
-								+e.P.subtitle вы не успеваете заняться своим здоровьем
-								+e.P.text и ходите ко врачам только в самых крайних случаях, но регулярно испытываете боли/дискомфорт
-							+e.LI.item 
-								+e.P.subtitle вы не знаете, к какому врачу обратиться
-								+e.P.text за помощью, вас не устраивает их подход, советы в интернете вызывают сомнения
-							+e.LI.item 
-								+e.P.subtitle если у вас встречаются следующие признаки:
-								+e.P.text болит спина, бывает недержание мочи, есть диастаз, попадает воздух во влагалище, есть проблемы с достижением оргазма
-							+e.LI.item 
-								+e.P.subtitle вы хотите понимать свое тело
-								+e.P.text и ищете спорт не для «похудеть», а для здоровья
+			+e.wrraper
+				+pic('youNeedUsIMG').text-center
+				+e.H2.title.text-center Мы&nbsp;нужны вам, если
+				+e.slider--js.swiper
+					// Additional required wrapper
+					.swiper-wrapper
+						// Slides
+						mixin item(h, t) 
+							+e.slide.swiper-slide
+								+e.item 
+									.medium-subtitle!= h
+									p!= t
+						+item(`вы&nbsp;не&nbsp;успеваете заняться своим здоровьем`, `и ходите ко врачам только в самых крайних случаях, но регулярно испытываете боли/дискомфорт`)
+						+item("вы&nbsp;не&nbsp;знаете, к&nbsp;какому врачу обратиться", "за&nbsp;помощью, вас не&nbsp;устраивает их&nbsp;подход, советы в&nbsp;интернете вызывают сомнения")
+						+item("если у&nbsp;вас встречаются следующие признаки:", "болит спина, бывает недержание мочи, есть диастаз, попадает воздух во&nbsp;влагалище, есть проблемы с&nbsp;достижением оргазма")
+						+item("вы&nbsp;хотите понимать свое тело", "и&nbsp;ищете спорт не&nbsp;для &laquo;похудеть&raquo;,а&nbsp;для здоровья")
+							
 	// end sYouNeedUs
