@@ -12,7 +12,7 @@
 	}
 	.container {
 		@include media-breakpoint-up(md) {
-			max-width: rem(900);
+			max-width: rem(910);
 		}
 	}
 	.row {
@@ -63,14 +63,22 @@
 		&:first-child {
 			.sAccess__item {
 				@include media-breakpoint-down(md) {
+<<<<<<< HEAD
 					border-radius: rem(24) rem(24) 0 0;
+=======
+					border-radius: $border-radius-lg $border-radius-lg 0 0;
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 				}
 			}
 		}
 		&:last-child {
 			.sAccess__item {
 				@include media-breakpoint-down(md) {
+<<<<<<< HEAD
 					border-radius: 0 0 rem(24) rem(24);
+=======
+					border-radius: 0 0 $border-radius-lg $border-radius-lg;
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 				}
 			}
 		}
@@ -103,7 +111,11 @@
 		flex-direction: column;
 		position: relative;
 		max-width: rem(328);
+<<<<<<< HEAD
 		padding: calc(var(--spacing) * 2);
+=======
+		padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2) 0 calc(var(--spacing) * 2);
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 		margin-left: auto;
 		margin-right: auto;
 		// background-color: $background;
@@ -115,14 +127,24 @@
 		@include media-breakpoint-up(md) {
 			height: 100%;
 			border: none;
+<<<<<<< HEAD
 			padding: calc(var(--spacing) * 4) calc(var(--spacing) * 2) calc(var(--spacing) * 5);
+=======
+			padding: calc(var(--spacing) * 4) calc(var(--spacing) * 2) 0 calc(var(--spacing) * 2);
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 			border-radius: rem(16);
 			margin-left: 0;
 			margin-right: 0;
 		}
+<<<<<<< HEAD
 		@include media-breakpoint-only(md) {
 			font-size: rem(14);
 		}
+=======
+		// @include media-breakpoint-only(md) {
+		// 	font-size: rem(14);
+		// }
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 
 		&--popular {
 			background-image: radial-gradient(167.29% 93.4% at 96.1% 8.61%, #fffdfc 0%, #f9edda 70.24%, #ffd4c1 100%);
@@ -266,16 +288,33 @@
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
+<<<<<<< HEAD
+=======
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: flex !important;
+		}
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 	}
 
 	&__item-footer {
 		margin-top: auto;
+<<<<<<< HEAD
+=======
+		padding-bottom: calc(var(--spacing) * 2);
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 		@include media-breakpoint-down(md) {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
 		}
+<<<<<<< HEAD
+=======
+		@include media-breakpoint-up(md) {
+			padding-bottom: calc(var(--spacing) * 5);
+		}
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 	}
 
 	&__price-wrap {
@@ -307,7 +346,11 @@
 		display: inline-block;
 		padding: rem(4) rem(8);
 		border: 1px solid #d67644;
+<<<<<<< HEAD
 		max-width: 7.5em;
+=======
+		max-width: 7.6em;
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 		border-radius: $border-radius;
 		color: $primary;
 		// display: none;
@@ -417,9 +460,21 @@
 		}
 		.icon {
 			@include a-cent;
+<<<<<<< HEAD
 			top: 1px;
 			font-size: rem(7);
 		}
+=======
+			@include mt;
+			top: 1px;
+			font-size: rem(7);
+		}
+		&.on {
+			.icon {
+				transform: rotateX(180deg);
+			}
+		}
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 	}
 
 	@include media-breakpoint-up(xl) {

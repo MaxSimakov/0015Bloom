@@ -2,6 +2,7 @@ mixin sQuestions(data)
 	// start sQuestions
 	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
 		.container
+<<<<<<< HEAD
 			.row
 				.col-12
 					+b.question-block.text-center 
@@ -10,4 +11,12 @@ mixin sQuestions(data)
 						+e.BUTTON(type='button').btn
 							+icon('whatsapp')
 							+e.SPAN.span WhatsApp
+=======
+			+e.inner.text-center
+				h2 Остались вопросы?
+				+e.subtitle Напишите нам&nbsp;- мы&nbsp;всегда на&nbsp;связи
+				+e.btn(href="#")
+					+icon('whatsapp')
+					span WhatsApp
+>>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 	// end sQuestions
