@@ -39,6 +39,32 @@
 
 .sCardHorizontalItem {
 	margin-bottom: rem(168);
+	.swiper-wrapper {
+		@include row-sw(16px, lg, 24px);
+	}
+	&__slider {
+		overflow: visible;
+		@include media-breakpoint-up(lg) {
+			overflow: hidden;
+		}
+	}
+	&__slide {
+		@include media-breakpoint-down(lg) {
+			max-width: rem(320);
+		}
+		&.col-lg-12 {
+			@include media-breakpoint-up(lg) {
+				flex: 0 0 auto !important;
+				width: 100% !important;
+			}
+		}
+		&.col-lg-6 {
+			@include media-breakpoint-up(lg) {
+				flex: 0 0 auto !important;
+				width: 50% !important;
+			}
+		}
+	}
 	&__row {
 		--bs-gutter-x: rem(24);
 		--bs-gutter-y: #{rem(16)};
@@ -111,17 +137,27 @@
 		}
 	}
 	&__body {
-		
-		.row {
-			--bs-gutter-x: 16px;
-			--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
-		}
+		// .row {
+		// 	--bs-gutter-x: 16px;
+		// 	--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
+		// }
 	}
 	&__text-block {
 		// margin-bottom: rem(24);
+		@include media-breakpoint-down(lg) {
+			height: 100%;
+			padding: rem(16);
+			border: 1px solid $primary;
+			border-radius: $border-radius;
+
+		}
 
 		p {
 			margin-bottom: rem(8);
+			line-height: calc(24 / 16);
+			@include media-breakpoint-up(lg) {
+				line-height: 1;
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}

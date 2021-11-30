@@ -316,9 +316,9 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 		//loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
 		spaceBetween: 24,
 
 	});
@@ -330,9 +330,21 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 		//loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		spaceBetween: 8,
+
+	});
+	const sCardHorizontalItem = new Swiper('.sCardHorizontalItem__slider--js', {
+		// slidesPerView: 5,
+		// ...defaultSl,
+		slidesPerView: 'auto',
+		freeMode: true,
+		//loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
 		spaceBetween: 8,
 
 	});
