@@ -45,8 +45,14 @@
 		margin-right: rem(24);
 	}
 	.soc {
+		@include roww(16px, m);
 		justify-content: center;
 		margin-top: rem(24);
+		&__item {
+			.icon {
+				font-size: rem(24);
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

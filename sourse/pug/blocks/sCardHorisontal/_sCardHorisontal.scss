@@ -5,34 +5,6 @@
 	// --sTPB: ;
 
 	@include media-breakpoint-up(xl) {
-<<<<<<< HEAD
-		.container{
-			max-width: rem(1230);
-		}
-	}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-} // end.sCardHorisontal
-
-.sCardHorizontalItem{
-	margin-bottom: rem(168);
-	&__row{
-		--bs-gutter-x: 0;
-		align-items: center;
-	}
-	ul{
-		li{
-			list-style: none;
-			position: relative;
-			padding-left: rem(20);
-			margin-bottom: .5em;
-			&::before{
-				content: '';
-=======
 		.container {
 			max-width: rem(1230);
 		}
@@ -92,60 +64,11 @@
 			}
 			&::before {
 				content: "";
->>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 				width: 4px;
 				height: 4px;
 				border-radius: 50%;
 				background-color: currentColor;
 				left: 0;
-<<<<<<< HEAD
-				top: em(6);
-				position: absolute;
-			}
-		}
-	}
-	&:nth-child(even) &__row{
-		flex-direction: row-reverse;
-	}
-	h2{
-		// @include rfs()
-		color: $primary;
-	}
-	p{
-		span{
-			color: $primary;
-			font-size: rem(22);
-			// font-weight: bold;
-		}
-	}
-	&__caption{
-		max-width: rem(570);
-	}
-	&__head{
-		margin-bottom: rem(24);
-	}
-	&__text-block{
-		margin-bottom: rem(24);
-		
-		p{
-			margin-bottom: rem(8);
-		}
-		strong{
-			font-size: rem(22);
-		}
-
-	}
-	&__btn{
-		@extend .btn;
-		// flex-grow: 1;
-		width: calc(50% - 1rem);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 48px;
-		padding: 0 rem(5);
-		.icon{
-=======
 				top: em(10);
 				position: absolute;
 				@include media-breakpoint-up(md) {
@@ -231,24 +154,10 @@
 			margin-right: auto;
 		}
 		.icon {
->>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 			font-size: rem(24);
 			margin-right: rem(8);
 		}
 	}
-<<<<<<< HEAD
-	.btn-outline-primary{
-		&:not(:hover){
-			background-color: #fff;
-		}
-	}
-	&__btns{
-		display: flex;
-		flex-wrap: wrap;
-		@include roww(1rem, m);
-	}
-}
-=======
 	.btn-outline-primary {
 		&:not(:hover) {
 			background-color: #fff;
@@ -265,4 +174,3 @@
 		// @include roww(1rem, m);
 	}
 }
->>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc

@@ -323,7 +323,6 @@ function eventHandler() {
 
 	});
 	// modal window
-<<<<<<< HEAD
 
 	const sYouNeedUs = new Swiper('.sYouNeedUs__slider--js', {
 		// slidesPerView: 5,
@@ -338,12 +337,10 @@ function eventHandler() {
 
 	});
 
-=======
 	$(".sAccess__btn-accordion" ).click(function() {
 		$(this).toggleClass('on')
 		.parents('.sAccess__item').find( ".sAccess__item-content").slideToggle();
 	});
->>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -23,11 +23,7 @@
 	}
 
 	&__slide {
-<<<<<<< HEAD
-		max-width: rem(120);
-=======
 		max-width: 120px;
->>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 		@include media-breakpoint-up(lg) {
 		}
 	}
@@ -84,11 +80,7 @@
 		span {
 			@include mt;
 			position: relative;
-<<<<<<< HEAD
-			font-size: rem(14);
-=======
 			font-size: 14px;
->>>>>>> 98598b3c45ec88f92c5aa169642c517d045787dc
 			line-height: calc(24 / 18);
 			letter-spacing: 0.5px;
 			text-transform: uppercase;
