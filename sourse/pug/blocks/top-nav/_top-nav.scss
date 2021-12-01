@@ -18,7 +18,11 @@
 		// background-color: #000;
 		// border: 1px solid #000;
 	}
+	&__row-main {
+		align-items: center;
+	}
 	&__controls {
+		@include roww(16px, m);
 		display: flex;
 		align-items: center;
 		& > * {
@@ -30,12 +34,58 @@
 				color: $dark;
 			}
 		}
-		&--left {
-			@include roww(16px, m);
-		}
 		&--right {
-			@include roww(14px, m);
 			justify-content: flex-end;
+			.icon {
+				transition: $btn-transition;
+				font-size: rem(24);
+			}
+			button {
+				position: relative;
+				border: none !important;
+				outline: none !important;
+				background-color: transparent;
+				padding: 3px;
+				color: $dark;
+				&:hover {
+					.icon {
+						color: $link-hover-color;
+					}
+				}
+				span {
+					position: absolute;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					top: 0;
+					right: 0;
+					width: rem(14);
+					height: rem(14);
+					color: $white;
+					background-color: $primary;
+					border-radius: 50%;
+					font-size: rem(10);
+					line-height: 1.2;
+				}
+			}
+			a {
+				display: flex;
+				align-items: center;
+				padding-top: 3px;
+				padding-bottom: 3px;
+				transition: $btn-transition;
+				font-size: rem(14);
+				line-height: calc(16 / 14);
+				font-weight: 500;
+				&:hover {
+					.icon {
+						color: $link-hover-color;
+					}
+				}
+				span {
+					margin-left: rem(8);
+				}
+			}
 		}
 	}
 	&__logo {

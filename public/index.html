@@ -36,7 +36,7 @@
 					<div class="container-fluid">
 						<div class="top-nav__row-main row">
 							<div class="col-auto">
-								<div class="top-nav__controls top-nav__controls--left">
+								<div class="top-nav__controls">
 									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 									</div>
 									<a class="top-nav__logo" href="/"><img src="img/logo.png" alt=""/>
@@ -45,10 +45,14 @@
 							</div>
 							<div class="col">
 								<div class="top-nav__controls top-nav__controls--right">
-									<div class="top-nav__notice">уведомления
-									</div>
-									<div class="top-nav__profile">Личный кабинет
-									</div>
+									<button>
+										<svg class="icon icon-notification ">
+											<use xlink:href="img/svg/sprite.svg#notification"></use>
+										</svg><span>2</span>
+									</button><a href="#">
+										<svg class="icon icon-account-header ">
+											<use xlink:href="img/svg/sprite.svg#account-header"></use>
+										</svg><span>Личный кабинет</span></a>
 								</div>
 							</div>
 						</div>

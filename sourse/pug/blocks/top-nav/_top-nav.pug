@@ -23,14 +23,18 @@ mixin top-nav()
 		.container-fluid
 			+e.row-main.row
 				.col-auto
-					+e.controls--left
+					+e.controls
 						+menu-toggle()
 						+e.logo(href="/")
 							img(src="img/logo.png", alt="")
 				.col
 					+e.controls--right
-						+e.notice уведомления
-						+e.profile Личный кабинет
+						button
+							+icon('notification')
+							span 2
+						a(href="#")
+							+icon('account-header')
+							span Личный кабинет
 
 
 	// end top-nav
