@@ -35,12 +35,25 @@
 				.sCardHorizontalItem__row {
 					flex-direction: row;
 				}
+				.sCardHorizontalItem__caption {
+					@include media-breakpoint-only(lg) {
+						padding-left: rem(24);
+						padding-right: 0;
+					}
+				}
 			}
 			&:nth-child(odd) {
 				.sCardHorizontalItem__row {
 					flex-direction: row-reverse;
 				}
+				.sCardHorizontalItem__caption {
+					@include media-breakpoint-only(lg) {
+						padding-right: rem(24);
+						padding-left: 0;
+					}
+				}
 			}
+
 			&:last-child {
 				@include media-breakpoint-down(lg) {
 					padding-bottom: 20px;
@@ -131,6 +144,20 @@
 	}
 	&:nth-child(even) &__row {
 		flex-direction: row-reverse;
+	}
+	&:nth-child(even) {
+		.sCardHorizontalItem__caption {
+			@include media-breakpoint-only(lg) {
+				padding-right: rem(24);
+			}
+		}
+	}
+	&:nth-child(odd) {
+		.sCardHorizontalItem__caption {
+			@include media-breakpoint-only(lg) {
+				padding-left: rem(24);
+			}
+		}
 	}
 	h2 {
 		// @include rfs()
