@@ -4,12 +4,32 @@
 	// --sPB: ;
 	// --sTPB: ;
 
-	@include media-breakpoint-up(xl) {
-		.container {
+	.container {
+		@include media-breakpoint-up(xl) {
 			max-width: rem(1230);
+		}
+		@include media-breakpoint-down(sm) {
+			max-width: rem(432);
 		}
 	}
 	&--reverse {
+		position: relative;
+		overflow: visible;
+		z-index: 3;
+		background-color: $white;
+		border-radius: 0 0 rem(32) rem(32);
+		margin-bottom: rem(-40);
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	left: 0;
+		// 	bottom: rem(-40);
+		// 	height: rem(80);
+		// 	width: 100%;
+		// 	background-color: $white;
+		// 	border-radius: 0 0 rem(32) rem(32);
+		// 	z-index: -1;
+		// }
 		.sCardHorizontalItem {
 			&:nth-child(even) {
 				.sCardHorizontalItem__row {
@@ -19,6 +39,11 @@
 			&:nth-child(odd) {
 				.sCardHorizontalItem__row {
 					flex-direction: row-reverse;
+				}
+			}
+			&:last-child {
+				@include media-breakpoint-down(lg) {
+					padding-bottom: 20px;
 				}
 			}
 		}
@@ -38,7 +63,8 @@
 } // end.sCardHorisontal
 
 .sCardHorizontalItem {
-	margin-bottom: rem(168);
+	padding-bottom: calc(var(--sPB) * 2);
+	// margin-bottom: rem(168);
 	.swiper-wrapper {
 		@include row-sw(16px, lg, 24px);
 	}
@@ -149,7 +175,6 @@
 			padding: rem(16);
 			border: 1px solid $primary;
 			border-radius: $border-radius;
-
 		}
 
 		p {
