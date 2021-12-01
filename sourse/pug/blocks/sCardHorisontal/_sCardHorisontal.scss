@@ -71,15 +71,7 @@
 	}
 } // end.sCardHorisontal
 
-.bg-background {
-	.sCardHorizontalItem {
-		&__row {
-			@include media-breakpoint-up(xl) {
-				--bs-gutter-x: 0;
-			}
-		}
-	}
-}
+
 
 .sCardHorizontalItem {
 	padding-bottom: calc(var(--sPB) * 2);
@@ -154,16 +146,16 @@
 	}
 	&:nth-child(even) {
 		.sCardHorizontalItem__caption {
-			@include media-breakpoint-only(lg) {
-				padding-right: rem(24);
-			}
+			// @include media-breakpoint-only(lg) {
+			// 	padding-right: rem(24);
+			// }
 		}
 	}
 	&:nth-child(odd) {
 		.sCardHorizontalItem__caption {
-			@include media-breakpoint-only(lg) {
-				padding-left: rem(24);
-			}
+			// @include media-breakpoint-only(lg) {
+			// 	padding-left: rem(24);
+			// }
 		}
 	}
 	h2 {
@@ -267,5 +259,14 @@
 		// display: flex;
 		// flex-wrap: wrap;
 		// @include roww(1rem, m);
+	}
+}
+.bg-background {
+	.sCardHorizontalItem {
+		&__row {
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: 0;
+			}
+		}
 	}
 }

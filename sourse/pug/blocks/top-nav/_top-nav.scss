@@ -152,7 +152,33 @@
 			transform-origin: 50% 50%;
 		}
 	}
+	&.fixed {
+		.toggle-menu-mobile {
+			margin-right: 0;
+			margin-left: 0;
+			background-color: transparent;
+			--color: #{$dark};
+			
+		}
+		.top-nav__logo {
+			margin-left: 0;
+			color: $primary;
+		}
+		.top-nav__controls {
 
+			&--left {
+				margin: 0;
+				background-color: $white;
+				border-radius: 0 rem(32) rem(32) rem(32);
+				&:hover {
+					.top-nav__logo {
+						color: $link-hover-color;
+					}
+				}
+			}
+
+		}
+	}
 	// p{
 	// 	@include ell();
 	// }
