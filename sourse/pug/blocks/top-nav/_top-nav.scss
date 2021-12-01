@@ -89,9 +89,8 @@
 		}
 	}
 	&__logo {
-		img {
-			width: rem(64);
-			height: rem(27);
+		.icon {
+			font-size: rem(27);
 		}
 	}
 
@@ -104,6 +103,9 @@
 		height: 40px;
 		background-color: #de8a5e;
 		border-radius: 0 50% 50% 50%;
+		&:hover {
+			background-color: $link-hover-color;
+		}
 		&.on span {
 			--color: transparent;
 		}
