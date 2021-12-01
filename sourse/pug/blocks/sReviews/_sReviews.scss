@@ -4,6 +4,19 @@
 		// --sPB: ;
 		// --sTPB: ;
 
+	.section-title {
+		position: relative;
+		color: $primary;
+	}
+
+	.section-img {
+		position: absolute;
+	}
+	
+	.section-img__1 {
+		top: 50%;	
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
