@@ -20,13 +20,17 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				//- .col-auto.d-lg-none
-				//- 	+menu-toggle()
-				//- .col
-				//- 	.menu-mobile.menu-mobile--js
-				//- 		+menu-toggle()
-				//- 		+mnu()
-					
+		.container-fluid
+			+e.row-main.row
+				.col-auto
+					+e.controls--left
+						+menu-toggle()
+						+e.logo(href="/")
+							img(src="img/logo.png", alt="")
+				.col
+					+e.controls--right
+						+e.notice уведомления
+						+e.profile Личный кабинет
+
+
 	// end top-nav

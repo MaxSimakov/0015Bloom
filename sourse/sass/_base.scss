@@ -30,7 +30,9 @@ body {
 		}
 		margin-right: var(--spacing-end);
 	}
-	// min-width: 575px;
+	// @include media-breakpoint-up(md) {
+	// 	min-width: 1200px;
+	// }
 	-webkit-font-smoothing: antialiased;
 	position: relative;
 	overflow-x: hidden;

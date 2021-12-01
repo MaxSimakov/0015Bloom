@@ -299,6 +299,13 @@ $container-max-widths: (
   lg: 960px,
   xl: 1184px) !default;
 // scss-docs-end container-max-widths
+// $container-max-widths: (
+//   xs: 432px,
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1184px) !default;
+// // scss-docs-end container-max-widths
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
