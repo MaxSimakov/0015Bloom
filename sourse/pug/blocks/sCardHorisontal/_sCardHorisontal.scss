@@ -8,9 +8,9 @@
 		@include media-breakpoint-up(xl) {
 			max-width: rem(1230);
 		}
-		@include media-breakpoint-down(sm) {
-			max-width: rem(432);
-		}
+		// @include media-breakpoint-down(sm) {
+		// 	max-width: rem(432);
+		// }
 	}
 	&--reverse {
 		position: relative;
@@ -37,8 +37,6 @@
 				}
 				.sCardHorizontalItem__caption {
 					@include media-breakpoint-only(lg) {
-						padding-left: rem(24);
-						padding-right: 0;
 					}
 				}
 			}
@@ -48,8 +46,6 @@
 				}
 				.sCardHorizontalItem__caption {
 					@include media-breakpoint-only(lg) {
-						padding-right: rem(24);
-						padding-left: 0;
 					}
 				}
 			}
@@ -75,6 +71,16 @@
 	}
 } // end.sCardHorisontal
 
+.bg-background {
+	.sCardHorizontalItem {
+		&__row {
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: 0;
+			}
+		}
+	}
+}
+
 .sCardHorizontalItem {
 	padding-bottom: calc(var(--sPB) * 2);
 	// margin-bottom: rem(168);
@@ -88,8 +94,12 @@
 		}
 	}
 	&__slide {
+		margin-right: 8px;
 		@include media-breakpoint-down(lg) {
 			max-width: rem(320);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-right: 0;
 		}
 		&.col-lg-12 {
 			@include media-breakpoint-up(lg) {
@@ -105,12 +115,9 @@
 		}
 	}
 	&__row {
-		--bs-gutter-x: rem(24);
+		--bs-gutter-x: #{rem(24)};
 		--bs-gutter-y: #{rem(16)};
 		align-items: center;
-		@include media-breakpoint-up(xl) {
-			--bs-gutter-x: 0;
-		}
 	}
 	picture {
 		text-align: center;

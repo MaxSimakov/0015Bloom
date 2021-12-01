@@ -310,21 +310,10 @@ function eventHandler() {
 		},
 	}
 
-	const sCategories = new Swiper('.sCategories__slider--js', {
-		// slidesPerView: 5,
-		// ...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		//loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		spaceBetween: 24,
 
-	});
 	// modal window
 
-	const sYouNeedUs = new Swiper('.sYouNeedUs__slider--js', {
+	const sliderAutoJs = new Swiper('.slider-auto--js', {
 		// slidesPerView: 5,
 		// ...defaultSl,
 		slidesPerView: 'auto',
@@ -333,21 +322,10 @@ function eventHandler() {
 		// touchRatio: 0.2,
 		// slideToClickedSlide: true,
 		// freeModeMomentum: true,
-		spaceBetween: 8,
+		spaceBetween: 0,
 
 	});
-	const sCardHorizontalItem = new Swiper('.sCardHorizontalItem__slider--js', {
-		// slidesPerView: 5,
-		// ...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		//loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		spaceBetween: 8,
 
-	});
 
 	$(".sAccess__btn-accordion" ).click(function() {
 		$(this).toggleClass('on')

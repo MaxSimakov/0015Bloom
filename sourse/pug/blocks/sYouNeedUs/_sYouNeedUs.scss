@@ -1,77 +1,87 @@
 // start .sYouNeedUs
 .sYouNeedUs {
 	background-color: $background;
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-		.container {
-			@include media-breakpoint-down(lg) {
-				max-width: 100%;
-			}
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	.container {
+		@include media-breakpoint-down(lg) {
+			max-width: 100%;
 		}
-		&__wrraper {
-			background: #DAC8AB;
-			border-radius: 16px;
-			padding: 0 16px 40px;
-			margin: 0 -1rem 0;
+	}
+	&__wrraper {
+		background: #dac8ab;
+		border-radius: 16px;
+		padding: 0 16px 40px;
+		margin: 0 -1rem 0;
+		overflow: visible;
+		@include media-breakpoint-up(lg) {
+			padding: 0 56px 56px;
+			margin: 0;
+			overflow: hidden;
+		}
+	}
+	&__title {
+		color: $primary;
+		@include media-breakpoint-up(md) {
+			margin-top: -66px;
+		}
+	}
+	&__item {
+		max-width: rem(320);
+		@include media-breakpoint-up(lg) {
+			max-width: 255px;
+		}
+		@include media-breakpoint-down(lg) {
+			height: 100%;
+			border-radius: 8px;
+			background: $background;
+			border: 1px solid $primary;
+			line-height: 1.5em;
+			padding: 16px;
+		}
+	}
+	&__slider {
+		margin-top: rem(24);
+		@include media-breakpoint-down(lg) {
 			overflow: visible;
-			@include media-breakpoint-up(lg) {
-				padding: 0 56px 56px;
-				margin: 0;
-				overflow: hidden;
+		}
+	}
+	.swiper-wrapper {
+		@include row-sw(8px, lg, 0);
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(24)};
+		}
+	}
+	&__slide {
+		max-width: rem(320);
+		margin-right: 8px;
+		@include media-breakpoint-up(lg) {
+			margin-right: 0;
+		}
+	}
+	&__item {
+		.medium-subtitle {
+			margin-bottom: 8px;
+		}
+		p {
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
-		&__title {
-			color: $primary;
-			@include media-breakpoint-up(md) {
-				margin-top: -66px;
-			}
-		}
-		&__item {
-			max-width: rem(320);
-			@include media-breakpoint-up(lg) {
-				max-width: 255px;
-			}
-			@include media-breakpoint-down(lg) {
-				height: 100%;
-				border-radius: 8px;
-				background: $background;
-				border: 1px solid $primary;
-				line-height: 1.50em;
-				padding: 16px;
-			}
-		}
-		&__slider {
-			margin-top: rem(24);
-			@include media-breakpoint-down(lg) {
-				overflow: visible;
-			}
-		}
-		.swiper-wrapper {
-			@include row-sw(8px, lg, 0);
-			@include media-breakpoint-up(lg) {
-				--bs-gutter-x: #{rem(24)};
-			}
-		}
-		&__slide {
-			max-width: rem(320);
-		}
-		&__item {
-			.medium-subtitle {
-				margin-bottom: 8px;
-			}
-			p{
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sYouNeedUs

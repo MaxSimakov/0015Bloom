@@ -2,7 +2,7 @@ mixin sCategories(data)
 	// start sCategories
 	+b.sCategories.section#sCategories&attributes(attributes)
 		.container
-			+e.slider--js.swiper
+			+e.slider.swiper.slider-auto--js
 				.swiper-wrapper
 					mixin slide(i, l, ...items)
 						+e.slide.swiper-slide

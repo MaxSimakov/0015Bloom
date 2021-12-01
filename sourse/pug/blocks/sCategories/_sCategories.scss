@@ -24,7 +24,9 @@
 
 	&__slide {
 		max-width: 120px;
+		margin-right: 24px;
 		@include media-breakpoint-up(lg) {
+			margin-right: 0;
 		}
 	}
 

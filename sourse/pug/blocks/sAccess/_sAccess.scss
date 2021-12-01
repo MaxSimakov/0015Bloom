@@ -22,15 +22,16 @@
 		}
 	}
 	.section-title {
-		max-width: rem(328);
-		margin-left: auto;
-		margin-right: auto;
-		@include media-breakpoint-up(sm) {
-			max-width: rem(400);
-		}
-		@include media-breakpoint-up(md) {
-			max-width: 100%;
-		}
+		// max-width: rem(328);
+		// margin-left: auto;
+		// margin-right: auto;
+		// @include media-breakpoint-up(sm) {
+		// 	max-width: rem(400);
+		// 	max-width: rem(400);
+		// }
+		// @include media-breakpoint-up(md) {
+		// 	max-width: 100%;
+		// }
 		h2 {
 			color: $primary;
 			margin-left: auto;
@@ -102,7 +103,7 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		max-width: rem(328);
+		// max-width: rem(328);
 		padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2) 0 calc(var(--spacing) * 2);
 		margin-left: auto;
 		margin-right: auto;

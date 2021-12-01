@@ -8,12 +8,12 @@
 	@include media-breakpoint-up(xl) {
 		--bs-body-font-size: #{$em-base};
 	}
-	--sPT: #{rem(80 * 0.5)};
-	--sPB: #{rem(80 * 0.5)};
+	--sPT: #{rem(70 * 0.5)};
+	--sPB: #{rem(70 * 0.5)};
 	--sTPB: #{rem(40 * 0.5)};
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(80)};
-		--sPB: #{rem(80)};
+		--sPT: #{rem(70)};
+		--sPB: #{rem(70)};
 		--sTPB: #{rem(40)};
 	}
 
