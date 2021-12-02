@@ -5,9 +5,15 @@
 		// --sTPB: ;
 	min-height: rem(442);
 	padding-top: calc(var(--sPT) + rem(40));
+	margin-bottom: rem(64);
+
+	@include media-breakpoint-up(sm) {
+		min-height: rem(650);
+	}
 	@include media-breakpoint-up(md) {
 		padding-top: calc(var(--sPT) + rem(40));
 		min-height: calc(var(--vh, 1vh) * 100 + rem(40));
+		margin-bottom: 0;
 	}
 	display: flex;
 	align-items: center;
