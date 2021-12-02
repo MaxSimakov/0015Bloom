@@ -1,14 +1,44 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary);
 	//
-	position: fixed;
 	left: 0;
+	@include media-breakpoint-down(md) {
+		background: #FFFFFF;
+		/* Deep */
+		
+		box-shadow: 0px 0px 8px rgba(214, 118, 68, 0.22);
+	}
+	@include media-breakpoint-down(md) {
+		
+		position: fixed;
+		z-index: 1000;
+	}
+	&__col{
+		position: relative;
+		z-index: 1000;
+		padding: rem(12) 0;
+		top: 0;
+			@include media-breakpoint-up(md) {
+				
+				position: fixed;
+				&--left{
+					left: calc(var(--bs-gutter-x) / 2);
+				}
+				
+				&--right{
+					right: calc(var(--bs-gutter-x) / 2);
+				}
+			}
+
+	}
+	@include media-breakpoint-up(md) {
 	top: 0;
+	bottom: auto;
+	}
+	bottom: 0;
 	width: 100%;
-	padding: rem(12) 0;
 	// pointer-events: none;
 	// width: 100vw;
-	z-index: 10;
 	--bs-gutter-x: 1rem;
 	@include media-breakpoint-up(lg) {
 		// background-color: red;

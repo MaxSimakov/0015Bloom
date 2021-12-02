@@ -22,19 +22,20 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container-fluid
 			+e.row-main.row
-				.col-auto
+				+e.col--left.col-auto
 					+e.controls--left
 						+menu-toggle()
 						+e.logo(href="/")
 							+icon('logo')
 				.col
+				+e.col--right.col-auto
 					+e.controls--right
 						button
 							+icon('notification')
 							span 2
-						a(href="#")
+						+b.cabinet-link(href="#")
 							+icon('account-header')
-							span Личный кабинет
+							span.d-none.d-md-inline Личный кабинет
 
 
 	// end top-nav

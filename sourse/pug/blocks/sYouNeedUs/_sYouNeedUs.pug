@@ -3,7 +3,9 @@ mixin sYouNeedUs(data)
 	+b.SECTION.sYouNeedUs.section#sYouNeedUs&attributes(attributes)
 		.container
 			+e.wrraper
-				+pic('youNeedUsIMG').text-center
+				+pic('youNeedUsIMG.png').text-center
+				//- picture.text-center
+				//- 	img(src="img/youNeedUsIMG.png" laoding="lazy", alt="")
 				+e.H2.title.text-center Мы&nbsp;нужны вам, если
 				+e.slider.swiper.slider-auto--js
 					// Additional required wrapper
