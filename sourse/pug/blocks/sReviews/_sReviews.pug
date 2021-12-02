@@ -15,7 +15,7 @@ mixin sReviews(data)
 				.swiper-wrapper
 					mixin item(i, l, ...items) 
 						+e.slide.swiper-slide
-							+e.A.item(data-src=`${l}`, data-fancybox="sReviews-gallery")
+							+e.A.item(href=`${l}`, data-fancybox="sReviews-gallery")
 								+e.img-wrap
 									+pic(`sReviews-slider-${i}`, "bg", 0)
 									+icon("youtube-play")
