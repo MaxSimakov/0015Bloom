@@ -15,7 +15,7 @@ mixin sReviews(data)
 				.swiper-wrapper
 					mixin item(n, i, l, ...items) 
 						+e.slide.swiper-slide
-							+e.item(href=`${l}`, data-fancybox=`ref-${n}`, data-caption="Отзыв от Натальи Бурковой") 
+							+e.item(href=`${l}`, data-fancybox=`sReviews-gallery-ref-${n}`)
 								+e.img-wrap
 									+pic(`sReviews-slider-${i}`, "bg", 0)
 									+icon("youtube-play")

@@ -48,6 +48,7 @@
 		align-items: center;
 	}
 	&__controls {
+		@include mt;
 		@include roww(16px, m);
 		display: flex;
 		align-items: center;
@@ -56,20 +57,20 @@
 		}
 		a {
 			display: inline-block;
-			&:not(:hover) {
-				color: $dark;
-			}
+
+			color: $dark;
 		}
 		&--right {
 			justify-content: flex-end;
 			.icon {
-				transition: $btn-transition;
+				@include mt;
 				font-size: rem(32);
 				@include media-breakpoint-up(md) {
 					font-size: rem(24);
 				}
 			}
 			button {
+				@include mt;
 				position: relative;
 				border: none !important;
 				outline: none !important;
@@ -101,12 +102,13 @@
 				}
 			}
 			a {
+				@include mt;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				padding-top: 3px;
 				padding-bottom: 3px;
-				transition: $btn-transition;
+				
 				font-size: rem(14);
 				line-height: calc(16 / 14);
 				font-weight: 500;
@@ -137,6 +139,7 @@
 	}
 
 	.toggle-menu-mobile {
+		@include mt;
 		--h: 2px;
 		--color: #{$white};
 		--position: 5px;
@@ -150,7 +153,8 @@
 		}
 		&.on span {
 			--color: transparent;
-			&::after, &::before {
+			&::after,
+			&::before {
 				background-color: $white;
 			}
 		}
@@ -206,7 +210,8 @@
 				--color: #{$dark};
 				&.on span {
 					--color: transparent;
-					&::after, &::before {
+					&::after,
+					&::before {
 						background-color: $dark;
 					}
 				}
@@ -220,6 +225,7 @@
 					margin: 0;
 					background-color: $white;
 					border-radius: 0 rem(32) rem(32) rem(32);
+					filter: drop-shadow(0px 0px 8px rgba(214, 118, 68, 0.22));
 					&:hover {
 						.top-nav__logo {
 							color: $link-hover-color;
@@ -233,6 +239,7 @@
 						margin-right: rem(4);
 						border-radius: 50%;
 						background-color: $white;
+						filter: drop-shadow(0px 0px 8px rgba(214, 118, 68, 0.22));
 						span {
 							top: rem(5);
 							right: rem(6);
@@ -246,6 +253,7 @@
 				margin-left: rem(4);
 				border-radius: 50%;
 				background-color: $white;
+				filter: drop-shadow(0px 0px 8px rgba(214, 118, 68, 0.22));
 				span {
 					display: none;
 				}
