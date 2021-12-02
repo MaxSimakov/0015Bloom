@@ -3,7 +3,11 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+		.section-title {
+			h2 {
+				color: $primary;
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
