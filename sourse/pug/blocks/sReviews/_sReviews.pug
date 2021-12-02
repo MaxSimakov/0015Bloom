@@ -9,23 +9,23 @@ mixin sReviews(data)
 					span курс#[+pic('sReviews-3', '', 0)]в
 			+b.count
 				h3 15 000
-				p женщин купили наши<br>курсы тренировок
+				p женщин купили наши курсы тренировок
 			//- +e.wrraper
 			+e.slider.swiper.slider-auto--js
 				.swiper-wrapper
-					mixin item(i, l, ...items) 
+					mixin item(n, i, l, ...items) 
 						+e.slide.swiper-slide
-							+e.A.item(data-src=`${l}`, data-fancybox="sReviews-gallery")
+							+e.item(href=`${l}`, data-fancybox=`ref-${n}`, data-caption="Отзыв от Натальи Бурковой") 
 								+e.img-wrap
 									+pic(`sReviews-slider-${i}`, "bg", 0)
 									+icon("youtube-play")
 								h3
 									each item in items
 										span!= item
-					+item(1, `https://www.youtube.com/watch?v=z2X2HaTvkl8`, `Salma`, `Theron`)
-					+item(2, `https://www.youtube.com/watch?v=qwi6POwtfnc`, `Буркова`, `Наталья`)
-					+item(3, `https://www.youtube.com/watch?v=HE2OlPmH7xs`, `Анжелина`, `Терон`)
-					+item(1, `https://www.youtube.com/watch?v=z2X2HaTvkl8`, `Salma`, `Theron`)
-					+item(2, `https://www.youtube.com/watch?v=qwi6POwtfnc`, `Буркова`, `Наталья`)
-					+item(3, `https://www.youtube.com/watch?v=HE2OlPmH7xs`, `Анжелина`, `Терон`)
+					+item(1, 1, `https://www.youtube.com/watch?v=z2X2HaTvkl8`, `Salma`, `Theron`)
+					+item(2, 2, `https://www.youtube.com/watch?v=qwi6POwtfnc`, `Буркова`, `Наталья`)
+					+item(3, 3, `https://www.youtube.com/watch?v=HE2OlPmH7xs`, `Анжелина`, `Терон`)
+					+item(4, 1, `https://www.youtube.com/watch?v=z2X2HaTvkl8`, `Salma`, `Theron`)
+					+item(5, 2, `https://www.youtube.com/watch?v=qwi6POwtfnc`, `Буркова`, `Наталья`)
+					+item(6, 3, `https://www.youtube.com/watch?v=HE2OlPmH7xs`, `Анжелина`, `Терон`)
 	// end sReviews				
