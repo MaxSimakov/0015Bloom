@@ -7,5 +7,25 @@ mixin sReviews(data)
 					span Отзывы#[+pic('sReviews-1', '', 0)]
 					span уч#[+pic('sReviews-2', '', 0)]стниц
 					span курс#[+pic('sReviews-3', '', 0)]в
-
-	// end sReviews
+			+b.count
+				h3 15 000
+				p женщин купили наши<br>курсы тренировок
+			//- +e.wrraper
+			+e.slider.swiper.slider-auto--js
+				.swiper-wrapper
+					mixin item(i, l, ...items) 
+						+e.slide.swiper-slide
+							+e.A.item(data-src=`${l}`, data-fancybox="sReviews-gallery")
+								+e.img-wrap
+									+pic(`sReviews-slider-${i}`, "bg", 0)
+									+icon("youtube-play")
+								h3
+									each item in items
+										span!= item
+					+item(1, `https://www.youtube.com/watch?v=z2X2HaTvkl8`, `Salma`, `Theron`)
+					+item(2, `https://www.youtube.com/watch?v=qwi6POwtfnc`, `Буркова`, `Наталья`)
+					+item(3, `https://www.youtube.com/watch?v=HE2OlPmH7xs`, `Анжелина`, `Терон`)
+					+item(1, `https://www.youtube.com/watch?v=z2X2HaTvkl8`, `Salma`, `Theron`)
+					+item(2, `https://www.youtube.com/watch?v=qwi6POwtfnc`, `Буркова`, `Наталья`)
+					+item(3, `https://www.youtube.com/watch?v=HE2OlPmH7xs`, `Анжелина`, `Терон`)
+	// end sReviews				
