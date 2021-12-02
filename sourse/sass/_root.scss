@@ -27,7 +27,7 @@
 	--swiperColorDefHover: var(--bs-primary);
 	--swiperBgDefHover: #ffffff;
 
-	--fancybox-bg: rgba(24, 24, 27, 0.77);
+	--fancybox-bg: #{rgba($dark, 0.7)};
 
 	//  --carousel-button-width: 48px;
 	//  --carousel-button-height: 48px;

@@ -101,6 +101,45 @@ a {
 	}
 }
 
+.modal-win--team {
+	max-width: rem(565);
+	border-radius: rem(16);
+}
+
+.team-more {
+	&__header {
+		text-align: center;
+		color: $primary;
+		margin-bottom: rem(25);
+		picture {
+			img {
+				border-radius: rem(81);
+			}
+		}
+	}
+	&__title {
+		margin-top: rem(11);
+	}
+	&__post {
+		display: inline-block;
+		border: 1px solid rgba(214, 118, 68, 0.4);
+		border-radius: 8px 8px 8px 0px;
+		margin-top: rem(4);
+		padding: 3px 8px 5px 8px;
+	}
+	&__paragraph {
+		margin-bottom: rem(24);
+	}
+	&__subtitle {
+		font-weight: bold;
+		font-size: rem(17);
+		color: $dark;
+	}
+	&__text {
+		color: $dark;
+		margin-top: rem(8);
+	}
+}
 
 // 
 @include media-breakpoint-up(xl) {}
