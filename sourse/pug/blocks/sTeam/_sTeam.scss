@@ -7,9 +7,9 @@
 	@include media-breakpoint-up(md) {
 		// --sTPB: #{rem(5)};
 	}
-	--imgW: 27.77%;
+	--imgW: 80px;
 	@include media-breakpoint-up(sm) {
-		--imgW: 31%;
+		--imgW: 184px;
 	}
 	@include media-breakpoint-up(md) {
 		// --imgW: 30%;
@@ -52,11 +52,11 @@
 			@include media-breakpoint-up(md) {
 				max-width: rem(489);
 				--tY: #{rem(-30)};
-				padding-left: rem(45);
+				// padding-left: rem(45);
 				
 				picture {
-					transform: scale(1.35);
-					transform-origin: top right;
+					// transform: scale(1.35);
+					
 				}
 			}
 		}
@@ -101,7 +101,7 @@
 	}
 
 	picture {
-		@include block;
+		// @include block;
 		@include mt;
 		position: absolute;
 		width: var(--imgW);
@@ -115,9 +115,13 @@
 			top: rem(75);
 		}
 		img {
-			position: absolute;
-			left: 0;
-			top: 0;
+			// transform-origin: top right;
+			// position: absolute;
+			// left: 0;
+			// top: 0;
+			// @include mt;
+			// transform: var(-);
+			// max-width: none;
 		}
 	}
 	&__heading {

@@ -81,6 +81,12 @@
 
 .sCardHorizontalItem {
 	padding-bottom: calc(var(--sPB) * 2);
+	@include media-breakpoint-up(xxl) {
+		img{
+			// max-width: 468px;
+			max-width: none
+		}
+	}
 	// margin-bottom: rem(168);
 	.swiper-wrapper {
 		@include row-sw(16px, lg, 24px);
