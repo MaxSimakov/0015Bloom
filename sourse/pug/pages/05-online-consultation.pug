@@ -1,0 +1,47 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent
+	+pageHead({
+		t: `Консультации с&nbsp;врачом`,
+		p: `Не&nbsp;нашли ответ на&nbsp;свой вопрос или хотите получить личную консультацию со&nbsp;специалистом? На&nbsp;этой странице вы&nbsp;можете записаться на&nbsp;онлайн-консультацию с&nbsp;одним из&nbsp;наших специалистов и&nbsp;подробно разобрать свой вопрос`,
+		btn: `Записаться`
+	})
+	//- +mob-mnu()
+	//- +header()
+	+top-nav()
+	//- +topLine()
+	//- .bg-background
+	//- 	+headerBlock()
+	//- 	+sCategories()
+	//- 	+sCardHorisontal()
+	//- 	+sYouNeedUs()
+	+sTeam5()
+	//- +sAccess()
+	//- +sQuestions()
+	//- +sReviews()
+	//- +sCardHorisontal2()
+	//- //- +sForm()
+	//- //- +sContact()
+	//- +footer-main()
+	+footer
+
+
