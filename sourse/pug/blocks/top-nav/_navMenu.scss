@@ -4,11 +4,14 @@
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-    background: radial-gradient(circle 32px at var(--x, 0) var(--y, 0), #D67644 99%, #fff 100%) fixed;
-    background-clip: text;
-    -webkit-background-clip: text;
-   color: #fff;
-    -webkit-text-fill-color: transparent;
+		@include media-breakpoint-up(md){
+
+			background: radial-gradient(circle 32px at var(--x, 0) var(--y, 0), #D67644 99%, #fff 100%) fixed;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		color: #fff;
 	li {
 		// margin-left: 0;
 		// margin-right: 0;
@@ -80,18 +83,24 @@
 // }
 
 .menu-mobile {
-	&:before {
-    content: "";
-    position: fixed;
-    width: 64px;
-    height: 64px;
-    background: #fff;
-    border-radius: 50%;
-    top: var(--y, 0);
-    left: var(--x, 0); 
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
+		@include media-breakpoint-up(md) {
+
+			&:before {
+				content: "";
+				position: fixed;
+				width: 64px;
+				height: 64px;
+				margin-left: -32px;
+				margin-top: -32px;
+				background: #fff;
+				border-radius: 50%;
+				transform: translate3d( var(--x, 0), var(--y, 0), 0);
+				top: 0;
+				left: 0; 
+				z-index: -1;
+				// @include mt;
+			}
+		}
 	position: fixed !important;
 		@include media-breakpoint-up(md){
 

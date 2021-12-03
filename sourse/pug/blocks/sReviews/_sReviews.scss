@@ -45,8 +45,6 @@
 	&__slider {
 		overflow: visible;
 	}
-	.swiper-wrapper {
-	}
 	&__slide {
 		padding-bottom: rem(45);
 		padding-top: rem(10);
@@ -180,7 +178,9 @@
 
 .fancybox__caption {
 	font-size: rem(32);
-	margin-right: auto;
+	width: 100%;
+	max-width: rem(960);
+	@extend .mono;
 	@include media-breakpoint-down(sm) {
 		font-size: 1.6em;
 	}

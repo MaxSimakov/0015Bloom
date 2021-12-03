@@ -195,8 +195,10 @@ body.fixed {
 		height: 40px;
 		background-color: #de8a5e;
 		border-radius: 0 50% 50% 50%;
+			@include media-breakpoint-up(md){
 		&:hover {
 			background-color: $link-hover-color;
+		}
 		}
 		&.on span {
 			--color: transparent;

@@ -6,11 +6,11 @@ const JSCCommon = {
 
 		Fancybox.bind(link, {
 			arrows: false,
-			infobar: false,
+			// infobar: false,
 			touch: false,
 			infinite: false,
 			dragToClose: false,
-			type: 'inline',
+			// type: 'inline',
 			autoFocus: false,
 			l10n: {
 				Escape: "Закрыть",
@@ -272,10 +272,12 @@ function eventHandler() {
 	const mask = document.querySelector('.menu-mobile ul');
 	const mainModal = document.querySelector('.menu-mobile');
 
-	mainModal.onmousemove = function (e) {
+	mainModal.addEventListener('mousemove', (e) => {
 		mainModal.style.setProperty('--x', (e.clientX) + 'px');
 		mainModal.style.setProperty('--y', (e.clientY) + 'px');
-	}
+	}, { passive: true });
+	// mainModal.onmousemove = function (e) {
+	// }
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
