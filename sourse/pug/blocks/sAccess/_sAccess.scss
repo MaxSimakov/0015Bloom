@@ -1,11 +1,12 @@
 // start .sAccess
 .sAccess {
-	// --sPT: ;
 	// --sPB: ;
 	--spacing: #{rem(8)};
 	--sTPB: calc(var(--spacing) * 6);
 	@include media-breakpoint-up(md) {
 		--sTPB: calc(var(--spacing) * 10);
+		--sPT: 104px;
+		--sPB: 48px;
 	}
 	@include media-breakpoint-only(md) {
 		--spacing: #{rem(6)};

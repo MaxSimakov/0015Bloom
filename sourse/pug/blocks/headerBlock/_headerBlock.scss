@@ -11,6 +11,10 @@
 	text-align: center;
 	img{
 		@extend .res-i;
+		@include media-breakpoint-up(xxl) {
+
+			margin-top: -19%;
+		}
 		margin-top: -15%;
 			@include media-breakpoint-down(md){
 				margin-left: -30px;

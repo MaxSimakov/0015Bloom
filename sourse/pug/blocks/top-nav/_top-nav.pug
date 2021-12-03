@@ -30,12 +30,12 @@ mixin top-nav()
 				.col
 				+e.col--right.col-auto
 					+e.controls--right
-						button
+						+e.btn(href="#")
 							+icon('notification')
-							span 2
-						+b.cabinet-link(href="#")
+							+e.btn-count 2
+						+e.btn(href="#") 
 							+icon('account-header')
-							span Личный кабинет
-
+							+e.SPAN.btn-text Личный кабинет
+		+mob-mnu()
 
 	// end top-nav

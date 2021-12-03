@@ -2,8 +2,12 @@
 .sReviews {
 	// --sPT: ;
 	// --sPB: ;
-	// --sTPB: ;
-
+	position: relative;
+	z-index: 4;
+	@include media-breakpoint-up(xl) {
+		--sPB: 174px;
+		--sTPB: 16px;
+	}
 	.section-title {
 		position: relative;
 		color: $primary;
@@ -34,52 +38,61 @@
 	.count {
 		margin-bottom: rem(32);
 		@include media-breakpoint-up(md) {
-			margin-bottom: rem(60);
+			margin-bottom: rem(40);
 		}
 	}
 	&__slider {
 		overflow: visible;
 	}
 	.swiper-wrapper {
-		padding-bottom: rem(45);
-		padding-top: rem(10);
-		@include media-breakpoint-up(md) {
-			padding-top: rem(25);
-			padding-bottom: rem(52);
-		}
+	}
+	padding-bottom: rem(45);
+	padding-top: rem(10);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(25);
+		padding-bottom: rem(52);
 	}
 	&__slide {
 		@include mt;
-		max-width: rem(196);
-		margin-right: rem(48);
-		@include media-breakpoint-up(md) {
-			max-width: rem(340);
-			margin-right: rem(135);
-			&:nth-child(2) {
-				margin-right: rem(96);
-			}
+		max-width: rem(196 + 48);
+		padding-right: rem(48);
+		@include media-breakpoint-up(md) { 
+			padding-right: rem(135);
+			// &:nth-child(2) {
+			// 	margin-right: rem(96);
+			// }
 		}
 		@include media-breakpoint-up(md) {
-			max-width: rem(336);
+			max-width: rem(336 + 135);
 		}
 
 		&.swiper-slide-next {
-			transform: translateY(#{rem(45)});
+			--tY: #{rem(45)};
 			@include media-breakpoint-up(md) {
-				transform: translateY(#{rem(52)});
+				--tY: #{rem(52)};
 			}
 		}
 		&.swiper-slide-next + .swiper-slide {
-			transform: translateY(#{rem(-10)});
+			--tY: #{rem(-10)};
 			@include media-breakpoint-up(md) {
-				transform: translateY(#{rem(-25)});
+				--tY: #{rem(-25)};
 			}
 		}
 	}
 	&__item {
+		transform: translateY(var(--tY)); 
 		display: block;
 		cursor: pointer;
 		color: $white;
+		&::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			position: absolute;
+			z-index: 4;
+		}
 		&:hover {
 			picture {
 				&::after {
