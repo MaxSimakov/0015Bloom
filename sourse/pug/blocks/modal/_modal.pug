@@ -7,7 +7,7 @@ mixin description(subtitle, ...texts)
 mixin team-more(i, h, s)
 	+b.team-more 
 		+e.header 
-			+pic(`doctor-img-${i}`)
+			+pic(`doctor-img-${i}.jpg`)
 			h5!= h
 			span!= s
 		+e.body
@@ -39,8 +39,8 @@ mixin modal()
 				.row 
 					mixin lic(n)
 						.col-6.col-sm-3
-							+e.link(href=`img/@2x/certificate-${n}.jpg`, data-fancybox="team-sertificates")
-								+pic(`certificate-small-${n}`, 'bg', 0)
+							+e.link(href=`img/certificate-${n}.jpg`, data-fancybox="team-sertificates")
+								+pic(`certificate-small-${n}.jpg`, 'bg', 0)
 								span 
 									+icon("zoom")
 					+lic(1)
