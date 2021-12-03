@@ -19,8 +19,9 @@
 		background-color: $white;
 		border-radius: 0 0 rem(32) rem(32);
 		margin-bottom: rem(-40);
+		@include media-breakpoint-up(xl) {
+		margin-bottom: rem(-80);
 		.sCardHorizontalItem{
-			@include media-breakpoint-up(xl) {
 				margin-bottom: 52px;
 			}
 		}

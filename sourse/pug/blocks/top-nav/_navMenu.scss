@@ -75,7 +75,11 @@
 
 .menu-mobile {
 	position: fixed !important;
-	z-index: 999; 
+		@include media-breakpoint-up(md){
+
+			z-index: 1001; 
+		}
+		z-index: 999; 
 	height: calc(var(--vh, 1vh) * 100);
 	width: 100%;
 	top: 0; 
@@ -107,9 +111,15 @@
 	will-change: transform;
 
 	.toggle-menu-mobile {
+			@include media-breakpoint-down(md){
+				display: none !important;
+			}
 		--h: #{em(2)};
 		--color: #{$primary};
 		--position: calc(var(--h) * 2);
+		position: absolute !important;
+		left: 30px;
+		top: 15px;
 		&.on span {
 			--color: transparent;
 		}
@@ -120,7 +130,8 @@
 		}
 		display: block;
 		height: calc(var(--h) * 12);
-		position: relative;
+		position: absolute;
+		
 		font-size: 32px;
 		width: 1em;
 		cursor: pointer;
