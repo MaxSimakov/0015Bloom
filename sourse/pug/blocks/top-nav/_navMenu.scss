@@ -4,6 +4,11 @@
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
+    background: radial-gradient(circle 32px at var(--x, 0) var(--y, 0), #D67644 99%, #fff 100%) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+   color: #fff;
+    -webkit-text-fill-color: transparent;
 	li {
 		// margin-left: 0;
 		// margin-right: 0;
@@ -16,7 +21,8 @@
 			}
 		@include rfs(40px);
 		margin-bottom: calc(30 / 48 * 1em);
-		@extend .mono;color: #fff !important;
+		@extend .mono;
+		// color: #fff !important;
 		// padding: rem(20) calc(var(--bs-gutter-x) / 2);
 
 	}
@@ -74,6 +80,18 @@
 // }
 
 .menu-mobile {
+	&:before {
+    content: "";
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background: #fff;
+    border-radius: 50%;
+    top: var(--y, 0);
+    left: var(--x, 0); 
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
 	position: fixed !important;
 		@include media-breakpoint-up(md){
 

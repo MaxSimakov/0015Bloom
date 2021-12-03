@@ -266,6 +266,16 @@ function eventHandler() {
 		$(this).toggleClass('on')
 		.parents('.sAccess__item').find( ".sAccess__item-content").slideToggle();
 	});
+
+
+
+	const mask = document.querySelector('.menu-mobile ul');
+	const mainModal = document.querySelector('.menu-mobile');
+
+	mainModal.onmousemove = function (e) {
+		mainModal.style.setProperty('--x', (e.clientX) + 'px');
+		mainModal.style.setProperty('--y', (e.clientY) + 'px');
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
