@@ -2,7 +2,7 @@
 .sTeam {
 	// --sPT: ;
 	// --sPB: ;
-	--sTPB: #{rem(50)};
+	--sTPB: #{rem(5)};
 	position: relative;
 	@include media-breakpoint-up(md) {
 		--sTPB: #{rem(75)};
@@ -37,18 +37,20 @@
 		overflow: visible;
 	}
 	&__slide {
-		@include mt;
+		// @include mt;
 		max-width: rem(288);
 		margin-right: rem(24);
+		padding-top: rem(45);
+		padding-bottom: rem(45);
 		@include media-breakpoint-up(md) {
 			margin-right: rem(57);
 			max-width: rem(435);
 		}
 		&.swiper-slide-active {
-			transform: translateY(#{rem(-20)});
+			--tY: #{rem(-20)};
 			@include media-breakpoint-up(md) {
 				max-width: rem(489);
-				transform: translateY(#{rem(-30)});
+				--tY: #{rem(-30)};
 				padding-left: rem(45);
 				
 				picture {
@@ -58,14 +60,16 @@
 			}
 		}
 		&.swiper-slide-next {
-			transform: translateY(#{rem(38)});
+			--tY: #{rem(38)};
 			@include media-breakpoint-up(md) {
-				transform: translateY(#{rem(25)});
+				--tY: #{rem(25)};
 			}
 		}
 	}
 
 	&__item {
+		@include mt;
+		transform: translateY(var(--tY));
 		position: relative;
 		@include media-breakpoint-up(md) {
 			padding-left: calc(var(--imgW) + rem(12));

@@ -64,19 +64,21 @@
 		}
 
 		&.swiper-slide-next {
-			transform: translateY(#{rem(45)});
+			--tY: #{rem(45)};
 			@include media-breakpoint-up(md) {
-				transform: translateY(#{rem(52)});
+				--tY: #{rem(52)};
 			}
 		}
 		&.swiper-slide-next + .swiper-slide {
-			transform: translateY(#{rem(-10)});
+			--tY: #{rem(-10)};
 			@include media-breakpoint-up(md) {
-				transform: translateY(#{rem(-25)});
+				--tY: #{rem(-25)};
 			}
 		}
 	}
 	&__item {
+		transform: translateY(var(--tY));
+		position: relative;
 		display: block;
 		cursor: pointer;
 		color: $white;

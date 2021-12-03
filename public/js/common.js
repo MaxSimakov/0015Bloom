@@ -1,10 +1,6 @@
 "use strict";
 const JSCCommon = {
 
-	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-
 	modalCall() {
 		const link = ".link-modal-js";
 
@@ -56,85 +52,29 @@ const JSCCommon = {
 		if (linkModal) addData();
 	},
 	// /modalCall
-	toggleMenu() {
-		const toggle = this.btnToggleMenuMobile;
-		const menu = this.menuMobile;
+	mobileMenu() {
 		document.addEventListener("click", function (event) {
+			const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
+			const menu = document.querySelector(".menu-mobile--js");
 			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
-			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed")); 
+			if (menu.classList.contains("active")) { 
+				menu.classList.add("close");
+				menu.classList.remove("active");
+				setTimeout(() => {
+					menu.classList.remove("close"); 
+				}, 500); 
+			}
+			else{	
+				menu.classList.add("active");
+			}
+			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
-	closeMenu() {
-		let menu = this.menuMobile;
-		if (!menu) return;
-		if (menu.classList.contains("active")) {
-			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
-			this.menuMobile.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed")); 
-		}
-
-	},
-	mobileMenu() {
-		if (!this.menuMobileLink) return;
-		this.toggleMenu();
-		document.addEventListener('mouseup', (event) => {
-			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".menu-mobile .menu a"); // (1)
-			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-			if (!container && !toggle) this.closeMenu();
-		}, { passive: true });
-
-		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
-		}, { passive: true });
-	},
-	// /mobileMenu
 
 	// tabs  .
-	tabscostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
-		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-		// tabs.forEach(element => {
-		// 	let tabs = element;
-		// 	const tabsCaption = tabs.querySelector(".tabs__caption");
-		// 	const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-		// 	const tabsWrap = tabs.querySelector(".tabs__wrap");
-		// 	const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-		// 	const random = Math.trunc(Math.random() * 1000);
-		// 	tabsBtn.forEach((el, index) => {
-		// 		const data = `tab-content-${random}-${index}`;
-		// 		el.dataset.tabBtn = data;
-		// 		const content = tabsContent[index];
-		// 		content.dataset.tabContent = data;
-		// 		if (!content.dataset.tabContent == data) return;
-
-		// 		const active = content.classList.contains('active') ? 'active' : '';
-		// 		// console.log(el.innerHTML);
-		// 		content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary  mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
-		// 	})
-
-
-		// 	tabs.addEventListener('click', function (element) {
-		// 		const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
-		// 		if (!btn) return;
-		// 		const data = btn.dataset.tabBtn;
-		// 		const tabsAllBtn = this.querySelectorAll(`[data-tab-btn`);
-		// 		const content = this.querySelectorAll(`[data-tab-content]`);
-		// 		tabsAllBtn.forEach(element => {
-		// 			element.dataset.tabBtn == data
-		// 				? element.classList.add('active')
-		// 				: element.classList.remove('active')
-		// 		});
-		// 		content.forEach(element => {
-		// 			element.dataset.tabContent == data
-		// 				? (element.classList.add('active'), element.previousSibling.classList.add('active'))
-		// 				: element.classList.remove('active')
-		// 		});
-		// 	})
-		// })
+	tabscostume(tab) { 
 
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)

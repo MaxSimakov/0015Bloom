@@ -1,9 +1,38 @@
+body.fixed{
+	@include media-breakpoint-down(md) {
+	.top-nav{
+		&::before{
+			// transform: translateY(100%);
+			// opacity: 0;
+			// z-index: -1200;
+		}
+		a,
+		&__logo{
+			color: #fff;
+		}
+		&__btn-count{
+			background-color: #fff;
+			color: $body-color;
+		}
+		}
+	}
+}
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary);
 	//
 	left: 0;
 	@include media-breakpoint-down(md) {
-		background: #ffffff;
+		&::before{
+			content: '';
+			background: #ffffff;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			@include mt;
+		}
 		/* Deep */
 
 		box-shadow: 0px 0px 8px rgba(214, 118, 68, 0.22);
@@ -11,6 +40,7 @@
 	@include media-breakpoint-down(md) {
 		position: fixed;
 		z-index: 1000;
+		width: 100vw;
 	}
 	&__col {
 		position: relative;
@@ -21,7 +51,8 @@
 			left: calc(var(--bs-gutter-x) / 2);
 		}
 		&--right {
-			right: calc(var(--bs-gutter-x) / 2);
+			right: calc(var(--bs-gutter-x) - 1 * (100vw - 100%));
+			
 		}
 		@include media-breakpoint-up(md) {
 			position: fixed;
@@ -56,7 +87,7 @@
 			pointer-events: all;
 		}
 		a {
-			display: inline-block;
+			// display: inline-block;
 
 			color: $dark;
 		}
@@ -69,60 +100,80 @@
 					font-size: rem(24);
 				}
 			}
-			button {
-				@include mt;
-				position: relative;
-				border: none !important;
-				outline: none !important;
-				background-color: transparent;
-				color: $dark;
-				padding: 0;
-				@include media-breakpoint-up(md) {
-					padding: 3px;
-				}
-				&:hover {
-					.icon {
-						color: $link-hover-color;
-					}
-				}
-				span {
-					position: absolute;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					top: 0;
-					right: 0;
-					width: rem(14);
-					height: rem(14);
-					color: $white;
-					background-color: $primary;
-					border-radius: 50%;
-					font-size: rem(10);
-					line-height: 1.2;
-				}
-			}
-			a {
-				@include mt;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding-top: 3px;
-				padding-bottom: 3px;
-				
-				font-size: rem(14);
-				line-height: calc(16 / 14);
-				font-weight: 500;
-				&:hover {
-					.icon {
-						color: $link-hover-color;
-					}
-				}
-				span {
-					margin-left: rem(8);
-				}
-			}
 		}
 	}
+	&__btn {
+		@extend .btn;
+		// @include mt;
+		position: relative;
+		border: none !important;
+		outline: none !important;
+		background-color: transparent;
+		color: $dark;
+		padding: 0;
+		min-width: rem(40);
+			border-radius: rem(100);
+			display: flex;
+			align-items: center;
+			height: rem(40);
+			padding: 0;
+				display: flex;
+			align-items: center;
+			justify-content: center;
+			.icon{
+				// @include mt;
+			}
+		@include media-breakpoint-up(md) {
+			padding: 3px;
+		}
+		&:hover {
+			color: $link-hover-color;
+			.icon {
+			}
+		}
+		
+	}
+	&__btn-count{ 
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: rem(5);
+				right: rem(6);
+			width: rem(14);
+			height: rem(14);
+			color: $white;
+			background-color: $primary;
+			border-radius: 50%;
+			font-size: rem(10);
+			line-height: 1.2; 
+			 @include mt;
+	}
+	// a {
+	// 	@include mt;
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	padding-top: 3px;
+	// 	padding-bottom: 3px;
+		
+	// 	font-size: rem(14);
+	// 	line-height: calc(16 / 14);
+	// 	font-weight: 500;
+	// 	&:hover {
+	// 		.icon {
+	// 			color: $link-hover-color;
+	// 		}
+	// 	}
+	// }
+		&__btn-text {
+			font-size: rem(14);
+			margin-left: rem(8);
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: inline-block;
+			}
+		}
 	&__logo {
 		.icon {
 			font-size: rem(27);
@@ -131,10 +182,7 @@
 
 	.cabinet-link {
 		span {
-			display: none;
-			@include media-breakpoint-up(md) {
-				display: inline-block;
-			}
+			
 		}
 	}
 
@@ -233,19 +281,24 @@
 					}
 				}
 				&--right {
-					button {
-						width: rem(40);
-						height: rem(40);
-						margin-right: rem(4);
-						border-radius: 50%;
-						background-color: $white;
-						filter: drop-shadow(0px 0px 8px rgba(214, 118, 68, 0.22));
-						span {
-							top: rem(5);
-							right: rem(6);
-						}
-					}
 				}
+			}
+			.top-nav__btn {
+				width: rem(40);
+				
+				margin-right: rem(4);
+			
+				background-color: $white;
+				filter: drop-shadow(0px 0px 8px rgba(214, 118, 68, 0.22));
+			}
+			.top-nav__btn-count {
+				top: rem(5);
+				right: rem(6);
+			}
+			.top-nav__btn-text{
+				width: 1px;
+				opacity: 0;
+				margin-left: 0;
 			}
 			.cabinet-link {
 				width: rem(40);
