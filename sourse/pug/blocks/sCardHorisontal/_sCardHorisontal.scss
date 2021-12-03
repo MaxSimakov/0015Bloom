@@ -19,6 +19,11 @@
 		background-color: $white;
 		border-radius: 0 0 rem(32) rem(32);
 		margin-bottom: rem(-40);
+		.sCardHorizontalItem{
+			@include media-breakpoint-up(xl) {
+				margin-bottom: 52px;
+			}
+		}
 		// &::after {
 		// 	content: "";
 		// 	position: absolute;

@@ -1,8 +1,10 @@
 // start .sQuestions
 .sQuestions {
 	// --sPT: ;
-	// --sPB: ;
 	// --sTPB: ;
+	@include media-breakpoint-up(xl) {
+		--sPB: 55px;
+	}
 	&__inner {
 		border: 1px solid $primary;
 		border-radius: $border-radius-lg;

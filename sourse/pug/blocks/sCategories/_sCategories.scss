@@ -1,6 +1,9 @@
 // start .sCategories
 .sCategories {
-	// --sPT: ;
+	@include media-breakpoint-up(xl) {
+	--sPT: 32px;
+	--sPB: 108px;
+	}
 	// --sPB: ;
 	// --sTPB: ;
 	background-color: $background;

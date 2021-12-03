@@ -47,14 +47,14 @@ body.fixed{
 		z-index: 1000;
 		padding: rem(12) 0;
 		top: 0;
+		@include media-breakpoint-up(md) {
 		&--left {
-			left: calc(var(--bs-gutter-x) / 2);
+			left: calc(var(--bs-gutter-x) / 2 + 10px);
 		}
 		&--right {
-			right: calc(var(--bs-gutter-x) - 1 * (100vw - 100%));
+			right: calc(var(--bs-gutter-x) / 2 - 1 * (100vw - 100%) + 20px);
 			
 		}
-		@include media-breakpoint-up(md) {
 			position: fixed;
 		}
 	}
