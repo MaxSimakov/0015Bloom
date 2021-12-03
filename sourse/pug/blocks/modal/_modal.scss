@@ -110,8 +110,10 @@ a {
 	.row {
 		--bs-gutter-x: #{rem(24)};
 		--bs-gutter-y: var(--bs-gutter-x);
+		margin-top: calc(var(--bs-gutter-y)*-0.3);
 		@include media-breakpoint-up(sm) {
 			--bs-gutter-x: #{rem(16)};
+			margin-top: calc(var(--bs-gutter-y)*0.5);
 		}
 	}
 	&__header {
