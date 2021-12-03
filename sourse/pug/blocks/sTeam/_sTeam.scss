@@ -55,6 +55,7 @@
 				// padding-left: rem(45);
 				
 				picture {
+					width: var(--imgW);
 					// transform: scale(1.35);
 					
 				}
@@ -104,13 +105,17 @@
 		// @include block;
 		@include mt;
 		position: absolute;
-		width: var(--imgW);
-		left: 0;
+		// left: 0;
 		top: 0;
 		overflow: hidden;
 		border-radius: 24px 0px 24px 24px;
 		background-color: #c4c4c4;
+		width: var(--imgW);
 		@include media-breakpoint-up(md) {
+			right: calc(100% - var(--imgW));
+			left: auto;
+			width: 134px;
+			margin-left: auto;
 			border-radius: 32px 0px 32px 32px;
 			top: rem(75);
 		}
