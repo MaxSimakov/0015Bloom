@@ -180,12 +180,6 @@
 .fancybox__caption {
 	font-size: rem(32);
 	margin-right: auto;
-	@include media-breakpoint-up(lg) {
-		margin-right: rem(250);
-	}
-	@include media-breakpoint-up(md) {
-		margin-right: rem(380);
-	}
 	@include media-breakpoint-down(sm) {
 		font-size: 1.6em;
 	}

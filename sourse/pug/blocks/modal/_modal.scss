@@ -11,7 +11,7 @@
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	// width: rem(1500);
 	// min-height: 100%; 
 	padding: 40px;
 
@@ -107,6 +107,13 @@ a {
 }
 
 .team-more {
+	.row {
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
 	&__header {
 		text-align: center;
 		color: $primary;
@@ -116,28 +123,52 @@ a {
 				border-radius: rem(81);
 			}
 		}
-	}
-	&__title {
-		margin-top: rem(11);
-	}
-	&__post {
-		display: inline-block;
-		border: 1px solid rgba(214, 118, 68, 0.4);
-		border-radius: 8px 8px 8px 0px;
-		margin-top: rem(4);
-		padding: 3px 8px 5px 8px;
+		h5 {
+			margin-top: rem(11);
+		}
+		span {
+			display: inline-block;
+			border: 1px solid rgba(214, 118, 68, 0.4);
+			border-radius: 8px 8px 8px 0px;
+			margin-top: rem(4);
+			padding: 3px 8px 5px 8px;
+		}
 	}
 	&__paragraph {
 		margin-bottom: rem(24);
+		p {
+			color: $dark;
+			margin-top: rem(8);
+		}
 	}
 	&__subtitle {
-		font-weight: bold;
+		font-weight: 500;
 		font-size: rem(17);
 		color: $dark;
 	}
-	&__text {
+	&__link {
+		position: relative;
+		display: block;
 		color: $dark;
-		margin-top: rem(8);
+		picture {
+			@include block(152, 214);
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		span {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: inline-block;
+			padding: 4px;
+			background-color: rgba($color: #fff, $alpha: 0.89);
+			.icon {
+				font-size: 16px;
+			}
+		}
 	}
 }
 
