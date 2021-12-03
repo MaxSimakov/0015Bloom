@@ -253,15 +253,10 @@ function eventHandler() {
 
 	// modal window
 
-	const sliderAutoJs = new Swiper('.slider-auto--js', {
-		// slidesPerView: 5,
-		// ...defaultSl,
-		slidesPerView: 'auto',
-		// freeMode: true,
-		//loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
+	const sliderAutoJs = new Swiper('.slider-auto--js', { 
+
+		slidesPerView: 'auto', 
+		watchOverflow: true, 
 		spaceBetween: 0,
 
 	});
