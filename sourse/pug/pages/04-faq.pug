@@ -14,12 +14,13 @@ extends layout/main.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= 'main.jpg'
+	- let  bg= 'qna.jpg'
 
 block title
 	- let  title= 'Главная'
 	title= title
 block pagecontent
+	+top-nav()
 	+pageHead({
 		t: `Вопросы и&nbsp;ответы`,
 		p: `Здесь вы&nbsp;можете найти ответы на&nbsp;свои вопросы, которые дали наши специалисты другим пользователям, или&nbsp;же задать свой, если данная тема еще не&nbsp;обсуждалась`,
@@ -27,7 +28,6 @@ block pagecontent
 	})
 	//- +mob-mnu()
 	//- +header()
-	//- +top-nav()
 	//- +topLine()
 	.bg-background
 	//- 	+headerBlock()
