@@ -114,69 +114,16 @@
 			@include media-breakpoint-down(md){
 				display: none !important;
 			}
-		--h: #{em(2)};
-		--color: #{$primary};
-		--position: calc(var(--h) * 2);
-		position: absolute !important;
-		left: 30px;
-		top: 15px;
-		&.on span {
-			--color: transparent;
-		}
-
-		&.on {
-			--position: 0;
-			--rotate: 45deg;
-		}
-		display: block;
-		height: calc(var(--h) * 12);
-		position: absolute;
-		
-		font-size: 32px;
-		width: 1em;
-		cursor: pointer;
-		span:after,
-		span:before {
-			content: "";
-			position: absolute;
-			left: 0;
-		}
-		span {
-			@include a-cent(y);
-			display: block;
-		}
-
-		span:before {
-			top: var(--position);
-			transform: rotate3d(0, 0, 1, var(--rotate, 0));
-		}
-
-		span:after {
-			bottom: var(--position);
-			transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
-		}
-		span,
-		span:after,
-		span:before {
-			// width: 32px;
-			width: 1em;
-			height: var(--h);
-			background-color: var(--color);
-			transition: all 0.3s;
-			backface-visibility: hidden;
-			transform-origin: 50% 50%;
-		}
-
-		margin-left: -15%;
-		position: absolute;
-		left: 0;
+		position: absolute; 
+		left: 26px;
+    top: 13px;
+		background: none !important;
 		right: auto;
-		color: #fff;
-		top: 10px;
+		color: $body-color !important;
 		z-index: 9999;
 		span:after,
 		span:before {
-			--color: #fff;
+			background:   $body-color !important;
 		}
 	}
 	&__inner {
