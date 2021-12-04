@@ -35,3 +35,13 @@ mixin pageHead(data)
 			h1!= data.t
 			p!= data.p
 			+e.btn(href="#")= data.btn
+
+mixin pricing(n, l)
+	+b.pricing
+		.row
+			+e.col.col.col-sm-auto
+				+e.num= n
+					span ₽
+				span /час
+			.col-auto
+				+e.btn(href=`${l}`).link-modal-js Записаться
