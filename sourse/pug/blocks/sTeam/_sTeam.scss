@@ -179,39 +179,7 @@
 			line-height: calc(24 / 16);
 		}
 	}
-	&__price-row {
-		align-items: center;
-		margin-top: 0;
-		max-width: rem(344);
-		--bs-gutter-x: #{rem(16)};
-		--bs-gutter-y: #{rem(12)};
-	}
-	&__price {
-		display: flex;
-		align-items: center;
-		& > span {
-			align-self: flex-end;
-			margin-left: -0.3em;
-		}
-	}
-	&__num {
-		display: flex;
-		font-family: "Lovelace";
-		font-size: rem(32);
-		line-height: 0.9;
-		// line-height: calc(40 / 32);
-		span {
-			font-size: 0.62em;
-			margin-left: 0.05em;
-		}
-	}
-	&__btn-signUp {
-		@extend .btn, .btn-primary;
-		padding: rem(8) rem(26);
-		@include media-breakpoint-only(md) {
-			font-size: rem(19);
-		}
-	}
+
 	&--page {
 		--sPB: #{rem(57)};
 		@include media-breakpoint-up(sm) {
@@ -273,6 +241,17 @@
 
 		// }
 	}
+	.pricing {
+		.row {
+			margin-top: 0;
+			max-width: rem(344);
+		}
+		&__btn {
+			@include media-breakpoint-only(md) {
+				font-size: rem(19);
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -288,3 +267,5 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sTeam
+
+
