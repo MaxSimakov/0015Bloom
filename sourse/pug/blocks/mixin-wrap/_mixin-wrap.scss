@@ -7,10 +7,10 @@
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover {
-			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			// opacity: .6 ;
-		}
+		// &:hover {
+		// 	box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		// 	opacity: .6 ;
+		// }
 	}
 	.icon {
 		font-size: rem(30);
