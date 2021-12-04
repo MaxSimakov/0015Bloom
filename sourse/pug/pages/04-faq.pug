@@ -11,13 +11,14 @@ extends layout/main.pug
 //- include ../blocks/sReviews/_sReviews.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 //- include ../blocks/footer-main/_footer-main.pug
+include ../blocks/sFaqExperts/_sFaqExperts.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= 'qna.jpg'
 
 block title
-	- let  title= 'Главная'
+	- let  title= 'Вопросы и ответы'
 	title= title
 block pagecontent
 	+top-nav()
@@ -26,6 +27,7 @@ block pagecontent
 		p: `Здесь вы&nbsp;можете найти ответы на&nbsp;свои вопросы, которые дали наши специалисты другим пользователям, или&nbsp;же задать свой, если данная тема еще не&nbsp;обсуждалась`,
 		btn: `Задать вопрос`
 	})
+	+sFaqExperts()
 	//- +mob-mnu()
 	//- +header()
 	//- +topLine()
@@ -42,6 +44,3 @@ block pagecontent
 	//- //- +sForm()
 	//- //- +sContact()
 	//- +footer-main()
-
-
-
