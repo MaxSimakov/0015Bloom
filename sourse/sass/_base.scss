@@ -98,6 +98,11 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	padding-bottom: rem(64);
+	@include media-breakpoint-up(md) {
+		padding-bottom: 0;
+	}
+
 	// display: flex;
 	// flex-direction: row;
 	// /	overflow: scroll;
