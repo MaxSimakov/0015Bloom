@@ -12,6 +12,7 @@ extends layout/main.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 //- include ../blocks/footer-main/_footer-main.pug
 include ../blocks/sFaqExperts/_sFaqExperts.pug
+include ../blocks/sConsultation/_sConsultation.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -28,6 +29,7 @@ block pagecontent
 		btn: `Задать вопрос`
 	})
 	+sFaqExperts()
+	+sConsultation()
 	//- +mob-mnu()
 	//- +header()
 	//- +topLine()
