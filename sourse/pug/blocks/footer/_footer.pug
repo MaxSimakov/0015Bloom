@@ -1,9 +1,29 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+			+e.top-row.row
+				.col-12.col-md-auto
+					+e.logo-main(href="/")
+						+icon('footer-logo-sm')
+						+icon('footer-logo')
+				.col-12.col-md-auto
+					+e.link(href="mailto:bloom@gmail.com") bloom@gmail.com
+				.col-12.col-md-auto
+					+e.link(href="tel:89057934646") 8 905 793-46-46
+				.col-12.col-sm
+					+soc
+			+e.bottom-row.row
+				.col-12.col-md-auto
+					.row
+						.col-12.col-md-auto
+							+e.copyright © #[span.currentYear] Bloom
+						.col-12.col-md-auto
+							+e.developer(href="#")
+								+icon('coalla-logo')
+								span Сделано в Coalla Agency
+				.col-12.col-md-auto
+					+e.policy.row
+						.col-auto
+							a(href="#") Политика конфиденциальности
+						.col-auto
+							a(href="#") Пользовательское соглашение

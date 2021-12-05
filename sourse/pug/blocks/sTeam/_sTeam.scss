@@ -212,14 +212,36 @@
 				max-width: 1070px;
 			}
 			& > .row {
-				--bs-gutter-y: #{rem(50)};
+				--bs-gutter-y: #{rem(52)};
 				@include media-breakpoint-up(xl) {
 					--bs-gutter-x: #{rem(96)};
 					--bs-gutter-y: #{rem(105)};
 				}
 			}
 		}
+		.sTeam__col {
+			&:not(:first-child) {
+				.sTeam__item {
+					&::before {
+						@include media-breakpoint-down(md) {
+							content: "";
+							position: absolute;
+							width: 150%;
+							height: 1px;
+							top: calc(-1 * var(--bs-gutter-y) / 2);
+							left: -25%;
+							background-color: rgba($color: $dark, $alpha: 0.2);
+						}
+						// @include media-breakpoint-up(md) {
+						// 	width: calc(100% - 2rem);
+						// 	left: 1rem;
+						// }
+					}
+				}
+			}
+		}
 		.sTeam__item {
+			position: relative;
 			// @include media-breakpoint-up(xl) {
 			// 	max-width: rem(471);
 			// }
