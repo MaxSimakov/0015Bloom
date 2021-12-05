@@ -1,9 +1,19 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
+			+e.top-row.row
+				.col-12.col-sm-auto
+					+e.logo-main(href="/")
+						+icon('footer-logo-sm')
+						+icon('footer-logo')
+				.col-12.col-sm-auto
+					a(href="mailto:bloom@gmail.com") bloom@gmail.com
+				.col-12.col-sm-auto
+					a(href="tel:89057934646") 8 905 793-46-46
+
+				.col-12.col-sm
+					+soc
+			+e.bottom-row.row
 				.col
 				.col
 				.col-auto
