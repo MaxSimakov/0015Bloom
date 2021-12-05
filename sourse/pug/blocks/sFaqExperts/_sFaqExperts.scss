@@ -1,12 +1,52 @@
 // start .sFaqExperts
 .sFaqExperts {
-		// --sPT: ;
-		// --sPB: ;
+		 --sPT: #{rem(32)};
+		 --sPB: #{rem(40)};
 		// --sTPB: ;
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(40)};
+		 	--sPB: #{rem(72)};
+		}
+		&__slider {
+			overflow: visible;
+		}
 		.swiper-wrapper {
 			@include row-sw(16px, lg, 0);
 		}
-	
+		&__slide {
+			max-width: rem(164);
+			margin-right: rem(8);
+		}
+		&__item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+   		padding-left: rem(8);
+			padding-right: rem(16);
+			@include media-breakpoint-up(lg) {
+				flex-direction: column;
+				align-items: center;
+				height: 100%;
+				padding: rem(8) rem(7) rem(16);
+			}
+			text-align: center;
+			color: $dark;
+			background: $white;
+			box-shadow: 0px 20px 24px rgba($color: $primary, $alpha: 0.2);
+			border-radius: 24px 0px 24px 24px;
+		}
+		img {
+			width: 48px;
+			margin-right: rem(8);
+			@include media-breakpoint-up(lg) {
+				width: 92px;
+				margin-right: 0;
+				margin-bottom: rem(8);
+			}
+		}
+		span {
+			max-width: rem(165);
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
