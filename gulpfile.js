@@ -6,33 +6,34 @@ let  publicPath = 'public',
 import pkg from 'gulp'
 const { gulp, src, dest, parallel, series, watch } = pkg
 
-import del  from 'del' 
-import pug  from 'gulp-pug'
-import notify  from 'gulp-notify' 
-import svgmin  from 'gulp-svgmin'
-import cheerio  from 'gulp-cheerio'
-import replace  from 'gulp-replace'
-import svgSprite  from 'gulp-svg-sprite' 
-import npmDist  from 'gulp-npm-dist'
-import newer  from 'gulp-newer'
-import rename  from 'gulp-rename'  
-import gulpSass      from 'gulp-sass'
-import sassGlob  from 'gulp-sass-glob'
-import dartSass      from 'sass'
-const  sass          = gulpSass(dartSass)
-import tabify  from 'gulp-tabify' 
-import gcmq  from 'postcss-sort-media-queries' 
+import del from 'del'
+import pug from 'gulp-pug'
+import notify from 'gulp-notify'
+import svgmin from 'gulp-svgmin'
+import cheerio from 'gulp-cheerio'
+import replace from 'gulp-replace'
+import svgSprite from 'gulp-svg-sprite'
+import npmDist from 'gulp-npm-dist'
+import newer from 'gulp-newer'
+import rename from 'gulp-rename'
+// import gulpSass      from 'gulp-sass'
+import sassGlob from 'gulp-sass-glob'
+import sass from 'gulp-dart-sass'
+// const  sass          = gulpSass(dartSass)
+import tabify from 'gulp-tabify'
+import gcmq from 'postcss-sort-media-queries'
 import bssi from 'browsersync-ssi'
-import browserSync  from 'browser-sync'
-import postcss  from 'gulp-postcss'
-import autoprefixer  from 'autoprefixer'
-import cssnano  from 'cssnano' 
-import nested  from 'postcss-nested'
-import pscss  from 'postcss-scss'
-import syntax  from 'postcss-syntax'
+import browserSync from 'browser-sync'
+import postcss from 'gulp-postcss'
+import autoprefixer from 'autoprefixer'
+import cssnano from 'cssnano'
+import nested from 'postcss-nested'
+import pscss from 'postcss-scss'
+import syntax from 'postcss-syntax'
 // )({ scss: 'postcss-scss'}),
-import plumber  from 'gulp-plumber'
+import plumber from 'gulp-plumber'
 import sharpResponsive from "gulp-sharp-responsive";
+
 
 
 function browsersync() {
@@ -121,7 +122,7 @@ function styles() {
     ];
     return src(sourse + '/sass/main.scss')
         .pipe(sassGlob())
-        .pipe(sass({ outputStyle: 'compressed', indentedSyntax: false, errLogToConsole: true }))
+        .pipe(sass().on('error', sass.logError))
         // .pipe(postcss(processors, { syntax: syntax }))
         .pipe(postcss(processors, { syntax: pscss }))
         // .pipe(gcmq())
@@ -222,7 +223,7 @@ function img() {
         .pipe(dest(publicPath + '/img')) 
 }
 function startwatch() {
-    watch([sourse + '/sass/**/*.css', sourse + '/pug/blocks/**/*.scss', sourse + '/sass/**/*.scss', sourse + '/sass/**/*.sass'], { usePolling: true }, styles);
+    watch([sourse + '/sass/*.css', sourse + '/pug/blocks/**/*.scss', sourse + '/sass/*.scss', sourse + '/sass/*.sass'], { usePolling: true }, styles);
     watch(sourse + '/pug/**/*.pug', { usePolling: true }, pugFiles);
     watch(sourse + '/svg/*.svg', { usePolling: true }, svg);
     // watch([sourse + '/js/libs.js'], { usePolling: true }, scripts);
