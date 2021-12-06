@@ -67,6 +67,29 @@ mixin modal()
 				+input("Владимир Воротников", "select", "Специалисты")
 				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
 				+input("+7 (___) __ __", "tel", "Телефон")
+				+e.input-wrap.form-group
+					+e.SPAN.input-title Дата и время приёма
+					+e.row-date.row
+						.col-auto
+							+in-c("radio", "Сегодня", "date" )(checked)
+						.col-auto
+							+in-c("radio", "Завтра", "date" )
+						.col-auto
+							+in-c("radio", "Датапикер", "date" )
+				+e.input-wrap.form-group
+					+e.row-time.row
+						.col-auto
+							+in-c("radio", "10:00", "time" )
+						.col-auto
+							+in-c("radio", "11:00", "time" )
+						.col-auto
+							+in-c("radio", "12:00", "time" )
+						.col-auto
+							+in-c("radio", "13:00", "time" )(disabled)
+						.col-auto
+							+in-c("radio", "15:00", "time" )
+						.col-auto
+							+in-c("radio", "16:00", "time" )
 				+b.pricing-block
 					.row
 						+e.col.col-auto
