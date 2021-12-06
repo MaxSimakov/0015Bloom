@@ -132,6 +132,7 @@
 		& > span {
 			align-self: flex-end;
 			margin-left: -0.3em;
+			white-space: nowrap;
 		}
 	}
 	&__num {
@@ -148,4 +149,5 @@
 		@extend .btn, .btn-primary;
 		padding: rem(8) rem(26);
 	}
+	
 }
