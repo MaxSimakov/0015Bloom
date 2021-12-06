@@ -3,7 +3,11 @@
 		--sPT: 0;
 		// --sPB: ;
 		// --sTPB: ;
-	li {
+	&__col {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__item {
 		position: relative;
 		list-style-type: none;
 		&:not(:last-child) {
@@ -83,7 +87,7 @@
 			font-size: rem(22);
 		}
 	}
-	a {
+	&__btn {
 		border: 1px solid $primary;
 		border-radius: rem(8);
 		@extend .btn-outline-primary;
@@ -99,6 +103,33 @@
 			color: $primary;
 			margin-left: rem(4);
 		}
+	}
+	&__answer {
+		position: relative;
+		margin-top: rem(16);
+		font-size: rem(14);
+		color: $gray-medium;
+	}
+	.icon-northWestArrow {
+		font-size: rem(16);
+		color: $dark;
+		vertical-align: sub;
+		margin-right: rem(7);
+	}
+	&__answerBody {
+		padding-top: rem(8);
+		padding-left: rem(65);
+	}
+	&__who {
+		display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	}
+	&__position {
+		flex-basis: 100%;
+	}
+	&__name--color {
+		color: $dark;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
