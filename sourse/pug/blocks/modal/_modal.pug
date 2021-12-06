@@ -15,20 +15,8 @@ mixin team-more(i, h, s)
 
 mixin modal() 
 	//  start modals
-	//- a(href="modal-call").link-modal-js modal-call 
-	//- div(id="modal-call"  style="display: none" )
-	//- 	+b.modal-win
-	//- 		+form-wrap
-	//- 			.text-center
-	//- 				+e.title.form-data.h3.ttu Обратный звонок
-	//- 				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-	//- 			+input("Ваше Имя")(required)  
-	//- 			+e.BUTTON.btn.btn(type="submit"  )  
-	//- 			+policy()
-	//- // #modal-call
 	div(id="modal-team"  style="display: none" )
-		+b.modal-win--team
+		+b.modal-win
 			+team-more(1, "Маркарьян Даниил", "Онколог")
 				+description("Специальность", "Кандидат медицинских наук. колопроктолог, онколог, хирург старший научный сотрудник отдела хирургии МНОЦ")
 				+description("Стаж", "15&nbsp;лет")
@@ -48,28 +36,49 @@ mixin modal()
 						+certificate(1)
 						+certificate(1)
 						+certificate(1)
-
 	// #modal-team
+
 	div(id="modal-team-consult"  style="display: none" )
-		+b.modal-win--team
+		+b.modal-win
 			+team-more(1, "Маркарьян Даниил", "Онколог")
 				+description("Специальность", "Кандидат медицинских наук. колопроктолог, онколог, хирург старший научный сотрудник отдела хирургии МНОЦ")
 				+description("Стаж", "15&nbsp;лет")
 				+description("Направление деятельности", "Кандидат медицинских наук. колопроктолог, онколог, хирург старший научный сотрудник отдела хирургии МНОЦ")
 				+description("Опыт и&nbsp;время работы", "2006&nbsp;&mdash; 2009 Областная клиническая больница &#8470;&nbsp;2 , Врач хирургического отделения, Ростов-на Дону, Россия", "2012&nbsp;&mdash; 2013 Российский Научный Центр Хирургии&nbsp;им. акад. Б.В. Петровского РАМН, Врач-хирург отделение колопроктологии с&nbsp;хирургией тазового дна, Москва, Россия", "2013&nbsp;&mdash; н.в. Первый Московский Государственный Медицинский Университет им. И.М. Сеченова Минздрава России, врач-колопроктолог, Клиника колопроктологии и&nbsp;малоинвазивной хирургии, Москва, Россия", "2014&nbsp;&mdash; н.в. Первый Московский Государственный Медицинский Университет им. И.М. Сеченова Минздрава России, доцент Кафедры колопроктологии и&nbsp;эндоскопической хирургии, Москва, Россия")
 				+description("Дополнительные сведения", "Кандидат медицинских наук. колопроктолог, онколог, хирург старший научный сотрудник отдела хирургии МНОЦ")
-				+b.pricing
+				+b.pricing-block
 					.row
 						+e.col.col-auto
 							+e.num 900
 								span ₽
 							span /час
 						.col-auto
-							+e.btn(href=`#modal-team`).link-modal-js Записаться
+							+e.btn(href=`#modal-consult`).link-modal-js Записаться
 					+e.agreement
 						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
 						a(href="#") Пользовательского соглашения
-				+footer
-	// #modal-team
+				//- +footer
+	// #modal-team-consult
+
+	div(id="modal-consult"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				h3 Запись на консультацию
+				+input("Владимир Воротников", "select", "Специалисты")
+				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
+				+input("+7 (___) __ __", "tel", "Телефон")
+				+b.pricing-block
+					.row
+						+e.col.col-auto
+							+e.num 900
+								span ₽
+							span /час
+						.col-auto
+							+e.BUTTON.btn Записаться
+					+e.agreement
+						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
+						a(href="#") Пользовательского соглашения
+				//- +footer
+	// #modal-team-consult
 	
 	// end modals
