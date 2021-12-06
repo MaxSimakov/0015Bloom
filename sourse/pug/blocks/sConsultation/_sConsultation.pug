@@ -2,14 +2,30 @@ mixin consultation(i, n, d, t, text)
 	+b.faq-item
 		+pic(`sTeam-${i}`)
 		+e.head 
-			+e.SPAN.name!= n 
-			+e.SPAN.date!= d
+			+e.name!= n 
+			+e.date!= d
 		+e.body
-			+e.SPAN.title!= t 
+			+e.title!= t 
 			p!= text
-			+e(href="#") 
+			+e.BUTTON.btn
 				+icon('shevron-down')
 				span Показать ответ
+		+consultAnswer(n, "Даниил Маркарьян", d, "Здравствуйте <br> <br> Выделения различного характера возможны в период адаптации организма к препарату ( 1-3 месяца идет период адаптации). ")
+
+mixin consultAnswer(n, nDoctor, d, content)
+	+b.answer-block
+		+e.reply
+			+icon('northWestArrow')
+			span!= n
+		+e.answerBody
+			+pic(`sTeam-2.jpg`)
+			+e.who
+				+e.name.text-dark!= nDoctor
+				+e.date!= d
+				+e.position Психолог
+			+e.body
+				p!= content
+
 
 mixin sConsultation(data)
 	// start sConsultation
