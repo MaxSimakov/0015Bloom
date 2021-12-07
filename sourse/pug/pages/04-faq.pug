@@ -12,8 +12,9 @@ extends layout/main.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 //- include ../blocks/footer-main/_footer-main.pug
 include ../blocks/sFaqExperts/_sFaqExperts.pug
-include ../blocks/sConsultation/_sConsultation.pug
 include ../blocks/footer/_footer.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/sConsulOptions/_sConsulOptions.pug
 
 block variables
 	- let  mainPage= null
@@ -32,6 +33,7 @@ block pagecontent
 	})
 	+sFaqExperts()
 	+sConsultation()
+	+sConsulOptions()
 	//- +mob-mnu()
 	//- +header()
 	//- +topLine()

@@ -1042,14 +1042,14 @@ $pagination-bg: $white !default;
 $pagination-border-width: $border-width !default;
 $pagination-border-radius: $border-radius !default;
 $pagination-margin-start: -$pagination-border-width !default;
-$pagination-border-color: $gray-300 !default;
+$pagination-border-color: $gray-dark !default;
 
 $pagination-focus-color: $link-hover-color !default;
 $pagination-focus-bg: $gray-200 !default;
 $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $pagination-focus-outline: 0 !default;
 
-$pagination-hover-color: $link-hover-color !default;
+$pagination-hover-color: $primary !default;
 $pagination-hover-bg: $gray-200 !default;
 $pagination-hover-border-color: $gray-300 !default;
 
