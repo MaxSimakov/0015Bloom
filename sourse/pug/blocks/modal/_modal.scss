@@ -341,11 +341,19 @@ a {
 			--bs-gutter-x: #{rem(8)};
 			--bs-gutter-y: #{rem(12)};
 			.form-wrap__input {
-				padding: rem(4.75);
-				padding-left: rem(27);
-				margin-bottom: 0;
-				&:not(:focus) {
-					border: 1px solid $gray-light;
+				&.input-date-picker-js,
+				&.input-date-picker-single-js {
+					padding: rem(4.75);
+					padding-left: rem(27);
+					margin-bottom: 0;
+					width: rem(107);
+					text-align: center;
+					&:not(:focus) {
+						border: 1px solid $gray-light;
+					}
+					&::placeholder {
+						color: $dark;
+					}
 				}
 			}
 			.custom-input {
