@@ -136,7 +136,8 @@ mixin modal()
 				+input("Имя", "text", "Имя")
 				+input("Электронная почта", "email", "Электронная почта")
 				+input("+7 (___) __ __", "tel", "Телефон")
-				+e.SPAN.input-title Пароль
+				+e.SPAN.input-title Пароль 
+					+help-tooltip(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim!`)
 				+e.password-wrap
 					+e.SPAN.btn-toggle-pass
 						+icon('visibility')
@@ -186,6 +187,7 @@ mixin modal()
 				+input("Электронная почта", "email", "Электронная почта")
 				+input("+7 (___) __ __", "tel", "Телефон")
 				+e.SPAN.input-title Пароль
+					+help-tooltip(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim!`)
 				+e.password-wrap
 					+e.SPAN.btn-toggle-pass
 						+icon('visibility')

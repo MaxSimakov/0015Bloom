@@ -46,3 +46,8 @@ mixin pricing(n, l)
 			.col-auto
 				+e.btn(href=`${l}`).link-modal-js Записаться
 		block
+
+mixin help-tooltip(t)
+	+b.SPAN.help-tooltip
+		+icon('help')
+		span!= t
