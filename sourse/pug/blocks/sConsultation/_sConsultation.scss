@@ -1,9 +1,8 @@
 // start .sConsultation
 .sConsultation {
-		--sPT: 0;
-		// --sPB: ;
-		// --sTPB: ;
-	
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -31,24 +30,43 @@
 	&__who {
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
 		flex-wrap: wrap;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
 	}
 	&__position {
-		flex-basis: 100%;
+		@include media-breakpoint-up(md) {
+			flex-basis: 100%;
+		}
+		margin-top: rem(2);
+		margin-bottom: rem(8);
 	}
-	&__name--color {
+	&__name {
 		color: $dark;
 		font-weight: 500;
+	}
+	&__date {
+		color: $gray-medium;
+		font-size: rem(12);
+		margin-top: rem(4);
 	}
 	&__col {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	picture {
+		top: 1.5rem;
+		@include media-breakpoint-up(md) {
+			.faq-item:not(:first-child) picture {
+					top: 2.2rem;
+			}
+		}
+	}
 	p {
 		color: $dark;
 		font-size: rem(12);
-		line-height: 1.33em;
-		margin-top: rem(4);
 		@include media-breakpoint-up(md) {
 			font-size: rem(16);
 			max-width: rem(699);
@@ -56,49 +74,48 @@
 	}
 }
 
-	.faq-item {
-		position: relative;
-		list-style-type: none;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: rem(763);
+.faq-item {
+	position: relative;
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(763);
+	padding-bottom: 1.6rem;
+	&:not(:last-child) {
+		padding-bottom: rem(24);
+		border-bottom: 1px solid $gray-light;
+	}
+	&:not(:first-child) {
+		padding-top: rem(24);
+		.pic-position {
+			top: rem(17);
+		}
+	}
+	@include media-breakpoint-up(md) {
+		padding-left: rem(65);
 		&:not(:last-child) {
-			padding-bottom: rem(24);
-			border-bottom: 1px solid $gray-light;
+			padding-bottom: rem(32);
 		}
 		&:not(:first-child) {
-			padding-top: rem(24);
-		}
-		@include media-breakpoint-up(md) {
-			padding-left: rem(65);
-			&:not(:last-child) {
-				padding-bottom: rem(32);
-			}
-			&:not(:first-child) {
-				padding-top: rem(32);
+			padding-top: rem(28.8);
+			.pic-position {
+				top: rem(35.2);
 			}
 		}
+	}
 
-		picture {
+	picture {
 		position: absolute;
-		&:not(:first-child) {
-			top: rem(24);
-		}
 		left: 0;
 		border-radius: 50%;
 		width: rem(48);
 		height: rem(48);
 		overflow: hidden;
-		@include media-breakpoint-up(md) {
-			&:not(:first-child) {
-				top: rem(32);
-			}
-		}
 	}
 	&__head {
 		display: flex;
 		flex-direction: column;
-		font-size: rem(14);
+		font-size: rem(13.968px);
 		@include media-breakpoint-down(md) {
 			padding-left: rem(56);
 		}
@@ -113,6 +130,7 @@
 	}
 	&__date {
 		color: $gray-medium;
+		font-size: rem(12);
 		margin-top: rem(4);
 	}
 	&__body {
@@ -120,8 +138,6 @@
 		p {
 			color: $dark;
 			font-size: rem(12);
-			line-height: 1.33em;
-			margin-top: rem(4);
 			@include media-breakpoint-up(md) {
 				font-size: rem(16);
 				max-width: rem(699);
@@ -133,9 +149,8 @@
 	}
 	&__title {
 		color: $dark;
-		line-height: 1.50em;
+		line-height: 1.4em;
 		font-weight: 500;
-		margin-bottom: rem(4);
 		@include media-breakpoint-up(md) {
 			font-size: rem(22);
 		}
@@ -144,8 +159,9 @@
 		background-color: transparent;
 		border: 1px solid $primary;
 		border-radius: rem(8);
+		transition: $transition-base;
 		@extend .btn-outline-primary;
-		padding: rem(2) rem(8);
+		padding: rem(3.6) rem(9.6);
 		svg {
 			font-size: rem(5);
 			color: $dark;
@@ -155,8 +171,8 @@
 		}
 		span {
 			color: $primary;
-			margin-left: rem(4);
+			margin-left: rem(7.2);
 		}
 	}
 	
-	}
+}
