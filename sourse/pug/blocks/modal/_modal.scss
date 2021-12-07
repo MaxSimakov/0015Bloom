@@ -379,6 +379,9 @@ a {
 		&:hover {
 			color: $link-hover-color;
 		}
+		&.on {
+			color: $gray-medium;
+		}
 
 		.icon {
 			@include mt;
