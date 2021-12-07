@@ -92,6 +92,7 @@ $output-bourbon-deprecation-warnings: false;
 	// @extend .pagination;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .pagination-wrapper li .page-numbers {
@@ -101,7 +102,6 @@ $output-bourbon-deprecation-warnings: false;
   font-weight: 500;
    &.current, &:hover {
     color: $pagination-hover-color;
-    font-size: rem(17);
   }
   &.prev {
     svg {
@@ -109,9 +109,13 @@ $output-bourbon-deprecation-warnings: false;
     }
   }
   &.prev, &.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
     border: 1px solid $pagination-border-color;
     border-radius: 50%;
-    padding: 7px 12px 11px 14px;
   }
 }
 
