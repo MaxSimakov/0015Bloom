@@ -75,7 +75,7 @@ mixin modal()
 						.col-auto
 							+in-c("radio", "Завтра", "date" )
 						.col-auto
-							+in-c("radio", "Датапикер", "date" )
+							+e.INPUT.input.form-control.input-date-picker-single-js(name='text' type='text' placeholder='Все даты' autocomplete='off')
 				+e.input-wrap.form-group
 					+e.row-time.row
 						.col-auto
