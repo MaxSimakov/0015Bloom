@@ -156,6 +156,8 @@
 		}
 	}
 	&__btn {
+		display: flex;
+    align-items: center;
 		background-color: transparent;
 		border: 1px solid $primary;
 		border-radius: rem(8);
@@ -163,6 +165,7 @@
 		@extend .btn-outline-primary;
 		padding: rem(3.6) rem(9.6);
 		svg {
+			transform: rotate(180deg);
 			font-size: rem(5);
 			color: $dark;
 			@include media-breakpoint-up(md) {
