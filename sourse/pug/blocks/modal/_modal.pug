@@ -68,7 +68,7 @@ mixin modal()
 				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
 				+input("+7 (___) __ __", "tel", "Телефон")
 				+e.input-wrap.form-group
-					+e.SPAN.input-title Дата и время приёма
+					+e.SPAN.input-title Дата и время приёма #[span.text-gray-medium *]
 					+e.row-date.row
 						.col-auto
 							+in-c("radio", "Сегодня", "date" )(checked)
@@ -111,7 +111,7 @@ mixin modal()
 				+input("Владимир Воротников", "select", "Специалисты")
 				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
 				+e.input-wrap.form-group
-					+e.SPAN.input-title Дата и время приёма
+					+e.SPAN.input-title Дата и время приёма #[span.text-gray-medium *]
 					+e.row-date.row
 						.col-auto
 							+in-c("radio", "Сегодня", "date" )(checked)
