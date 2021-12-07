@@ -102,6 +102,62 @@ mixin modal()
 						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
 						a(href="#") Пользовательского соглашения
 				//- +footer
-	// #modal-team-consult
+	// #modal-consult
+
+	div(id="modal-consult-auth"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				h3 Запись на консультацию
+				+input("Владимир Воротников", "select", "Специалисты")
+				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
+				+e.input-wrap.form-group
+					+e.SPAN.input-title Дата и время приёма
+					+e.row-date.row
+						.col-auto
+							+in-c("radio", "Сегодня", "date" )(checked)
+						.col-auto
+							+in-c("radio", "Завтра", "date" )
+						.col-auto
+							+e.INPUT.input.form-control.input-date-picker-single-js(name='text' type='text' placeholder='Все даты' autocomplete='off')
+				+e.input-wrap.form-group
+					+e.row-time.row
+						.col-auto
+							+in-c("radio", "10:00", "time" )
+						.col-auto
+							+in-c("radio", "11:00", "time" )
+						.col-auto
+							+in-c("radio", "12:00", "time" )
+						.col-auto
+							+in-c("radio", "13:00", "time" )(disabled)
+						.col-auto
+							+in-c("radio", "15:00", "time" )
+						.col-auto
+							+in-c("radio", "16:00", "time" )
+				+input("Имя", "text", "Имя")
+				+input("Электронная почта", "email", "Электронная почта")
+				+input("+7 (___) __ __", "tel", "Телефон")
+				+e.SPAN.input-title Подтвердите пароль
+				+e.password-wrap
+					+e.SPAN.btn-show-pass
+						+icon('visibility')
+					+input("Пароль", "password")
+				+e.SPAN.input-title Подтвердите пароль
+				+e.password-wrap
+					+e.SPAN.btn-show-pass
+						+icon('visibility')
+					+input("Подтвердите пароль", "password")
+				+b.pricing-block
+					.row
+						+e.col.col-auto
+							+e.num 900
+								span ₽
+							span /час
+						.col-auto
+							+e.BUTTON.btn Записаться
+					+e.agreement
+						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
+						a(href="#") Пользовательского соглашения
+				//- +footer
+	// #modal-consult-auth
 	
 	// end modals

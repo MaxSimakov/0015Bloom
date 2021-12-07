@@ -56,6 +56,10 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		textarea {
+			min-height: rem(120);
+			padding: rem(12);
+		}
 	}
 }
 
@@ -334,6 +338,28 @@ a {
 		margin-bottom: rem(24);
 		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(27);
+		}
+	}
+	&__password-wrap {
+		position: relative;
+		input {
+			padding-right: rem(45);
+		}
+	}
+	&__btn-show-pass {
+		@include a-cent(y);
+		right: rem(12);
+		width: rem(24);
+		height: rem(24);
+		cursor: pointer;
+		color: $primary;
+		&:hover {
+			color: $link-hover-color;
+		}
+
+		.icon {
+			@include mt;
+			font-size: rem(24);
 		}
 	}
 	&__row {

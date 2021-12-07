@@ -7,6 +7,9 @@
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: vertical;
+		&::placeholder {
+			color: $gray-medium;
+		}
 	}
 	&__input-title {
 		display: inline-block;
