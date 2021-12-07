@@ -159,5 +159,49 @@ mixin modal()
 						a(href="#") Пользовательского соглашения
 				//- +footer
 	// #modal-consult-auth
+
+	div(id="modal-question"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				h3 Задать вопрос
+				+input("Выберите направление", "select", "Направления")
+				+input("Выберите специалиста", "select", "Специалисты")
+				+input("Опишите кратко суть вопроса", "textarea", "Вопрос")
+				+e.input-wrap.form-group
+					+in-c("checkbox", "Анонимно")
+				+e.BUTTON.btn.btn.btn-primary Задать вопрос
+				//- +footer
+	// #modal-question
+
+	div(id="modal-question-auth"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				+e.heading
+					h3 Задать вопрос
+					p Если у&nbsp;вас уже есть учетная запись, #[a(href="#") авторизуйтесь.] Если вы&nbsp;еще не&nbsp;регистрировались, то&nbsp;заполните форму ниже
+				+input("Выберите направление", "select", "Направления")
+				+input("Выберите специалиста", "select", "Специалисты")
+				+input("Опишите кратко суть вопроса", "textarea", "Вопрос")
+				+input("Имя", "text", "Имя")
+				+input("Электронная почта", "email", "Электронная почта")
+				+input("+7 (___) __ __", "tel", "Телефон")
+				+e.SPAN.input-title Подтвердите пароль
+				+e.password-wrap
+					+e.SPAN.btn-show-pass
+						+icon('visibility')
+					+input("Пароль", "password")
+				+e.SPAN.input-title Подтвердите пароль
+				+e.password-wrap
+					+e.SPAN.btn-show-pass
+						+icon('visibility')
+					+input("Подтвердите пароль", "password")
+				+e.input-wrap.form-group
+					+in-c("checkbox", "Анонимно")
+				+e.BUTTON.btn.btn.btn-primary Задать вопрос
+				+e.agreement
+						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
+						a(href="#") Пользовательского соглашения
+				//- +footer
+	// #modal-question-auth
 	
 	// end modals

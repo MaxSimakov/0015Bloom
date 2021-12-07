@@ -60,6 +60,29 @@
 			min-height: rem(120);
 			padding: rem(12);
 		}
+		&__btn {
+			width: 100%;
+			margin-top: rem(5);
+		}
+		&__heading {
+			text-align: center;
+			margin-bottom: rem(24);
+			h3 {
+				margin-bottom: rem(8);
+			}
+			p {
+				font-size: rem(16);
+				line-height: calc(24 / 16);
+				margin-bottom: 0;
+				@include media-breakpoint-up(sm) {
+					line-height: 1;
+				}
+			}
+		}
+		&__agreement {
+			text-align: center;
+			margin-top: rem(16);
+		}
 	}
 }
 
