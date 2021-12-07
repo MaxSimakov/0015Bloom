@@ -189,7 +189,8 @@ const JSCCommon = {
 				singleMode: false,
 				showTooltip: false,
 				dropdowns: true,
-				resetButton: true,
+				// resetButton: true,
+				position: "bottom right",
 				// tooltipText: {
 				// 	one: 'night',
 				// 	other: 'nights'
@@ -205,7 +206,8 @@ const JSCCommon = {
 				singleMode: true,
 				showTooltip: false,
 				dropdowns: true,
-				resetButton: true,
+				// resetButton: true,
+				position: "bottom right",
 				// tooltipText: {
 				// 	one: 'night',
 				// 	other: 'nights'

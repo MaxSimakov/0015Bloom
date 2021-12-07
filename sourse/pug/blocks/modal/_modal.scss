@@ -351,6 +351,9 @@ a {
 					&:not(:focus) {
 						border: 1px solid $gray-light;
 					}
+					&:hover {
+						border-color: $primary;
+					}
 					&::placeholder {
 						color: $dark;
 					}
