@@ -306,6 +306,28 @@ function eventHandler() {
 		.parents('.sAccess__item').find( ".sAccess__item-content").slideToggle();
 	});
 
+	// $(document).on("click", ".form-wrap__btn-toggle-pass", function() {
+	// 	var inputPass = $(this).parents('.form-wrap__password-wrap').find( "input");
+	// 	if ($(inputPass).attr('type') == 'password'){
+	// 		$(this).addClass('on');
+	// 		$(inputPass).attr('type', 'text');
+	// 		} else {
+	// 		$(this).removeClass('on');
+	// 		$(inputPass).attr('type', 'password');
+	// 		}
+	// 		return false;
+	// });
+
+	document.addEventListener("click", function (event) {
+		const toggleEv = event.target.closest(".form-wrap__btn-toggle-pass");
+		if (!toggleEv) return;
+		toggleEv.classList.toggle('on');
+		const input = toggleEv.closest('.form-wrap__password-wrap').querySelector('input');
+		const type = input.getAttribute(
+			'type') === 'password' ? 'text' : 'password';
+			input.setAttribute('type', type);
+	}, { passive: true });
+
 
 
 	const mask = document.querySelector('.menu-mobile ul');
@@ -317,6 +339,9 @@ function eventHandler() {
 	}, { passive: true });
 	// mainModal.onmousemove = function (e) {
 	// }
+
+	
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -369,7 +369,7 @@ a {
 			padding-right: rem(45);
 		}
 	}
-	&__btn-show-pass {
+	&__btn-toggle-pass {
 		@include a-cent(y);
 		right: rem(12);
 		width: rem(24);
