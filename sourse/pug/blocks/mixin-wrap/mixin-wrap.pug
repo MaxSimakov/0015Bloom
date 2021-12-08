@@ -29,12 +29,28 @@ mixin addblock()
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
 
+mixin searchForm(d)
+	+b.FORM.searchForm 
+		+input("Поиск")
+		button 
+			if d 
+				+icon('close')
+			else 
+				+icon('search')
+
+
 mixin pageHead(data)
-	+b.page-head 
-		.container 
-			h1!= data.t
-			p!= data.p
-			+e.btn(href="#")= data.btn
+	+b.page-head&attributes(attributes)
+		.container
+			+e.content
+				h1!= data.t
+				p!= data.p
+				if data.btn
+					+e.btn(href="#")= data.btn
+				if data.img
+					+pic(data.img)
+				if data.search
+					+searchForm(data.d)
 
 mixin pricing(n, l)
 	+b.pricing-block

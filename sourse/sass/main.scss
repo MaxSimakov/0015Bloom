@@ -116,6 +116,9 @@ $output-bourbon-deprecation-warnings: false;
     height: 31px;
     border: 1px solid $pagination-border-color;
     border-radius: 50%;
+    svg {
+      font-size: rem(12);
+    }
   }
 }
 

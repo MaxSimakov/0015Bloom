@@ -1,0 +1,55 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sFaqExperts/_sFaqExperts.pug
+include ../blocks/sNewsWrraper/_sNewsWrraper.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  st= "--headBg: linear-gradient(180deg, rgba(186,193,228,1) 0%, rgba(238,240,248,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);"
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Статьи и лекции'
+	title= title
+block pagecontent
+
+	+pageHead({
+		t: `Статьи и&nbsp;лекции`,
+		p: `Врачи и&nbsp;эксперты в&nbsp;формате мини-лекций рассказывают о&nbsp;том, как работает женский организм.`,
+		d: true,
+		search: true,
+		img: 'newsImg.png'
+	}).text-start
+	+sFaqExperts()
+	+sNewsWrraper()
+	//- +mob-mnu()
+	//- +header()
+	+top-nav()
+	//- +topLine()
+	//- .bg-background
+	//- 	+headerBlock()
+	//- 	+sCategories()
+	//- 	+sCardHorisontal()
+	//- 	+sYouNeedUs()
+	//- +sTeam5()
+	//- +sAccess()
+	//- +sQuestions()
+	//- +sReviews()
+	//- +sCardHorisontal2()
+	//- //- +sForm()
+	//- //- +sContact()
+	//- +footer-main()
+	+footer
+
+
