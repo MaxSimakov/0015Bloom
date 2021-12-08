@@ -122,7 +122,7 @@ function styles() {
     ];
     return src(sourse + '/sass/main.scss')
         .pipe(sassGlob())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass.sync().on('error', sass.logError))
         // .pipe(postcss(processors, { syntax: syntax }))
         .pipe(postcss(processors, { syntax: pscss }))
         // .pipe(gcmq())

@@ -581,3 +581,18 @@ h6 {
 		font-size: rem(22);
 	}
 }
+
+.litepicker {
+	font-family: $font-family-sans-serif;
+	font-size: rem(14);
+	line-height: calc(16 / 14);
+}
+
+.litepicker .container__days > div,
+.litepicker .container__days > a {
+	padding: rem(7) 0;
+}
+
+.litepicker .container__months .month-item-weekdays-row > div {
+	font-size: 100%;
+}

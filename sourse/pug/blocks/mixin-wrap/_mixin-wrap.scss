@@ -163,3 +163,50 @@
 	}
 	
 }
+
+.help-tooltip {
+	position: relative;
+	display: inline-block;
+	width: rem(16);
+	height: rem(16);
+	&:hover {
+		span {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	span {
+		@include mt;
+		position: absolute;
+		display: inline-block;
+		width: rem(220);
+		bottom: calc(100% + 3px);
+		left: rem(-30);
+		padding: rem(8);
+		background-color: $white;
+		font-size: rem(14);
+		line-height: calc(16 / 14);
+		border-radius: $border-radius;
+		z-index: 2;
+		filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
+		visibility: hidden;
+		opacity: 0;
+		&::before {
+			content: "";
+			position: absolute;
+			width: rem(12);
+			height: rem(12);
+			left: rem(32);
+			top: calc(100% - 8px);
+			z-index: 1;
+			border-radius: 2px;
+			background-color: $white;
+			transform: rotate(45deg);
+		}
+	}
+	.icon {
+		font-size: rem(16);
+		fill: none;
+		stroke: currentColor;
+	}
+}

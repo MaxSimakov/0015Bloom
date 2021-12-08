@@ -17,7 +17,7 @@
 		--sTPB: #{rem(40)};
 	}
 
-	--headBg: linear-gradient(0deg,hsla(37,44%,81%,0),hsla(37,44%,81%,.768) 40%,#e4d4ba);
+	--headBg: linear-gradient(0deg, hsla(37, 44%, 81%, 0), hsla(37, 44%, 81%, 0.768) 40%, #e4d4ba);
 	--card-shadow: 0px 20px 24px #{rgba($color: $primary, $alpha: 0.2)};
 	--swiperArrowSize: #{rem(68)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
@@ -39,6 +39,38 @@
 
 	//  --carousel-button-svg-stroke-width: 2.5;
 	//  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+
+	--litepicker-container-months-color-bg: #{$white};
+	--litepicker-container-months-box-shadow-color: rgba(214, 118, 68, 0.22);
+	--litepicker-footer-color-bg: #fafafa;
+	--litepicker-footer-box-shadow-color: rgba(214, 118, 68, 0.22);
+	--litepicker-tooltip-color-bg: #{$white};
+	--litepicker-month-header-color: #{$dark};
+	--litepicker-button-prev-month-color: #{$dark};
+	--litepicker-button-next-month-color: #{$dark};
+	--litepicker-button-prev-month-color-hover: #{$primary};
+	--litepicker-button-next-month-color-hover: #{$primary};
+	--litepicker-month-width: calc(var(--litepicker-day-width) * 7);
+	--litepicker-month-weekday-color: #{$gray-medium};
+	--litepicker-month-week-number-color: #{$gray-medium};
+	--litepicker-day-width: #{rem(30)};
+	--litepicker-day-color: #{$dark};
+	--litepicker-day-color-hover: #{$primary};
+	--litepicker-is-today-color: #{$primary};
+	--litepicker-is-in-range-color: #bbdefb;
+	--litepicker-is-locked-color: #{$gray-medium};
+	--litepicker-is-start-color: #{$white};
+	--litepicker-is-start-color-bg: #{$primary};
+	--litepicker-is-end-color: #{$white};
+	--litepicker-is-end-color-bg: #{$primary};
+	--litepicker-button-cancel-color: #{$white};
+	--litepicker-button-cancel-color-bg: #{$gray-medium};
+	--litepicker-button-apply-color: #{$white};
+	--litepicker-button-apply-color-bg: #{$primary};
+	--litepicker-button-reset-color: #{$gray-medium};
+	--litepicker-button-reset-color-hover: #{$primary};
+	--litepicker-highlighted-day-color: #{$dark};
+	--litepicker-highlighted-day-color-bg: #{$yellow}; 
 }
 
 @include media-breakpoint-up(xl) {
