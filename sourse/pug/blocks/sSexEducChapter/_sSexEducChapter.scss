@@ -1,0 +1,18 @@
+// start .sSexEducChapter
+.sSexEducChapter {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		.container {
+			@include media-breakpoint-up(xl) {
+				max-width: 990px;
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSexEducChapter

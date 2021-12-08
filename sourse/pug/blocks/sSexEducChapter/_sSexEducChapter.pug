@@ -1,0 +1,13 @@
+mixin sSexEducChapter(data)
+	// start sSexEducChapter
+	+b.sSexEducChapter.section#sSexEducChapter&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Знакомство со&nbsp;своим телом
+			+e.slider.swiper.slider-auto--js
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.item(href=`#`)
+							+pic()
+
+	// end sSexEducChapter

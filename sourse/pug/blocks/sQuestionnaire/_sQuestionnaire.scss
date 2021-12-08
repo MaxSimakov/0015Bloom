@@ -1,31 +1,22 @@
 // start .sQuestionnaire
 .sQuestionnaire {
 	--sPT: 0;
-	--sPB: #{rem(40)};
-	// --sTPB: ;
+	--sPB: #{rem(28)};
+	// --sPT: #{rem(24)};
 	background-color: $white;
+	// margin-top: rem(-24);
+	// border-radius: 24px 24px 0px 0px;
 	@include media-breakpoint-up(md) {
-		--sPB: #{rem(56)};
+		--sPT: 0;
+		--sPB: #{rem(16)};
+		// --sPT: #{rem(48)};
 	}
-
 	.container {
 		@include media-breakpoint-up(xl) {
 			max-width: 990px;
 		}
 	}
-	// &__heading {
-	// 	margin-bottom: rem(24);
-	// 	@include media-breakpoint-up(md) {
-	// 		margin-bottom: rem(56);
-	// 	}
-	// 	p {
-	// 		@extend .medium-subtitle;
-	// 		font-weight: 400;
-	// 		&:last-child {
-	// 			margin-bottom: 0;
-	// 		}
-	// 	}
-	// }
+	
 	.form-wrap {
 		border: 1px solid $primary;
 		border-radius: 24px;
@@ -49,15 +40,14 @@
 		h2 {
 			@extend .h4;
 			text-align: center;
-			margin-bottom: rem(16);
 			max-width: 12em;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 0;
 			@include media-breakpoint-up(md) {
 				margin-left: 0;
 				margin-right: 0;
 				max-width: 100%;
-				margin-bottom: rem(32);
 			}
 		}
 		&__input-wrap {
@@ -67,6 +57,13 @@
 			margin-bottom: rem(32);
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(24);
+			}
+			&:first-of-type {
+				margin-top: rem(16);
+				@include media-breakpoint-up(md) {
+					margin-top: rem(32);
+
+				}
 			}
 			&:last-of-type {
 				margin-bottom: 0;

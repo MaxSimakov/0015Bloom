@@ -7,6 +7,8 @@ extends layout/main.pug
 //- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
 //- include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sQuestionnaire/_sQuestionnaire.pug
+include ../blocks/sSexEducation/_sSexEducation.pug
+include ../blocks/sSexEducChapter/_sSexEducChapter.pug
 //- include ../blocks/sAccess/_sAccess.pug
 //- include ../blocks/sQuestions/_sQuestions.pug
 //- include ../blocks/sReviews/_sReviews.pug
@@ -33,10 +35,14 @@ block pagecontent
 		search: false,
 		img: 'sex-education.png'
 	}).text-start
-	+sQuestionnaire()
-		//- +e.heading
-		//- 	p Когда говорят &laquo;сексуальное образование&raquo;, &laquo;сексуальное просвещение&raquo; многие люди слышат лишь первую часть &mdash; &laquo;секс&raquo;, &laquo;сексуальное&raquo;, совершенно не&nbsp;обращая внимания на то, что секс и&nbsp;половой акт&nbsp;&mdash; это разные понятия.
-		//- 	p Сексуальное просвещение&nbsp;&mdash; это прежде всего знания о&nbsp;своем теле: как оно устроено, какие процессы в&nbsp;нем нормальны и соответствуют возрасту, а&nbsp;на&nbsp;какие нужно обратить внимание, сказать родителям, обратиться к&nbsp;врачу. А&nbsp;еще сексуальное просвещение&nbsp;&mdash; это разговор о&nbsp;безопасности, умении говорить &laquo;нет&raquo; и&nbsp;спокойно принимать отказ, о&nbsp;контрацепции. Две основные функции сексуального просвещения&nbsp;&mdash; это сохранение здоровья и&nbsp;обеспечение безопасности.
+	+sSexEducation()
+		.container
+			+e.heading
+				p Когда говорят &laquo;сексуальное образование&raquo;, &laquo;сексуальное просвещение&raquo; многие люди слышат лишь первую часть &mdash; &laquo;секс&raquo;, &laquo;сексуальное&raquo;, совершенно не&nbsp;обращая внимания на то, что секс и&nbsp;половой акт&nbsp;&mdash; это разные понятия.
+				p Сексуальное просвещение&nbsp;&mdash; это прежде всего знания о&nbsp;своем теле: как оно устроено, какие процессы в&nbsp;нем нормальны и соответствуют возрасту, а&nbsp;на&nbsp;какие нужно обратить внимание, сказать родителям, обратиться к&nbsp;врачу. А&nbsp;еще сексуальное просвещение&nbsp;&mdash; это разговор о&nbsp;безопасности, умении говорить &laquo;нет&raquo; и&nbsp;спокойно принимать отказ, о&nbsp;контрацепции. Две основные функции сексуального просвещения&nbsp;&mdash; это сохранение здоровья и&nbsp;обеспечение безопасности.
+		+sQuestionnaire(`Пройдите анонимный опрос`, `start`)
+		+sQuestionnaire(`Спасибо! <br> Ваши ответы успешно отправлены`)
+		+sSexEducChapter()
 	//- +sFaqExperts()
 	//- +sNewsWrraper()
 	//- +mob-mnu()
