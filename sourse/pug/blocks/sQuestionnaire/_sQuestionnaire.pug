@@ -1,0 +1,21 @@
+mixin sQuestionnaire(data)
+	// start sQuestionnaire
+	+b.SECTION.sQuestionnaire.section#sQuestionnaire&attributes(attributes)
+		.container
+			+form-wrap
+				h2 Пройдите анонимный опрос
+				+e.input-wrap.form-group
+					+e.SPAN.input-title Говорили&nbsp;ли с&nbsp;вами родители о&nbsp;сексе и&nbsp;устройстве тела?
+					+in-c("radio", "Да", "talk" )
+					+in-c("radio", "Нет", "talk" )
+				+e.input-wrap.form-group
+					+e.SPAN.input-title Кто проводил уроки полового воспитания когда вы&nbsp;учились в&nbsp;школе?
+					+in-c("radio", "Мед сестра", "talk" )
+					+in-c("radio", "Преподаватель биологии", "talk" )
+					+in-c("radio", "Психолог", "talk" )
+					+in-c("radio", "Батюшка из церкви", "talk" )
+					+in-c("radio", "Специалист по половому воспитанию, секс-педагог", "talk" )
+					+in-c("radio", "Никто", "talk" )
+				+e.BUTTON.btn Отправить
+			.row
+	// end sQuestionnaire
