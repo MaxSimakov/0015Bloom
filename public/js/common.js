@@ -228,7 +228,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.getCurrentYear('.currentYear');
 	JSCCommon.datepicker();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
