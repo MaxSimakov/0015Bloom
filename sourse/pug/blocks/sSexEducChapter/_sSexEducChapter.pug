@@ -1,13 +1,18 @@
-mixin sSexEducChapter(data)
+
+mixin slide(i, p)
+	+e.slide.swiper-slide
+		+e.item(href=`#`)
+			+pic(`sSexEducChapter-${i}.jpg`, `bg`, 0)
+			p!= p
+
+mixin sSexEducChapter(t)
 	// start sSexEducChapter
 	+b.sSexEducChapter.section#sSexEducChapter&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Знакомство со&nbsp;своим телом
+				h4!= t
 			+e.slider.swiper.slider-auto--js
 				.swiper-wrapper
-					+e.slide.swiper-slide
-						+e.item(href=`#`)
-							+pic()
+					block
 
 	// end sSexEducChapter
