@@ -299,6 +299,34 @@ function eventHandler() {
 		spaceBetween: 0,
 
 	});
+	const sSexEducChapter = new Swiper('.sSexEducChapter__slider--js', { 
+
+		slidesPerView: 'auto', 
+		watchOverflow: true, 
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			// 576: {
+			// 	slidesPerView: 2,
+			// 	spaceBetween: 16
+			// },
+			// // when window width is >= 480px
+			// 768: {
+			// 	slidesPerView: 3,
+			// 	spaceBetween: 16
+			// },
+			// when window width is >= 640px
+			// 640: {
+			// 	slidesPerView: 4,
+			// 	spaceBetween: 40
+			// }
+		}
+
+	});
 
 
 	$(".sAccess__btn-accordion" ).click(function() {

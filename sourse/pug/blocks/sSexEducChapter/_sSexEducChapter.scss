@@ -8,6 +8,7 @@
 		--sPB: #{rem(40)};
 		--sTPB: #{rem(24)};
 	}
+
 	.container {
 		@include media-breakpoint-up(xl) {
 			max-width: 990px;
@@ -20,11 +21,37 @@
 	}
 	&__slider {
 		overflow: visible;
+		--slideMargin: #{rem(16)};
+		--slideWidth: #{rem(227)};
+		--arrowVertPos: calc(var(--slideWidth) * 1.211 / 2 - #{rem(20)});
+		@include media-breakpoint-up(sm) {
+			--slideWidth: #{rem(246)};
+		}
+		@include media-breakpoint-up(md) {
+			--slideWidth: #{rem(218.66)};
+		}
+		@include media-breakpoint-up(lg) {
+			--slideWidth: #{rem(220)};
+		}
+		@include media-breakpoint-up(xl) {
+			--slideWidth: #{rem(227.5)};
+		}
+		.swiper-button-hand {
+			margin-top: 0;
+			margin-bottom: 0;
+			bottom: 0;
+			top: var(--arrowVertPos);
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+
+		}
 	}
 	&__slide {
-		max-width: rem(227);
+		max-width: var(--slideWidth);
 		margin-right: rem(16);
 		height: auto;
+		
 	}
 	&__item {
 		display: flex;
@@ -33,7 +60,7 @@
 		&:not(:hover) {
 			color: #c26d61;
 		}
-		
+
 		picture {
 			@include block(227, 275);
 			border-radius: 16px;
