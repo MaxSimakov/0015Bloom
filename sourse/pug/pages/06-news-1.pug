@@ -27,12 +27,13 @@ block pagecontent
 	+pageHead({
 		t: `Статьи и&nbsp;лекции`,
 		p: `Врачи и&nbsp;эксперты в&nbsp;формате мини-лекций рассказывают о&nbsp;том, как работает женский организм.`,
-		d: false,
+		d: true,
+		formText: 'По вашему запросу ничего не найдено. Попробуйте изменить поисковый запрос',
 		search: true,
 		img: 'newsImg.png'
 	}).text-start.pageHeadNews
-	+sFaqExperts().rounded-top
-	+sNewsWrraper()
+	//- +sFaqExperts()
+	+sNewsWrraper1().rounded-top.rounded-top1
 	//- +mob-mnu()
 	//- +header()
 	+top-nav()
