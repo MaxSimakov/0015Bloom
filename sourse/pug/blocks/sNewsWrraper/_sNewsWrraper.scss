@@ -50,7 +50,8 @@
 		}
 	}
 	.custom-switch {
-		min-height: 2.2em;
+		display: inline-block;
+		margin-bottom: rem(16);
 		.form-check-label {
 			vertical-align: middle;
 			font-weight: 500;
