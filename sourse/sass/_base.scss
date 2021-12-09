@@ -314,7 +314,8 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		@include a-cent;
+		font-size: rem(19);
 	}
 
 	&::after {
@@ -322,11 +323,21 @@ ul {
 	}
 	&-next {
 		right: var(--swiperArrowPosition);
+		.icon {
+			left: 3px;
+		}
 	}
 
 	&-prev {
 		left: var(--swiperArrowPosition);
+		.icon {
+			right: 3px;
+		}
 	}
+	// &.swiper-button-disabled {
+	// 	opacity: 0;
+		
+	// }
 }
 
 .swiper-pagination {

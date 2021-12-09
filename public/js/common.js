@@ -299,6 +299,17 @@ function eventHandler() {
 		spaceBetween: 0,
 
 	});
+	const sSexEducChapter = new Swiper('.sSexEducChapter__slider--js', { 
+
+		slidesPerView: 'auto', 
+		watchOverflow: true, 
+		spaceBetween: 0,
+		// loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+	});
 
 
 	$(".sAccess__btn-accordion" ).click(function() {

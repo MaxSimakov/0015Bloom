@@ -11,8 +11,9 @@ mixin sSexEducChapter(t)
 		.container
 			+b.section-title
 				h4!= t
-			+e.slider.swiper.slider-auto--js
+			+e.slider--js.swiper
 				.swiper-wrapper
 					block
+				+arrow
 
 	// end sSexEducChapter
