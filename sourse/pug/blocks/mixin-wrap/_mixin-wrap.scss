@@ -138,10 +138,11 @@
 			}
 		}
 		img {
-			position: absolute;
-			@include media-breakpoint-down(lg) {
-				position: static;
-				margin-bottom: 3px;
+			position: static;
+			margin-bottom: 3px;
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				margin-bottom: 0;
 			}
 			bottom: rem(0);
 			right: rem(16);
