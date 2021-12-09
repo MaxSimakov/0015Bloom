@@ -1,0 +1,18 @@
+
+mixin slide(i, p)
+	+e.slide.swiper-slide
+		+e.item(href=`#`)
+			+pic(`sSexEducChapter-${i}.jpg`, `bg`, 0)
+			p!= p
+
+mixin sSexEducChapter(t)
+	// start sSexEducChapter
+	+b.sSexEducChapter.section#sSexEducChapter&attributes(attributes)
+		.container
+			+b.section-title
+				h4!= t
+			+e.slider.swiper.slider-auto--js
+				.swiper-wrapper
+					block
+
+	// end sSexEducChapter

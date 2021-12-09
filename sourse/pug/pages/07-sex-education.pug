@@ -1,0 +1,75 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sQuestionnaire/_sQuestionnaire.pug
+include ../blocks/sSexEducation/_sSexEducation.pug
+include ../blocks/sSexEducChapter/_sSexEducChapter.pug
+//- include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sFaqExperts/_sFaqExperts.pug
+//- include ../blocks/sNewsWrraper/_sNewsWrraper.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  st= "--headBg: linear-gradient(180deg, rgba(232, 160, 151, 1) 0%, rgba(250,233,231,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);"
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Сексуальное образование'
+	title= title
+block pagecontent
+
+	+top-nav()
+	+pageHead({
+		t: `Сексуальное образование`,
+		p: `Добавь гармонию в&nbsp;свою жизнь`,
+		d: false,
+		search: false,
+		img: 'sex-education.png'
+	}).text-start
+	+sSexEducation()
+		.container
+			+e.heading
+				p Когда говорят &laquo;сексуальное образование&raquo;, &laquo;сексуальное просвещение&raquo; многие люди слышат лишь первую часть &mdash; &laquo;секс&raquo;, &laquo;сексуальное&raquo;, совершенно не&nbsp;обращая внимания на то, что секс и&nbsp;половой акт&nbsp;&mdash; это разные понятия.
+				p Сексуальное просвещение&nbsp;&mdash; это прежде всего знания о&nbsp;своем теле: как оно устроено, какие процессы в&nbsp;нем нормальны и соответствуют возрасту, а&nbsp;на&nbsp;какие нужно обратить внимание, сказать родителям, обратиться к&nbsp;врачу. А&nbsp;еще сексуальное просвещение&nbsp;&mdash; это разговор о&nbsp;безопасности, умении говорить &laquo;нет&raquo; и&nbsp;спокойно принимать отказ, о&nbsp;контрацепции. Две основные функции сексуального просвещения&nbsp;&mdash; это сохранение здоровья и&nbsp;обеспечение безопасности.
+		+sQuestionnaire(`Пройдите анонимный опрос`, `start`)
+		+sQuestionnaire(`Спасибо! <br> Ваши ответы успешно отправлены`)
+		+sSexEducChapter(`Знакомство со&nbsp;своим телом`)
+			+slide(1, `Привычки для спортивной жизни`)
+			+slide(2, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(3, `Привычки для спортивной жизни`)
+			+slide(4, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(5, `Привычки для спортивной жизни`)
+
+		+sSexEducChapter(`Репродуктивное здоровье`)
+			+slide(4, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(5, `Привычки для спортивной жизни`)
+			+slide(2, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(1, `Привычки для спортивной жизни`)
+			+slide(3, `Привычки для спортивной жизни`)
+
+		+sSexEducChapter(`Секс и&nbsp;отношения`)
+			+slide(2, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(1, `Привычки для спортивной жизни`)
+			+slide(4, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(3, `Привычки для спортивной жизни`)
+			+slide(5, `Привычки для спортивной жизни`)
+
+		+sSexEducChapter(`Все, что нужно знать о&nbsp;контрацепции`)
+			+slide(4, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(5, `Привычки для спортивной жизни`)
+			+slide(2, `Факты и&nbsp;мифы о&nbsp;фитнесе`)
+			+slide(1, `Привычки для спортивной жизни`)
+			+slide(3, `Привычки для спортивной жизни`)
+
+	+footer
+
+

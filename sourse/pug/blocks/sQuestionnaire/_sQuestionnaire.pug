@@ -1,0 +1,27 @@
+mixin sQuestionnaire(t, start)
+	// start sQuestionnaire
+	+b.SECTION.sQuestionnaire.section#sQuestionnaire&attributes(attributes)
+		.container
+			if start
+				+form-wrap
+					h2!= t
+					+e.input-wrap.form-group
+						+e.SPAN.input-title Говорили&nbsp;ли с&nbsp;вами родители о&nbsp;сексе и&nbsp;устройстве тела?
+						+in-c("radio", "Да", "talk" )
+						+in-c("radio", "Нет", "talk" )
+					+e.input-wrap.form-group
+						+e.SPAN.input-title Кто проводил уроки полового воспитания когда вы&nbsp;учились в&nbsp;школе?
+						+in-c("radio", "Мед сестра", "who" )
+						+in-c("radio", "Преподаватель биологии", "who" )
+						+in-c("radio", "Психолог", "who" )
+						+in-c("radio", "Батюшка из церкви", "who" )
+						+in-c("radio", "Специалист по половому воспитанию, секс-педагог", "who" )
+						+in-c("radio", "Никто", "who" )
+					+e.BUTTON.btn Отправить
+			else
+				.form-wrap
+					h2!= t
+
+				
+
+	// end sQuestionnaire
