@@ -94,7 +94,7 @@
 			@extend .medium-subtitle;
 			font-weight: 400;
 			max-width: rem(760);
-			margin-top: rem(16px);
+			// margin-top: rem(16px);
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: rem(28px);
@@ -139,9 +139,12 @@
 		}
 		img {
 			position: absolute;
+			@include media-breakpoint-up(lg) {
+				max-height: calc(100% - 54px);
+			}
 			@include media-breakpoint-down(lg) {
 				position: static;
-				margin-bottom: 3px;
+				// margin-bottom: 3px;
 			}
 			bottom: rem(0);
 			right: rem(16);
@@ -177,6 +180,15 @@
 	// 		}
 	// 	}
 	// }
+
+	&--sexEduc {
+		.container {
+			@include media-breakpoint-up(lg) {
+				padding-top: rem(216);
+				padding-bottom: rem(185);
+			}
+		}
+	}
 }
 .pricing-block {
 	.row {
@@ -208,7 +220,6 @@
 		@extend .btn, .btn-primary;
 		padding: rem(8) rem(26);
 	}
-	
 }
 
 .help-tooltip {
