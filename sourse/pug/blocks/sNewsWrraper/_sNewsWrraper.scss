@@ -1,8 +1,12 @@
 // start .sNewsWrraper
 .sNewsWrraper {
-		// --sPT: ;
+		--sPT: 0;
 		--sPB: 0;
 		// --sTPB: ;
+	margin-top: rem(-40);
+	@include media-breakpoint-down(lg) {
+		margin-top: rem(0);
+	}
 	&__newsList {
 		display: flex;
 		flex-wrap: wrap;
@@ -10,6 +14,13 @@
 		gap: rem(16) 0;
 		@include media-breakpoint-up(md) {
 			gap: rem(41) rem(16);
+		}
+	}
+	.custom-switch {
+		min-height: 2.2em;
+		.form-check-label {
+			vertical-align: middle;
+			font-weight: 500;
 		}
 	}
 	.pagination-wrapper {
@@ -42,12 +53,13 @@
 		position: absolute;
 		top: rem(8);
 		right: rem(8);
-	}
-	svg {
-		font-size: rem(24);
-		color: $primary;
-		fill: var(--color, none);
-		stroke: currentColor;
+	
+		svg {
+			font-size: rem(24);
+			color: $primary;
+			fill: var(--color, none);
+			stroke: currentColor;
+		}
 	}
 	&.active {
 		--color: currentColor;
@@ -58,15 +70,29 @@
 	&__specialization {
 		font-size: rem(14);
 		color: $gray-medium;
+		margin-bottom: rem(8);
 	}
 	&__title {
 		font-size: rem(17);
 		color: $dark;
 		line-height: rem(24);
 		font-weight: 500;
-		margin: rem(8) 0;
 	}
 	&__text {
 		color: $gray-dark;
+		margin-top: rem(8);
+	}
+}
+
+.video-collection {
+	position: absolute;
+	top: rem(8);
+	left: rem(8);
+	background-color: $white;
+	font-size: rem(14);
+	padding: rem(5) rem(8);
+	border-radius: rem(8);
+	svg {
+		font-size: rem(16);
 	}
 }

@@ -12,9 +12,9 @@
 		<link href="libs/litepicker/css/litepicker.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="main.jpg" style="--headBg: linear-gradient(180deg, rgba(186,193,228,1) 0%, rgba(238,240,248,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);">
+	<body class="main-page" data-bg="6-1News.jpg" style="--headBg: linear-gradient(180deg, rgba(186,193,228,1) 0%, rgba(238,240,248,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);">
 		<div class="main-wrapper">
-			<div class="page-head text-start">
+			<div class="page-head text-start pageHeadNews">
 				<div class="container">
 					<div class="page-head__content">
 						<h1>Статьи и&nbsp;лекции</h1>
@@ -28,8 +28,8 @@
 							</div>
 							<!-- +e.input-wrap-->
 							<button> 
-								<svg class="icon icon-close ">
-									<use xlink:href="img/svg/sprite.svg#close"></use>
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
 								</svg>
 							</button>
 						</form>
@@ -67,12 +67,84 @@
 			</div>
 			<!-- end sFaqExperts-->
 			<!-- start sNewsWrraper-->
-			<section class="sNewsWrraper section" id="sNewsWrraper">
+			<div class="sNewsWrraper section" id="sNewsWrraper">
 				<div class="container">
-					<label class="form-check form-switch">
-						<input class="form-check-input" type="checkbox" checked=""/><span class="form-check-label">Checked switch checkbox input</span>
+					<label class="form-check form-switch custom-switch">
+						<input class="form-check-input" type="checkbox" checked=""/><span class="form-check-label">Только бесплатные</span>
 					</label>
 					<div class="sNewsWrraper__newsList">
+						<div class="newsItem">
+							<!-- picture-->
+							<picture> <img class="object-fit-js" src="img/newsPre-1.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<a class="newsItem__bookmark" href="#">
+								<svg class="icon icon-bookmarkActive ">
+									<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
+								</svg>
+							</a>
+							<div class="newsItem__content"> 
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет:
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id...
+								</p>
+							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
+						</div>
+						<div class="newsItem active">
+							<!-- picture-->
+							<picture> <img class="object-fit-js" src="img/newsPre-2.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<a class="newsItem__bookmark" href="#">
+								<svg class="icon icon-bookmarkActive ">
+									<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
+								</svg>
+							</a>
+							<div class="newsItem__content"> 
+								<div class="newsItem__specialization">Реабилитация и&nbsp;тренировки
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
+								</p>
+							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
+						</div>
+						<div class="newsItem">
+							<!-- picture-->
+							<picture> <img class="object-fit-js" src="img/newsPre-3.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<a class="newsItem__bookmark" href="#">
+								<svg class="icon icon-bookmarkActive ">
+									<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
+								</svg>
+							</a>
+							<div class="newsItem__content"> 
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...
+								</p>
+							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
+						</div>
 						<div class="newsItem active">
 							<!-- picture-->
 							<picture> <img class="object-fit-js" src="img/newsPre-1.jpg" alt="" loading="lazy"/>
@@ -84,70 +156,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет:
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
-						</div>
-						<div class="newsItem">
-							<!-- picture-->
-							<picture> <img class="object-fit-js" src="img/newsPre-2.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-							<a class="newsItem__bookmark" href="#">
-								<svg class="icon icon-bookmarkActive ">
-									<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-								</svg>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
 							</a>
-							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Active
-								</div>
-								<p class="newsItem__text">Реабилитация и&nbsp;тренировки
-								</p>
-							</div>
-						</div>
-						<div class="newsItem">
-							<!-- picture-->
-							<picture> <img class="object-fit-js" src="img/newsPre-3.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-							<a class="newsItem__bookmark" href="#">
-								<svg class="icon icon-bookmarkActive ">
-									<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-								</svg>
-							</a>
-							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума
-								</p>
-							</div>
-						</div>
-						<div class="newsItem">
-							<!-- picture-->
-							<picture> <img class="object-fit-js" src="img/newsPre-1.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-							<a class="newsItem__bookmark" href="#">
-								<svg class="icon icon-bookmarkActive ">
-									<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-								</svg>
-							</a>
-							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">Active
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
-								</p>
-							</div>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -160,13 +180,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -179,15 +204,20 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
-						<div class="newsItem">
+						<div class="newsItem active">
 							<!-- picture-->
 							<picture> <img class="object-fit-js" src="img/newsPre-6.jpg" alt="" loading="lazy"/>
 							</picture>
@@ -198,13 +228,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">Active
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -217,13 +252,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -236,13 +276,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -255,13 +300,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -274,15 +324,20 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
-						<div class="newsItem">
+						<div class="newsItem active">
 							<!-- picture-->
 							<picture> <img class="object-fit-js" src="img/newsPre-3.jpg" alt="" loading="lazy"/>
 							</picture>
@@ -293,13 +348,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">Active
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -312,15 +372,20 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
-						<div class="newsItem">
+						<div class="newsItem active">
 							<!-- picture-->
 							<picture> <img class="object-fit-js" src="img/newsPre-3.jpg" alt="" loading="lazy"/>
 							</picture>
@@ -331,13 +396,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">Active
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -350,13 +420,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -369,15 +444,20 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
-						<div class="newsItem">
+						<div class="newsItem active">
 							<!-- picture-->
 							<picture> <img class="object-fit-js" src="img/newsPre-6.jpg" alt="" loading="lazy"/>
 							</picture>
@@ -388,13 +468,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">Active
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -407,13 +492,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -426,13 +516,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 						<div class="newsItem">
 							<!-- picture-->
@@ -445,13 +540,18 @@
 								</svg>
 							</a>
 							<div class="newsItem__content"> 
-								<div class="newsItem__specialization">
-								</div>
-								<div class="newsItem__title">Проктология
-								</div>
-								<p class="newsItem__text">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								<div class="newsItem__specialization">Проктология
+								</div><span class="newsItem__title">
+								<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+								</a></span>
+								<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 								</p>
 							</div>
+							<a class="video-collection" href="#">
+								<svg class="icon icon-playVideo ">
+									<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+								</svg><span>Видеолекция</span>
+							</a>
 						</div>
 					</div>
 					<div class="pagination-wrapper">
@@ -481,7 +581,7 @@
 						</ul>
 					</div>
 				</div>
-			</section>
+			</div>
 			<!-- end sNewsWrraper-->
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">

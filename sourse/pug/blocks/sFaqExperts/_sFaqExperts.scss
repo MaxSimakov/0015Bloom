@@ -1,8 +1,17 @@
 // start .sFaqExperts
 .sFaqExperts {
-		 --sPT: #{rem(32)};
+		 --sPT: #{rem(79)};
 		 --sPB: #{rem(40)};
 		// --sTPB: ;
+		@include media-breakpoint-down(lg) {
+			position: relative;
+			overflow: visible;
+			z-index: 2;
+			background-color: #fff;
+			border-radius: 2em 2em 0 0;
+			margin-top: -2.5em;
+			// --sPT: #{rem(79)};
+		}
 		@include media-breakpoint-up(lg) {
 			--sPT: #{rem(40)};
 		 	--sPB: #{rem(72)};

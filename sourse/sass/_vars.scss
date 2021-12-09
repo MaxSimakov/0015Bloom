@@ -663,10 +663,10 @@ $form-label-color: null !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y: rem(15) !default;
-$input-padding-x: rem(15) !default;
+$input-padding-y: rem(5) !default;
+$input-padding-x: rem(16) !default;
 $input-font-family: $input-btn-font-family !default;
-$input-font-size: rem(16) !default;
+$input-font-size: rem(22) !default;
 $input-font-weight: $font-weight-base !default;
 $input-line-height: 1 !default;
 
@@ -683,11 +683,13 @@ $input-disabled-bg: $gray-light !default;
 $input-disabled-border-color: $gray-medium !default;
 
 $input-color: $body-color !default;
-$input-border-color: $gray-medium !default;
-$input-border-width: $input-btn-border-width !default;
+$input-border-color: $dark !default;
+// $input-border-width: $input-btn-border-width !default;
+$input-border-width: 0 !default;
 $input-box-shadow: null !default;
 
-$input-border-radius: $border-radius !default;
+// $input-border-radius: $border-radius !default;
+$input-border-radius: 8px 0 8px 8px !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
@@ -697,7 +699,7 @@ $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: null !default;
 
-$input-placeholder-color: $gray-600 !default;
+$input-placeholder-color: $gray-medium !default;
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;
@@ -755,8 +757,9 @@ $form-check-inline-margin-end: 1rem !default;
 // scss-docs-end form-check-variables
 
 // scss-docs-start form-switch-variables
-$form-switch-color: rgba(0, 0, 0, .25) !default;
-$form-switch-width: 2em !default;
+$form-switch-color: rgb(0, 0, 0) !default;
+// $form-switch-width: 2em !default;
+$form-switch-width: 2.4em !default;
 $form-switch-padding-start: $form-switch-width+.5em !default;
 $form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
 $form-switch-border-radius: $form-switch-width !default;
