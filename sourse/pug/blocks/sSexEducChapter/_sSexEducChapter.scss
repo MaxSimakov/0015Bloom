@@ -38,17 +38,17 @@
 			--slideWidth: #{rem(227.5)};
 		}
 
-		&::before {
-			content: "";
-			position: absolute;
-			height: 100%;
-			top: 0;
-			right: calc(100% + rem(15));
-			width: calc((100vw - 100%) / 2);
-			background-color: $white;
-			z-index: 5;
-		}
 		@include media-breakpoint-up(sm) {
+			&::before {
+				content: "";
+				position: absolute;
+				height: 100%;
+				top: 0;
+				right: calc(100% + rem(15));
+				width: calc((100vw - 100%) / 2);
+				background-color: $white;
+				z-index: 5;
+			}
 			&::after {
 				content: "";
 				position: absolute;
