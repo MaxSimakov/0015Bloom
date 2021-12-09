@@ -138,13 +138,12 @@
 			}
 		}
 		img {
-			position: absolute;
+			position: static;
+			margin-bottom: 3px;
 			@include media-breakpoint-up(lg) {
-				max-height: calc(100% - 54px);
-			}
-			@include media-breakpoint-down(lg) {
-				position: static;
-				// margin-bottom: 3px;
+				position: absolute;
+				margin-bottom: 0;
+				max-height: calc(100% - 57px);
 			}
 			bottom: rem(0);
 			right: rem(16);
@@ -186,6 +185,11 @@
 			@include media-breakpoint-up(lg) {
 				padding-top: rem(216);
 				padding-bottom: rem(185);
+			}
+		}
+		.page-head__content {
+			img {
+				margin-bottom: 0;
 			}
 		}
 	}

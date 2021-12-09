@@ -25,6 +25,12 @@
 			}
 		}
 	}
+	&.rounded-top {
+		--sPT: 0;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(24)};
+	}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
