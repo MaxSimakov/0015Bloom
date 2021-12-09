@@ -136,6 +136,30 @@ $output-bourbon-deprecation-warnings: false;
 		// border-color: $pagination-active-border-color;
 	}
 }
+
+.searchForm {
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    top: 23px;
+  }
+  .form-control {
+    @include media-breakpoint-down(lg) {
+      border-width: 1px;
+    }
+  }
+  button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    z-index: 18;
+    svg {
+      font-size: rem(24);
+    }
+  }
+}
 @import "root";
 @import "base";
 @import '../pug/blocks/**/*.scss';

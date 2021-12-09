@@ -17,7 +17,7 @@ include ../blocks/sNewsWrraper/_sNewsWrraper.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  st= "--headBg: linear-gradient(180deg, rgba(186,193,228,1) 0%, rgba(238,240,248,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);"
-	- let  bg= 'main.jpg'
+	- let  bg= '6-1News.jpg'
 
 block title
 	- let  title= 'Статьи и лекции'
@@ -27,10 +27,10 @@ block pagecontent
 	+pageHead({
 		t: `Статьи и&nbsp;лекции`,
 		p: `Врачи и&nbsp;эксперты в&nbsp;формате мини-лекций рассказывают о&nbsp;том, как работает женский организм.`,
-		d: true,
+		d: false,
 		search: true,
 		img: 'newsImg.png'
-	}).text-start
+	}).text-start.pageHeadNews
 	+sFaqExperts()
 	+sNewsWrraper()
 	//- +mob-mnu()
