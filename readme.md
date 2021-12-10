@@ -3,5 +3,8 @@
 1. <https://maxsimakov.github.io/0015Bloom/public/04-faq.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/05-online-consultation.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/06-news.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/06-news-1.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/06-news-2.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/06-news-3.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/07-sex-education.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/07-sex-education-2.html>
