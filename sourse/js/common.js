@@ -15,11 +15,11 @@ const JSCCommon = {
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
-				PREV: "Назад", 
-			}, 
-		}); 
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+				PREV: "Назад",
+			},
+		});
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -59,14 +59,14 @@ const JSCCommon = {
 			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
-			if (menu.classList.contains("active")) { 
+			if (menu.classList.contains("active")) {
 				menu.classList.add("close");
 				menu.classList.remove("active");
 				setTimeout(() => {
-					menu.classList.remove("close"); 
-				}, 500); 
+					menu.classList.remove("close");
+				}, 500);
 			}
-			else{	
+			else {
 				menu.classList.add("active");
 			}
 			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
@@ -74,7 +74,7 @@ const JSCCommon = {
 	},
 
 	// tabs  .
-	tabscostume(tab) { 
+	tabscostume(tab) {
 
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
@@ -100,7 +100,7 @@ const JSCCommon = {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
-	
+
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -234,7 +234,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -292,17 +292,17 @@ function eventHandler() {
 
 	// modal window
 
-	const sliderAutoJs = new Swiper('.slider-auto--js', { 
+	const sliderAutoJs = new Swiper('.slider-auto--js', {
 
-		slidesPerView: 'auto', 
-		watchOverflow: true, 
+		slidesPerView: 'auto',
+		watchOverflow: true,
 		spaceBetween: 0,
 
 	});
-	const sSexEducChapter = new Swiper('.sSexEducChapter__slider--js', { 
+	const sSexEducChapter = new Swiper('.sSexEducChapter__slider--js', {
 
-		slidesPerView: 'auto', 
-		watchOverflow: true, 
+		slidesPerView: 'auto',
+		watchOverflow: true,
 		spaceBetween: 0,
 		// loop: true,
 		navigation: {
@@ -311,31 +311,38 @@ function eventHandler() {
 		}
 	});
 
-	var sexEduc = new Typed('.page-head--sexEduc .page-head__title p', {
-		strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
-		typeSpeed: 50,
-		backDelay: 5000,
-		loop: true,
-		loopCount: Infinity,
-		backSpeed: 15
+	// var sexEduc = new Typed('.page-head--sexEduc .page-head__title p', {
+	// 	strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
+	// 	typeSpeed: 50,
+	// 	backDelay: 5000,
+	// 	loop: true,
+	// 	loopCount: Infinity,
+	// 	backSpeed: 15
+	// });
+
+	$('.typed-js').each(function () {
+
+		let thisStings = $(this).data("text");
+		var arrayOfStrings = thisStings.split('; ');
+		let typed = new Typed(this, {
+			strings: arrayOfStrings,
+			typeSpeed: 50,
+			backDelay: 5000,
+			loop: true,
+			loopCount: Infinity,
+			backSpeed: 15
+		});
 	});
-	
-	var pageHeadNews = new Typed('.pageHeadNews .page-head__title p', {
-		strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
-		typeSpeed: 50,
-		backDelay: 5000,
-		loop: true,
-		loopCount: Infinity,
-		backSpeed: 15
-	});
-	
-	
-	
 
 
-	$(".sAccess__btn-accordion" ).click(function() {
+
+
+
+
+
+	$(".sAccess__btn-accordion").click(function () {
 		$(this).toggleClass('on')
-		.parents('.sAccess__item').find( ".sAccess__item-content").slideToggle();
+			.parents('.sAccess__item').find(".sAccess__item-content").slideToggle();
 	});
 
 	// $(document).on("click", ".form-wrap__btn-toggle-pass", function() {
@@ -357,7 +364,7 @@ function eventHandler() {
 		const input = toggleEv.closest('.form-wrap__password-wrap').querySelector('input');
 		const type = input.getAttribute(
 			'type') === 'password' ? 'text' : 'password';
-			input.setAttribute('type', type);
+		input.setAttribute('type', type);
 	}, { passive: true });
 
 
@@ -372,13 +379,13 @@ function eventHandler() {
 	// mainModal.onmousemove = function (e) {
 	// }
 
-var wow = new WOW(
-	{
-		animateClass: 'animate__animated', // animation css class (default is animated)
-		mobile:       false       // trigger animations on mobile devices (default is true)
-	}
-);
-wow.init();
+	var wow = new WOW(
+		{
+			animateClass: 'animate__animated', // animation css class (default is animated)
+			mobile: false       // trigger animations on mobile devices (default is true)
+		}
+	);
+	wow.init();
 
 };
 if (document.readyState !== 'loading') {

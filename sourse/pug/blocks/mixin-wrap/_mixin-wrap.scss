@@ -99,7 +99,15 @@
 			margin-right: auto;
 			margin-bottom: rem(28px);
 			display: inline-block;
-			min-height: rem(21);
+		}
+	}
+	&__typed-wrap {
+		min-height: rem(21);
+		margin-bottom: rem(28px);
+		p {
+			margin: 0;
+			padding: 0;
+			max-width: 100%;
 		}
 	}
 	&__btn {

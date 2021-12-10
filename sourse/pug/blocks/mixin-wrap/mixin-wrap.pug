@@ -57,7 +57,9 @@ mixin pageHead(data)
 			+e.content
 				+e.title
 					h1!= data.t
-					p!= data.p
+					if data.p
+						p!= data.p
+					block
 				if data.btn
 					+e.btn(href="#")= data.btn
 				if data.img
