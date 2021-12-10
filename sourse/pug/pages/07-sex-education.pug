@@ -30,11 +30,12 @@ block pagecontent
 	+top-nav()
 	+pageHead({
 		t: `Сексуальное <br> образование`,
-		p: `Добавь гармонию в&nbsp;свою жизнь`,
 		d: false,
 		search: false,
 		img: 'sex-education.png'
 	}).--sexEduc.text-start
+		+e.typed-wrap
+			p.typed-js(data-text= 'Знакомство со своим телом; Добавь гармонию в свою жизнь')
 	+sSexEducation().rounded-top
 		.container
 			+e.heading
