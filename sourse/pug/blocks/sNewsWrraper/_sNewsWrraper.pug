@@ -18,7 +18,8 @@ mixin videoCollection()
 mixin newsWrrap(v, n, spec, t, text)
 	.col-md-6.col-lg-4.col-xl-3
 		+b.newsItem&attributes(attributes)
-			+pic(`newsPre-${n}.jpg`, 'bg', 0)
+			a(href="#")
+				+pic(`newsPre-${n}.jpg`, 'bg', 0)
 			+e.bookmark(href="#")
 				+icon(`bookmarkActive`)
 			+e.content 
