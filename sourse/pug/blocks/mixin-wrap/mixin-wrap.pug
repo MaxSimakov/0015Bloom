@@ -67,6 +67,13 @@ mixin pageHead(data)
 				if data.search
 					+searchForm(data.d, data.formText)
 
+mixin pageHead-article(data)
+	+b.page-head-article&attributes(attributes)
+		.container
+			h1!= data.t
+			+e.btn-back(href="#")
+				+icon('chevron-left-sm')
+				span!= data.b
 //- mixin pageHead2(data)
 //- 	+b.page-head&attributes(attributes)
 //- 		.container
