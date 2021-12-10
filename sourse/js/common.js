@@ -311,6 +311,27 @@ function eventHandler() {
 		}
 	});
 
+	var sexEduc = new Typed('.page-head--sexEduc .page-head__title p', {
+		strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
+		typeSpeed: 50,
+		backDelay: 5000,
+		loop: true,
+		loopCount: Infinity,
+		backSpeed: 15
+	});
+	
+	var pageHeadNews = new Typed('.pageHeadNews .page-head__title p', {
+		strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
+		typeSpeed: 50,
+		backDelay: 5000,
+		loop: true,
+		loopCount: Infinity,
+		backSpeed: 15
+	});
+	
+	
+	
+
 
 	$(".sAccess__btn-accordion" ).click(function() {
 		$(this).toggleClass('on')
