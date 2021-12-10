@@ -351,7 +351,13 @@ function eventHandler() {
 	// mainModal.onmousemove = function (e) {
 	// }
 
-	
+var wow = new WOW(
+	{
+		animateClass: 'animate__animated', // animation css class (default is animated)
+		mobile:       false       // trigger animations on mobile devices (default is true)
+	}
+);
+wow.init();
 
 };
 if (document.readyState !== 'loading') {
