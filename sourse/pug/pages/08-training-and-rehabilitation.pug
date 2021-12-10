@@ -1,0 +1,57 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sFaqExperts/_sFaqExperts.pug
+//- include ../blocks/sNewsWrraper/_sNewsWrraper.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+include ../blocks/sCourses/_sCourses.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  st= "--headBg: linear-gradient(180deg, rgba(167,230,234,1) 0%, rgba(255,255,255,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);"
+	- let  bg= ''
+
+block title
+	- let  title= 'Тренировки и реабилитация'
+	title= title
+block pagecontent
+
+	+pageHead({
+		t: `Тренировки и&nbsp;реабилитация`,
+		p: ``,
+		d: false,
+		search: false,
+		img: ''
+	}).--courses
+	+sCourses()
+	//- +sFaqExperts().rounded-top
+	//- +sNewsWrraper()
+	//- +mob-mnu()
+	//- +header()
+	+top-nav()
+	//- +topLine()
+	//- .bg-background
+	//- 	+headerBlock()
+	//- 	+sCategories()
+	//- 	+sCardHorisontal()
+	//- 	+sYouNeedUs()
+	//- +sTeam5()
+	//- +sAccess()
+	//- +sQuestions()
+	//- +sReviews()
+	//- +sCardHorisontal2()
+	//- //- +sForm()
+	//- //- +sContact()
+	//- +footer-main()
+	+footer
+
+
