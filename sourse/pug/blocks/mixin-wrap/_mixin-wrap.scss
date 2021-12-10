@@ -118,19 +118,22 @@
 		// 	color: $white;
 		// }
 	}
-	--contentW: #{rem(374)};
-	&__content {
-		@include media-breakpoint-up(lg) {
-			max-width: var(--contentW);
-		}
+	&.text-start {
+		--contentW: #{rem(374)};
+		
 	}
-	&__content {
-		@include media-breakpoint-up(xl) {
-			margin-left: rem(98);
-		}
+	&.text-start &__content {
 		@include media-breakpoint-down(lg) {
 			margin-left: auto;
 			margin-right: auto;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-left: rem(98);
+		}
+	}
+	&__content {
+		@include media-breakpoint-up(lg) {
+			max-width: var(--contentW);
 		}
 		picture {
 			@include media-breakpoint-down(lg) {
@@ -138,7 +141,6 @@
 			}
 		}
 		img {
-			position: static;
 			margin-bottom: 3px;
 			@include media-breakpoint-up(lg) {
 				position: absolute;
