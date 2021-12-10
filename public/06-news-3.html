@@ -29,21 +29,64 @@
 							<div class="searchForm__input-wrap form-group"><input class="searchForm__input form-control" name="text" type="text" placeholder="Поиск"/>
 							</div>
 							<!-- +e.input-wrap-->
-							<p class="searchForm__formText">По вашему запросу ничего не найдено. Попробуйте изменить поисковый запрос
-							</p>
 							<button> 
-								<svg class="icon icon-close ">
-									<use xlink:href="img/svg/sprite.svg#close"></use>
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
 								</svg>
 							</button>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="sNewsWrraper sNewsWrraper--notFound section rounded-top rounded-top1" id="sNewsWrraper1">
+			<!-- start sFaqExperts-->
+			<div class="sFaqExperts section rounded-top" id="sFaqExperts">
 				<div class="container">
-					<h4 class="sNewsWrraper__newsTitle">Сейчас читают
-					</h4>
+					<div class="sFaqExperts__slider swiper slider-auto slider-auto--js">
+						<div class="swiper-wrapper">
+								<div class="sFaqExperts__slide swiper-slide">
+									<a class="sFaqExperts__item" href="#">
+										<svg class="icon icon-sFaqExperts-1 ">
+											<use xlink:href="img/svg/sprite.svg#sFaqExperts-1"></use>
+										</svg><span>Проктология</span>
+									</a>
+								</div>
+								<div class="sFaqExperts__slide swiper-slide">
+									<a class="sFaqExperts__item" href="#">
+										<svg class="icon icon-sFaqExperts-2 ">
+											<use xlink:href="img/svg/sprite.svg#sFaqExperts-2"></use>
+										</svg><span>Гинекология</span>
+									</a>
+								</div>
+								<div class="sFaqExperts__slide swiper-slide">
+									<a class="sFaqExperts__item" href="#">
+										<svg class="icon icon-sFaqExperts-3 ">
+											<use xlink:href="img/svg/sprite.svg#sFaqExperts-3"></use>
+										</svg><span>Урология</span>
+									</a>
+								</div>
+								<div class="sFaqExperts__slide swiper-slide">
+									<a class="sFaqExperts__item active" href="#">
+										<svg class="icon icon-sFaqExperts-4 ">
+											<use xlink:href="img/svg/sprite.svg#sFaqExperts-4"></use>
+										</svg><span>Реабилитация и тренировки</span>
+									</a>
+								</div>
+								<div class="sFaqExperts__slide swiper-slide">
+									<a class="sFaqExperts__item" href="#">
+										<svg class="icon icon-sFaqExperts-5 ">
+											<use xlink:href="img/svg/sprite.svg#sFaqExperts-5"></use>
+										</svg><span>Ментальное здоровье</span>
+									</a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sNewsWrraper section" id="sNewsWrraper1">
+				<div class="container">
+					<label class="form-check form-switch custom-switch">
+						<input class="form-check-input" type="checkbox" checked=""/><span class="form-check-label">Только бесплатные</span>
+					</label>
 					<div class="row">
 						<div class="col-md-6 col-lg-4 col-xl-3">
 							<div class="newsItem">
@@ -90,53 +133,6 @@
 									<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
 									</p>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div class="newsItem">
-								<!-- picture-->
-								<picture> <img class="object-fit-js" src="img/newsPre-3.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<a class="newsItem__bookmark" href="#">
-									<svg class="icon icon-bookmarkActive ">
-										<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-									</svg>
-								</a>
-								<div class="newsItem__content"> 
-									<div class="newsItem__specialization">Проктология
-									</div><span class="newsItem__title">
-									<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума
-									</a></span>
-									<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div class="newsItem active">
-								<!-- picture-->
-								<picture> <img class="object-fit-js" src="img/newsPre-1.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<a class="newsItem__bookmark" href="#">
-									<svg class="icon icon-bookmarkActive ">
-										<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-									</svg>
-								</a>
-								<div class="newsItem__content"> 
-									<div class="newsItem__specialization">Проктология
-									</div><span class="newsItem__title">
-									<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
-									</a></span>
-									<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
-									</p>
-								</div>
-								<a class="video-collection" href="#">
-									<svg class="icon icon-playVideo ">
-										<use xlink:href="img/svg/sprite.svg#playVideo"></use>
-									</svg><span>Видеолекция</span>
-								</a>
 							</div>
 						</div>
 					</div>

@@ -7,7 +7,7 @@ mixin sFaqExperts(data)
 					mixin expertsList(i, n)
 						+e.slide.swiper-slide
 							+e.item(href="#")
-								img(src=`img/svg/sFaqExperts-${i}.svg`, alt="")
+								+icon(`sFaqExperts-${i}`)
 								span!= n
 					+expertsList(1, "Проктология")
 					+expertsList(2, "Гинекология")
@@ -15,3 +15,26 @@ mixin sFaqExperts(data)
 					+expertsList(4, "Реабилитация и тренировки")
 					+expertsList(5, "Ментальное здоровье")
 	// end sFaqExperts
+
+mixin sFaqExperts3(data)
+	// start sFaqExperts
+	+b.sFaqExperts.section#sFaqExperts&attributes(attributes)
+		.container
+			+e.slider.swiper.slider-auto--js
+				.swiper-wrapper
+					mixin expertsList(a, i, n)
+						if a
+							+e.slide.swiper-slide
+								+e.item.active(href="#")
+									+icon(`sFaqExperts-${i}`)
+									span!= n
+						else
+							+e.slide.swiper-slide
+								+e.item(href="#")
+									+icon(`sFaqExperts-${i}`)
+									span!= n
+					+expertsList(``, 1, "Проктология")
+					+expertsList(``, 2, "Гинекология")
+					+expertsList(``, 3, "Урология")
+					+expertsList(`a`, 4, "Реабилитация и тренировки")
+					+expertsList(``, 5, "Ментальное здоровье")
