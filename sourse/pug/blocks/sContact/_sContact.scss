@@ -17,7 +17,7 @@
 		content: "";
 		position: absolute;
 		width: 100%;
-		height: calc(var(--sPB) );
+		height: calc(var(--sPB) + 1px);
 		left: 0;
 		bottom: -1px;
 		border-radius: 24px 24px 0 0;
