@@ -36,14 +36,15 @@
 		}
 	}
 	picture {
+		text-align: center;
 		img {
-			max-width: unset;
-			width: calc(100% + var(--bs-gutter-x));
-			margin-left: calc(-1 * var(--bs-gutter-x) / 2);
-			@include media-breakpoint-up(lg) {
-				width: calc(100% + var(--bs-gutter-x) * 2);
-				margin-left: calc(-1 * var(--bs-gutter-x) * 2);
-			}
+			// max-width: unset;
+			// width: calc(100% + var(--bs-gutter-x));
+			// margin-left: calc(-1 * var(--bs-gutter-x) / 2);
+			// @include media-breakpoint-up(lg) {
+			// 	width: calc(100% + var(--bs-gutter-x) * 2);
+			// 	margin-left: calc(-1 * var(--bs-gutter-x) * 2);
+			// }
 		}
 	}
 	&__content {
