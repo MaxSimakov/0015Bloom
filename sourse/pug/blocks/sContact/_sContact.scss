@@ -17,7 +17,7 @@
 		content: "";
 		position: absolute;
 		width: 100%;
-		height: calc(var(--sPB) );
+		height: calc(var(--sPB) + 1px);
 		left: 0;
 		bottom: -1px;
 		border-radius: 24px 24px 0 0;
@@ -36,14 +36,15 @@
 		}
 	}
 	picture {
+		text-align: center;
 		img {
-			max-width: unset;
-			width: calc(100% + var(--bs-gutter-x));
-			margin-left: calc(-1 * var(--bs-gutter-x) / 2);
-			@include media-breakpoint-up(lg) {
-				width: calc(100% + var(--bs-gutter-x) * 2);
-				margin-left: calc(-1 * var(--bs-gutter-x) * 2);
-			}
+			// max-width: unset;
+			// width: calc(100% + var(--bs-gutter-x));
+			// margin-left: calc(-1 * var(--bs-gutter-x) / 2);
+			// @include media-breakpoint-up(lg) {
+			// 	width: calc(100% + var(--bs-gutter-x) * 2);
+			// 	margin-left: calc(-1 * var(--bs-gutter-x) * 2);
+			// }
 		}
 	}
 	&__content {
