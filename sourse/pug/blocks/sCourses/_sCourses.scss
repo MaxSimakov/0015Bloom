@@ -1,8 +1,11 @@
 // start .sCourses
 .sCourses {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(40)};
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(0)};
+	}
 	--main-fontSize: #{rem(14)};
 	--line-height: #{rem(16)};
 	margin-top: rem(-384);
@@ -15,15 +18,15 @@
 		background-color: $white;
 		border: 1px solid $primary;
 		border-radius: rem(16) 0 rem(16) rem(16);
-		&:not(:last-child) {
-			margin-bottom: rem(16);
+		&:not(:last-of-type) {
+			margin-bottom: rem(17);
 		}
 		&__content {
 			display: flex;
 			flex-direction: column;
 			order: 1;
 			max-width: rem(440);
-			padding: rem(24) 0 rem(16) rem(32);
+			padding: rem(9.6) rem(15) rem(13) rem(16);
 		}
 		h5 {
 			color: $primary;
@@ -39,15 +42,34 @@
 		img {
 			border-radius: rem(16) 0 rem(16) rem(16);
 		}
+		&--starter {
+			background-image: radial-gradient(167.29% 93.4% at 96.1% 8.61%, #FFFDFC 0%, #F9EDDA 70.24%, #FFD4C1 100%);
+			position: relative;
+			z-index: 1;
+			&::before {
+				content: 'Начальный курс';
+				position: absolute;
+				width: rem(134);
+				height: rem(64);
+				background-color: $primary;
+				border-radius: rem(12);
+				text-align: center;
+				color: $white;
+				padding-top: rem(6);
+				top: rem(-27);
+				z-index: -1;
+			}
+		}
 		@include media-breakpoint-up(lg) {
 			max-width: rem(860);
 			flex-direction: row;
 			justify-content: space-between;
-			&:not(:last-child) {
-				margin-bottom: rem(24);
+			&:not(:last-of-type) {
+					margin-bottom: rem(24);
 			}
 			&__content {
 				order: 0;
+				padding: rem(9.6) 0 rem(13) rem(32);
 			}
 			picture {
 				order: 1;
@@ -57,6 +79,13 @@
 			}
 			&__info {
 				display: flex;
+			}
+			&--starter {
+				&::before {
+					transform: rotate(270deg);
+					top: 35px;
+    			left: -65px;
+				}
 			}
 		}
 	}
@@ -118,9 +147,7 @@
 			}
 		}
 		&__col {
-			@include media-breakpoint-up(lg) {
-				margin-right: auto;
-			}
+			margin-right: auto;
 		}
 		@include media-breakpoint-up(lg) {
 			margin-top: 0;
