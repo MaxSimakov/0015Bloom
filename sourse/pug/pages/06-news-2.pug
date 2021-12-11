@@ -35,24 +35,11 @@ block pagecontent
 		img: 'newsImg.png'
 	}).text-start
 	+sFaqExperts().rounded-top.rounded-top2
-	+sNewsWrraper2()
-	//- +mob-mnu()
-	//- +header()
+	+sNewsWrraper(``, `sw`)
+		.row
+			+newsWrrap(`v`, 1, 'Проктология', 'Пусть весь мир подождет:', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id...')
+			+newsWrrap('', 2, 'Реабилитация и&nbsp;тренировки', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
 	+top-nav()
-	//- +topLine()
-	//- .bg-background
-	//- 	+headerBlock()
-	//- 	+sCategories()
-	//- 	+sCardHorisontal()
-	//- 	+sYouNeedUs()
-	//- +sTeam5()
-	//- +sAccess()
-	//- +sQuestions()
-	//- +sReviews()
-	//- +sCardHorisontal2()
-	//- //- +sForm()
-	//- //- +sContact()
-	//- +footer-main()
 	+footer
 
 

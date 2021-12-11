@@ -33,24 +33,13 @@ block pagecontent
 		img: 'newsImg.png'
 	}).text-start.pageHeadNews
 	//- +sFaqExperts()
-	+sNewsWrraper1().rounded-top.rounded-top1
-	//- +mob-mnu()
-	//- +header()
+	+sNewsWrraper(`Сейчас читают`, ``).rounded-top.rounded-top1
+		.row
+			+newsWrrap(`v`, 1, 'Проктология', 'Пусть весь мир подождет:', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id...')
+			+newsWrrap('', 2, 'Реабилитация и&nbsp;тренировки', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+			+newsWrrap('',3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...')
+			+newsWrrap(`v`, 1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
 	+top-nav()
-	//- +topLine()
-	//- .bg-background
-	//- 	+headerBlock()
-	//- 	+sCategories()
-	//- 	+sCardHorisontal()
-	//- 	+sYouNeedUs()
-	//- +sTeam5()
-	//- +sAccess()
-	//- +sQuestions()
-	//- +sReviews()
-	//- +sCardHorisontal2()
-	//- //- +sForm()
-	//- //- +sContact()
-	//- +footer-main()
 	+footer
 
 
