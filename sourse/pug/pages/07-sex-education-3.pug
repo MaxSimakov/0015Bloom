@@ -29,11 +29,15 @@ block title
 block pagecontent
 
 	+top-nav()
-	+pageHead-article({
+	+pageHead({
 		t: `Привычки для спортивной&nbsp;жизни`,
-		b: `Вернуться к выбору темы`
-	})
-	+sNewsWrraper()
+		p: false,
+		d: false,
+		search: false,
+		img: false
+	}).--articles
+		+link-back(`Вернуться к выбору темы`, `#`)
+	+sNewsWrraper--article()
 	+footer
 
 

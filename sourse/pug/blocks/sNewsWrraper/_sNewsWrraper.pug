@@ -22,8 +22,9 @@ mixin newsWrrap(v, n, spec, t, text)
 				+pic(`newsPre-${n}.jpg`, 'bg', 0)
 			+e.bookmark(href="#")
 				+icon(`bookmarkActive`)
-			+e.content 
-				+e.specialization!= spec
+			+e.content
+				if spec
+					+e.specialization!= spec
 				+e.SPAN.title
 					+e.title(href="#")!= t
 				+e.P.text!= text
@@ -60,36 +61,37 @@ mixin sNewsWrraper(data)
 				+newsWrrap(`v`, 6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
 			+pugin()
 	// end sNewsWrraper
-//- mixin sNewsWrraper(data)
-//- 	// start sNewsWrraper
-//- 	+b.sNewsWrraper.section#sNewsWrraper&attributes(attributes)
-//- 		.container
-//- 			label.form-check.form-switch.custom-switch
-//- 				input.form-check-input(type='checkbox', checked='')
-//- 				span.form-check-label Только бесплатные
-//- 			+e.newsList
-//- 				+newsWrrap(1, 'Проктология', 'Пусть весь мир подождет:', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id...')
-//- 				+newsWrrap(2, 'Реабилитация и&nbsp;тренировки', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
-//- 				+newsWrrap(3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...')
-//- 				+newsWrrap(1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
-//- 				+newsWrrap(4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(5, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
-//- 				+newsWrrap(4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(2, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
-//- 				+newsWrrap(4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
-//- 				+newsWrrap(5, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
-//- 				+newsWrrap(2, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 				+newsWrrap(6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
-//- 			+pugin()
-//- 	// end sNewsWrraper
+
+mixin sNewsWrraper--article(data)
+	// start sNewsWrraper--article
+	+b.sNewsWrraper.section#sNewsWrraper&attributes(attributes)
+		.container
+			label.form-check.form-switch.custom-switch
+				input.form-check-input(type='checkbox', checked)
+				span.form-check-label Только бесплатные
+			.row
+				+newsWrrap(`v`, 1, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(``, 2, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du').active
+				+newsWrrap(``, 3, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(`v`, 1, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du').active
+				+newsWrrap(``, 4, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(``, 5, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(`v`, 6, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du').active
+				+newsWrrap(``, 4, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(``, 3, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(`v`, 1, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(``, 2, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(``, 3, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du').active
+				+newsWrrap(``, 4, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(`v`, 3, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du').active
+				+newsWrrap(``, 5, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(``, 4, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(`v`, 6, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du').active
+				+newsWrrap(``, 2, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(``, 1, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+				+newsWrrap(`v`, 6, '', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur du')
+			+pugin()
+	// end sNewsWrraper--article
 
 mixin sNewsWrraper1(data)
 	+b.sNewsWrraper--notFound.section#sNewsWrraper1&attributes(attributes)
