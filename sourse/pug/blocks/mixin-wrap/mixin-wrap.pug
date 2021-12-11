@@ -98,6 +98,16 @@ mixin pricing(n, l)
 				+e.btn(href=`${l}`).link-modal-js Записаться
 		block
 
+mixin pricing2(n, l, btn)
+	+b.pricing-block
+		.row
+			+e.col.col.col-sm-auto
+				+e.num= n
+					span ₽
+			.col-auto
+				+e.btn(href=`${l}`).link-modal-js!= btn
+		block
+
 mixin help-tooltip(t)
 	+b.SPAN.help-tooltip
 		+icon('help')

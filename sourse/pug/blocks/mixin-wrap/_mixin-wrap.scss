@@ -157,15 +157,72 @@
 			margin-left: rem(98);
 		}
 	}
-	&.text-start .container {
+	&--headNews .container {
 		padding-top: rem(32);
 		padding-bottom: rem(0);
 		@include media-breakpoint-only(md) {
 			padding-top: rem(64);
 		}
 		@include media-breakpoint-up(lg) {
-			padding-top: rem(152px);
-			padding-bottom: rem(169);
+			padding-top: rem(145.6);
+			padding-bottom: rem(170.6);
+		}
+	}
+	
+	&--noResult .container {
+		padding-top: rem(32);
+		padding-bottom: rem(0);
+		@include media-breakpoint-only(md) {
+			padding-top: rem(64);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(145.6);
+			padding-bottom: rem(110.6);
+		}
+		.page-head__content {
+			img {
+				@include media-breakpoint-up(xl) {
+					right: rem(40);
+				}
+			}
+		}
+	}
+
+	&--search-result .container {
+		padding-top: rem(32);
+		padding-bottom: rem(0);
+		@include media-breakpoint-only(md) {
+			padding-top: rem(64);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(144);
+			padding-bottom: rem(128);
+		}
+		.page-head__content {
+			img {
+				@include media-breakpoint-up(xl) {
+					right: rem(40);
+				}
+			}
+		}
+	}
+
+	&--tabResult .container {
+		padding-top: rem(32);
+		padding-bottom: rem(0);
+		@include media-breakpoint-only(md) {
+			padding-top: rem(64);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(145.6);
+			padding-bottom: rem(171.4);
+		}
+		.page-head__content {
+			img {
+				@include media-breakpoint-up(xl) {
+					right: rem(41);
+				}
+			}
 		}
 	}
 	&__content {
@@ -192,8 +249,10 @@
 		&__formText {
 			font-size: rem(12);
 			margin-top: rem(16);
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-up(lg) {
 				font-size: rem(14);
+			}
+			@include media-breakpoint-down(lg) {
 				margin-top: rem(8);
 				text-align: left;
 			}

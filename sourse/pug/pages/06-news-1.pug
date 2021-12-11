@@ -17,7 +17,7 @@ include ../blocks/sNewsWrraper/_sNewsWrraper.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  st= "--headBg: linear-gradient(180deg, rgba(186,193,228,1) 0%, rgba(238,240,248,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);"
-	- let  bg= '6-1News.jpg'
+	- let  bg= '6-1News-1-No-result.jpg'
 
 block title
 	- let  title= 'Статьи и лекции'
@@ -31,7 +31,7 @@ block pagecontent
 		formText: 'По вашему запросу ничего не найдено. Попробуйте изменить поисковый запрос',
 		search: true,
 		img: 'newsImg.png'
-	}).text-start.pageHeadNews
+	}).--noResult.text-start
 	//- +sFaqExperts()
 	+sNewsWrraper(`Сейчас читают`, ``).rounded-top.rounded-top1
 		.row

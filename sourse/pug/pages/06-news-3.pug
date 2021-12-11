@@ -17,7 +17,7 @@ include ../blocks/sNewsWrraper/_sNewsWrraper.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  st= "--headBg: linear-gradient(180deg, rgba(186,193,228,1) 0%, rgba(238,240,248,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);"
-	- let  bg= '6-1News.jpg'
+	- let  bg= '6-1News-Tab-result.jpg'
 
 block title
 	- let  title= 'Статьи и лекции'
@@ -30,7 +30,7 @@ block pagecontent
 		d: false,
 		search: true,
 		img: 'newsImg.png'
-	}).text-start.pageHeadNews
+	}).--tabResult.text-start
 	+sFaqExperts3().rounded-top
 	+sNewsWrraper(``, `sw`)
 		.row

@@ -25,7 +25,7 @@ mixin sNewsWrraper(h, sw)
 	+b.sNewsWrraper.section#sNewsWrraper&attributes(attributes)
 		.container
 			if h
-				+e.H4.newsTitle!= h
+				h4!= h
 			if sw
 				label.form-check.form-switch.custom-switch
 					input.form-check-input(type='checkbox', checked)
