@@ -2,8 +2,26 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			.row
+				.col-12.col-lg-5
+					+e.content
+						+b.section-title
+							h1 Контакты
+						+e.email(href="mailto:bloom@gmail.com") bloom@gmail.com
+						+e.tel(href="tel:89047934646") 8 904 793-46-46
+						+e.social
+							p Связаться с помощью мессенджеров
+							+soc().--contact
+								+item-sos
+									img(src="img/svg/instagram-colored.svg" alt="")
+								+item-sos
+									img(src="img/svg/telegram-filled.svg" alt="")
+								+item-sos
+									img(src="img/svg/whatsapp-filled.svg" alt="")
+				.col-12.col-lg-7.order-lg-first
+					picture
+						source(type='image/png' srcset='img/sContact.png' media='(min-width:992px)')
+						source(type='image/png' srcset='img/sContact-sm.png')
+						img(src='img/sContact-sm.png' alt='' loading='lazy')
+
 	// end sContact
