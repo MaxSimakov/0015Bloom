@@ -15,6 +15,23 @@
 	.icon {
 		font-size: rem(30);
 	}
+	&--contact {
+		--bs-gutter-x: 8px;
+		.soc__item {
+			width: rem(40);
+			height: rem(40);
+			border: 1px solid currentColor;
+			border-radius: 8px;
+			
+			img {
+				width: rem(24);
+				height: rem(24);
+			}
+			.icon {
+				font-size: rem(24);
+			}
+		}
+	}
 }
 
 .counter {
