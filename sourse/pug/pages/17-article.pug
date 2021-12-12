@@ -15,25 +15,28 @@ include ../blocks/sNewsWrraper/_sNewsWrraper.pug
 include ../blocks/sCourses/_sCourses.pug
 include ../blocks/sRecomendedCourse/_sRecomendedCourse.pug
 include ../blocks/sOtherArticles/_sOtherArticles.pug
+include ../blocks/sArticleBodyIntoduction/_sArticleBodyIntoduction.pug
+include ../blocks/sArticleTable/_sArticleTable.pug
 //- include ../blocks/footer-main/_footer-main.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  st= "--headBg: linear-gradient(180deg, rgba(167,230,234,1) 0%, rgba(255,255,255,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);"
-	- let  bg= ''
+	- let  st= "--headBg: #{$white}; --card-shadow: none;"
+	- let  bg= '7-1Article.jpg'
 
 block title
 	- let  title= 'Статья'
 	title= title
 block pagecontent
-
 	+pageHead({
-		t: `Тренировки и&nbsp;реабилитация`,
-		p: ``,
+		t: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`,
+		p: `Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est.`,
 		d: false,
 		search: false,
 		img: ''
-	}).--courses
+	}).--article
+	+sArticleBodyIntoduction('Fusce sed auctor', 'Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. <span>Donec non purus</span>  venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.', 'Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla', 'In&nbsp;posuere, augue eget ornare congue, eros ex&nbsp;bibendum', 'In&nbsp;finibus vitae lorem nec scelerisque', 'Phasellus eu&nbsp;aliquam&nbsp;ex. Integer facilisis velit lacus, vel venenatis est aliquam sit amet', 'Proin suscipit placerat turpis', 1, 'Description')
+	+sArticleTable('H6&nbsp;Header two line words description')
 	//- +sCourses()
 	//- +sFaqExperts().rounded-top
 	//- +sNewsWrraper()
@@ -54,8 +57,9 @@ block pagecontent
 	//- //- +sForm()
 	//- //- +sContact()
 	//- +footer-main()
-	+sRecomendedCourse()
-	+sOtherArticles()
+	.articleBgGradient
+		+sRecomendedCourse()
+		+sOtherArticles()
 	+footer
 
 

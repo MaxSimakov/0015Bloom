@@ -13,17 +13,91 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="" style="--headBg: linear-gradient(180deg, rgba(167,230,234,1) 0%, rgba(255,255,255,1) 100%); --card-shadow: 0px 20px 24px rgba(192, 198, 230, 0.42);">
+	<body class="main-page" data-bg="7-1Article.jpg" style="--headBg: #{$white}; --card-shadow: none;">
 		<div class="main-wrapper">
-			<div class="page-head page-head--courses">
+			<div class="page-head page-head--article">
 				<div class="container">
 					<div class="page-head__content">
 						<div class="page-head__title">
-							<h1>Тренировки и&nbsp;реабилитация</h1>
+							<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+							<p>Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est.</p>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!-- start sArticleBodyIntoduction-->
+			<section class="sArticleBodyIntoduction section" id="sArticleBodyIntoduction">
+				<div class="container">
+					<div class="row"> 
+						<div class="col col-lg-8">
+							<div class="article-body-introduction">
+								<h2>Fusce sed auctor</h2>
+								<p>Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. <span>Donec non purus</span>  venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.</p>
+								<ul> 
+									<li>Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla</li>
+									<li>In&nbsp;posuere, augue eget ornare congue, eros ex&nbsp;bibendum
+										<ul class="article-body-introduction__sublist">
+											<li>In&nbsp;finibus vitae lorem nec scelerisque</li>
+											<li>Phasellus eu&nbsp;aliquam&nbsp;ex. Integer facilisis velit lacus, vel venenatis est aliquam sit amet</li>
+										</ul>
+									</li>
+									<li>Proin suscipit placerat turpis</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col col-lg-9">
+							<!-- picture-->
+							<picture> <img src="img/articleBodyIntoductionBg-1.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture--><span>Description</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sArticleBodyIntoduction-->
+			<!-- start sArticleTable-->
+			<section class="sArticleTable section" id="sArticleTable">
+				<div class="container">
+					<div class="row"> 
+						<div class="col col-lg-8"> 
+							<h6>H6&nbsp;Header two line words description</h6>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th scope="col">Maecenas</th>
+										<th scope="col">Phasellus</th>
+										<th scope="col">Gravida</th>
+										<th scope="col">Integer</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Nullam</th>
+										<td>Tincidunt</td>
+										<td>Tincidunt</td>
+										<td>Dapibus</td>
+									</tr>
+									<tr>
+										<th scope="row">Luctus</th>
+										<td>Mauris</td>
+										<td>Felis</td>
+										<td>Aenean</td>
+									</tr>
+									<tr>
+										<th scope="row">Dignissim</th>
+										<td>Vestibulum</td>
+										<td>Fusce</td>
+										<td>Donec</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sArticleTable-->
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
 				<div class="container-fluid">
@@ -76,141 +150,143 @@
 				<!--  мобильное меню-->
 			</div>
 			<!-- end top-nav-->
-			<!-- start sRecomendedCourse-->
-			<section class="sRecomendedCourse section" id="sRecomendedCourse">
-				<div class="container">
-					<h4>Рекомендуем курс</h4>
-					<div class="courseWrrpaer courseWrrpaer--starter">
-						<a class="courseWrrpaer__bookmark" href="#">
-							<svg class="icon icon-bookmarkActive ">
-								<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-							</svg>
-						</a><span class="courseWrrpaer__label">Начальный курс</span>
-						<div class="courseWrrpaer__content">
-							<h5>Курс &laquo;С&nbsp;заботой о&nbsp;вашем тазовом дне&raquo;</h5>
-							<p>Подготовка к родам и восстановление после них. Тренировки при болях в позвоночнике. Улучшение мобильности и стабильности.</p>
-							<div class="row">
-								<div class="col-12 col-lg-auto">
-									<div class="courseWrrpaer__infoBlock"> <span>Начало проведения</span><span>3 июля в 18:00 (по мск)</span>
-									</div>
-								</div>
-								<div class="col-12 col-lg-auto">
-									<div class="courseWrrpaer__infoBlock"> <span>Длительность</span><span>12 занятий</span>
-									</div>
-								</div>
-								<div class="col-12 col-lg-auto">
-									<div class="courseWrrpaer__infoBlock"> <span>Формат проведения</span><span>Онлайн</span>
-									</div>
-								</div>
-							</div>
-							<div class="courseWrrpaer__who">
-								<!-- picture-->
-								<picture> <img src="img/sTeam-1.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<div class="courseWrrpaer__text">
-									<p>Анна Грикевич</p>
-									<p>Специалист по&nbsp;функциональному движению и&nbsp;восстановлению мышц тазового дна</p>
-								</div>
-							</div>
-							<div class="pricing-block">
+			<div class="articleBgGradient">
+				<!-- start sRecomendedCourse-->
+				<section class="sRecomendedCourse section" id="sRecomendedCourse">
+					<div class="container">
+						<h4>Рекомендуем курс</h4>
+						<div class="courseWrrpaer courseWrrpaer--starter">
+							<a class="courseWrrpaer__bookmark" href="#">
+								<svg class="icon icon-bookmarkActive ">
+									<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
+								</svg>
+							</a><span class="courseWrrpaer__label">Начальный курс</span>
+							<div class="courseWrrpaer__content">
+								<h5>Курс &laquo;С&nbsp;заботой о&nbsp;вашем тазовом дне&raquo;</h5>
+								<p>Подготовка к родам и восстановление после них. Тренировки при болях в позвоночнике. Улучшение мобильности и стабильности.</p>
 								<div class="row">
-									<div class="pricing-block__col col col-sm-auto">
-										<div class="pricing-block__num">900<span>₽</span>
+									<div class="col-12 col-lg-auto">
+										<div class="courseWrrpaer__infoBlock"> <span>Начало проведения</span><span>3 июля в 18:00 (по мск)</span>
 										</div>
 									</div>
-									<div class="col-auto">
-										<a class="pricing-block__btn link-modal-js" href="#modal-consult">Пройти курс
-										</a>
+									<div class="col-12 col-lg-auto">
+										<div class="courseWrrpaer__infoBlock"> <span>Длительность</span><span>12 занятий</span>
+										</div>
+									</div>
+									<div class="col-12 col-lg-auto">
+										<div class="courseWrrpaer__infoBlock"> <span>Формат проведения</span><span>Онлайн</span>
+										</div>
+									</div>
+								</div>
+								<div class="courseWrrpaer__who">
+									<!-- picture-->
+									<picture> <img src="img/sTeam-1.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<div class="courseWrrpaer__text">
+										<p>Анна Грикевич</p>
+										<p>Специалист по&nbsp;функциональному движению и&nbsp;восстановлению мышц тазового дна</p>
+									</div>
+								</div>
+								<div class="pricing-block">
+									<div class="row">
+										<div class="pricing-block__col col col-sm-auto">
+											<div class="pricing-block__num">900<span>₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<a class="pricing-block__btn link-modal-js" href="#modal-consult">Пройти курс
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- picture-->
+							<picture> <img src="img/courseImg-1.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+					</div>
+				</section>
+				<!-- end sRecomendedCourse-->
+				<!-- start sOtherArticles-->
+				<section class="sOtherArticles section" id="sOtherArticles">
+					<div class="container">
+						<h4>Другие статьи</h4>
+						<div class="row">
+							<div class="col-md-6 col-lg-4 col-xl-3">
+								<div class="newsItem wow animate__fadeIn"><a href="#">
+										<!-- picture-->
+										<picture> <img class="object-fit-js" src="img/newsPre-1.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+									<a class="newsItem__bookmark" href="#">
+										<svg class="icon icon-bookmarkActive ">
+											<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
+										</svg>
+									</a>
+									<div class="newsItem__content">
+										<div class="newsItem__specialization">Проктология
+										</div><span class="newsItem__title">
+										<a class="newsItem__title" href="#">Пусть весь мир подождет:
+										</a></span>
+										<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id...
+										</p>
+									</div>
+									<a class="video-collection" href="#">
+										<svg class="icon icon-playVideo ">
+											<use xlink:href="img/svg/sprite.svg#playVideo"></use>
+										</svg><span>Видеолекция</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 col-xl-3">
+								<div class="newsItem wow animate__fadeIn active"><a href="#">
+										<!-- picture-->
+										<picture> <img class="object-fit-js" src="img/newsPre-2.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+									<a class="newsItem__bookmark" href="#">
+										<svg class="icon icon-bookmarkActive ">
+											<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
+										</svg>
+									</a>
+									<div class="newsItem__content">
+										<div class="newsItem__specialization">Реабилитация и&nbsp;тренировки
+										</div><span class="newsItem__title">
+										<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
+										</a></span>
+										<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 col-xl-3">
+								<div class="newsItem wow animate__fadeIn"><a href="#">
+										<!-- picture-->
+										<picture> <img class="object-fit-js" src="img/newsPre-3.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+									<a class="newsItem__bookmark" href="#">
+										<svg class="icon icon-bookmarkActive ">
+											<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
+										</svg>
+									</a>
+									<div class="newsItem__content">
+										<div class="newsItem__specialization">Проктология
+										</div><span class="newsItem__title">
+										<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума
+										</a></span>
+										<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...
+										</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- picture-->
-						<picture> <img src="img/courseImg-1.jpg" alt="" loading="lazy"/>
-						</picture>
-						<!-- /picture-->
 					</div>
-				</div>
-			</section>
-			<!-- end sRecomendedCourse-->
-			<!-- start sOtherArticles-->
-			<section class="sOtherArticles section" id="sOtherArticles">
-				<div class="container">
-					<h4>Другие статьи</h4>
-					<div class="row">
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div class="newsItem wow animate__fadeIn"><a href="#">
-									<!-- picture-->
-									<picture> <img class="object-fit-js" src="img/newsPre-1.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-								<a class="newsItem__bookmark" href="#">
-									<svg class="icon icon-bookmarkActive ">
-										<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-									</svg>
-								</a>
-								<div class="newsItem__content">
-									<div class="newsItem__specialization">Проктология
-									</div><span class="newsItem__title">
-									<a class="newsItem__title" href="#">Пусть весь мир подождет:
-									</a></span>
-									<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id...
-									</p>
-								</div>
-								<a class="video-collection" href="#">
-									<svg class="icon icon-playVideo ">
-										<use xlink:href="img/svg/sprite.svg#playVideo"></use>
-									</svg><span>Видеолекция</span>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div class="newsItem wow animate__fadeIn active"><a href="#">
-									<!-- picture-->
-									<picture> <img class="object-fit-js" src="img/newsPre-2.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-								<a class="newsItem__bookmark" href="#">
-									<svg class="icon icon-bookmarkActive ">
-										<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-									</svg>
-								</a>
-								<div class="newsItem__content">
-									<div class="newsItem__specialization">Реабилитация и&nbsp;тренировки
-									</div><span class="newsItem__title">
-									<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма
-									</a></span>
-									<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div class="newsItem wow animate__fadeIn"><a href="#">
-									<!-- picture-->
-									<picture> <img class="object-fit-js" src="img/newsPre-3.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-								<a class="newsItem__bookmark" href="#">
-									<svg class="icon icon-bookmarkActive ">
-										<use xlink:href="img/svg/sprite.svg#bookmarkActive"></use>
-									</svg>
-								</a>
-								<div class="newsItem__content">
-									<div class="newsItem__specialization">Проктология
-									</div><span class="newsItem__title">
-									<a class="newsItem__title" href="#">Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума
-									</a></span>
-									<p class="newsItem__text">Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end sOtherArticles-->
+				</section>
+				<!-- end sOtherArticles-->
+			</div>
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__top-row row">

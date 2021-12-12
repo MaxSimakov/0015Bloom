@@ -114,7 +114,7 @@
 			// margin-top: rem(16px);
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: rem(28px);
+			margin-bottom: rem(28);
 			display: inline-block;
 		}
 	}
@@ -160,24 +160,30 @@
 	&--headNews .container {
 		padding-top: rem(32);
 		padding-bottom: rem(0);
+		p {
+			margin-bottom: rem(9);
+		}
 		@include media-breakpoint-only(md) {
 			padding-top: rem(64);
 		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(145.6);
-			padding-bottom: rem(170.6);
+			padding-bottom: rem(193);
 		}
 	}
 	
 	&--noResult .container {
 		padding-top: rem(32);
 		padding-bottom: rem(0);
+		p {
+			margin-bottom: rem(9);
+		}
 		@include media-breakpoint-only(md) {
 			padding-top: rem(64);
 		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(145.6);
-			padding-bottom: rem(110.6);
+			padding-bottom: rem(133);
 		}
 		.page-head__content {
 			img {
@@ -191,12 +197,15 @@
 	&--search-result .container {
 		padding-top: rem(32);
 		padding-bottom: rem(0);
+		p {
+			margin-bottom: rem(9);
+		}
 		@include media-breakpoint-only(md) {
 			padding-top: rem(64);
 		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(144);
-			padding-bottom: rem(128);
+			padding-bottom: rem(149);
 		}
 		.page-head__content {
 			img {
@@ -210,12 +219,15 @@
 	&--tabResult .container {
 		padding-top: rem(32);
 		padding-bottom: rem(0);
+		p {
+			margin-bottom: rem(9);
+		}
 		@include media-breakpoint-only(md) {
 			padding-top: rem(64);
 		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(145.6);
-			padding-bottom: rem(171.4);
+			padding-bottom: rem(192.2);
 		}
 		.page-head__content {
 			img {
@@ -223,6 +235,27 @@
 					right: rem(41);
 				}
 			}
+		}
+	}
+	&--article {
+		text-align: left;
+		@extend .h1;
+		h1 {
+			color: $primary;
+			line-height: calc(80 / 72);
+			@include rfs(rem(72));
+		}
+		p {
+			font-family: var(--bs-body-font-family);
+			font-size: rem(19);
+			line-height: rem(24);
+			color: $dark;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(22);
+			}
+		}
+		& > .container {
+			max-width: rem(794);
 		}
 	}
 	&__content {
@@ -246,6 +279,39 @@
 		}
 	}
 	.searchForm {
+		position: relative;
+		top: 23px;
+		max-width: rem(374);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(lg) {
+		}
+		&__input {
+			border: none;
+			border: 1px solid $dark;
+			border-radius: rem(8) 0 rem(8) rem(8);
+			padding: 8px 16px;
+			&:focus {
+				border-color: $primary;
+			}
+			&::placeholder {
+				font-size: rem(22);
+			}
+			@include media-breakpoint-up(lg) {
+				border-width: 0;
+			}
+		}
+		button {
+			position: absolute;
+			top: rem(7);
+			right: rem(7);
+			background-color: transparent;
+			border: none;
+			z-index: 18;
+			svg {
+				font-size: rem(24);
+			}
+		}
 		&__formText {
 			font-size: rem(12);
 			margin-top: rem(16);

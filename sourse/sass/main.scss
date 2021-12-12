@@ -35,7 +35,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/images";
 @import "./node_modules/bootstrap/scss/containers";
 @import "./node_modules/bootstrap/scss/grid";
-// @import "./node_modules/bootstrap/scss/tables";
+@import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
 @import "./node_modules/bootstrap/scss/buttons";
 // @import "./node_modules/bootstrap/scss/transitions";
@@ -126,29 +126,6 @@ $output-bourbon-deprecation-warnings: false;
 		// background-color: $pagination-active-bg;
 		// border-color: $pagination-active-border-color;
 	}
-}
-
-.searchForm {
-  position: relative;
-  @include media-breakpoint-down(lg) {
-    top: 23px;
-  }
-  .form-control {
-    @include media-breakpoint-down(lg) {
-      border-width: 1px;
-    }
-  }
-  button {
-    position: absolute;
-    top: 7px;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    z-index: 18;
-    svg {
-      font-size: rem(24);
-    }
-  }
 }
 @import "root";
 @import "base";
