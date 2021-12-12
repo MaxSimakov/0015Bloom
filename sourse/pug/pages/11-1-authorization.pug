@@ -33,15 +33,27 @@ block pagecontent
 		img: 'sRegistration-1.png',
 		title
 	}).--auth
-
+		
+		.text-center.mb-3 Через соцсети
+		+soc().--reg
+			+item-sos('facebook-reg')
+			+item-sos('vkontakte-reg')
+			+item-sos('google-reg')
+			//- +item-sos
+			//- 	img(src="img/svg/facebook-reg.svg" alt="")
+			//- +item-sos
+			//- 	img(src="img/svg/vkontakte-reg.svg" alt="")
+			//- +item-sos
+			//- 	img(src="img/svg/google-reg.svg" alt="")
+		.text-center.mb-3 Или с помощью электронной почты
 		+input("Электронная почта", "email", "Электронная почта")
 		+e.SPAN.input-title Пароль 
 		+e.password-wrap
 			+e.SPAN.btn-toggle-pass
 				+icon('visibility')
 			+input("Пароль", "password")
-		+e.btn Войти
-		+e.link-wrap--pass.text-center
+		+e.btn.mt-2 Войти
+		+e.agreement.text-center.my-4
 			a(href="#") Восстановить пароль
 		+e.agreement.text-center
 			span Ещё не зарегистрированы? 

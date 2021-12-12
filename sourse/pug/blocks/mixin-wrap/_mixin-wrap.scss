@@ -32,6 +32,26 @@
 			}
 		}
 	}
+	&--reg {
+		--bs-gutter-x: #{rem(24)};
+		justify-content: center;
+		.soc__item {
+			width: rem(48);
+			height: rem(48);
+			border: 1px solid $gray-medium;
+			border-radius: 8px;
+			&:hover {
+				border-color: $primary;
+			}
+			img {
+				width: rem(24);
+				height: rem(24);
+			}
+			.icon {
+				font-size: rem(24);
+			}
+		}
+	}
 }
 
 .counter {
