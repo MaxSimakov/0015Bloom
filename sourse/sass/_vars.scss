@@ -663,10 +663,10 @@ $form-label-color: null !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y: rem(5) !default;
-$input-padding-x: rem(16) !default;
+$input-padding-y: rem(15) !default;
+$input-padding-x: rem(15) !default;
 $input-font-family: $input-btn-font-family !default;
-$input-font-size: rem(22) !default;
+$input-font-size: rem(16) !default;
 $input-font-weight: $font-weight-base !default;
 $input-line-height: 1 !default;
 
@@ -683,13 +683,12 @@ $input-disabled-bg: $gray-light !default;
 $input-disabled-border-color: $gray-medium !default;
 
 $input-color: $body-color !default;
-$input-border-color: $dark !default;
-// $input-border-width: $input-btn-border-width !default;
-$input-border-width: 0 !default;
+$input-border-color: $gray-medium !default;
+$input-border-width: $input-btn-border-width !default;
 $input-box-shadow: null !default;
 
 // $input-border-radius: $border-radius !default;
-$input-border-radius: 8px 0 8px 8px !default;
+$input-border-radius: $border-radius !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 

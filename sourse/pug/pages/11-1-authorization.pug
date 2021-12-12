@@ -2,7 +2,8 @@ extends layout/main.pug
 
 
 //- include ../blocks/sContent/_sContent.pug
-include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sRegistration/_sRegistration.pug
 //- include ../blocks/sCategories/_sCategories.pug
 //- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
 //- include ../blocks/sTeam/_sTeam.pug
@@ -18,17 +19,26 @@ include ../blocks/sContact/_sContact.pug
 //- include ../blocks/footer-main/_footer-main.pug
 
 block variables
-	- let  mainPage= 'contacts' 
-	- let  st= "--headBg: linear-gradient(0deg, hsla(37, 44%, 81%, 0.15), hsla(37, 44%, 81%, 0.768) 40%, #e4d4ba);"
+	- let  mainPage= 'registration' 
+	- let  st= null
 	- let  bg= '10-1-Contacts.jpg'
 
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Вход'
 	title= title
 block pagecontent
 
 	+top-nav()
-	+sContact()
-	+footer
+	+sRegistration({
+		img: 'sRegistration-1.png',
+		title
+	}).--auth
+		
+				+input("Владимир Воротников", "select", "Специалисты")
+				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
+				+input("+7 (___) __ __", "tel", "Телефон")
+				+e.SPAN.input-title Пароль 
+					+help-tooltip(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim!`)
+	+footer.d-lg-none
 
 

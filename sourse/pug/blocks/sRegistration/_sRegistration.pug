@@ -1,0 +1,13 @@
+mixin sRegistration(data)
+	// start sRegistration
+	+b.sRegistration#sRegistration&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-6
+					+pic(data.img)
+				+e.col.col-lg-6
+					+b.form-wrap
+						h1= data.title
+						form
+							block
+	// end sRegistration
