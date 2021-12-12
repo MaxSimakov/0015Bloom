@@ -11,4 +11,6 @@
 1. <https://maxsimakov.github.io/0015Bloom/public/07-sex-education-3.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/08-training-and-rehabilitation.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/10-contacts.html>
-1. <https://maxsimakov.github.io/0015Bloom/public/11-1-authorization.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/11-authorization.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/11-registration.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/17-article.html>

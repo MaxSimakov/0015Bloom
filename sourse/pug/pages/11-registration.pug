@@ -21,19 +21,18 @@ include ../blocks/sRegistration/_sRegistration.pug
 block variables
 	- let  mainPage= 'registration' 
 	- let  st= null
-	- let  bg= '10-1-Contacts.jpg'
+	- let  bg= null
 
 block title
-	- let  title= 'Вход'
+	- let  title= 'Регистрация'
 	title= title
 block pagecontent
 
 	+top-nav()
 	+sRegistration({
-		img: 'sRegistration-1.png',
+		img: 'sRegistration-2.png',
 		title
-	}).--auth
-		
+	})
 		.text-center.mb-3 Через соцсети
 		+soc().--reg
 			+item-sos('facebook-reg')
@@ -46,18 +45,27 @@ block pagecontent
 			//- +item-sos
 			//- 	img(src="img/svg/google-reg.svg" alt="")
 		.text-center.mb-3 Или с помощью электронной почты
+		+input("Имя", "text", "Имя")
 		+input("Электронная почта", "email", "Электронная почта")
+		+input("Город", "text", "Город")
 		+e.SPAN.input-title Пароль 
+			+help-tooltip(`Длина пароля должна быть не менее 8 символов. Пароль может состоять из букв латинского алфавита (A-z), арабских цифр (0-9) и специальных символов ( . , : ; ? ! * + % - < > @ [ ] { } / \ _ {} $ #  ” " )"`)
 		+e.password-wrap
 			+e.SPAN.btn-toggle-pass
 				+icon('visibility')
 			+input("Пароль", "password")
-		+e.btn.mt-2 Войти
-		+e.agreement.text-center.my-4
-			a(href="#") Восстановить пароль
+		+e.SPAN.input-title Подтвердите пароль
+		+e.password-wrap
+			+e.SPAN.btn-toggle-pass
+				+icon('visibility')
+			+input("Подтвердите пароль", "password")
+		+e.btn.mb-4 Зарегистрироваться
+		+e.agreement.text-center Нажимая кнопку «Зарегистрироваться», <br> вы принимаете условия
 		+e.agreement.text-center
-			span Ещё не зарегистрированы? 
-				a(href="#") Зарегистрироваться
+			a(href="#") Пользовательского соглашения
+		+e.agreement.text-center.mt-4
+			span Уже зарегистрированы? 
+				a(href="#") Войти
 		
 	+footer.d-lg-none
 
