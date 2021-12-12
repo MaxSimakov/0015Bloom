@@ -32,6 +32,26 @@
 			}
 		}
 	}
+	&--reg {
+		--bs-gutter-x: #{rem(24)};
+		justify-content: center;
+		.soc__item {
+			width: rem(48);
+			height: rem(48);
+			border: 1px solid $gray-medium;
+			border-radius: 8px;
+			&:hover {
+				border-color: $primary;
+			}
+			img {
+				width: rem(24);
+				height: rem(24);
+			}
+			.icon {
+				font-size: rem(24);
+			}
+		}
+	}
 }
 
 .counter {
@@ -450,6 +470,7 @@
 	display: inline-block;
 	width: rem(16);
 	height: rem(16);
+	margin-left: rem(3);
 	&:hover {
 		span {
 			visibility: visible;
@@ -462,7 +483,7 @@
 		display: inline-block;
 		width: rem(220);
 		bottom: calc(100% + 3px);
-		left: rem(-30);
+		left: rem(-46);
 		padding: rem(8);
 		background-color: $white;
 		font-size: rem(14);
@@ -477,7 +498,7 @@
 			position: absolute;
 			width: rem(12);
 			height: rem(12);
-			left: rem(32);
+			left: rem(48);
 			top: calc(100% - 8px);
 			z-index: 1;
 			border-radius: 2px;

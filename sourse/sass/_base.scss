@@ -114,6 +114,11 @@ body {
 			flex-direction: column;
 		}
 	}
+	&.page-404 {
+		.main-wrapper {
+			padding-bottom: 0;
+		}
+	}
 }
 
 .main-wrapper {

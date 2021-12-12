@@ -1,0 +1,18 @@
+mixin sPage404(data)
+	// start sPage404
+	+b.sPage404#sPage404&attributes(attributes)
+		.container-fluid
+			+b.section-title.d-none
+				h1 404
+			
+			+e.logo-main(href="/")
+				+icon('footer-logo-sm')
+				+icon('footer-logo')
+			picture
+				source(type='image/png' srcset='img/sPage404-bg.jpg' media='(min-width:768px)')
+				source(type='image/png' srcset='img/sPage404-bg-sm.png')
+				img(src='img/sPage404-bg-sm.png' alt='' loading='lazy')
+			+e.caption
+				p Страница не&nbsp;найдена. Она&nbsp;не&nbsp;существовала или срок публикации истёк.
+				+e.btn(href="/") На главную
+	// end sPage404

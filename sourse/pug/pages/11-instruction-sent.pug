@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sRegistration/_sRegistration.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sQuestionnaire/_sQuestionnaire.pug
+//- include ../blocks/sSexEducation/_sSexEducation.pug
+//- include ../blocks/sSexEducChapter/_sSexEducChapter.pug
+//- include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sFaqExperts/_sFaqExperts.pug
+//- include ../blocks/sNewsWrraper/_sNewsWrraper.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= 'registration' 
+	- let  st= null
+	- let  bg= null
+
+block title
+	- let  title= 'Инструкция отправлена'
+	title= title
+block pagecontent
+
+	+top-nav()
+	+sRegistration({
+		img: 'sRegistration-3.png',
+		title
+	}).--instruction
+		+e.agreement.text-center Зайдите в&nbsp;почту с&nbsp;указанным адресом и&nbsp;перейдите по&nbsp;ссылке &laquo;Восстановить пароль&raquo;
+		+e.btn.mt-4(href="/") На главную
+
+	+footer.d-lg-none
+
+

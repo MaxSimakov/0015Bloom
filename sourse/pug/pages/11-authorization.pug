@@ -21,7 +21,7 @@ include ../blocks/sRegistration/_sRegistration.pug
 block variables
 	- let  mainPage= 'registration' 
 	- let  st= null
-	- let  bg= '10-1-Contacts.jpg'
+	- let  bg= null
 
 block title
 	- let  title= 'Вход'
@@ -34,11 +34,31 @@ block pagecontent
 		title
 	}).--auth
 		
-				+input("Владимир Воротников", "select", "Специалисты")
-				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
-				+input("+7 (___) __ __", "tel", "Телефон")
-				+e.SPAN.input-title Пароль 
-					+help-tooltip(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim!`)
+		.text-center.mb-3 Через соцсети
+		+soc().--reg
+			+item-sos('facebook-reg')
+			+item-sos('vkontakte-reg')
+			+item-sos('google-reg')
+			//- +item-sos
+			//- 	img(src="img/svg/facebook-reg.svg" alt="")
+			//- +item-sos
+			//- 	img(src="img/svg/vkontakte-reg.svg" alt="")
+			//- +item-sos
+			//- 	img(src="img/svg/google-reg.svg" alt="")
+		.text-center.mb-3 Или с&nbsp;помощью электронной почты
+		+input("Электронная почта", "email", "Электронная почта")
+		+e.SPAN.input-title Пароль
+		+e.password-wrap
+			+e.SPAN.btn-toggle-pass
+				+icon('visibility')
+			+input("Пароль", "password")
+		+e.BUTTON.btn.mt-2 Войти
+		+e.agreement.text-center.my-4
+			a(href="#") Восстановить пароль
+		+e.agreement.text-center
+			span Ещё не&nbsp;зарегистрированы?
+				a(href="#") Зарегистрироваться
+		
 	+footer.d-lg-none
 
 
