@@ -1,0 +1,73 @@
+// start .sRegistration
+.sRegistration {
+	// --sPT: 0;
+	// --sPB: 0;
+	// --sTPB: ;
+	flex-grow: 1;
+	@include media-breakpoint-up(lg) {
+		background-color: $background;
+	}
+	.container {
+		@include media-breakpoint-up(lg) {
+			padding: 0;
+			max-width: 100%;
+		}
+		& > .row {
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(16)};
+			}
+		}
+	}
+
+	&__col {
+		@include media-breakpoint-up(lg) {
+			min-height: 100vh;
+		}
+		&:first-child {
+			display: none;
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+			}
+		}
+		&:last-child {
+			@include media-breakpoint-up(lg) {
+				background-color: $white;
+				border-radius: rem(16) 0 0 rem(16);
+			}
+		}
+	}
+	&--auth {
+		.sRegistration__col {
+			&:first-child {
+				@include media-breakpoint-up(lg) {
+					align-items: center;
+				}
+			}
+		}
+	}
+
+	.form-wrap {
+		form {
+			max-width: rem(375);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sRegistration
