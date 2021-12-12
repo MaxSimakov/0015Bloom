@@ -1,0 +1,23 @@
+// start .sOtherArticles
+.sOtherArticles {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(16)};
+		// --sTPB: ;
+	h4 {
+		text-align: center;
+		margin-bottom: rem(32);
+	}
+	.row {
+		justify-content: center;
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(12)};
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+
+} // end.sOtherArticles
