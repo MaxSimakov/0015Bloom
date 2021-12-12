@@ -14,5 +14,7 @@
 1. <https://maxsimakov.github.io/0015Bloom/public/11-authorization.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/11-registration.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/11-forgot-password.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/11-instruction-sent.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/11-create-new-passsword.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/13-page-404.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/17-article.html>
