@@ -69,6 +69,29 @@
 			}
 		}
 	}
+
+	&--instruction {
+		.form-wrap {
+			form {
+				text-align: center;
+			}
+			&__agreement {
+				max-width: 20em;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			&__btn {
+				padding: rem(8);
+				@include media-breakpoint-down(lg) {
+					max-width: rem(328);
+				}
+				@include media-breakpoint-up(lg) {
+					max-width: rem(180);
+				}
+			}
+		}
+	}
+
 	.soc--reg {
 		margin-bottom: rem(40);
 	}
@@ -88,7 +111,7 @@
 			color: $dark;
 			@extend .h3;
 			max-width: 100%;
-			max-width: 10em;
+			max-width: 9em;
 			margin-left: auto;
 			margin-right: auto;
 			@include media-breakpoint-up(md) {
