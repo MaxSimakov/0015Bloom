@@ -1,0 +1,30 @@
+// start .sRecomendedCourse
+.sRecomendedCourse {
+		// --sPT: ;
+	--sPB: #{rem(40)};
+		// --sTPB: ;
+	--main-fontSize: #{rem(14)};
+	--line-height: #{rem(16)};
+	h4 {
+		text-align: center;
+		margin-bottom: rem(40);
+	}
+	.courseWrrpaer {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.pricing-block {
+		padding-top: rem(16);
+		border-top: 1px solid $background;
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(7);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sRecomendedCourse
