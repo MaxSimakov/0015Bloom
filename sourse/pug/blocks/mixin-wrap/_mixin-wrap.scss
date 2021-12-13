@@ -481,10 +481,36 @@
 	@include media-breakpoint-up(sm) {
 		font-size: rem(16);
 		padding: rem(8) rem(19);
-
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url(../img/svg/bubble-tail.svg);
+		background-repeat: no-repeat;
+		width: rem(21);
+		height: rem(16);
+	}
+	&.left {
+		&::before {
+			right: 12%;
+		}
+	}
+	&.right {
+		&::before {
+			left: 12%;
+		}
 	}
 	&--top {
+		&::before {
+			top: calc(100% - 6px);
+			@include media-breakpoint-up(sm) {
+				top: calc(100% - 4px);
+			}
+		}
 		&.left {
+			&::before {
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+			}
 			top: -11%;
 			left: -2%;
 			@include media-breakpoint-up(sm) {
@@ -518,6 +544,13 @@
 		}
 	}
 	&--bottom {
+		&::before {
+			bottom: calc(100% - 6px);
+			transform: rotate(-180deg);
+			@include media-breakpoint-up(sm) {
+				bottom: calc(100% - 4px);
+			}
+		}
 		&.left {
 			left: -2%;
 			bottom: 30%;
@@ -535,6 +568,9 @@
 			}
 		}
 		&.right {
+			&::before {
+				transform: matrix(1, 0, 0, -1, 0, 0);
+			}
 			right: -2%;
 			bottom: 4%;
 			@include media-breakpoint-up(sm) {
