@@ -445,6 +445,7 @@
 			}
 		}
 		.page-head__img-wrap {
+			position: relative;
 			@include media-breakpoint-up(lg) {
 				position: absolute;
 				max-height: calc(100% - 57px);
@@ -465,6 +466,88 @@
 			}
 			p {
 				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.buble {
+	position: absolute;
+	border-radius: rem(32);
+	background-color: $white;
+	padding: rem(6) rem(17);
+	line-height: 16px;
+	font-size: rem(12);
+	@include media-breakpoint-up(sm) {
+		font-size: rem(16);
+		padding: rem(8) rem(19);
+
+	}
+	&--top {
+		&.left {
+			top: -11%;
+			left: -2%;
+			@include media-breakpoint-up(sm) {
+				top: 24%;
+				left: -10%;
+			}
+			@include media-breakpoint-up(md) {
+				top: 24%;
+				left: -17%;
+			}
+			@include media-breakpoint-up(xl) {
+				top: 24%;
+				left: -21%;
+			}
+		}
+		&.right {
+			right: -2%;
+			top: -1%;
+			@include media-breakpoint-up(sm) {
+				right: -10%;
+				top: 12%;
+			}
+			@include media-breakpoint-up(md) {
+				right: -14%;
+				top: 12%;
+			}
+			@include media-breakpoint-up(xl) {
+				right: -29%;
+				top: 12%;
+			}
+		}
+	}
+	&--bottom {
+		&.left {
+			left: -2%;
+			bottom: 30%;
+			@include media-breakpoint-up(sm) {
+				left: -10%;
+				bottom: 12%;
+			}
+			@include media-breakpoint-up(md) {
+				left: -24%;
+				bottom: 12%;
+			}
+			@include media-breakpoint-up(xl) {
+				left: -33%;
+				bottom: 12%;
+			}
+		}
+		&.right {
+			right: -2%;
+			bottom: 4%;
+			@include media-breakpoint-up(sm) {
+				right: -10%;
+				bottom: 30%;
+			}
+			@include media-breakpoint-up(md) {
+				right: -14%;
+				bottom: 30%;
+			}
+			@include media-breakpoint-up(xl) {
+				right: -29%;
+				bottom: 30%;
 			}
 		}
 	}
