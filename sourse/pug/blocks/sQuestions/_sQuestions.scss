@@ -50,6 +50,19 @@
 		}
 	}
 	&--help {
+		// --sPT: ;
+		// --sTPB: ;
+		--sPB: #{rem(40)};
+		@include media-breakpoint-up(md) {
+			// --sPT: #{rem(35)};
+			--sPB: #{rem(65)};
+		}
+		@include media-breakpoint-up(lg) {
+			--sPT: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			--sPB: #{rem(65)};
+		}
 		.sQuestions__inner {
 			@include media-breakpoint-up(xl) {
 				padding: rem(40);
