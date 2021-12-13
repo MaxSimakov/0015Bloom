@@ -1,0 +1,56 @@
+// start .sArticleTable
+.sArticleTable {
+		--sPT: #{rem(21)};;
+		--sPB: #{rem(46)};;
+		// --sTPB: ;
+	h6 {
+		font-size: rem(18);
+		line-height: rem(24);
+		letter-spacing: rem(0.5);
+		text-transform: uppercase;
+		margin-bottom: rem(7);
+	}
+	.row {
+		justify-content: center;
+	}
+	table {
+		margin-bottom: 0;
+		& > :not(:first-child) {
+			border-top: none;
+		}
+		thead {
+			th {
+				color: $gray-dark;
+				padding-bottom: 8px;
+				font-size: rem(14);
+				line-height: rem(16);
+			}
+		}
+		tbody {
+			& > tr {
+				&:hover {
+					background-color: rgba($color: #EFEAE7, $alpha: 0.5);
+				}
+			}
+		}
+		th {
+			border-bottom: 1px solid $gray-light;
+			padding-top: rem(16);
+			padding-bottom: rem(16);
+			font-weight: 400;
+			color: $black;
+		}
+		td {
+			color: $black;
+			padding-top: rem(16);
+			padding-bottom: rem(14.4);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticleTable
