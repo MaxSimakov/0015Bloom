@@ -49,6 +49,21 @@
 			margin-right: rem(6);
 		}
 	}
+	&--help {
+		.sQuestions__inner {
+			@include media-breakpoint-up(xl) {
+				padding: rem(40);
+			}
+		}
+		h2 {
+			@extend .h3;
+		}
+		.sQuestions__subtitle {
+			max-width: 27.7em;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

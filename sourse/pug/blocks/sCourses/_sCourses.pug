@@ -1,28 +1,3 @@
-mixin course(s, h, text, i, p, bg, btn, ...texts)
-	+b.courseWrrpaer&attributes(attributes)
-		+e.bookmark(href="#")
-				+icon(`bookmarkActive`)
-		if s
-			+e.SPAN.label!= s
-		+e.content
-			h5!= h
-			p!= text
-			.row
-				block
-			+e.who
-				+pic(`sTeam-${i}.jpg`)
-				+e.text
-					each text in texts 
-						p!= text
-			+pricing2(p, '#modal-consult', btn)
-		+pic(`courseImg-${bg}.jpg`)
-
-mixin infoblock(infoTitle, infoText)
-	.col-12.col-lg-auto
-		+e.infoBlock 
-			span!= infoTitle
-			span!= infoText
-
 mixin sCourses(data)
 	// start sCourses
 	+b.sCourses.section#sCourses&attributes(attributes)
