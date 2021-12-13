@@ -1,5 +1,5 @@
 mixin card(img, t, p)
-	+b.sCardHorizontalItem
+	+b.sCardHorizontalItem&attributes(attributes)
 		+e.row.row
 			.col-lg-5.col-xl-6
 				+pic(`${img}`, '', 0)
@@ -10,7 +10,7 @@ mixin card(img, t, p)
 						if t
 							h2!= t
 						p: span!= p
-					
+
 					block
 mixin cardText(t, p)
 	+e.text-block
@@ -69,7 +69,7 @@ mixin sCardHorisontal(data)
 							.col-12.col-sm-6
 								+e.btn(href="#").btn-outline-primary Тренировки и реабилитация
 	// end sCardHorisontal
-	
+
 mixin sCardHorisontal2(data)
 	// start sCardHorisontal
 	+b.sCardHorisontal--reverse&attributes(attributes)
@@ -80,7 +80,6 @@ mixin sCardHorisontal2(data)
 						.swiper-wrapper
 							+e.slide.swiper-slide.col-lg-6
 								+cardText(`Реабилитация`,`Для тех, у&nbsp;кого есть проблемы в&nbsp;области органов малого таза: недержание мочи, нарушение работы кишечника, боль во&nbsp;время секса, боль в&nbsp;пояснице, диастаз и&nbsp;другие`)
-								
 							+e.slide.swiper-slide.col-lg-6
 								+cardText(`Здоровая спина`,`Подходит тем, кто проводит много времени в&nbsp;дороге или за&nbsp;компьютером, хочет укрепить свои мышцы и&nbsp;поправить осанку`)
 							+e.slide.swiper-slide.col-lg-6
@@ -110,17 +109,14 @@ mixin sCardHorisontal2(data)
 							+e.btn(href="#").btn-primary  Читать статьи
 						.col-12.col-sm-6
 							+e.btn(href="#").btn-outline-primary Задать вопрос
-					
-					
 
 			+card(`card-6.png`,`Консультации  с&nbsp;врачами`,`Наши врачи могут провести для вас онлайн или офлайн консультацию`) 
 				+e.btns
 					.row
 						.col-12.col-sm-6
-								+e.btn(href="#").btn-primary  Записаться
-					
-			+card(`card-7.png`,`Статьи  и&nbsp;лекции`,`Врачи и&nbsp;эксперты в&nbsp;формате мини-лекций рассказывают о&nbsp;том, как работает женский организм. Вот о&nbsp;чем мы&nbsp;уже поговорили:`)
+							+e.btn(href="#").btn-primary  Записаться
 
+			+card(`card-7.png`,`Статьи  и&nbsp;лекции`,`Врачи и&nbsp;эксперты в&nbsp;формате мини-лекций рассказывают о&nbsp;том, как работает женский организм. Вот о&nbsp;чем мы&nbsp;уже поговорили:`)
 				+e.body
 					ul
 						li Что такое дисфункция тазового дна после родов
@@ -134,6 +130,81 @@ mixin sCardHorisontal2(data)
 							+e.btn(href="#").btn-primary  Читать статьи
 						.col-12.col-sm-6
 							+e.btn(href="#").btn-outline-primary Задать вопрос
+
+mixin sCardHorisontal3(data)
+	// start sCardHorisontal
+	+b.sCardHorisontal&attributes(attributes)
+		.container
+			+card(`card-8.png`,`Ваш тренер`,`Я&nbsp;&mdash; сертифицированный специалист по&nbsp;9&nbsp;фитнес направлениям, работаю тренером с&nbsp;2014&nbsp;года. За&nbsp;время работы в&nbsp;студии мои клиенты часто жаловались:`)
+				+e.body
+					+e.slider.swiper.slider-auto--js
+						.swiper-wrapper
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('quote')
+									p Мой вечно выпяченный живот не&nbsp;уходит даже от&nbsp;качания пресса
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('quote')
+									p В&nbsp;нашем обществе не&nbsp;принято делиться такими подробностями
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('quote')
+									p Подтекание мочи во&nbsp;время прыжков доставляет мне дискомфорт
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('quote')
+									p Постоянно испытываю боли в&nbsp;спине
+
+					p.small Скажу честно: тогда я&nbsp;ничем не&nbsp;могла помочь своим клиенткам, так как на&nbsp;курсах для тренеров про это не&nbsp;рассказывают. Но&nbsp;совсем скоро эта проблема затронула и&nbsp;меня: в&nbsp;2019 году я&nbsp;родила дочь и&nbsp;получила акушерскую травму&nbsp;&mdash; разрывы 3&nbsp;степени.
+				+e.btns
+					.row
+						.col-12.col-sm-6
+							+e.btn(href="#").btn-primary  Смотреть видео
+
+			+card(`card-9.png`,`Образование`,`Я&nbsp;столкнулась с&nbsp;полным отсутствием послеродовой реабилитации в&nbsp;России и&nbsp;каких-то методов для восстановления собственного здоровья.`)
+				+e.body
+					p.small Но&nbsp;мне всегда было интересно учиться и&nbsp;хотелось помочь себе&nbsp;&mdash; поэтому я&nbsp;пошла учиться. С&nbsp;новыми знаниями я&nbsp;избавилась от&nbsp;симптомов и&nbsp;решила все свои проблемы с&nbsp;помощью тренировок.
+					+e.row-sm.row
+						.col-12.col-md-6.col-lg-12.col-xl-6
+							+b.small-card
+								+e.text
+									p Лейденский университет (Нидерланды)
+									p.small Курс по&nbsp;восстановлению мышц тазового дна
+								img(src="img/svg/small-card-1.svg" alt="")
+						.col-12.col-md-6.col-lg-12.col-xl-6
+							+b.small-card
+								+e.text
+									p Мичиганский университет (США)
+									p.small Онлайн программа
+								img(src="img/svg/small-card-2.svg" alt="")
+				+e.btns
+					.row
+						.col-12.col-sm-6
+							+e.btn(href="#").btn-primary  Статьи и лекции
+						.col-12.col-sm-6
+							+e.btn(href="#").btn-outline-primary Вопросы и ответы
+
+
+mixin sCardHorisontal4(data)
+	// start sCardHorisontal
+	+b.sCardHorisontal--reverse&attributes(attributes)
+		.container
+			+card(`card-10.png`,`Консультации  с&nbsp;врачами`,`Тренировки по&nbsp;восстановлению женского здоровья, к&nbsp;сожалению, не&nbsp;могут вылечить всех. Многие женщины попадали на&nbsp;мои занятия уже в&nbsp;запущенных стадиях, когда требовалась операция, и&nbsp;отправлялись к&nbsp;соответствующим специалистам.`).--end
+				+e.btns
+					.row
+						.col-12.col-sm-6
+							+e.btn(href="#").btn-primary Тренировки и реабилитация
+						.col-12.col-sm-6
+							+e.btn(href="#").btn-outline-primary Зарегистрироваться
+
+			+card(`card-11.png`,`Консультации с&nbsp;врачами`,`Но, после любой операции, также важна реабилитация: и&nbsp;тогда мы&nbsp;совместно с&nbsp;врачами Университетской клиники МГУ начали практиковать преемственность пациентов.`)
+				+e.body
+					p.small Они&nbsp;&mdash; оперируют, я&nbsp;&mdash; помогаю восстанавливаться и&nbsp;забыть про симптомы болезней. Именно в&nbsp;таком формате получился потрясающий результат. Мультидисциплинарный подход&nbsp;&mdash; основа нашего успеха, и&nbsp;мы&nbsp;решили, что можем масштабировать эти результаты. Чтобы вы&nbsp;смогли получить высококвалифицированную помощь и&nbsp;найти ответы на&nbsp;свои вопросы.
+				+e.btns
+					.row
+						.col-12.col-sm-6
+							+e.btn(href="#").btn-primary Выбрать врача
 
 
 	// end sCardHorisontal

@@ -67,25 +67,21 @@ mixin pageHead(data)
 				if data.search
 					+searchForm(data.d, data.formText)
 
-//- mixin pageHead-article(data)
-//- 	+b.page-head-article&attributes(attributes)
-//- 		.container
-//- 			h1!= data.t
-//- 			+e.btn-back(href="#")
-//- 				+icon('chevron-left-sm')
-//- 				span!= data.b
-//- mixin pageHead2(data)
-//- 	+b.page-head&attributes(attributes)
-//- 		.container
-//- 			+e.content
-//- 				h1!= data.t
-//- 				p!= data.p
-//- 				if data.btn
-//- 					+e.btn(href="#")= data.btn
-//- 				if data.img
-//- 					+pic(data.img)
-//- 				if data.search
-//- 					+searchForm2(data.d, data.formText)
+mixin pageHead-about(data)
+	+b.page-head--about&attributes(attributes)
+		.container
+			+e.content
+				+e.title
+					h1!= data.t
+					if data.p
+						p!= data.p
+				if data.img
+					+e.img-wrap
+						+pic(data.img)
+						block
+
+
+
 
 mixin pricing(n, l)
 	+b.pricing-block
@@ -105,7 +101,7 @@ mixin pricing2(n, l, btn)
 				+e.num= n
 					span ₽
 			.col-auto
-				+e.btn(href=`${l}`).link-modal-js!= btn
+				+e.btn(href=`${l}`)!= btn
 		block
 
 mixin help-tooltip(t)
@@ -117,3 +113,28 @@ mixin link-back(t, l)
 	+b.link-back(href=`${l}`)
 		+icon('chevron-left-sm')
 		span!= t
+
+mixin course(s, h, text, i, p, bg, btn, ...texts)
+	+b.courseWrrpaer&attributes(attributes)
+		+e.bookmark(href="#")
+				+icon(`bookmarkActive`)
+		if s
+			+e.SPAN.label!= s
+		+e.content
+			h5!= h
+			p!= text
+			.row
+				block
+			+e.who
+				+pic(`sTeam-${i}.jpg`)
+				+e.text
+					each text in texts 
+						p!= text
+			+pricing2(p, '#modal-consult', btn)
+		+pic(`courseImg-${bg}.jpg`)
+
+mixin infoblock(infoTitle, infoText)
+	.col-12.col-lg-auto
+		+e.infoBlock 
+			span!= infoTitle
+			span!= infoText

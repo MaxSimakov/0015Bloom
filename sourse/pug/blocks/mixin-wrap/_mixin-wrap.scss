@@ -22,7 +22,7 @@
 			height: rem(40);
 			border: 1px solid currentColor;
 			border-radius: 8px;
-			
+
 			img {
 				width: rem(24);
 				height: rem(24);
@@ -191,7 +191,7 @@
 			padding-bottom: rem(193);
 		}
 	}
-	
+
 	&--noResult .container {
 		padding-top: rem(32);
 		padding-bottom: rem(0);
@@ -411,6 +411,179 @@
 					margin-bottom: rem(16);
 					max-width: 100%;
 				}
+			}
+		}
+	}
+	&--about {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 26px;
+			left: 0;
+			bottom: -1px;
+			background-color: $white;
+			border-radius: 24px 24px 0px 0px;
+		}
+		.container {
+			@include media-breakpoint-up(lg) {
+				padding-top: rem(185);
+				padding-bottom: rem(192);
+			}
+		}
+		.page-head__content {
+			max-width: rem(470);
+			@include media-breakpoint-up(lg) {
+			}
+
+			img {
+				@include media-breakpoint-up(lg) {
+					position: static;
+					max-height: 100%;
+				}
+			}
+		}
+		.page-head__img-wrap {
+			position: relative;
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				max-height: calc(100% - 57px);
+				bottom: 0;
+				right: 5%;
+			}
+			@include media-breakpoint-up(xl) {
+				right: 10.4%;
+			}
+		}
+		.page-head__title {
+			margin-bottom: rem(60);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+			}
+			h1 {
+				margin-bottom: rem(16);
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.buble {
+	position: absolute;
+	border-radius: rem(32);
+	background-color: $white;
+	padding: rem(6) rem(17);
+	line-height: 16px;
+	font-size: rem(12);
+	@include media-breakpoint-up(sm) {
+		font-size: rem(16);
+		padding: rem(8) rem(19);
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url(../img/svg/bubble-tail.svg);
+		background-repeat: no-repeat;
+		width: rem(21);
+		height: rem(16);
+	}
+	&.left {
+		&::before {
+			right: 12%;
+		}
+	}
+	&.right {
+		&::before {
+			left: 12%;
+		}
+	}
+	&--top {
+		&::before {
+			top: calc(100% - 6px);
+			@include media-breakpoint-up(sm) {
+				top: calc(100% - 4px);
+			}
+		}
+		&.left {
+			&::before {
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+			}
+			top: -11%;
+			left: -2%;
+			@include media-breakpoint-up(sm) {
+				top: 24%;
+				left: -10%;
+			}
+			@include media-breakpoint-up(md) {
+				top: 24%;
+				left: -17%;
+			}
+			@include media-breakpoint-up(xl) {
+				top: 24%;
+				left: -21%;
+			}
+		}
+		&.right {
+			right: -2%;
+			top: -1%;
+			@include media-breakpoint-up(sm) {
+				right: -10%;
+				top: 12%;
+			}
+			@include media-breakpoint-up(md) {
+				right: -14%;
+				top: 12%;
+			}
+			@include media-breakpoint-up(xl) {
+				right: -29%;
+				top: 12%;
+			}
+		}
+	}
+	&--bottom {
+		&::before {
+			bottom: calc(100% - 6px);
+			transform: rotate(-180deg);
+			@include media-breakpoint-up(sm) {
+				bottom: calc(100% - 4px);
+			}
+		}
+		&.left {
+			left: -2%;
+			bottom: 30%;
+			@include media-breakpoint-up(sm) {
+				left: -10%;
+				bottom: 12%;
+			}
+			@include media-breakpoint-up(md) {
+				left: -24%;
+				bottom: 12%;
+			}
+			@include media-breakpoint-up(xl) {
+				left: -33%;
+				bottom: 12%;
+			}
+		}
+		&.right {
+			&::before {
+				transform: matrix(1, 0, 0, -1, 0, 0);
+			}
+			right: -2%;
+			bottom: 4%;
+			@include media-breakpoint-up(sm) {
+				right: -10%;
+				bottom: 30%;
+			}
+			@include media-breakpoint-up(md) {
+				right: -14%;
+				bottom: 30%;
+			}
+			@include media-breakpoint-up(xl) {
+				right: -29%;
+				bottom: 30%;
 			}
 		}
 	}

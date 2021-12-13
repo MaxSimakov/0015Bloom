@@ -188,29 +188,31 @@
 
 .count {
 	@include roww(16px, m);
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	background-image: radial-gradient(96.71% 173.05% at 9.26% 11.36%, #fffdfc 0%, #f9edda 77.15%, #ffd4c1 100%);
 	border-radius: 16px;
 	padding: rem(5);
 	color: $dark;
-	max-width: rem(328);
+	// max-width: rem(328);
 	margin-left: auto;
 	margin-right: auto;
 	height: rem(64);
 	@include media-breakpoint-up(md) {
-		max-width: rem(374);
+		// max-width: rem(374);
 		--bs-gutter-x: #{rem(22)};
 	}
 	h3 {
-		// line-height: 1;
+		line-height: 1;
 		margin-bottom: 0;
+		white-space: nowrap;
 	}
 	p {
 		font-size: rem(16);
 		line-height: 1;
 		margin-bottom: 0;
 		max-width: rem(155);
+		text-align: left;
 	}
 }

@@ -49,6 +49,34 @@
 			margin-right: rem(6);
 		}
 	}
+	&--help {
+		// --sPT: ;
+		// --sTPB: ;
+		--sPB: #{rem(40)};
+		@include media-breakpoint-up(md) {
+			// --sPT: #{rem(35)};
+			--sPB: #{rem(65)};
+		}
+		@include media-breakpoint-up(lg) {
+			--sPT: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			--sPB: #{rem(65)};
+		}
+		.sQuestions__inner {
+			@include media-breakpoint-up(xl) {
+				padding: rem(40);
+			}
+		}
+		h2 {
+			@extend .h3;
+		}
+		.sQuestions__subtitle {
+			max-width: 27.7em;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

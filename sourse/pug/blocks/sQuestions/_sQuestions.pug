@@ -9,3 +9,14 @@ mixin sQuestions(data)
 					+icon('whatsapp-qestions')
 					span WhatsApp
 	// end sQuestions
+
+mixin sQuestions-help(data)
+	// start sQuestions-help
+	+b.SECTION.sQuestions--help.section#sQuestions--help&attributes(attributes)
+		.container
+			+e.inner.text-center
+				h2 Окажем помощь
+				+e.subtitle На&nbsp;этой платформе мы&nbsp;объединили лучших специалистов в&nbsp;своей области. Я&nbsp;верю, что мы&nbsp;будем полезны для каждой из&nbsp;вас.
+				+e.btn(href="#")
+					span Создать личный кабинет
+	// end sQuestions-help
