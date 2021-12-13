@@ -67,6 +67,20 @@ mixin pageHead(data)
 				if data.search
 					+searchForm(data.d, data.formText)
 
+mixin pageHead-about(data)
+	+b.page-head--about&attributes(attributes)
+		.container
+			+e.content
+				+e.title
+					h1!= data.t
+					if data.p
+						p!= data.p
+				if data.img
+					+e.img-wrap
+						+pic(data.img)
+						block
+
+
 
 
 mixin pricing(n, l)

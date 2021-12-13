@@ -21,7 +21,7 @@ include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 block variables
 	- let  mainPage= 'about' 
 	- let  st= null
-	- let  bg= null
+	- let  bg= '12-1About-project.jpg'
 
 block title
 	- let  title= 'О проекте'
@@ -29,6 +29,11 @@ block title
 block pagecontent
 
 	+top-nav()
+	+pageHead-about({
+		t: `Привет! <br> Я - Аня Грикевич`,
+		p: `Создательница этой платформы. Хочу немного рассказать вам о&nbsp;том, как все начиналось, зачем я&nbsp;собрала команду и&nbsp;мы&nbsp;сделали эту платформу.`,
+		img: 'about-project.png'
+	}).text-start
 	+sCardHorisontal3()
 	+sNewCourse()
 	+sCardHorisontal4()
