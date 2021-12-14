@@ -23,6 +23,7 @@ block title
 	- let  title= 'Статьи и лекции'
 	title= title
 block pagecontent
+	+top-nav()
 
 	+pageHead({
 		t: `Статьи и&nbsp;лекции`,
@@ -39,7 +40,6 @@ block pagecontent
 			+newsWrrap('', 2, 'Реабилитация и&nbsp;тренировки', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
 			+newsWrrap('',3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...')
 			+newsWrrap(`v`, 1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
-	+top-nav()
 	+footer
 
 

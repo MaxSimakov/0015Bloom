@@ -55,6 +55,8 @@ mixin pageHead(data)
 	+b.page-head&attributes(attributes)
 		.container
 			+e.content
+				if data.bread 
+					+breadcrumb()
 				+e.title
 					h1!= data.t
 					if data.p

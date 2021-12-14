@@ -311,7 +311,7 @@ function eventHandler() {
 		}
 	});
 
-	const sArticleSlider = new Swiper('.sArticleSlider__slider--js', {
+	const sArticleSlider = new Swiper('.mediaContent__slider--js', {
 
 		slidesPerView: 'auto',
 		watchOverflow: true,

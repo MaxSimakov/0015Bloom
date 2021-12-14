@@ -20,6 +20,8 @@ block title
 	- let  title= 'Консультации с врачом'
 	title= title
 block pagecontent
+	+top-nav()
+	
 	+pageHead({
 		t: `Консультации с&nbsp;врачом`,
 		p: `Не&nbsp;нашли ответ на&nbsp;свой вопрос или хотите получить личную консультацию со&nbsp;специалистом? На&nbsp;этой странице вы&nbsp;можете записаться на&nbsp;онлайн-консультацию с&nbsp;одним из&nbsp;наших специалистов и&nbsp;подробно разобрать свой вопрос`,
@@ -27,7 +29,6 @@ block pagecontent
 	})
 	//- +mob-mnu()
 	//- +header()
-	+top-nav()
 	//- +topLine()
 	//- .bg-background
 	//- 	+headerBlock()
