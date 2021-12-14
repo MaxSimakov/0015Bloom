@@ -273,6 +273,7 @@
 			max-width: rem(344);
 		}
 		&__btn {
+			min-width: rem(155);
 			@include media-breakpoint-only(md) {
 				font-size: rem(19);
 			}
