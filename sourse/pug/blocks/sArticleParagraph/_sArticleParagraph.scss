@@ -1,0 +1,51 @@
+// start .sArticleParagraph
+.sArticleParagraph {
+	--sPT: #{rem(47)};
+	--sPB: #{rem(30)};
+		// --sTPB: ;
+	.row {
+		justify-content: center;
+	}
+	p {
+		span {
+			color: $primary;
+		}
+	}
+	blockquote {
+		margin-bottom: 0;
+		padding-left: rem(17.5);
+		border-left: 2px solid $primary;
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(23);
+		}
+		h5 {
+			color: $primary;
+		}
+		cite {
+			font-style: normal;
+			display: flex;
+			flex-direction: column;
+			line-height: rem(24);
+			color: $dark;
+			span {
+				font-size: rem(12);
+				line-height: rem(16);
+				color: $gray-dark;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: rem(16);
+				line-height: rem(16);
+				span {
+					font-size: rem(14);
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticleParagraph

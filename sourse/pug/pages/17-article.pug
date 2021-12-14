@@ -17,6 +17,10 @@ include ../blocks/sRecomendedCourse/_sRecomendedCourse.pug
 include ../blocks/sOtherArticles/_sOtherArticles.pug
 include ../blocks/sArticleBodyIntoduction/_sArticleBodyIntoduction.pug
 include ../blocks/sArticleTable/_sArticleTable.pug
+include ../blocks/sArticleParagraph/_sArticleParagraph.pug
+include ../blocks/sArticleSlider/_sArticleSlider.pug
+include ../blocks/sArticleBodyText/_sArticleBodyText.pug
+include ../blocks/sArticleVideo/_sArticleVideo.pug
 //- include ../blocks/footer-main/_footer-main.pug
 
 block variables
@@ -37,6 +41,14 @@ block pagecontent
 	}).--article
 	+sArticleBodyIntoduction('Fusce sed auctor', 'Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. <span>Donec non purus</span>  venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.', 'Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla', 'In&nbsp;posuere, augue eget ornare congue, eros ex&nbsp;bibendum', 'In&nbsp;finibus vitae lorem nec scelerisque', 'Phasellus eu&nbsp;aliquam&nbsp;ex. Integer facilisis velit lacus, vel venenatis est aliquam sit amet', 'Proin suscipit placerat turpis', 1, 'Description')
 	+sArticleTable('H6&nbsp;Header two line words description')
+	+sArticleParagraph('H3&nbsp;Header two line words description', 'Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo <span>pulvinar tincidunt et&nbsp;vel enim.</span> Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.')
+		+articelCite('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac&nbsp;vehicula volutpat.', 'Анастасия Алаева', 'врач околог')
+	+sArticleSlider()
+		+slide(1)
+		+slide(1)
+		+slide(1)
+	+sArticleBodyText('H4&nbsp;Header two line words description', 'H5&nbsp;Header two line words description', 'Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.', 'Donec scelerisque massa nec sapien tempus consectetur', 'Morbi vehicula mauris neque', 'Nam luctus orci non suscipit mollis', 'Proin suscipit placerat turpis, vitae fermentum turpis auctor vel', 'Quisque aliquet nibh nec egestas faucibus')
+	+sArticleVideo('https://www.youtube.com/embed/AWKzr6n0ea0')
 	//- +sCourses()
 	//- +sFaqExperts().rounded-top
 	//- +sNewsWrraper()

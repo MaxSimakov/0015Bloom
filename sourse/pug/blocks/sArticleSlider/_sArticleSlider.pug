@@ -1,0 +1,15 @@
+mixin slide(i)
+	+e.slide.swiper-slide
+		+e.item
+			+pic(`arcticleSliderBg-${i}.jpg`, `bg`, 0)
+
+mixin sArticleSlider(data)
+	// start sArticleSlider
+	+b.SECTION.sArticleSlider.section#sArticleSlider&attributes(attributes)
+		.container
+			+e.sliderContainer
+				+e.slider--js.swiper
+					.swiper-wrapper
+						block
+				+arrow
+	// end sArticleSlider
