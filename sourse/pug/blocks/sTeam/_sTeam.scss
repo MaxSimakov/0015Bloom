@@ -165,14 +165,14 @@
 		}
 	}
 	&__btn {
-		@include roww(8px, m);
+		@include roww(10px, m);
 		display: inline-flex;
 		align-items: center;
 		&:not(:hover) {
 			color: $dark;
 		}
 		.icon {
-			font-size: rem(24);
+			font-size: rem(18);
 		}
 		span {
 			font-size: rem(16);
