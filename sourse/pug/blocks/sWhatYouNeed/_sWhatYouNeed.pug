@@ -1,0 +1,33 @@
+mixin sWhatYouNeed(data)
+	// start sWhatYouNeed
+	+b.SECTION.sWhatYouNeed.section#sWhatYouNeed&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Что понадобится?
+			+e.slider.swiper.slider-auto--js
+				.swiper-wrapper
+					mixin slide(i, h, p, ...items)
+						+e.slide.swiper-slide
+							+e.item
+								+pic(`sWhatYouNeed-${i}.jpg`, `bg`, 0)
+								+e.heading
+									h4!= h
+									+e.price
+										span!= p
+										span ₽
+								ul
+									each item in items
+										li!= item
+
+					+slide(1, `Ролл`, `~900`, `Диаметр 13-15 см`, `Длина 45-90 см`)
+					+slide(2, `2 теннисных мячика`, `~100`)
+					+slide(3, `Мяч для пилатеса`, `~300`)
+					//- +slide(2, `2 теннисных мячика`, `~100`)
+					//- +slide(3, `Мяч для пилатеса`, `~300`)
+					//- +slide(1, `Ролл`, `~900`, `Диаметр 13-15 см`, `Длина 45-90 см`)
+					//- +slide(2, `2 теннисных мячика`, `~100`)
+
+
+			.text-center
+				+e.btn Купить курс
+	// end sWhatYouNeed
