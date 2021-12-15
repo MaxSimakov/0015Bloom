@@ -34,11 +34,21 @@
 		max-width: rem(450);
 		margin-left: auto;
 		margin-right: auto;
+		.row {
+			--bs-gutter-x: #{rem(8)};
+		}
 		h5 {
 			color: $primary;
 		}
-		.row {
-			--bs-gutter-x: #{rem(8)};
+		p {
+			font-size: rem(16);
+			line-height: calc(24 / 16);
+			@include media-breakpoint-up(md) {
+				line-height: 1;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 	&__counter {
