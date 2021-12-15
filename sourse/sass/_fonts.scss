@@ -10,7 +10,7 @@ $file-format: woff2;
 @include font-face ($default-font, $addr + "FuturaPT-Light", 300, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "FuturaPT-Medium/FuturaPT-Medium", 500, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "FuturaPT-Medium/FuturaPT-Medium", 700, $file-formats: $file-format);
-@include font-face ("Lovelace", $addr + "Lovelace-Regular/Lovelace-Regular", $file-formats: $file-format);
+@include font-face ("Lovelace", $addr + "Lovelace-Regular/Lovelace-Regular", $file-formats: woff);
 // @include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
 
 // font-weight helper:
