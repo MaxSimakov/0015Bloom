@@ -45,7 +45,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/breadcrumb";
 // @import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 @import "./node_modules/bootstrap/scss/alert";
@@ -69,14 +69,33 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 
-// .breadcrumb {
-// 	.active {
-// 		a {
-// 			// color: $breadcrumb-active-color;
-// 			pointer-events: none;
-// 		}
-// 	}
-// }
+.breadcrumb {
+  display: inline-flex;
+  min-width: rem(750);
+  margin-top: rem(24);
+  margin-left: rem(16);
+  @include media-breakpoint-up(lg) {
+    margin-left: rem(64);
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: rem(88);
+  }
+  &-item {
+    a {
+      font-size: $breadcrumb-font-size;
+      color: $dark;
+    }
+  }
+	.active {
+		a {
+			color: $breadcrumb-active-color;
+			pointer-events: none;
+		}
+	}
+}
+.breadcrumb-item+ .breadcrumb-item:before {
+  color: $gray-medium;
+}
 // @import "./node_modules/bootstrap/scss/pagination";
 
 .pagination-wrapper ul {
@@ -90,7 +109,7 @@ $output-bourbon-deprecation-warnings: false;
 	// @extend .page-link;
   font-size: rem(16);
   color: $dark;
-  font-weight: 500;
+  font-weight: 400;
    &.current, &:hover {
     color: $pagination-hover-color;
   }
