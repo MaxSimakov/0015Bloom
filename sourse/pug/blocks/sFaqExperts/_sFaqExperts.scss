@@ -94,6 +94,13 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sFaqExperts
 
+.section--faq {
+	margin-top: rem(-95);
+	@include media-breakpoint-up(lg) {
+		margin-top: rem(-108);
+	}
+}
+
 // .sFaqExperts {
 // 	position: relative;
 // 	overflow: visible;

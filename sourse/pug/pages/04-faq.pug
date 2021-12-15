@@ -18,7 +18,7 @@ include ../blocks/sConsulOptions/_sConsulOptions.pug
 
 block variables
 	- let  mainPage= null
-	- let  st= null
+	- let  st= "--headBg: linear-gradient(0deg,hsl(0deg 0% 100% / 10%),hsla(37,44%,81%,.768) 40%,#e4d4ba);";
 	- let  bg= 'qna.jpg'
 
 block title
@@ -30,8 +30,8 @@ block pagecontent
 		t: `Вопросы и&nbsp;ответы`,
 		p: `Здесь вы&nbsp;можете найти ответы на&nbsp;свои вопросы, которые дали наши специалисты другим пользователям, или&nbsp;же задать свой, если данная тема еще не&nbsp;обсуждалась`,
 		btn: `Задать вопрос`
-	})
-	+sFaqExperts()
+	}).--faq
+	+sFaqExperts().--faq
 	+sConsultation()
 	+sConsulOptions()
 	//- +mob-mnu()

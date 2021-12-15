@@ -1,0 +1,29 @@
+mixin sArticleNotAvaible(data)
+	// start sArticleNotAvaible
+	+b.sArticleNotAvaible.section#sArticleNotAvaible&attributes(attributes)
+		+b.headBread
+			+breadcrumb('Главная','Сексуальное образование','Знакомство со своим телом', 'Привычки для спортивной жизни', 'Название статьи')
+		.container
+			+e.head
+				.row
+					.col
+						+link-back(`Назад`, `#`)
+					.col-auto
+						+e.inFavorite(href="#")
+							+icon('bookmark')
+							span В избранное
+				h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				p Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est.
+			+e.blackout
+				h2 Fusce sed auctor
+				p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. #[a(href="#") Donec non purusa] venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+				p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. #[a(href="#") Donec non purusa] venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		+b.articleReg 
+			.container
+				+e.wrrap
+					h4 Чтобы читать дальше, зарегистрируйтесь на сайте
+					p Ежемесячная подписка откроет доступ на все материалы сайта
+					+e.reg(href="#") Зарегистрироваться
+					span Уже зарегистрироаны?&nbsp;
+						a(href="#") Авторизуйтесь
+	// end sArticleNotAvaible

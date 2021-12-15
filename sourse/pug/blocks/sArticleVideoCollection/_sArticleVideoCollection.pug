@@ -1,0 +1,39 @@
+mixin sArticleVideoCollection(data)
+	// start sArticleVideoCollection
+	+b.sArticleVideoCollection.section#sArticleVideoCollection&attributes(attributes)
+		+b.headBread
+			+breadcrumb('Главная','Сексуальное образование','Знакомство со своим телом', 'Привычки для спортивной жизни', 'Название статьи')
+		.container
+			+e.head
+				.row
+					.col
+						+link-back(`Назад`, `#`)
+					.col-auto
+						+e.inFavorite(href="#")
+							+icon('bookmark')
+							span В избранное
+				h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				p Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est.
+			+b.mediaContent
+				+b.video-wrrpaer
+					iframe(src=`https://www.youtube.com/embed/AWKzr6n0ea0` title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+			+b.footer--article
+				+e.copyWrrap 
+					span Данная статья/ видеолекция доступна только по подписке.
+					p Убедитесь перед отправкой, что у получателя она оформлена.
+					a(href="#") Скопировать
+				.row
+					.col
+						span Поделиться
+						+soc()
+							+item-sos('fb-share')
+							+item-sos('twitter-share')
+							+item-sos('vk-share')
+							+item-sos('telegram')
+							+item-sos('whatsapp')
+							+item-sos('share')
+					.col-auto
+						+e.inFavorite(href="#")
+							+icon('bookmark')
+							span В избранное
+	// end sArticleVideoCollection
