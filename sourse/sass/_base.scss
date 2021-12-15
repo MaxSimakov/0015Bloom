@@ -241,9 +241,11 @@ body {
 	}
 }
 
-.strong {
-	font-weight: bold;
+.strong, strong {
+	font-weight: 500;
 }
+
+
 
 ul {
 	padding-left: 0;
