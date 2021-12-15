@@ -14,6 +14,8 @@ extends layout/main.pug
 //- include ../blocks/sNewCourse/_sNewCourse.pug
 include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 include ../blocks/sWhatYouNeed/_sWhatYouNeed.pug
+include ../blocks/sClasses/_sClasses.pug
+include ../blocks/sForWhom/_sForWhom.pug
 //- include ../blocks/sFaqExperts/_sFaqExperts.pug
 //- include ../blocks/sNewsWrraper/_sNewsWrraper.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
@@ -30,12 +32,14 @@ block title
 block pagecontent
 
 	+top-nav()
-	+pageHead-about({
-		t: `Привет! <br> Я - Аня Грикевич`,
-		p: `Создательница этой платформы. Хочу немного рассказать вам о&nbsp;том, как все начиналось, зачем я&nbsp;собрала команду и&nbsp;мы&nbsp;сделали эту платформу.`,
-		img: 'about-project.png'
-	}).text-start
+	//- +pageHead-about({
+	//- 	t: `Привет! <br> Я - Аня Грикевич`,
+	//- 	p: `Создательница этой платформы. Хочу немного рассказать вам о&nbsp;том, как все начиналось, зачем я&nbsp;собрала команду и&nbsp;мы&nbsp;сделали эту платформу.`,
+	//- 	img: 'about-project.png'
+	//- }).text-start
+	+sForWhom()
 	+sWhatYouNeed()
+	+sClasses()
 	//- +sCardHorisontal3()
 	//- +sNewCourse()
 	//- +sCardHorisontal4()

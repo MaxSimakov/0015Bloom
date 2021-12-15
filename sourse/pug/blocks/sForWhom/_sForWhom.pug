@@ -1,0 +1,23 @@
+mixin sForWhom(data)
+	// start sForWhom
+	+b.SECTION.sForWhom.section#sForWhom&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title.text-center
+					h2 Для кого курс?
+				ol
+					mixin item(p)
+						li!= p
+					+item(`Оплачиваете курс Lorem ipsum dolor sit, amet consectetur adipisicing elit.`)
+					+item(`Оплачиваете курс`)
+					+item(`Оплачиваете курс`)
+					+item(`Оплачиваете курс`)
+					+item(`Оплачиваете курсLorem ipsum dolor sit, amet consectetur adipisicing elit.`)
+					+item(`Оплачиваете курс`)
+					+item(`Оплачиваете курсLorem ipsum dolor sit, amet consectetur adipisicing elit.`)
+					+item(`Оплачиваете курс`)
+					+item(`Оплачиваете курс`)
+					+item(`Оплачиваете курсLorem ipsum dolor sit, amet consectetur adipisicing elit.`)
+					+item(`Оплачиваете курс`)
+					
+	// end sForWhom

@@ -1,0 +1,72 @@
+// start .sForWhom
+.sForWhom {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	--coutW: #{rem(40)};
+
+	&__counter {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #a0d5d9;
+		width: rem(32);
+		height: rem(32);
+		border-radius: 50%;
+		@include media-breakpoint-up(md) {
+			width: rem(40);
+			height: rem(40);
+		}
+	}
+	ol {
+		@extend .row;
+		counter-reset: num;
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+	li {
+		@extend .col-4;
+		position: relative;
+		padding-left: calc(var(--coutW) + var(--bs-gutter-x) / 2 + #{rem(12)});
+		font-size: rem(22);
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			position: absolute;
+			left: calc(var(--bs-gutter-x) / 2);
+			top: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #a0d5d9;
+			width: var(--coutW);
+			height: var(--coutW);
+			border-radius: 50%;
+			color: $white;
+			font-size: rem(20);
+			line-height: 1;
+
+			// margin-bottom: 1px;
+			@include media-breakpoint-up(md) {
+				// margin-bottom: 2px;
+				// font-size: rem(24);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sForWhom
