@@ -1,0 +1,217 @@
+.mediaContent {
+	@include media-breakpoint-up(lg) {
+		margin-left: rem(-57);
+		margin-right: rem(-57);
+		max-width: rem(877);
+	}
+	&__sliderContainer {
+		position: relative;
+	}
+	&__slider {
+		max-width: rem(877);
+	}
+	picture {
+		margin-bottom: rem(8);
+	}
+	span {
+		display: inline-block;
+		margin-left: rem(4);
+		font-size: rem(14);
+		color: $gray-dark;
+		margin-bottom: rem(33);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(42);
+		}
+	}
+}
+
+// start .sArticleVideoCollection
+.sArticleVideoCollection {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	.container {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(877);
+			padding-left: rem(57);
+			padding-right: rem(57);
+		}
+	}
+	.headBread {
+		overflow-x: auto;
+		position: relative;
+		margin-bottom: rem(33);
+	}
+	.breadcrumb {
+		list-style-type: none;
+		min-width: rem(772);
+		padding-top: rem(16);
+		display: flex;
+		margin-left: rem(16);
+		padding-left: 0;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(54);
+			margin-left: rem(64);
+		}
+		&-item {
+			margin-left: 0;
+			font-size: rem(14);
+			&:before {
+				content: "";
+			}
+			&:after {
+				content: '/';
+				color: $gray-light;
+				padding: 0 rem(4);
+			}
+			a {
+				color: $dark;
+				&:hover {
+					color: $primary;
+				}
+			}
+		&.active {
+			a {
+				color: $primary;
+				&:hover {
+					color: $dark;
+				}
+			}
+		}
+		}
+	}
+	.soc {
+		margin-top: rem(8);
+		&__item {
+			.icon {
+				color: $dark;
+				font-size: rem(24);
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+	
+	.icon-share {
+		fill: none;
+		stroke: $dark;
+	}
+	&__head {
+		h1 {
+			color: $primary;
+			margin-bottom: rem(11);
+		}
+		p {
+			font-size: rem(22);
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(76);
+			}
+		}
+	}
+	&__inFavorite {
+		span {
+			font-size: rem(14);
+			color: $primary;
+		}
+		.icon {
+			font-size: rem(24);
+		}
+	}
+	
+	.footer {
+		&__inFavorite {
+			span {
+				font-size: rem(14);
+				color: $primary;
+			}
+			.icon {
+				font-size: rem(24);
+			}
+			&:hover {
+				.icon, span {
+					color: $dark;
+				}
+			}
+		}
+		&--article {
+			position: relative;
+			.soc {
+				justify-content: start;
+			}
+		}
+		&__copyWrrap {
+			position: absolute;
+			width: rem(248);
+			background-color: $white;
+			border-radius: 8px;
+			padding: rem(8);
+			box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+			top: rem(-94px);
+			left: rem(58px);
+			&:after {
+				content: "";
+				position: absolute;
+				background-image: url(../img/svg/filledTriangle.svg);
+				background-repeat: no-repeat;
+				width: rem(16);
+				height: rem(8);
+				bottom: rem(-8);
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			span {
+				font-size: rem(14);
+				font-weight: 500;
+			}
+			p {
+				font-size: rem(14);
+				margin-bottom: rem(8);
+			}
+			a {
+				width: 100%;
+				background-color: $primary;
+				color: $white;
+				text-align: center;
+				padding: rem(4) 0;
+				border-radius: 8px;
+			}
+		}  
+	}
+
+	.video-wrrpaer {
+		text-align: center;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(43);
+		}
+		iframe {
+			width: 100%;
+			height: rem(184);
+			@include media-breakpoint-up(xl) {
+				width: rem(873);
+				height: rem(492);
+			}	
+			@include media-breakpoint-up(lg) {
+				width: rem(769);
+				height: rem(calc((769 * 0.56)));
+			}
+			@include media-breakpoint-up(md) {
+				width: rem(688);
+				height: rem(calc((688 * 0.56)));
+			}
+			@include media-breakpoint-up(sm) {
+				width: rem(508);
+				height: rem(calc((508 * 0.56)));
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticleVideoCollection

@@ -19,3 +19,6 @@
 1. <https://maxsimakov.github.io/0015Bloom/public/12-about-project.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/13-page-404.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/17-article.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/17-article-1.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/17-article-2.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/17-article-2-1.html>
