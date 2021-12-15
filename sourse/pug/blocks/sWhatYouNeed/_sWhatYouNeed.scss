@@ -39,6 +39,9 @@
 			flex: 0 0 auto !important;
 			width: 33.33333333% !important;
 		}
+		&:last-child {
+			margin-right: 0;
+		}
 		
 	}
 	&__item {
