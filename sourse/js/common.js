@@ -311,6 +311,18 @@ function eventHandler() {
 		}
 	});
 
+	const sArticleSlider = new Swiper('.mediaContent__slider--js', {
+
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 0,
+		// loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+	});
+
 	// var sexEduc = new Typed('.page-head--sexEduc .page-head__title p', {
 	// 	strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
 	// 	typeSpeed: 50,
