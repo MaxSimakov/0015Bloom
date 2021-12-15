@@ -26,56 +26,23 @@
 	}
 }
 
+.headBread {
+	overflow-x: auto;
+	position: relative;
+	margin-bottom: rem(33);
+	@include media-breakpoint-up(md) {
+		margin-bottom: rem(55);
+  }
+}
 
 	// start .sContent
 .sContent {
+	padding-top: 0;
 	.container {
 		@include media-breakpoint-up(lg) {
 			max-width: rem(877);
 			padding-left: rem(57);
 			padding-right: rem(57);
-		}
-	}
-	.headBread {
-		overflow-x: auto;
-		position: relative;
-		margin-bottom: rem(33);
-	}
-	.breadcrumb {
-		min-width: rem(772);
-		padding-top: rem(16);
-		display: flex;
-		margin-left: rem(16);
-		padding-left: 0;
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(54);
-			margin-left: rem(64);
-		}
-		&-item {
-			margin-left: 0;
-			font-size: rem(14);
-			&:before {
-				content: "";
-			}
-			&:after {
-				content: '/';
-				color: $gray-light;
-				padding: 0 rem(4);
-			}
-			a {
-				color: $dark;
-				&:hover {
-					color: $primary;
-				}
-			}
-		&.active {
-			a {
-				color: $primary;
-				&:hover {
-					color: $dark;
-				}
-			}
-		}
 		}
 	}
 	&__head {
@@ -256,7 +223,9 @@
 			}
 		}
 	}
-	counter-reset: num ;
+	.container > ol {
+		counter-reset: num;
+	}
 	ol {
 		padding-left: 0;
 		ol {

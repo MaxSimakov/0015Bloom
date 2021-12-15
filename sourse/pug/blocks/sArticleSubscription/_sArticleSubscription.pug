@@ -1,8 +1,8 @@
 mixin sArticleSubscription(data)
+	+b.headBread
+		+breadcrumb('Главная','Сексуальное образование','Знакомство со своим телом', 'Привычки для спортивной жизни', 'Название статьи')
 	// start sArticleSubscription
 	+b.sArticleSubscription.section#sArticleSubscription&attributes(attributes)
-		+b.headBread
-			+breadcrumb('Главная','Сексуальное образование','Знакомство со своим телом', 'Привычки для спортивной жизни', 'Название статьи')
 		.container
 			+e.head
 				.row
