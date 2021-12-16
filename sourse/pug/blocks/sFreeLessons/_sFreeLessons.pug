@@ -1,0 +1,36 @@
+mixin sFreeLessons(data)
+	// start sFreeLessons
+	+b.SECTION.sFreeLessons.section#sFreeLessons&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Посмотрите 2 урока курса бесплатно
+				p Убедитесь, что формат тренировок вам подходит
+			.row
+				.col-lg-6
+					+e.item
+						+e.video
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/rIlSPozvdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						p Дыхание во&nbsp;время тренировок
+						p В&nbsp;этом уроке мы&nbsp;работаем над мобилизацией грудного отдела с&nbsp;помощью дыхания
+				.col-lg-6
+					+e.item
+						+e.video
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/rIlSPozvdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						p Дыхание во&nbsp;время тренировок
+						p В&nbsp;этом уроке мы&nbsp;работаем над включением глубоких мышц живота на&nbsp;нестабильной поверхности
+				
+					//- mixin item(n, i, caption, l, ...items) 
+					//- 	.col-md-6
+					//- 		+e.item(href="https://www.youtube.com/watch?v=z2X2HaTvkl8", data-fancybox=`sReviews-gallery-ref-${n}`, data-caption=`${caption}`)
+					//- 			+e.img-wrap
+					//- 				+pic(`sReviews-slider-${i}.jpg`, "bg", 0)
+					//- 				+icon("youtube-play")
+					//- 			each item in items
+					//- 				p!= item
+					//- +item(1, 1, `В&nbsp;этом уроке мы&nbsp;работаем над мобилизацией грудного отдела с&nbsp;помощью дыхания`, `https://www.youtube.com/watch?v=z2X2HaTvkl8`, `Дыхание во&nbsp;время тренировок`, `В&nbsp;этом уроке мы&nbsp;работаем над мобилизацией грудного отдела с&nbsp;помощью дыхания`)
+					//- +item(2, 2, `В&nbsp;этом уроке мы&nbsp;работаем над включением глубоких мышц живота на&nbsp;нестабильной поверхности`, `https://www.youtube.com/watch?v=qwi6POwtfnc`, `Тренировка с&nbsp;мячом`, `В&nbsp;этом уроке мы&nbsp;работаем над включением глубоких мышц живота на&nbsp;нестабильной поверхности`)
+
+			.text-center
+				+e.btn(href="#") Купить курс
+
+	// end sFreeLessons
