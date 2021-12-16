@@ -24,7 +24,12 @@
 	}
 	&__item-content {
 		display: none;
-		margin-bottom: rem(16);
+		padding-bottom: rem(16);
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 	@include media-breakpoint-down(md) {
 		&__item-content {

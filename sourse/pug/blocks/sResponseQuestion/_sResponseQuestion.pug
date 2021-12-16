@@ -1,11 +1,12 @@
-mixin responseAccordion(t, text)
+mixin responseAccordion(t, ...texts)
 	+e.item
 		+e.item-heading
 			+e.BUTTON.btn-accordion
 				p!= t
 				+icon('plus')
 		+e.item-content
-			p!= text
+			each text in texts
+				p!= text
 
 mixin sResponseQuestion(data)
 	// start sResponseQuestion
