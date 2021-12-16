@@ -1,0 +1,12 @@
+mixin sCourseGet(t, btn)
+	// start sCourseGet
+	+b.sCourseGet.section#sCourseGet&attributes(attributes)
+		.container
+			.row 
+				+e.col.col-12.col-lg-6
+					h3!= t
+					block
+					+e.BUTTON.btn!= btn
+				.col-12.col-lg-6
+					+pic('courseCard-2.png')
+	// end sCourseGet

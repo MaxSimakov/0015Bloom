@@ -140,3 +140,17 @@ mixin infoblock(infoTitle, infoText)
 		+e.infoBlock 
 			span!= infoTitle
 			span!= infoText
+
+mixin courseItem(will, t, ...texts)
+	if will
+		+b.courseItem
+			+e.check
+				+icon('check')
+			h6!= t
+			each text in texts
+				p!= text
+	else
+		+b.courseItem--get
+			+e.check
+				+icon('check')
+			h6!= t

@@ -1,0 +1,13 @@
+mixin sCourseCard(t, btn)
+	// start sCourseCard
+	+b.sCourseCard.section#sCourseCard&attributes(attributes)
+		.container
+			.row 
+				.col-12.col-lg-6
+					+pic('courseCard-1.png')
+				.col-12.col-lg-6
+					h3!= t
+					block
+					+e.BUTTON.btn!= btn
+	// end sCourseCard
+
