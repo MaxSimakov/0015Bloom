@@ -12,13 +12,16 @@ extends layout/main.pug
 //- include ../blocks/sAccess/_sAccess.pug
 //- include ../blocks/sQuestions/_sQuestions.pug
 //- include ../blocks/sNewCourse/_sNewCourse.pug
-include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 include ../blocks/sWhatYouNeed/_sWhatYouNeed.pug
 include ../blocks/sClasses/_sClasses.pug
 include ../blocks/sForWhom/_sForWhom.pug
 //- include ../blocks/sFaqExperts/_sFaqExperts.pug
+include ../blocks/sResponseQuestion/_sResponseQuestion.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sCourses/_sCourses.pug
 //- include ../blocks/sNewsWrraper/_sNewsWrraper.pug
-//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 //- include ../blocks/footer-main/_footer-main.pug
 
 block variables
@@ -42,6 +45,9 @@ block pagecontent
 	+sClasses()
 	//- +sCardHorisontal3()
 	//- +sNewCourse()
+	+sResponseQuestion()
+	+sReviews()
+	+sCourses2()
 	//- +sCardHorisontal4()
 	//- +sQuestions-help()
 	+footer
