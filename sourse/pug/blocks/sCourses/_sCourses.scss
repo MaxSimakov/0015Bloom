@@ -7,11 +7,18 @@
 		--sPT: #{rem(0)};
 	}
 	
-	margin-top: rem(-384);
-	.container {
+	// .container {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// }
+	&__courseBlock {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	&--topIndent {
+		margin-top: rem(-384);
 	}
 
 	@include media-breakpoint-up(xl) {
@@ -29,6 +36,69 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sCourses
+
+.sCourses--forCoursePage {
+	padding-top: rem(40);
+	border-radius: 24px 24px 0px 0px;
+	background-image: linear-gradient(180deg, #AAE7EB 0%, rgba(170, 231, 235, 0) 64.06%);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(80);
+	}
+	h4 {
+		text-align: center;
+		margin-bottom: rem(51);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(66);
+		}
+	}
+	.sCourses__courseBlock {
+		@include media-breakpoint-up(xl) {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.courseWrrpaer {
+			margin-left: 0;
+			margin-top: rem(27);
+			&:not(:last-of-type) {
+				margin-bottom: 0;
+			}
+				max-width: rem(373);
+				flex-direction: column;
+			&__label {
+				transform: rotate(0);
+				top: rem(-27);
+				left: 0;
+			}
+			&__content {
+				order: 1;
+			}
+			& > picture {
+				order: 0;
+			}
+			&__infoBlock {
+				flex-direction: row;
+				align-items: baseline;
+				span {
+					&:first-child {
+						margin-right: rem(8);
+					}
+					&:last-child {
+						margin-top: rem(4);
+					}
+				}
+			}
+			.pricing-block {
+				margin-top: rem(16);
+				&__btn {
+					min-width: auto;
+				}
+			}
+		}
+	}
+}
 
 .courseWrrpaer {
 	--main-fontSize: #{rem(14)};

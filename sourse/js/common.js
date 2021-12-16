@@ -357,6 +357,11 @@ function eventHandler() {
 			.parents('.sAccess__item').find(".sAccess__item-content").slideToggle();
 	});
 
+	$(".sResponseQuestion__btn-accordion").click(function () {
+		$(this).toggleClass('on')
+			.parents('.sResponseQuestion__item').find(".sResponseQuestion__item-content").slideToggle();
+	});
+
 	// $(document).on("click", ".form-wrap__btn-toggle-pass", function() {
 	// 	var inputPass = $(this).parents('.form-wrap__password-wrap').find( "input");
 	// 	if ($(inputPass).attr('type') == 'password'){
