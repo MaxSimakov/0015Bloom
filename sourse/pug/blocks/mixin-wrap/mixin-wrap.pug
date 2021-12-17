@@ -58,6 +58,8 @@ mixin pageHead(data)
 				if data.bread 
 					+breadcrumb()
 				+e.title
+					if data.label 
+						+e.label!= data.label
 					h1!= data.t
 					if data.p
 						p!= data.p
@@ -68,6 +70,21 @@ mixin pageHead(data)
 					+pic(data.img)
 				if data.search
 					+searchForm(data.d, data.formText)
+				if data.course 
+					+e.mobileWrraper
+						if data.p2
+							p!= data.p2
+						.row
+							+infoblock('Начало проведения', '3 июля в 18:00 (по мск)')
+							+infoblock('Длительность', '12 занятий')
+							+infoblock('Формат проведения', 'Онлайн')
+						if data.who
+							+e.who
+								+pic(`sTeam-1.jpg`)
+								+e.text
+									p Анна Грикевич
+									p Специалист по функциональному движению и восстановлению мышц тазового дна
+						+pricing3('900', '1800', '#modal-consult', 'Купить курс')
 
 mixin pageHead-about(data)
 	+b.page-head--about&attributes(attributes)
@@ -101,6 +118,18 @@ mixin pricing2(n, l, btn)
 		.row
 			+e.col.col.col-sm-auto
 				+e.num= n
+					span ₽
+			.col-auto
+				+e.btn(href=`${l}`)!= btn
+		block
+
+mixin pricing3(n, s, l, btn)
+	+b.pricing-block
+		.row
+			+e.col.col.col-sm-auto
+				+e.num= n
+					span ₽
+				+e.sale= s
 					span ₽
 			.col-auto
 				+e.btn(href=`${l}`)!= btn

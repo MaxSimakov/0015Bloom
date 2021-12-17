@@ -206,5 +206,45 @@ mixin sCardHorisontal4(data)
 						.col-12.col-sm-6
 							+e.btn(href="#").btn-primary Выбрать врача
 
+mixin sCardHorisontal5(data)
+	// start sCardHorisontal
+	+b.sCardHorisontal&attributes(attributes)
+		.container
+			+card(`courseCard-3.png`,`Противопоказания`, ``)
+				+e.body
+					+e.slider.swiper.slider-auto--js
+						.swiper-wrapper
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Беременность на&nbsp;любом сроке
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Ущемлённые паховые грыжи и&nbsp;грыжи белой линии живота
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Острые боли или воспаление в&nbsp;животе и&nbsp;мочеполовой системе
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Доброкачественные и&nbsp;злокачественные опухоли в&nbsp;фазе роста
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Грыжи или протрузии позвоночника в&nbsp;фазе обострения
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Прошло менее 8&nbsp;недель после родов
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Кровоточащие миомы
+							+e.slide.swiper-slide.col-lg-6
+								+e.text-block
+									+icon('close')
+									p Кровоточащий геморрой
 
 	// end sCardHorisontal
