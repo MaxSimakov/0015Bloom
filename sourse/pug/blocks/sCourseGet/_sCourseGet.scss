@@ -21,6 +21,9 @@
 		@include media-breakpoint-up(lg) {
 			max-width: none;
 			margin-bottom: 0;
+			img {
+				max-width: none;
+			}
 		}
 	}
 	h3 {
