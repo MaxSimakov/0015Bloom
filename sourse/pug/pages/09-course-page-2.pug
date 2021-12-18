@@ -1,0 +1,91 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sSexEducation/_sSexEducation.pug
+//- include ../blocks/sSexEducChapter/_sSexEducChapter.pug
+//- include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sNewCourse/_sNewCourse.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+include ../blocks/sWhatYouNeed/_sWhatYouNeed.pug
+include ../blocks/sClasses/_sClasses.pug
+include ../blocks/sForWhom/_sForWhom.pug
+include ../blocks/sCourseCard/_sCourseCard.pug
+include ../blocks/sFreeLessons/_sFreeLessons.pug
+include ../blocks/sCourseGet/_sCourseGet.pug
+//- include ../blocks/sFaqExperts/_sFaqExperts.pug
+include ../blocks/sResponseQuestion/_sResponseQuestion.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sStartCourse/_sStartCourse.pug
+include ../blocks/sCourses/_sCourses.pug
+//- include ../blocks/sNewsWrraper/_sNewsWrraper.pug
+include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= 'course' 
+	- let  st= "--headBg: linear-gradient(180deg, rgba(167,230,234,1) 0%, rgba(255,255,255,1) 100%);"
+	- let  bg= '9-1Course-Page.jpg'
+
+block title
+	- let  title= 'Страница курса'
+	title= title
+block pagecontent
+
+	+top-nav()
+	+pageHead({
+		label: `Начальный курс`, 
+		t: `Курс «С заботой о вашем тазовом дне»`,
+		p2: `Подготовка к родам и восстановление после них. Тренировки при болях в позвоночнике. Улучшение мобильности и стабильности опорно-двигательного аппарата.`,
+		d: false,
+		img: 'headCourse.png',
+		course: true,
+		who: true
+	}).--course.text-start
+	//- +pageHead-about({
+	//- 	t: `Привет! <br> Я - Аня Грикевич`,
+	//- 	p: `Создательница этой платформы. Хочу немного рассказать вам о&nbsp;том, как все начиналось, зачем я&nbsp;собрала команду и&nbsp;мы&nbsp;сделали эту платформу.`,
+	//- 	img: 'about-project.png'
+	//- }).text-start
+	+sForWhom2()
+	+sCourseCard('Что будет на&nbsp;курсе?', 'Купить курс')
+		+courseItem('will', '45&nbsp;уроков, из&nbsp;них 22&nbsp;уникальные', 'Уникальные уроки публикуются первый месяц занятий Второй месяц занятий - это закрепление, пройденного материала')
+		+courseItem('will', 'Вебинары с&nbsp;тренером и&nbsp;смежными специалистами', 'Наша команда поможет со&nbsp;всеми возникшими вопросами и&nbsp;поддержит в&nbsp;начинаниях')
+		+courseItem('will', 'Поддержка', 'Обратная связь от&nbsp;кураторов и&nbsp;возможность прислать видео для разбора техники упражнений')
+		+courseItem('will', 'Рекомендации по&nbsp;питанию', 'Программы питания для снижения газообразования, коррекции веса, а также поддержка нутрициолога.')
+	+sWhatYouNeed()
+	+sFreeLessons()
+	+sCourseGet('Что будет на&nbsp;курсе?', 'Купить курс')
+		+courseItem('', 'Улучшение осанки и&nbsp;гибкости позвоночника')
+		+courseItem('', 'Возможность сделать ягодицы упругими')
+		+courseItem('', 'Улучшение самочувствия')
+		+courseItem('', 'Укрепление мышц ног по&nbsp;всей длине')
+		+courseItem('', 'Избавление от&nbsp;сутулости и&nbsp;&laquo;холки&raquo;')
+		+courseItem('', 'Рекомендации по&nbsp;питанию')
+	+sClasses()
+	//- +sCourseContr('Противопоказания')
+	//- 	+ContraindicationsList('Беременность на&nbsp;любом сроке')
+	//- 	+ContraindicationsList('Ущемлённые паховые грыжи и грыжи белой линии живота')
+	//- 	+ContraindicationsList('Острые боли или воспаление в животе и мочеполовой системе')
+	//- 	+ContraindicationsList('Доброкачественные и злокачественные опухоли в фазе роста')
+	+sCardHorisontal5()
+	//- +sNewCourse()
+	+sResponseQuestion()
+	+sReviews()
+		h2
+			span Отзывы#[+pic('sReviews-1.jpg')]
+			span уч#[+pic('sReviews-2.jpg')]стниц
+			span курсa
+	+sStartCourse()
+	+sCourses2()
+	//- +sCardHorisontal4()
+	//- +sQuestions-help()
+	+footer
+
+

@@ -519,7 +519,8 @@
 					img {
 						margin-bottom: 0;
 						@include media-breakpoint-up(lg) { 
-							margin-right: rem(97);
+							margin-right: rem(82);
+							max-height: none;
 						}
 						@include media-breakpoint-down(md) {
 							width: rem(308);
@@ -709,6 +710,10 @@
 						border-radius: rem(16);
 					}
 					img {
+						@include media-breakpoint-up(lg) {
+							max-height: calc(100% - 57px);
+							margin-right: 0;
+						}
 						@include media-breakpoint-down(md) {
 							width: rem(274);
 							max-width: 100%;
