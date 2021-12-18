@@ -474,8 +474,20 @@
 	}
 	&--course {
 		.page-head__mobileWrraper {
+			position: relative;
 			@include media-breakpoint-down(lg) {
-				// 
+				padding-top: rem(24);
+				&:before {
+					content: '';
+					background-color: $white;
+					position: absolute;
+					bottom: 0;
+					left: calc(((100vw - 100%) / 2) * -1);
+					height: 100%;
+					width: calc(100vw);
+					z-index: -1;
+					border-radius: rem(24) rem(24) 0px 0px;
+				}
 			}
 		}
 		.page-head {
@@ -488,7 +500,32 @@
 				margin-bottom: rem(16);
 			}
 			&__content {
-				max-width: rem(496);
+				@include media-breakpoint-up(lg) {
+					max-width: rem(496);
+				}
+				& > picture {
+					img {
+						margin-bottom: 0;
+						@include media-breakpoint-down(md) {
+							width: rem(308);
+							max-width: 100%;
+						}
+					}
+				}
+			}
+			&__title {
+				@include media-breakpoint-down(lg) {
+					max-width: rem(496);
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			&__mobileWrraper {
+				@include media-breakpoint-down(lg) {
+					max-width: rem(496);
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
 			&__infoBlock {
 				display: flex;
@@ -550,6 +587,9 @@
 					margin-bottom: 0;
 				}
 			}
+			&__text {
+				color: $gray-dark;
+			}
 		}
 		.pricing-block {
 			margin-top: rem(16);
@@ -566,7 +606,9 @@
 			&__btn {
 				min-width: auto;
 				padding: rem(8) rem(17);
-
+				@include media-breakpoint-down(md) {
+					width: 100%;
+				}
 				@include media-breakpoint-up(lg) {
 					min-width: rem(216);
 				}
@@ -601,8 +643,43 @@
 		background-image: none;
 		background-color: #a7e6ea;
 		border-radius: 24px;
+		@include media-breakpoint-down(lg) {
+			background-color: $white;
+			border: 1px solid $primary;
+			border-radius: rem(16);
+		}
+		h2 {
+			@include media-breakpoint-down(lg) {
+				padding-top: rem(16);
+				color: $primary;
+			}
+			@extend .h3;
+			margin-bottom: 0;
+		}
 		.page-head {
+			&__mobileWrraper {
+				&:before {
+					@include media-breakpoint-down(lg) {
+						content: none;
+					}
+				}
+			}
 			&__content {
+				& > picture {
+					@include media-breakpoint-down(lg) {
+						width: calc(100% + rem(32));
+						margin-left: rem(-16);
+						margin-right: rem(-16);
+						background-color: #a7e6ea;
+						border-radius: rem(16);
+					}
+					img {
+						@include media-breakpoint-down(md) {
+							width: rem(274);
+							max-width: 100%;
+						}
+					}
+				}
 				@include media-breakpoint-down(lg) {
 					display: flex;
 					flex-direction: column;
@@ -616,7 +693,9 @@
 			}
 		}
 		.container {
-			padding-top: 0;
+			@include media-breakpoint-down(lg) {
+				padding-top: 0;
+			}
 			@include media-breakpoint-up(lg) {
 				padding-bottom: rem(116);
 			}

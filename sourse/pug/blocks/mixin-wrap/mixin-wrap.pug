@@ -60,7 +60,10 @@ mixin pageHead(data)
 				+e.title
 					if data.label 
 						+e.label!= data.label
-					h1!= data.t
+					if data.t
+						h1!= data.t
+					if data.t2
+						h2!= data.t2
 					if data.p
 						p!= data.p
 					block
@@ -131,7 +134,7 @@ mixin pricing3(n, s, l, btn)
 					span ₽
 				+e.sale= s
 					span ₽
-			.col-auto
+			.col-12.col-md-auto
 				+e.btn(href=`${l}`)!= btn
 		block
 
