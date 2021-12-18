@@ -186,3 +186,10 @@ mixin courseItem(will, t, ...texts)
 			+e.check
 				+icon('check')
 			h6!= t
+
+mixin courseItem2(will, ...texts)
+		+b.courseItem--get
+			+e.check
+				+icon('check')
+			each text in texts
+				h6!= text
