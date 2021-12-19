@@ -200,12 +200,18 @@ mixin cabinet-body(h)
 mixin aside-menu()
 	+b.cabinet-menu
 		ul
-			li: a(href="#") Мой профиль
-			li: a(href="#") Мой тариф
-			li: a(href="#") Доступные материалы
-			li: a(href="#") Избранное
-			li: a(href="#") Мои вопросы
-			li: a(href="#") Консультации с врачом
+			+cab-menu-item(`Мой профиль`).current
+			+cab-menu-item(`Мой тариф`)
+			+cab-menu-item(`Доступные материалы`).new
+			+cab-menu-item(`Избранное`)
+			+cab-menu-item(`Мои вопросы`).new
+			+cab-menu-item(`Консультации с врачом`).new
+
+mixin cab-menu-item(t)
+	li
+		a(href="#")&attributes(attributes)!= t
+			span
+
 mixin courseItem2(will, ...texts)
 		+b.courseItem--get
 			+e.check
