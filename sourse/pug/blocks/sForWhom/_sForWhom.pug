@@ -27,3 +27,27 @@ mixin sForWhom(data)
 					+e.btn(href="#") Купить курс
 					
 	// end sForWhom
+
+mixin sForWhom2(data)
+	// start sForWhom
+	+b.SECTION.sForWhom.section#sForWhom&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title
+					h2 Для кого курс?
+					p Этот курс вам поможет, если вы&nbsp;ответили &laquo;Да&raquo; хотя&nbsp;бы на&nbsp;несколько пунктов
+				ol
+					mixin item(p)
+						li!= p
+					+item(`Недержание мочи (подтекание)`)
+					+item(`Попадание воздуха во&nbsp;влагалище`)
+					+item(`Хроническое воспаление`)
+					+item(`Боль во&nbsp;время полового акта`)
+					+item(`Сложности в&nbsp;достижении оргазма`)
+					+item(`Хроническая тазовая боль`)
+					+item(`Боль в&nbsp;пояснице во&nbsp;время упражнений на&nbsp;пресс`)
+					+item(`Нарушение работы кишечника (запоры, вздутия)`)
+				.text-center
+					+e.btn(href="#") Купить курс
+					
+	// end sForWhom
