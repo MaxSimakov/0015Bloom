@@ -233,3 +233,8 @@ mixin favoritetabsItem(active, text)
 		else 
 			+e.item
 				a(href="#")!= text
+
+mixin nothingNow(text, btn)
+	+b.nothingNow
+		p!= text
+		button(type="button")!= btn
