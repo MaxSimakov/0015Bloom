@@ -1046,3 +1046,35 @@
 		@extend .h3;
 	}
 }
+
+.favoriteTabs {
+	.swiper-wrapper {
+		width: auto;
+		@include media-breakpoint-up(lg) {
+			justify-content: center;
+		}
+	}
+	&__slide {
+		width: auto;
+	}
+	&__item {
+		width: rem(231);
+		padding: rem(15) 0;
+		text-align: center;
+		border-bottom: 1px solid $gray-light;
+		margin-bottom: rem(24);
+		margin-top: rem(24);
+		a {
+			color: $dark;
+			&:hover {
+				color: $primary;
+			}
+		}
+		&--active {
+			border-bottom-color: $primary;
+			a {
+				color: $primary;
+			}
+		}
+	}
+}

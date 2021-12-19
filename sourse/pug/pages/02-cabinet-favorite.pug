@@ -1,0 +1,62 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sNewsWrraper/_sNewsWrraper.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Избранное'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	//- +header()
+	+top-nav()
+	//- +topLine()
+	+cabinet-body(title)
+		+favoriteTabs()
+			+favoritetabsItem('active', 'Статьи и лекции')
+			+favoritetabsItem('', 'Тренировки и реабилитация')
+			+favoritetabsItem('', 'Сексуальное образование')
+		+sNewsWrraper(``, ``)
+			.row
+				+newsWrrap2(`v`, 1, 'Проктология', 'Пусть весь мир подождет:', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id...')
+				+newsWrrap2(``, 2, 'Реабилитация и&nbsp;тренировки', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+				+newsWrrap2(``, 3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма и&nbsp;ума', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus...')
+				+newsWrrap2(`v`, 1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+				+newsWrrap2(``, 4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(``, 5, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(`v`, 6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+				+newsWrrap2(``, 4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(``, 3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(`v`, 1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(``, 2, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(``, 3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+				+newsWrrap2(``, 4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(`v`, 3, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+				+newsWrrap2(``, 5, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(``, 4, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(`v`, 6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+				+newsWrrap2(``, 2, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(``, 1, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(`v`, 6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.')
+				+newsWrrap2(`v`, 6, 'Проктология', 'Пусть весь мир подождет: 6&nbsp;правил здорового эгоизма', 'Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet.').active
+			+pugin()
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+

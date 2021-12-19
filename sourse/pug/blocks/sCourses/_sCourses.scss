@@ -20,7 +20,18 @@
 	&--topIndent {
 		margin-top: rem(-384);
 	}
-
+	&.section--favorite {
+		margin-top: 0;
+	}
+	&--avaibleMaterials {
+		.col-12 {
+			&:not(:last-child) {
+				.courseWrrpaer {
+						margin-bottom: rem(24);
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -327,5 +338,13 @@
 	}
 	&.active {
 		--color: currentColor;
+	}
+	&--cabinet {
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(lg) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }

@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCourses/_sCourses.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sNewsWrraper/_sNewsWrraper.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Доступные материалы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	//- +header()
+	+top-nav()
+	//- +topLine()
+	+cabinet-body(title)
+		+sCourses3
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+

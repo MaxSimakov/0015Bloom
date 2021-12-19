@@ -212,3 +212,18 @@ mixin courseItem2(will, ...texts)
 				+icon('check')
 			each text in texts
 				h6!= text
+
+mixin favoriteTabs()
+	+b.favoriteTabs
+		+e.slider.swiper.slider-auto--js
+				.swiper-wrapper
+					block
+
+mixin favoritetabsItem(active, text)
+	+e.slide.swiper-slide
+		if active
+			+e.item--active
+				a(href="#")!= text
+		else 
+			+e.item
+				a(href="#")!= text

@@ -20,6 +20,22 @@ mixin newsWrrap(v, n, spec, t, text)
 			if v
 				+videoCollection()
 
+mixin newsWrrap2(v, n, spec, t, text)
+	.col-md-12.col-lg-6.col-xl-4
+		+b.newsItem.wow.animate__fadeIn&attributes(attributes)
+			a(href="#")
+				+pic(`newsPre-${n}.jpg`, 'bg', 0)
+			+e.bookmark(href="#")
+				+icon(`bookmarkActive`)
+			+e.content
+				if spec
+					+e.specialization!= spec
+				+e.SPAN.title
+					+e.title(href="#")!= t
+				+e.P.text!= text
+			if v
+				+videoCollection()
+
 mixin sNewsWrraper(h, sw)
 	// start sNewsWrraper
 	+b.sNewsWrraper.section#sNewsWrraper&attributes(attributes)
