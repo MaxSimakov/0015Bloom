@@ -183,3 +183,23 @@ mixin courseItem(will, t, ...texts)
 			+e.check
 				+icon('check')
 			h6!= t
+
+mixin cabinet-body(h)
+	.container-fluid.container--main
+		.row.row--main
+			.col-auto.col--aside
+				+aside-menu
+			.col.col--main
+				.cabinet-head.text-center
+					h1!= h
+				block
+
+mixin aside-menu()
+	+b.cabinet-menu
+		ul
+			li: a(href="#") Мой профиль
+			li: a(href="#") Мой тариф
+			li: a(href="#") Доступные материалы
+			li: a(href="#") Избранное
+			li: a(href="#") Мои вопросы
+			li: a(href="#") Консультации с врачом
