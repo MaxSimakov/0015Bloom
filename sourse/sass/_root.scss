@@ -71,12 +71,14 @@
 	--litepicker-button-reset-color: #{$gray-medium};
 	--litepicker-button-reset-color-hover: #{$primary};
 	--litepicker-highlighted-day-color: #{$dark};
-	--litepicker-highlighted-day-color-bg: #{$yellow}; 
+	--litepicker-highlighted-day-color-bg: #{$yellow};
 
 	--asideW: #{rem(228)};
-	--cbinetTop: #{rem(96)};
 
-	
+	--cbinetTop: #{rem(32)};
+	@include media-breakpoint-up(md) {
+		--cbinetTop: #{rem(96)};
+	}
 }
 
 @include media-breakpoint-up(xl) {
