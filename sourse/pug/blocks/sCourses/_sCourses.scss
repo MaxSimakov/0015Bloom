@@ -22,8 +22,26 @@
 	}
 	&.section--favorite {
 		margin-top: 0;
+		.courseWrrpaer {
+			@include media-breakpoint-down(xl) {
+				flex-direction: column;
+				max-width: rem(380);
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(27);
+		}
 	}
 	&--avaibleMaterials {
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(27);
+		}
+		.courseWrrpaer {
+			@include media-breakpoint-down(xl) {
+				flex-direction: column;
+				max-width: rem(380);
+			}
+		}
 		.col-12 {
 			&:not(:last-child) {
 				.courseWrrpaer {
