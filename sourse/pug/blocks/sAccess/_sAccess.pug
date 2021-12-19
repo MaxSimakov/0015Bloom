@@ -101,3 +101,107 @@ mixin sAccess(data)
 									+e.btn.btn-sm.btn-outline-primary(href="#") Выбрать курс
 
 	// end sAccess
+
+
+mixin sAccess-cabinet(data)
+	// start sAccess-cabinet
+	+b.SECTION.sAccess--cabinet.section#sAccess&attributes(attributes)
+		.container
+			+e.subtitle Тариф действует до: 
+				span 15.12.21
+			.row
+				+e.col.col-md-4.order-md-last
+					+e.item--popular
+						+e.SPAN.label Популярный
+						+e.item-heading
+							h4 Personal
+							p Ежемесячная подписка откроет доступ на&nbsp;все материалы сайта
+							+e.BUTTON.btn-accordion
+								+icon('shevron-down')
+							+e.price 
+								+e.num 5900
+									span ₽
+								span /год
+						+e.item-content
+							ul
+								li.check Огромное количество статей и&nbsp;лекций
+								li.check Раздел &laquo;Сексуальное образование&raquo;
+								li.check Выстраивание правильной техники упражнений
+								li.check Тренировки с&nbsp;собственным весом
+								li.check Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем
+								li.check Поддержание хорошего самочувствия все 9&nbsp;месяцев
+								li.check Упражнения с&nbsp;учетом акушерских рекомендаций
+							+e.item-footer
+								+e.price-wrap
+									+e.benefit Выгода 
+										span 6000 ₽
+									+e.price 
+										+e.num 5900
+											span ₽
+										span /год
+									.small.text-primary При оплате годовой подписки
+								+e.btn-wrap
+									+e.conditions
+										span При оплате каждый месяц - 6400₽
+										span При оплате полгода - 6000₽
+									+e.btn.btn-sm.btn-primary(href="#") Оформить подписку
+				+e.col.col-md-4
+					+e.item
+						+e.item-heading
+							h4 Free
+							p Доступ к&nbsp;базовым статьям и&nbsp;лекциям после рагистрации
+							+e.BUTTON.btn-accordion
+								+icon('shevron-down')
+							+e.price 
+								+e.num 0
+									span ₽
+						+e.item-content
+							ul
+								li.check Ограниченное количество статей и&nbsp;лекций
+								li.check Несколько статей из&nbsp;раздела &laquo;Сексуальное образование&raquo;
+								li Выстраивание правильной техники упражнений
+								li Тренировки с&nbsp;собственным весом
+								li Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем
+								li Поддержание хорошего самочувствия все 9&nbsp;месяцев
+								li Упражнения с&nbsp;учетом акушерских рекомендаций
+							+e.item-footer
+								+e.price-wrap
+									+e.price 
+										+e.num 0
+											span ₽
+								+e.btn-wrap
+									+e.conditions
+										span Начните изучать доступный материал или откройте больше возможностей
+									+e.btn.btn-sm.btn-outline-primary(href="#") Зарегистрироваться
+				+e.col.col-md-4
+					+e.item
+						+e.item-heading
+							h4 Base
+							p Доступ ко&nbsp;всему контенту на&nbsp;3&nbsp;месяца после покупки курса
+							+e.BUTTON.btn-accordion
+								+icon('shevron-down')
+							+e.price 
+								span от 
+								+e.num 900
+									span ₽
+						+e.item-content
+							ul
+								li.check Огромное количество статей и&nbsp;лекций
+								li.check Раздел &laquo;Сексуальное образование&raquo;
+								li.check Выстраивание правильной техники упражнений
+								li.check Тренировки с&nbsp;собственным весом
+								li Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем
+								li Поддержание хорошего самочувствия все 9&nbsp;месяцев
+								li Упражнения с&nbsp;учетом акушерских рекомендаций
+							+e.item-footer
+								+e.price-wrap
+									+e.price 
+										span от 
+										+e.num 900
+											span ₽
+								+e.btn-wrap
+									+e.conditions
+										span Начните изучать доступный материал или откройте больше возможностей
+									+e.btn.btn-sm.btn-outline-primary(href="#") Выбрать курс
+
+	// end sAccess-cabinet
