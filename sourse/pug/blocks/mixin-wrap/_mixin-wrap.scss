@@ -1023,8 +1023,12 @@
 }
 
 .container--main {
+	margin-bottom: rem(50);
 	@include media-breakpoint-up(sm) {
 		max-width: calc(90% + 2rem);
+	}
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(80);
 	}
 	.container {
 		padding-left: 0;
@@ -1036,8 +1040,21 @@
 	width: var(--asideW);
 	padding-top: var(--cbinetTop);
 	display: none;
+	position: relative;
 	@include media-breakpoint-up(lg) {
 		display: block;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: calc(100% - #{rem(12)});
+		right: 0;
+		bottom: 0;
+		background-color: $gray-light;
+	}
+	.cabinet-menu {
+		position: fixed;
 	}
 }
 
