@@ -15,3 +15,27 @@ mixin soc()
 			+item-sos('telegram')
 
 //- /social buttons 
+
+mixin item-profile(i, t, a='#')
+	+e.A.item(href= a target="_blank")&attributes(attributes)
+		if block
+			block
+		else
+			img(src=`img/svg/${i}.svg`, alt="")
+			+e.content
+				span!= t 
+				img(src=`img/svg/check-social.svg`, alt="")
+
+mixin socProfile()
+	+b.soc-profile&attributes(attributes)
+		if block
+			block
+		else
+			p Привязанные социальные сети
+			.row 
+				+e.col.col-6 
+					+item-profile('facebook-prof', 'Facebook',).active
+				+e.col.col-6 
+					+item-profile('vkontakte-prof', 'Vkontakte')
+				+e.col.col-6 
+					+item-profile('google-prof', 'Google')
