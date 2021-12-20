@@ -26,8 +26,10 @@ block pagecontent
 	//- +topLine()
 	+cabinet-body(title)
 		+sAccess-cabinet()
-			+e.subtitle.alert Действие тарифа заканчивается. Тариф действует до:
-				span 15.12.21
+			+e.warning.alert
+				span Действие тарифа заканчивается. Тариф действует до: 
+					span 15.12.21
+					+icon('warning')
 	//- +sForm()
 	//- +sContact()
 	+footer()
