@@ -1023,6 +1023,9 @@
 }
 
 .container--main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 	margin-bottom: rem(50);
 	@include media-breakpoint-up(sm) {
 		max-width: calc(90% + 2rem);
@@ -1057,7 +1060,9 @@
 		position: fixed;
 	}
 }
-
+.row--main {
+	flex-grow: 1;
+}
 .col--main {
 	width: calc(100% - var(--asideW));
 	padding-top: var(--cbinetTop);
@@ -1158,7 +1163,7 @@
 	}
 	button {
 		@extend .btn, .btn-primary;
-    min-width: rem(276);
+		min-width: rem(276);
 	}
 }
 
