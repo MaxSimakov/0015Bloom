@@ -138,6 +138,13 @@ mixin pricing3(n, s, l, btn)
 				+e.btn(href=`${l}`)!= btn
 		block
 
+mixin pricing4(l, btn)
+	+b.pricing-block
+		.row
+			.col-12
+				+e.btn--lk(href=`${l}`)!= btn
+		block
+
 mixin help-tooltip(t)
 	+b.SPAN.help-tooltip
 		+icon('help')
@@ -165,6 +172,25 @@ mixin course(s, h, text, i, p, bg, btn, ...texts)
 					each text in texts 
 						p!= text
 			+pricing2(p, '#modal-consult', btn)
+		+pic(`courseImg-${bg}.jpg`)
+
+mixin course2(s, h, text, i, p, bg, btn, ...texts)
+	+b.courseWrrpaer&attributes(attributes)
+		+e.bookmark(href="#")
+				+icon(`bookmarkActive`)
+		if s
+			+e.SPAN.label--lk!= s
+		+e.content
+			h5!= h
+			p!= text
+			.row
+				block
+			+e.who
+				+pic(`sTeam-${i}.jpg`)
+				+e.text
+					each text in texts 
+						p!= text
+			+pricing4('#modal-consult', 'Пройти курс')
 		+pic(`courseImg-${bg}.jpg`)
 
 mixin infoblock(infoTitle, infoText)

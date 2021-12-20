@@ -6,7 +6,12 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(0)};
 	}
-
+	p {
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(8);
+			margin-bottom: rem(32);
+		}
+	}
 	// .container {
 	// 	display: flex;
 	// 	flex-direction: column;
@@ -47,6 +52,15 @@
 				.courseWrrpaer {
 						margin-bottom: rem(24);
 				}
+			}
+		}
+	}
+	.pricing-block {
+		&__btn {
+			&--lk {
+				width: 100%;
+				margin-top: rem(9);
+				margin-bottom: rem(16);
 			}
 		}
 	}
@@ -231,6 +245,14 @@
 			transform: rotate(270deg);
 			top: 35px;
 			left: -62px;
+		}
+		&--lk {
+			width: rem(64);
+			height: rem(76);
+			@include media-breakpoint-up(lg) {
+				left: -21px;
+				top: -6px;
+			}
 		}
 	}
 	&__content {
