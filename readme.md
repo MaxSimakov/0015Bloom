@@ -24,3 +24,15 @@
 1. <https://maxsimakov.github.io/0015Bloom/public/17-article-1.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/17-article-2.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/17-article-2-1.html>
+
+# Кабинет пользователя
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-rate.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-rate-2.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-favorite.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-favorite-2.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-favorite-3.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-favorite-nothingNow.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-favorite-2-nothingNow.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-clientProfile.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-avaibleMaterials.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-avaibleMaterials-2.html>
