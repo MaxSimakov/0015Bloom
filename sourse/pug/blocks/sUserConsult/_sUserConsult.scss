@@ -88,10 +88,11 @@
 	}
 	&__btn-cancel {
 		position: absolute;
-		width: rem(16);
-		height: rem(16);
-		right: rem(15);
-		top: rem(15);
+		width: rem(20);
+		height: rem(20);
+		right: rem(13);
+		top: rem(13);
+		z-index: 3;
 		&:not(:hover) {
 			color: $dark;
 		}
