@@ -6,7 +6,7 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(0)};
 	}
-	p {
+	.container > p {
 		@include media-breakpoint-up(lg) {
 			margin-top: rem(8);
 			margin-bottom: rem(32);
