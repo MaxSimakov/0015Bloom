@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Мой профиль</title>
+		<title>Мой тариф</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -13,7 +13,7 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="main.jpg">
+	<body>
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
@@ -83,7 +83,7 @@
 					</div>
 					<div class="col col--main">
 						<div class="cabinet-head text-center">
-							<h1>Мой профиль</h1>
+							<h1>Мой тариф</h1>
 						</div>
 						<!-- start sAccess-cabinet-->
 						<section class="sAccess sAccess--cabinet section" id="sAccess">
@@ -91,8 +91,92 @@
 								<div class="sAccess__subtitle">Тариф действует до: <span>15.12.21</span>
 								</div>
 								<div class="row">
+									<div class="sAccess__col col-md-4">
+										<div class="sAccess__item sAccess__item--popular"><span class="sAccess__label">Мой тариф</span>
+											<div class="sAccess__item-heading">
+												<h4>Base</h4>
+												<p>Доступ ко&nbsp;всему контенту на&nbsp;3&nbsp;месяца после покупки курса</p>
+												<button class="sAccess__btn-accordion">
+													<svg class="icon icon-shevron-down ">
+														<use xlink:href="img/svg/sprite.svg#shevron-down"></use>
+													</svg>
+												</button>
+												<div class="sAccess__price"> <span>от </span>
+													<div class="sAccess__num">900<span>₽</span>
+													</div>
+												</div>
+											</div>
+											<div class="sAccess__item-content">
+												<ul>
+													<li class="check">Огромное количество статей и&nbsp;лекций</li>
+													<li class="check">Раздел &laquo;Сексуальное образование&raquo;</li>
+													<li class="check">Выстраивание правильной техники упражнений</li>
+													<li class="check">Тренировки с&nbsp;собственным весом</li>
+													<li>Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем</li>
+													<li>Поддержание хорошего самочувствия все 9&nbsp;месяцев</li>
+													<li>Упражнения с&nbsp;учетом акушерских рекомендаций</li>
+												</ul>
+												<div class="sAccess__item-footer">
+													<div class="sAccess__price-wrap">
+														<div class="sAccess__price"> <span>от </span>
+															<div class="sAccess__num">900<span>₽</span>
+															</div>
+														</div>
+													</div>
+													<div class="sAccess__btn-wrap order-md-last">
+														<a class="sAccess__btn btn-sm btn-outline-primary" href="#">Выбрать курс
+														</a>
+													</div>
+													<div class="sAccess__conditions"><span>Начните изучать доступный материал или откройте больше возможностей</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sAccess__col col-md-4 order-md-first">
+										<div class="sAccess__item">
+											<div class="sAccess__item-heading">
+												<h4>Free</h4>
+												<p>Доступ к&nbsp;базовым статьям и&nbsp;лекциям после рагистрации</p>
+												<button class="sAccess__btn-accordion">
+													<svg class="icon icon-shevron-down ">
+														<use xlink:href="img/svg/sprite.svg#shevron-down"></use>
+													</svg>
+												</button>
+												<div class="sAccess__price"> 
+													<div class="sAccess__num">0<span>₽</span>
+													</div>
+												</div>
+											</div>
+											<div class="sAccess__item-content">
+												<ul>
+													<li class="check">Ограниченное количество статей и&nbsp;лекций</li>
+													<li class="check">Несколько статей из&nbsp;раздела &laquo;Сексуальное образование&raquo;</li>
+													<li>Выстраивание правильной техники упражнений</li>
+													<li>Тренировки с&nbsp;собственным весом</li>
+													<li>Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем</li>
+													<li>Поддержание хорошего самочувствия все 9&nbsp;месяцев</li>
+													<li>Упражнения с&nbsp;учетом акушерских рекомендаций</li>
+												</ul>
+												<div class="sAccess__item-footer">
+													<div class="sAccess__price-wrap">
+														<div class="sAccess__price"> 
+															<div class="sAccess__num">0<span>₽</span>
+															</div>
+														</div>
+													</div>
+													<div class="sAccess__btn-wrap order-md-last">
+														<a class="sAccess__btn btn-sm disabled" href="#">Зарегистрироваться
+														</a>
+													</div>
+													<div class="sAccess__conditions"><span>Начните изучать доступный материал или откройте больше возможностей</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<div class="sAccess__col col-md-4 order-md-last">
-										<div class="sAccess__item sAccess__item--popular"><span class="sAccess__label">Популярный</span>
+										<div class="sAccess__item">
 											<div class="sAccess__item-heading">
 												<h4>Personal</h4>
 												<p>Ежемесячная подписка откроет доступ на&nbsp;все материалы сайта</p>
@@ -126,95 +210,11 @@
 														</div>
 														<div class="small text-primary">При оплате годовой подписки</div>
 													</div>
-													<div class="sAccess__btn-wrap">
-														<div class="sAccess__conditions"><span>При оплате каждый месяц - 6400₽</span><span>При оплате полгода - 6000₽</span>
-														</div>
+													<div class="sAccess__btn-wrap order-md-last">
 														<a class="sAccess__btn btn-sm btn-primary" href="#">Оформить подписку
 														</a>
 													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="sAccess__col col-md-4">
-										<div class="sAccess__item">
-											<div class="sAccess__item-heading">
-												<h4>Free</h4>
-												<p>Доступ к&nbsp;базовым статьям и&nbsp;лекциям после рагистрации</p>
-												<button class="sAccess__btn-accordion">
-													<svg class="icon icon-shevron-down ">
-														<use xlink:href="img/svg/sprite.svg#shevron-down"></use>
-													</svg>
-												</button>
-												<div class="sAccess__price"> 
-													<div class="sAccess__num">0<span>₽</span>
-													</div>
-												</div>
-											</div>
-											<div class="sAccess__item-content">
-												<ul>
-													<li class="check">Ограниченное количество статей и&nbsp;лекций</li>
-													<li class="check">Несколько статей из&nbsp;раздела &laquo;Сексуальное образование&raquo;</li>
-													<li>Выстраивание правильной техники упражнений</li>
-													<li>Тренировки с&nbsp;собственным весом</li>
-													<li>Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем</li>
-													<li>Поддержание хорошего самочувствия все 9&nbsp;месяцев</li>
-													<li>Упражнения с&nbsp;учетом акушерских рекомендаций</li>
-												</ul>
-												<div class="sAccess__item-footer">
-													<div class="sAccess__price-wrap">
-														<div class="sAccess__price"> 
-															<div class="sAccess__num">0<span>₽</span>
-															</div>
-														</div>
-													</div>
-													<div class="sAccess__btn-wrap">
-														<div class="sAccess__conditions"><span>Начните изучать доступный материал или откройте больше возможностей</span>
-														</div>
-														<a class="sAccess__btn btn-sm btn-outline-primary" href="#">Зарегистрироваться
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="sAccess__col col-md-4">
-										<div class="sAccess__item">
-											<div class="sAccess__item-heading">
-												<h4>Base</h4>
-												<p>Доступ ко&nbsp;всему контенту на&nbsp;3&nbsp;месяца после покупки курса</p>
-												<button class="sAccess__btn-accordion">
-													<svg class="icon icon-shevron-down ">
-														<use xlink:href="img/svg/sprite.svg#shevron-down"></use>
-													</svg>
-												</button>
-												<div class="sAccess__price"> <span>от </span>
-													<div class="sAccess__num">900<span>₽</span>
-													</div>
-												</div>
-											</div>
-											<div class="sAccess__item-content">
-												<ul>
-													<li class="check">Огромное количество статей и&nbsp;лекций</li>
-													<li class="check">Раздел &laquo;Сексуальное образование&raquo;</li>
-													<li class="check">Выстраивание правильной техники упражнений</li>
-													<li class="check">Тренировки с&nbsp;собственным весом</li>
-													<li>Проработка спины, пресса, рук и&nbsp;ягодиц с&nbsp;малым инвентарем</li>
-													<li>Поддержание хорошего самочувствия все 9&nbsp;месяцев</li>
-													<li>Упражнения с&nbsp;учетом акушерских рекомендаций</li>
-												</ul>
-												<div class="sAccess__item-footer">
-													<div class="sAccess__price-wrap">
-														<div class="sAccess__price"> <span>от </span>
-															<div class="sAccess__num">900<span>₽</span>
-															</div>
-														</div>
-													</div>
-													<div class="sAccess__btn-wrap">
-														<div class="sAccess__conditions"><span>Начните изучать доступный материал или откройте больше возможностей</span>
-														</div>
-														<a class="sAccess__btn btn-sm btn-outline-primary" href="#">Выбрать курс
-														</a>
+													<div class="sAccess__conditions"><span>При оплате каждый месяц - 6400₽</span><span>При оплате полгода - 6000₽</span>
 													</div>
 												</div>
 											</div>

@@ -562,13 +562,22 @@ iframe {
 	&.disabled {
 		border-color: $gray-light;
 		background-color: $gray-light;
-		color: $gray-dark;
-	}
-	&-sm {
-		text-align: center;
-		line-height: calc(24 / 17);
+		color: $gray-medium !important;
+		pointer-events: none;
 	}
 }
+.btn-sm {
+	text-align: center;
+	line-height: calc(24 / 17);
+	&.disabled {
+		border-color: $gray-light;
+		background-color: $gray-light;
+		color: $gray-medium !important;
+		pointer-events: none;
+	}
+}
+
+
 
 h1 {
 	line-height: calc(80 / 72);
