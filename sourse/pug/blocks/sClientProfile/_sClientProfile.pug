@@ -3,6 +3,7 @@ mixin sClientProfile(data)
 	+b.sClientProfile.section#sClientProfile&attributes(attributes)
 		.container
 			+form-wrap()
+				+changePhoto()
 				+input('Фамилия и имя', 'text', 'Фамилия и имя')
 				+input('Электронная почта', 'email', 'Электронная почта')
 				+input('Город', 'text', 'Город')

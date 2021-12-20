@@ -34,6 +34,43 @@
 					margin-top: rem(20);
 				}
 			}
+			&__avatar {
+				display: flex;
+				justify-content: center;
+				position: relative;
+				width: rem(96);
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: rem(16);
+				margin-bottom: rem(16);
+				@include media-breakpoint-up(lg) {
+					margin-top: rem(24);
+					margin-bottom: rem(8);
+				}
+				picture {
+					border-radius: rem(81);
+					img {
+						border-radius: 5.0625rem;
+					}
+				}
+				a {
+					position: absolute;
+					border: 1px solid $gray-medium;
+					background-color: $white;
+					border-radius: rem(12);
+					text-align: center;
+					vertical-align: baseline;
+					width: rem(18);
+					height: rem(18);
+					right: 4px;
+					top: 6px;
+					.icon-close {
+						padding-bottom: 3px;
+						font-size: rem(12);
+						color: $gray-medium;
+					}
+				}
+			}
 		}
 		.soc-profile {
 			margin-top: rem(24);
