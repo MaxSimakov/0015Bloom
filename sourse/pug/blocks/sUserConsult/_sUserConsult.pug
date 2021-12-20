@@ -1,0 +1,28 @@
+mixin sUserConsult(data)
+	// start sUserConsult
+	+b.sUserConsult.section#sUserConsult&attributes(attributes)
+		.container
+			p Все события отображаются по&nbsp;московскому времени
+			.row
+				mixin item(i, d, p1, p2, ...items)
+					.col-md-6.col-xl-4
+						+e.item
+							+e.btn-cancel(href="#")
+								+icon('close')
+							+e.content
+								+e.date!= d
+								p!= p1
+								p!= p2
+								.row
+									.col-auto
+										+pic(`sUserConsult-${i}.jpg`)
+									.col.d-flex.flex-column
+										each item in items
+											span= item
+							+e.btn(href="#") Перейти к консультации
+								+icon('shevron-right-sm')
+				+item(1, `25 сентября 18:00`, `Проктология`, `&laquo;Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели...&raquo;`, `Даниил Маркарьян`, `врач проктолог`)
+				+item(2, `27 сентября 11:00`, `Психология`, `&laquo;Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели...&raquo; Lorem ipsum dolor sit amet.`, `Татьяна Коваль`, `врач психолог`)
+				+item(2, `29 сентября 12:00`, `Гинекология`, `&laquo;Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели...&raquo;`, `Татьяна Коваль`, `врач гинеколог`)
+	// end sUserConsult
+	
