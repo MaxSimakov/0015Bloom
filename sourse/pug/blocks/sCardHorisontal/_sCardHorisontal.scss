@@ -280,6 +280,14 @@
 			align-items: flex-end;
 		}
 	}
+	&--mobile-img{
+		picture{
+				@include media-breakpoint-down(sm) {
+					margin-left: calc(-1 * var(--bs-gutter-x) / 2);
+					margin-right: -40px;
+				}
+		}
+	}
 }
 .bg-background {
 	.sCardHorizontalItem {
