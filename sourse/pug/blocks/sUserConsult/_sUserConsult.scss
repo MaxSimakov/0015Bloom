@@ -101,7 +101,7 @@
 			font-size: rem(16);
 		}
 	}
-	&__btn {
+	.btn-next {
 		display: inline-flex;
 		align-items: center;
 		font-size: rem(16);
@@ -128,3 +128,16 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sUserConsult
+
+.btn-next {
+	display: inline-flex;
+	align-items: center;
+	font-size: rem(16);
+	line-height: 1;
+	&:not(:hover) {
+		color: $dark;
+	}
+	.icon {
+		font-size: inherit;
+	}
+}

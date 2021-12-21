@@ -113,7 +113,7 @@ mixin pricing(n, l)
 					span ₽
 				span /час
 			.col-auto
-				+e.btn(href=`${l}`).link-modal-js Записаться
+				+e.btn(href="#" data-src=`${l}` data-fancybox="modal") Записаться
 		block
 
 mixin pricing2(n, l, btn)

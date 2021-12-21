@@ -7,7 +7,7 @@ mixin sUserConsult(data)
 				mixin item(i, d, p1, p2, ...items)
 					.col-md-6.col-xl-4
 						+e.item
-							+e.btn-cancel(href="#")
+							+e.btn-cancel(href=`#modal-cancel-appointment`).link-modal-js
 								+icon('close')
 							+e.content
 								+e.date!= d
@@ -19,7 +19,7 @@ mixin sUserConsult(data)
 									.col.d-flex.flex-column
 										each item in items
 											span= item
-							+e.btn(href="#") Перейти к консультации
+							a.btn-next(href="#modal-consultation").link-modal-js Перейти к консультации
 								+icon('shevron-right-sm')
 				+item(1, `25 сентября 18:00`, `Проктология`, `&laquo;Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели...&raquo;`, `Даниил Маркарьян`, `врач проктолог`)
 				+item(2, `27 сентября 11:00`, `Психология`, `&laquo;Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели...&raquo; Lorem ipsum dolor sit amet.`, `Татьяна Коваль`, `врач психолог`)

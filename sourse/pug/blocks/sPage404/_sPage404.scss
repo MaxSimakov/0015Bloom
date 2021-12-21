@@ -4,7 +4,8 @@
 	// --sPB: ;
 	// --sTPB: ;
 	display: flex;
-	min-height: calc(var(--vh, 1vh) * 100);
+	min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: linear-gradient(0deg, #e4d4ba 0%, #edcda6 53.17%, #e9d4ae 62.2%, #e4d4ba 100%);
 	background-image: linear-gradient(180deg, #e4d4ba, #e6d2b4 41.6%, #edcda5 61.89%, #e9d4ae 73.62%, #e4d4ba);
 	.container-fluid {
