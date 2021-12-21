@@ -1,13 +1,22 @@
-mixin sClientProfile(data)
-	// start sClientProfile
-	+b.sClientProfile.section#sClientProfile&attributes(attributes)
+mixin sDoctorProfile(data)
+	// start sDoctorProfile
+	+b.sDoctorProfile.section#sDoctorProfile&attributes(attributes)
 		.container
 			+form-wrap()
+				p Общие сведения
 				+changePhoto()
 				+input('Фамилия и имя', 'text', 'Фамилия и имя')
 				+input('Электронная почта', 'email', 'Электронная почта')
-				+input('Город', 'text', 'Город')
-				+input('+7 (___) __ __', 'tel', 'Номер телефона')
+			+form-wrap()
+				p Опыт работы
+				+input('Специальность', 'text', 'Специальность')
+				+input('Стаж работы', 'text', 'Стаж работы')
+				+input('Направление деятельности', 'textarea', 'Где проходили обучение')
+				+input('Опыт и время работы', 'textarea', 'Опыт и время работы')
+				+input('Дополнительные сведения (достижения, услуги)', 'textarea', 'Расскажите о своих достижениях, заслугах')
+				+add-file()
+			+form-wrap()
+				p Изменение пароля
 				+e.SPAN.input-title Старый пароль
 					//- +help-tooltip(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim!`)
 				+e.password-wrap
@@ -29,5 +38,4 @@ mixin sClientProfile(data)
 				+e.btn Сохранить
 				//- +e.btn-delete(href="#") Удалить профиль
 				//- +e.btn-delete(href=`#modal-delete-profile`).link-modal-js Удалить профиль
-			+socProfile()
-	// end sClientProfile
+	// end sDoctorProfile

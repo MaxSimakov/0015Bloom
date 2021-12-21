@@ -13,7 +13,7 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body class="profile">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
@@ -90,6 +90,15 @@
 							<div class="container">
 								<div class="form-wrap">
 									<form>
+										<div class="form-wrap__avatar"> 
+											<!-- picture-->
+											<picture> <img src="img/sTeam-1.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><a href="#">
+												<svg class="icon icon-close ">
+													<use xlink:href="img/svg/sprite.svg#close"></use>
+												</svg></a>
+										</div>
 										<div class="form-wrap__input-wrap form-group">
 											<label><span class="form-wrap__input-title">Фамилия и имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Фамилия и имя"/>
 											</label>
@@ -136,8 +145,6 @@
 										</div>
 										<div class="form-wrap__btn">Сохранить
 										</div>
-										<a class="form-wrap__btn-delete" href="#">Удалить профиль
-										</a>
 									</form>
 								</div>
 								<div class="soc-profile">
@@ -723,10 +730,10 @@
 					<h5>Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?</h5>
 					<div class="row">
 						<div class="col-6">
-							<div class="btn btn-outline-primary">Нет</div>
+							<div class="btn btn-outline-primary">Удалить</div>
 						</div>
 						<div class="col-6">
-							<div class="btn btn-primary">Да</div>
+							<div class="btn btn-primary">Отмена</div>
 						</div>
 					</div>
 				</div>

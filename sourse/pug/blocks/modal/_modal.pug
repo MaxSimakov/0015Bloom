@@ -224,9 +224,9 @@ mixin modal()
 				h5 Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?
 				.row
 					.col-6
-						.btn.btn-outline-primary Нет
+						.btn.btn-outline-primary Удалить
 					.col-6
-						.btn.btn-primary Да
+						.btn.btn-primary Отмена
 			//- +footer
 	// #modal-delete-profile
 
@@ -238,4 +238,22 @@ mixin modal()
 			//- +footer
 	// #modal-all-the-best
 	
+	//- div(id="modal-delete-profile"  style="display: none" )
+	//- 	+b.modal-win
+	//- 			h5 Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?
+	//- 			+e.btn-wrrap
+	//- 				+e.btn.btn.btn-outline-primary(href=`#modal-delete-success`).link-modal-js Удалить
+	//- 				+e.BUTTON.btn.btn.btn-primary Отмена
+	//- 			//- +footer
+	//- // #modal-delete-profile
+
+	//- div(id="modal-delete-success"  style="display: none" )
+	//- 	+b.modal-win
+	//- 			h5 Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего
+	//- 			//- +e.BUTTON.btn.btn.btn-outline-primary Удалить modal-delete-success
+	//- 			//- +e.btn.btn.btn-outline-primary(href=`#modal-delete-success`).link-modal-js Удалить
+	//- 			+e.BUTTON.btn--successDelete.btn.btn-primary До новых встреч
+	//- 			//- +footer
+	//- // #modal-delete-profile
+
 	// end modals

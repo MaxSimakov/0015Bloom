@@ -264,3 +264,9 @@ mixin nothingNow(text, btn)
 	+b.nothingNow
 		p!= text
 		button(type="button")!= btn
+
+mixin changePhoto()
+	+e.avatar 
+		+pic('sTeam-1.jpg')
+		a(href="#")
+			+icon('close')
