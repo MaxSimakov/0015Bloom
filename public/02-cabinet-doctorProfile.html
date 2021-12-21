@@ -85,11 +85,12 @@
 						<div class="cabinet-head text-center">
 							<h1>Мой профиль</h1>
 						</div>
-						<!-- start sClientProfile-->
-						<div class="sClientProfile section" id="sClientProfile">
+						<!-- start sDoctorProfile-->
+						<div class="sDoctorProfile section" id="sDoctorProfile">
 							<div class="container">
 								<div class="form-wrap">
 									<form>
+										<p>Общие сведения</p>
 										<div class="form-wrap__avatar"> 
 											<!-- picture-->
 											<picture> <img src="img/sTeam-1.jpg" alt="" loading="lazy"/>
@@ -109,16 +110,45 @@
 											</label>
 										</div>
 										<!-- +e.input-wrap-->
+									</form>
+								</div>
+								<div class="form-wrap">
+									<form>
+										<p>Опыт работы</p>
 										<div class="form-wrap__input-wrap form-group">
-											<label><span class="form-wrap__input-title">Город</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Город"/>
+											<label><span class="form-wrap__input-title">Специальность</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Специальность"/>
 											</label>
 										</div>
 										<!-- +e.input-wrap-->
 										<div class="form-wrap__input-wrap form-group">
-											<label><span class="form-wrap__input-title">Номер телефона</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___) __ __"/>
+											<label><span class="form-wrap__input-title">Стаж работы</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Стаж работы"/>
 											</label>
 										</div>
-										<!-- +e.input-wrap--><span class="form-wrap__input-title">Старый пароль</span>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Где проходили обучение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Направление деятельности"></textarea>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Опыт и время работы</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Опыт и время работы"></textarea>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Расскажите о своих достижениях, заслугах</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Дополнительные сведения (достижения, услуги)"></textarea>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="add-file">
+											<label><input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> </span><span class="add-file__text">  Прикрепить резюме</span>
+											</label><span class="add-file__filename"> </span>
+										</div>
+									</form>
+								</div>
+								<div class="form-wrap">
+									<form>
+										<p>Изменение пароля</p><span class="form-wrap__input-title">Старый пароль</span>
 										<div class="form-wrap__password-wrap"><span class="form-wrap__btn-toggle-pass">
 											<svg class="icon icon-visibility ">
 												<use xlink:href="img/svg/sprite.svg#visibility"></use>
@@ -147,32 +177,9 @@
 										</div>
 									</form>
 								</div>
-								<div class="soc-profile">
-									<p>Привязанные социальные сети</p>
-									<div class="row"> 
-										<div class="soc-profile__col col-6"> 
-											<a class="soc-profile__item active" href="#" target="_blank"><img src="img/svg/facebook-prof.svg" alt=""/>
-												<div class="soc-profile__content"><span>Facebook</span><img src="img/svg/check-social.svg" alt=""/>
-												</div>
-											</a>
-										</div>
-										<div class="soc-profile__col col-6"> 
-											<a class="soc-profile__item" href="#" target="_blank"><img src="img/svg/vkontakte-prof.svg" alt=""/>
-												<div class="soc-profile__content"><span>Vkontakte</span><img src="img/svg/check-social.svg" alt=""/>
-												</div>
-											</a>
-										</div>
-										<div class="soc-profile__col col-6"> 
-											<a class="soc-profile__item" href="#" target="_blank"><img src="img/svg/google-prof.svg" alt=""/>
-												<div class="soc-profile__content"><span>Google</span><img src="img/svg/check-social.svg" alt=""/>
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
-						<!-- end sClientProfile-->
+						<!-- end sDoctorProfile-->
 					</div>
 				</div>
 			</div>

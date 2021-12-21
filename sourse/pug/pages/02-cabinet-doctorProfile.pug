@@ -6,7 +6,7 @@ extends layout/main.pug
 //- include ../blocks/sCategories/_sCategories.pug
 //- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
 //- include ../blocks/sTeam/_sTeam.pug
-include ../blocks/sClientProfile/_sClientProfile.pug
+include ../blocks/sDoctorProfile/_sDoctorProfile.pug
 //- include ../blocks/sQuestions/_sQuestions.pug
 //- include ../blocks/sReviews/_sReviews.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
@@ -25,7 +25,7 @@ block pagecontent
 	+top-nav()
 	//- +topLine()
 	+cabinet-body(title)
-		+sClientProfile()
+		+sDoctorProfile()
 	//- +sForm()
 	//- +sContact()
 	+footer()
