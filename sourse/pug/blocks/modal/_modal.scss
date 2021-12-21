@@ -40,6 +40,9 @@
 		border-radius: rem(16);
 		padding: rem(48);
 	}
+	@include media-breakpoint-down(sm) {
+		min-height: 100vh;
+	}
 
 	.modal-content {
 		// max-width: 485px;
@@ -308,6 +311,13 @@ a {
 	max-width: rem(374);
 	margin-left: auto;
 	margin-right: auto;
+	@include media-breakpoint-down(sm) {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	h5 {
 		color: $primary;
 		text-align: center;
@@ -337,8 +347,13 @@ a {
 	@include media-breakpoint-up(sm) {
 		max-width: rem(310);
 	}
+	@include media-breakpoint-down(sm) {
+		height: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
 	&__footer {
-		flex-grow: 1;
+		// flex-grow: 1;
 		text-align: center;
 		margin-top: rem(24);
 		.btn {
