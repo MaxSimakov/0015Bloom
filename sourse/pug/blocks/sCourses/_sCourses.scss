@@ -68,6 +68,11 @@
 			}
 		}
 	}
+	.pagination-wrapper {
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(16);
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -184,13 +189,6 @@
 	// .courseWrrpaer {
 	// 	margin-left: auto;
 	// 	margin-right: auto;
-	// }
-	// .courseWrrpaer {
-	// 	&:last-child {
-	// 		@include media-breakpoint-up(lg) {
-	// 			margin-bottom: rem(40);
-	// 		}
-	// 	}
 	// }
 }
 
