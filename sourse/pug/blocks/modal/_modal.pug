@@ -224,9 +224,9 @@ mixin modal()
 				h5 Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?
 				.row
 					.col-6
-						.btn.btn-outline-primary Удалить
+						.btn.btn-outline-primary(href=`#modal-all-the-best`).link-modal-js Удалить
 					.col-6
-						.btn.btn-primary Отмена
+						button.btn.btn-primary Отмена
 			//- +footer
 	// #modal-delete-profile
 
@@ -234,7 +234,7 @@ mixin modal()
 		+b.modal-win
 			+b.modal-cancel
 				h5 Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего
-				.btn.btn-primary До новых встреч
+				button.btn.btn-primary До новых встреч
 			//- +footer
 	// #modal-all-the-best
 	
