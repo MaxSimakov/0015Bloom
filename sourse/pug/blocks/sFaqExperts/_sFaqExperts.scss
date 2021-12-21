@@ -28,6 +28,8 @@
 			align-items: center;
    		padding-left: rem(8);
 			padding-right: rem(16);
+			padding-top: rem(7);
+			padding-bottom: rem(7);
 			@include media-breakpoint-up(lg) {
 				flex-direction: column;
 				align-items: center;
@@ -46,9 +48,10 @@
 				@include media-breakpoint-down(lg) {
 					max-height: rem(48);
 					max-width: rem(48);
+					margin-right: rem(7);
 				}
 			}
-			&.active {
+			&:focus {
 				color: $primary;
 				svg {
 					stroke: currentColor;
