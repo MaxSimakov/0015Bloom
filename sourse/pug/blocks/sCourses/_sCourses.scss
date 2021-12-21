@@ -59,12 +59,18 @@
 		&__btn {
 			@include media-breakpoint-down(sm) {
 				width: 100%;
+				margin-top: rem(16);
 			}
 			&--lk {
 				width: 100%;
 				margin-top: rem(9);
 				margin-bottom: rem(16);
 			}
+		}
+	}
+	.pagination-wrapper {
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(16);
 		}
 	}
 	@include media-breakpoint-up(xl) {
@@ -180,10 +186,10 @@
 }
 
 .tar {
-	.courseWrrpaer {
-		margin-left: auto;
-		margin-right: auto;
-	}
+	// .courseWrrpaer {
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// }
 }
 
 .courseWrrpaer {
