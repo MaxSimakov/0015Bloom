@@ -102,6 +102,7 @@
 	}
 
 	picture {
+		display: block;
 		// @include block;
 		@include mt;
 		position: absolute;
@@ -111,6 +112,9 @@
 		border-radius: 24px 0px 24px 24px;
 		background-color: #c4c4c4;
 		width: var(--imgW);
+		img{
+			min-width: 100%;
+		}
 		@include media-breakpoint-up(lg) {
 			right: calc(100% - var(--imgW));
 			left: auto;

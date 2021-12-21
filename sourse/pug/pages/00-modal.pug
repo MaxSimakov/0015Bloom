@@ -26,7 +26,7 @@ block pagecontent
 	//- +topLine()
 	.section.container 
 		mixin btn(id, name)
-			a.btn.btn-primary.link-modal-js(href=`#${id}`)= name 
+			a.btn.btn-primary(href="#" data-src=`#${id}` data-fancybox="modal")= name 
 		+btn("modal-team", "Подробнее о докторе")
 		+btn("modal-team-consult", "Подробнее о докторе (консульт.)")
 		+btn("modal-consult", "Записаться (авторизован)")
