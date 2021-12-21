@@ -13,7 +13,7 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="main.jpg">
+	<body data-bg="main.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -83,44 +83,85 @@
 				<!--  мобильное меню-->
 			</div>
 			<!-- end top-nav-->
-			<div class="section container"> <a class="btn btn-primary link-modal-js" href="#modal-team">Подробнее о докторе</a><a class="btn btn-primary link-modal-js" href="#modal-team-consult">Подробнее о докторе (консульт.)</a><a class="btn btn-primary link-modal-js" href="#modal-consult">Записаться (авторизован)</a><a class="btn btn-primary link-modal-js" href="#modal-consult-auth">Записаться (не авторизован)</a><a class="btn btn-primary link-modal-js" href="#modal-question">Задать вопрос (авторизован)</a><a class="btn btn-primary link-modal-js" href="#modal-question-auth">Задать вопрос (не авторизован)</a>
+			<div class="section container">
+				<div class="row">
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-team">Подробнее о докторе</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-team-consult">Подробнее о докторе (консульт.)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-consult">Записаться (авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-consult-auth">Записаться (не авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-question">Задать вопрос (авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-question-auth">Задать вопрос (не авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-cancel-appointment">Oтменить запись</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-delete-profile">Удалить профиль</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-all-the-best">Всего хорошего</a></div>
+				</div>
 			</div>
-			<!-- start footer-main-->
-			<section class="footer-main section bg-wrap" id="footer-main">
-				<!-- picture-->
-				<picture class="picture-bg"> <img class="object-fit-js" src="img/mainFooterBG.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
+			<footer class="footer">
 				<div class="container">
-					<div class="section-title text-center m-auto">
-						<h2>Давайте<br>заботиться<br>о здоровье<br>вместе!</h2>
-					</div>
-					<div class="footer-main__links">
-						<a class="footer-main__mail" href="mailto:bloom@gmail.com">bloom@gmail.com
-						</a>
-						<a class="footer-main__tel" href="tel:+89057934646">8 905 793-46-46
-						</a>
-						<div class="soc">
-							<a class="soc__item" href="#" target="_blank">
-								<svg class="icon icon-instagram ">
-									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+					<div class="footer__top-row row">
+						<div class="col-12 col-md-auto">
+							<a class="footer__logo-main" href="/">
+								<svg class="icon icon-footer-logo-sm ">
+									<use xlink:href="img/svg/sprite.svg#footer-logo-sm"></use>
 								</svg>
-							</a>
-							<a class="soc__item" href="#" target="_blank">
-								<svg class="icon icon-telegram ">
-									<use xlink:href="img/svg/sprite.svg#telegram"></use>
-								</svg>
-							</a>
-							<a class="soc__item" href="#" target="_blank">
-								<svg class="icon icon-whatsapp ">
-									<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+								<svg class="icon icon-footer-logo ">
+									<use xlink:href="img/svg/sprite.svg#footer-logo"></use>
 								</svg>
 							</a>
 						</div>
+						<div class="col-12 col-md-auto">
+							<a class="footer__link" href="mailto:bloom@gmail.com">bloom@gmail.com
+							</a>
+						</div>
+						<div class="col-12 col-md-auto">
+							<a class="footer__link" href="tel:89057934646">8 905 793-46-46
+							</a>
+						</div>
+						<div class="col-12 col-sm">
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-instagram ">
+										<use xlink:href="img/svg/sprite.svg#instagram"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom-row row">
+						<div class="col-12 col-md-auto">
+							<div class="row">
+								<div class="col-12 col-md-auto">
+									<div class="footer__copyright">© <span class="currentYear"></span> Bloom
+									</div>
+								</div>
+								<div class="col-12 col-md-auto">
+									<a class="footer__developer" href="#">
+										<svg class="icon icon-coalla-logo ">
+											<use xlink:href="img/svg/sprite.svg#coalla-logo"></use>
+										</svg><span>Сделано в Coalla Agency</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-auto">
+							<div class="footer__policy row">
+								<div class="col-auto"><a href="#">Политика конфиденциальности</a></div>
+								<div class="col-auto"><a href="#">Пользовательское соглашение</a></div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end footer-main-->
+			</footer>
 		</div>
 		<!--  start modals-->
 		<div id="modal-team" style="display: none">
@@ -245,7 +286,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 							</div>
 						</div>
 					</div>
@@ -333,7 +374,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 							</div>
 						</div>
 					</form>
@@ -450,7 +491,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 							</div>
 						</div>
 					</form>
@@ -580,13 +621,54 @@
 						</div>
 						<button class="form-wrap__btn btn btn-primary">Задать вопрос
 						</button>
-						<div class="form-wrap__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+						<div class="form-wrap__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 		<!-- #modal-question-auth-->
+		<div id="modal-cancel-appointment" style="display: none">
+			<div class="modal-win">
+				<div class="modal-cancel">
+					<h5>Вы&nbsp;уверены, что хотите отменить запись?</h5>
+					<div class="row">
+						<div class="col-6">
+							<div class="btn btn-outline-primary">Нет</div>
+						</div>
+						<div class="col-6">
+							<div class="btn btn-primary">Да</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-cancel-appointment-->
+		<div id="modal-delete-profile" style="display: none">
+			<div class="modal-win">
+				<div class="modal-cancel">
+					<h5>Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?</h5>
+					<div class="row">
+						<div class="col-6">
+							<div class="btn btn-outline-primary">Нет</div>
+						</div>
+						<div class="col-6">
+							<div class="btn btn-primary">Да</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-delete-profile-->
+		<div id="modal-all-the-best" style="display: none">
+			<div class="modal-win">
+				<div class="modal-cancel">
+					<h5>Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего</h5>
+					<div class="btn btn-primary">До новых встреч</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-all-the-best-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>

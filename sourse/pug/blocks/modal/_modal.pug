@@ -55,7 +55,7 @@ mixin modal()
 						.col-auto
 							+e.btn(href=`#modal-consult`).link-modal-js Записаться
 					+e.agreement
-						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
+						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия 
 						a(href="#") Пользовательского соглашения
 				//- +footer
 	// #modal-team-consult
@@ -99,7 +99,7 @@ mixin modal()
 						.col-auto
 							+e.BUTTON.btn Записаться
 					+e.agreement
-						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
+						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия 
 						a(href="#") Пользовательского соглашения
 				//- +footer
 	// #modal-consult
@@ -156,7 +156,7 @@ mixin modal()
 						.col-auto
 							+e.BUTTON.btn Записаться
 					+e.agreement
-						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
+						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия 
 						a(href="#") Пользовательского соглашения
 				//- +footer
 	// #modal-consult-auth
@@ -201,9 +201,41 @@ mixin modal()
 					+in-c("checkbox", "Анонимно")
 				+e.BUTTON.btn.btn.btn-primary Задать вопрос
 				+e.agreement
-						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия
+						span Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия 
 						a(href="#") Пользовательского соглашения
 				//- +footer
 	// #modal-question-auth
+
+	div(id="modal-cancel-appointment"  style="display: none" )
+		+b.modal-win
+			+b.modal-cancel
+				h5 Вы&nbsp;уверены, что хотите отменить запись?
+				.row
+					.col-6
+						.btn.btn-outline-primary Нет
+					.col-6
+						.btn.btn-primary Да
+			//- +footer
+	// #modal-cancel-appointment
+	
+	div(id="modal-delete-profile"  style="display: none" )
+		+b.modal-win
+			+b.modal-cancel
+				h5 Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?
+				.row
+					.col-6
+						.btn.btn-outline-primary Нет
+					.col-6
+						.btn.btn-primary Да
+			//- +footer
+	// #modal-delete-profile
+
+	div(id="modal-all-the-best"  style="display: none" )
+		+b.modal-win
+			+b.modal-cancel
+				h5 Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего
+				.btn.btn-primary До новых встреч
+			//- +footer
+	// #modal-all-the-best
 	
 	// end modals
