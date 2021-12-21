@@ -59,6 +59,7 @@
 		&__btn {
 			@include media-breakpoint-down(sm) {
 				width: 100%;
+				margin-top: rem(16);
 			}
 			&--lk {
 				width: 100%;
@@ -180,10 +181,17 @@
 }
 
 .tar {
-	.courseWrrpaer {
-		margin-left: auto;
-		margin-right: auto;
-	}
+	// .courseWrrpaer {
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// }
+	// .courseWrrpaer {
+	// 	&:last-child {
+	// 		@include media-breakpoint-up(lg) {
+	// 			margin-bottom: rem(40);
+	// 		}
+	// 	}
+	// }
 }
 
 .courseWrrpaer {
