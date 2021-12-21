@@ -15,7 +15,7 @@ mixin team-more(i, h, s)
 
 mixin modal() 
 	//  start modals
-	div(id="modal-team"  style="display: none" )
+	div(id="modal-team" style="display: none")
 		+b.modal-win
 			+team-more(1, "Маркарьян Даниил", "Онколог")
 				+description("Специальность", "Кандидат медицинских наук. колопроктолог, онколог, хирург старший научный сотрудник отдела хирургии МНОЦ")
@@ -38,7 +38,7 @@ mixin modal()
 						+certificate(1)
 	// #modal-team
 
-	div(id="modal-team-consult"  style="display: none" )
+	div(id="modal-team-consult" style="display: none")
 		+b.modal-win
 			+team-more(1, "Маркарьян Даниил", "Онколог")
 				+description("Специальность", "Кандидат медицинских наук. колопроктолог, онколог, хирург старший научный сотрудник отдела хирургии МНОЦ")
@@ -60,7 +60,7 @@ mixin modal()
 				//- +footer
 	// #modal-team-consult
 
-	div(id="modal-consult"  style="display: none" )
+	div(id="modal-consult" style="display: none")
 		+b.modal-win
 			+form-wrap
 				h3 Запись на консультацию
@@ -104,7 +104,7 @@ mixin modal()
 				//- +footer
 	// #modal-consult
 
-	div(id="modal-consult-auth"  style="display: none" )
+	div(id="modal-consult-auth" style="display: none")
 		+b.modal-win
 			+form-wrap
 				h3 Запись на консультацию
@@ -161,7 +161,7 @@ mixin modal()
 				//- +footer
 	// #modal-consult-auth
 
-	div(id="modal-question"  style="display: none" )
+	div(id="modal-question" style="display: none")
 		+b.modal-win
 			+form-wrap
 				h3 Задать вопрос
@@ -174,7 +174,7 @@ mixin modal()
 				//- +footer
 	// #modal-question
 
-	div(id="modal-question-auth"  style="display: none" )
+	div(id="modal-question-auth" style="display: none")
 		+b.modal-win
 			+form-wrap
 				+e.heading
@@ -206,54 +206,74 @@ mixin modal()
 				//- +footer
 	// #modal-question-auth
 
-	div(id="modal-cancel-appointment"  style="display: none" )
+	div(id="modal-cancel-appointment" style="display: none")
 		+b.modal-win
 			+b.modal-cancel
 				h5 Вы&nbsp;уверены, что хотите отменить запись?
 				.row
 					.col-6
-						.btn.btn-outline-primary Нет
+						button.btn.btn-outline-primary Нет
 					.col-6
-						.btn.btn-primary Да
+						button.btn.btn-primary Да
 			//- +footer
 	// #modal-cancel-appointment
 	
-	div(id="modal-delete-profile"  style="display: none" )
+	div(id="modal-delete-profile" style="display: none")
 		+b.modal-win
 			+b.modal-cancel
 				h5 Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?
 				.row
 					.col-6
-						.btn.btn-outline-primary(href=`#modal-all-the-best`).link-modal-js Удалить
+						.btn.btn-outline-primary(href=`#modal-miss-you`).link-modal-js Удалить
 					.col-6
 						button.btn.btn-primary Отмена
 			//- +footer
 	// #modal-delete-profile
 
-	div(id="modal-all-the-best"  style="display: none" )
+	div(id="modal-miss-you" style="display: none")
 		+b.modal-win
 			+b.modal-cancel
 				h5 Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего
 				button.btn.btn-primary До новых встреч
 			//- +footer
-	// #modal-all-the-best
-	
-	//- div(id="modal-delete-profile"  style="display: none" )
-	//- 	+b.modal-win
-	//- 			h5 Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?
-	//- 			+e.btn-wrrap
-	//- 				+e.btn.btn.btn-outline-primary(href=`#modal-delete-success`).link-modal-js Удалить
-	//- 				+e.BUTTON.btn.btn.btn-primary Отмена
-	//- 			//- +footer
-	//- // #modal-delete-profile
+	// #modal-miss-you
 
-	//- div(id="modal-delete-success"  style="display: none" )
-	//- 	+b.modal-win
-	//- 			h5 Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего
-	//- 			//- +e.BUTTON.btn.btn.btn-outline-primary Удалить modal-delete-success
-	//- 			//- +e.btn.btn.btn-outline-primary(href=`#modal-delete-success`).link-modal-js Удалить
-	//- 			+e.BUTTON.btn--successDelete.btn.btn-primary До новых встреч
-	//- 			//- +footer
-	//- // #modal-delete-profile
+	div(id="modal-consultation" style="display: none")
+		+b.modal-win--consult
+			+b.modal-consult
+				+e.content
+					h4 25&nbsp;сентября 18:00
+					+e.subtitle 18:00 - 19:00 Онлайн-консультация
+					p #[span Имя]Анастасия
+					p #[span Телефон]8 904 362 53 26
+					p #[span Тема приёма]Проктология
+					p #[span Комментарий]Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго.
+					p #[span Ссылка на&nbsp;трансляцию]
+					//- +e.info Специалист добавит ссылку на&nbsp;конференцию в&nbsp;Zoom чуть позднее, ближе ко&nbsp;времени консультации
+					a.btn-next(href="#") Перейти к консультации
+						+icon('shevron-right-sm')
+				+e.footer
+					button.btn Отменить запись
+			//- +footer
+	// #modal-consultation
+
+	div(id="modal-consultation-2" style="display: none")
+		+b.modal-win--consult
+			+b.modal-consult
+				+e.content
+					h4 25&nbsp;сентября 18:00
+					+e.subtitle 18:00 - 19:00 Онлайн-консультация
+					p #[span Имя]Анастасия
+					p #[span Телефон]8 904 362 53 26
+					p #[span Тема приёма]Проктология
+					p #[span Комментарий]Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго.
+					p #[span Ссылка на&nbsp;трансляцию]
+					+e.info Специалист добавит ссылку на&nbsp;конференцию в&nbsp;Zoom чуть позднее, ближе ко&nbsp;времени консультации
+					//- a.btn-next(href="#") Перейти к консультации
+					//- 	+icon('shevron-right-sm')
+				+e.footer
+					button.btn Отменить запись
+			//- +footer
+	// #modal-consultation-2
 
 	// end modals

@@ -92,7 +92,7 @@
 								<div class="row">
 											<div class="col-md-6 col-xl-4">
 												<div class="sUserConsult__item">
-													<a class="sUserConsult__btn-cancel" href="#">
+													<a class="sUserConsult__btn-cancel link-modal-js" href="#modal-cancel-appointment">
 														<svg class="icon icon-close ">
 															<use xlink:href="img/svg/sprite.svg#close"></use>
 														</svg>
@@ -112,17 +112,15 @@
 															<div class="col d-flex flex-column"><span>Даниил Маркарьян</span><span>врач проктолог</span>
 															</div>
 														</div>
-													</div>
-													<a class="sUserConsult__btn" href="#">Перейти к консультации
+													</div><a class="btn-next link-modal-js" href="#modal-consultation">Перейти к консультации
 														<svg class="icon icon-shevron-right-sm ">
 															<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
-														</svg>
-													</a>
+														</svg></a>
 												</div>
 											</div>
 											<div class="col-md-6 col-xl-4">
 												<div class="sUserConsult__item">
-													<a class="sUserConsult__btn-cancel" href="#">
+													<a class="sUserConsult__btn-cancel link-modal-js" href="#modal-cancel-appointment">
 														<svg class="icon icon-close ">
 															<use xlink:href="img/svg/sprite.svg#close"></use>
 														</svg>
@@ -142,17 +140,15 @@
 															<div class="col d-flex flex-column"><span>Татьяна Коваль</span><span>врач психолог</span>
 															</div>
 														</div>
-													</div>
-													<a class="sUserConsult__btn" href="#">Перейти к консультации
+													</div><a class="btn-next link-modal-js" href="#modal-consultation">Перейти к консультации
 														<svg class="icon icon-shevron-right-sm ">
 															<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
-														</svg>
-													</a>
+														</svg></a>
 												</div>
 											</div>
 											<div class="col-md-6 col-xl-4">
 												<div class="sUserConsult__item">
-													<a class="sUserConsult__btn-cancel" href="#">
+													<a class="sUserConsult__btn-cancel link-modal-js" href="#modal-cancel-appointment">
 														<svg class="icon icon-close ">
 															<use xlink:href="img/svg/sprite.svg#close"></use>
 														</svg>
@@ -172,12 +168,10 @@
 															<div class="col d-flex flex-column"><span>Татьяна Коваль</span><span>врач гинеколог</span>
 															</div>
 														</div>
-													</div>
-													<a class="sUserConsult__btn" href="#">Перейти к консультации
+													</div><a class="btn-next link-modal-js" href="#modal-consultation">Перейти к консультации
 														<svg class="icon icon-shevron-right-sm ">
 															<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
-														</svg>
-													</a>
+														</svg></a>
 												</div>
 											</div>
 								</div>
@@ -725,10 +719,10 @@
 					<h5>Вы&nbsp;уверены, что хотите отменить запись?</h5>
 					<div class="row">
 						<div class="col-6">
-							<div class="btn btn-outline-primary">Нет</div>
+							<button class="btn btn-outline-primary">Нет</button>
 						</div>
 						<div class="col-6">
-							<div class="btn btn-primary">Да</div>
+							<button class="btn btn-primary">Да</button>
 						</div>
 					</div>
 				</div>
@@ -741,7 +735,7 @@
 					<h5>Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?</h5>
 					<div class="row">
 						<div class="col-6">
-							<div class="btn btn-outline-primary link-modal-js" href="#modal-all-the-best">Удалить</div>
+							<div class="btn btn-outline-primary link-modal-js" href="#modal-miss-you">Удалить</div>
 						</div>
 						<div class="col-6">
 							<button class="btn btn-primary">Отмена</button>
@@ -751,7 +745,7 @@
 			</div>
 		</div>
 		<!-- #modal-delete-profile-->
-		<div id="modal-all-the-best" style="display: none">
+		<div id="modal-miss-you" style="display: none">
 			<div class="modal-win">
 				<div class="modal-cancel">
 					<h5>Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего</h5>
@@ -759,7 +753,52 @@
 				</div>
 			</div>
 		</div>
-		<!-- #modal-all-the-best-->
+		<!-- #modal-miss-you-->
+		<div id="modal-consultation" style="display: none">
+			<div class="modal-win modal-win--consult">
+				<div class="modal-consult">
+					<div class="modal-consult__content">
+						<h4>25&nbsp;сентября 18:00</h4>
+						<div class="modal-consult__subtitle">18:00 - 19:00 Онлайн-консультация
+						</div>
+						<p><span>Имя</span>Анастасия</p>
+						<p><span>Телефон</span>8 904 362 53 26</p>
+						<p><span>Тема приёма</span>Проктология</p>
+						<p><span>Комментарий</span>Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго.</p>
+						<p><span>Ссылка на&nbsp;трансляцию</span></p><a class="btn-next" href="#">Перейти к консультации
+							<svg class="icon icon-shevron-right-sm ">
+								<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
+							</svg></a>
+					</div>
+					<div class="modal-consult__footer">
+						<button class="btn">Отменить запись</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-consultation-->
+		<div id="modal-consultation-2" style="display: none">
+			<div class="modal-win modal-win--consult">
+				<div class="modal-consult">
+					<div class="modal-consult__content">
+						<h4>25&nbsp;сентября 18:00</h4>
+						<div class="modal-consult__subtitle">18:00 - 19:00 Онлайн-консультация
+						</div>
+						<p><span>Имя</span>Анастасия</p>
+						<p><span>Телефон</span>8 904 362 53 26</p>
+						<p><span>Тема приёма</span>Проктология</p>
+						<p><span>Комментарий</span>Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго.</p>
+						<p><span>Ссылка на&nbsp;трансляцию</span></p>
+						<div class="modal-consult__info">Специалист добавит ссылку на&nbsp;конференцию в&nbsp;Zoom чуть позднее, ближе ко&nbsp;времени консультации
+						</div>
+					</div>
+					<div class="modal-consult__footer">
+						<button class="btn">Отменить запись</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-consultation-2-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
