@@ -35,6 +35,7 @@
 	position: relative;
 	width: rem(565);
 	padding: 8.384vw 4.442vw;
+	overflow: hidden;
 	@include media-breakpoint-up(sm) {
 		border-radius: rem(16);
 		padding: rem(48);
@@ -82,6 +83,13 @@
 		&__agreement {
 			text-align: center;
 			margin-top: rem(16);
+		}
+	}
+	&--consult {
+		padding: rem(24) rem(16);
+		@include media-breakpoint-up(sm) {
+			width: rem(374);
+			padding: rem(24) rem(32);
 		}
 	}
 }
@@ -291,6 +299,111 @@ a {
 			padding-left: 0;
 			padding-right: 0;
 			padding-bottom: 0;
+		}
+	}
+}
+
+.modal-cancel {
+	text-align: center;
+	max-width: rem(374);
+	margin-left: auto;
+	margin-right: auto;
+	h5 {
+		color: $primary;
+		text-align: center;
+		margin-bottom: rem(24);
+		max-width: 14em;
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(32);
+		}
+	}
+	.btn {
+		width: rem(265);
+		max-width: 100%;
+	}
+	.row {
+		--bs-gutter-x: #{rem(8)};
+	}
+}
+
+.modal-consult {
+	display: flex;
+	flex-direction: column;
+	max-width: rem(328);
+	margin-left: auto;
+	margin-right: auto;
+	@include media-breakpoint-up(sm) {
+		max-width: rem(310);
+	}
+	&__footer {
+		flex-grow: 1;
+		text-align: center;
+		margin-top: rem(24);
+		.btn {
+			padding: 0;
+			color: $primary;
+			&:hover {
+				color: $link-hover-color;
+			}
+		}
+	}
+	&__content {
+		h4 {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			margin-bottom: rem(24);
+			padding-bottom: rem(16);
+			@include media-breakpoint-up(md) {
+				max-width: 8em;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				width: 200%;
+				height: 1px;
+				left: -50%;
+				bottom: 0;
+				background-color: $gray-light;
+			}
+		}
+		p {
+			font-size: rem(16);
+			line-height: 24px;
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(sm) {
+				line-height: 16px;
+			}
+			&:last-of-type {
+				margin-bottom: rem(4);
+			}
+			span {
+				font-size: inherit;
+				color: $gray-dark;
+				margin-right: rem(8);
+			}
+		}
+	}
+	&__info {
+		font-size: rem(16);
+		line-height: 24px;
+		margin-bottom: 0;
+		color: $gray-medium;
+		@include media-breakpoint-up(sm) {
+			line-height: 16px;
+		}
+	}
+	&__subtitle {
+		font-size: rem(19);
+		line-height: 24px;
+		font-weight: 500;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(8);
+			font-size: rem(17);
 		}
 	}
 }

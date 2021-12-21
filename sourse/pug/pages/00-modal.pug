@@ -13,7 +13,7 @@ include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 include ../blocks/footer-main/_footer-main.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= null 
 	- let  bg= 'main.jpg'
 
 block title
@@ -24,16 +24,24 @@ block pagecontent
 	//- +header()
 	+top-nav()
 	//- +topLine()
-	.section.container 
-		mixin btn(id, name)
-			a.btn.btn-primary(href="#" data-src=`#${id}` data-fancybox="modal")= name 
-		+btn("modal-team", "Подробнее о докторе")
-		+btn("modal-team-consult", "Подробнее о докторе (консульт.)")
-		+btn("modal-consult", "Записаться (авторизован)")
-		+btn("modal-consult-auth", "Записаться (не авторизован)")
-		+btn("modal-question", "Задать вопрос (авторизован)")
-		+btn("modal-question-auth", "Задать вопрос (не авторизован)")
-	+footer-main()
+	.section.container
+		.row
+			mixin btn(id, name)
+				.col-auto.mb-2
+					a.btn.btn-primary.link-modal-js(href=`#${id}`)= name
+			+btn("modal-team", "Подробнее о докторе")
+			+btn("modal-team-consult", "Подробнее о докторе (консульт.)")
+			+btn("modal-consult", "Записаться (авторизован)")
+			+btn("modal-consult-auth", "Записаться (не авторизован)")
+			+btn("modal-question", "Задать вопрос (авторизован)")
+			+btn("modal-question-auth", "Задать вопрос (не авторизован)")
+			+btn("modal-cancel-appointment", "Oтменить запись")
+			+btn("modal-delete-profile", "Удалить профиль")
+			+btn("modal-miss-you", "Всего хорошего")
+			+btn("modal-consultation", "Перейти к консультации")
+			+btn("modal-consultation-2", "Перейти к консультации (нет ссылки)")
+			
+	+footer
 
 
 

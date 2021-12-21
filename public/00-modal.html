@@ -13,7 +13,7 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="main.jpg">
+	<body data-bg="main.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -83,44 +83,87 @@
 				<!--  мобильное меню-->
 			</div>
 			<!-- end top-nav-->
-			<div class="section container"> <a class="btn btn-primary" href="#" data-src="#modal-team" data-fancybox="modal">Подробнее о докторе</a><a class="btn btn-primary" href="#" data-src="#modal-team-consult" data-fancybox="modal">Подробнее о докторе (консульт.)</a><a class="btn btn-primary" href="#" data-src="#modal-consult" data-fancybox="modal">Записаться (авторизован)</a><a class="btn btn-primary" href="#" data-src="#modal-consult-auth" data-fancybox="modal">Записаться (не авторизован)</a><a class="btn btn-primary" href="#" data-src="#modal-question" data-fancybox="modal">Задать вопрос (авторизован)</a><a class="btn btn-primary" href="#" data-src="#modal-question-auth" data-fancybox="modal">Задать вопрос (не авторизован)</a>
+			<div class="section container">
+				<div class="row">
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-team">Подробнее о докторе</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-team-consult">Подробнее о докторе (консульт.)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-consult">Записаться (авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-consult-auth">Записаться (не авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-question">Задать вопрос (авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-question-auth">Задать вопрос (не авторизован)</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-cancel-appointment">Oтменить запись</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-delete-profile">Удалить профиль</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-miss-you">Всего хорошего</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-consultation">Перейти к консультации</a></div>
+										<div class="col-auto mb-2"><a class="btn btn-primary link-modal-js" href="#modal-consultation-2">Перейти к консультации (нет ссылки)</a></div>
+				</div>
 			</div>
-			<!-- start footer-main-->
-			<section class="footer-main section bg-wrap" id="footer-main">
-				<!-- picture-->
-				<picture class="picture-bg"> <img class="object-fit-js" src="img/mainFooterBG.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
+			<footer class="footer">
 				<div class="container">
-					<div class="section-title text-center m-auto">
-						<h2>Давайте<br>заботиться<br>о здоровье<br>вместе!</h2>
-					</div>
-					<div class="footer-main__links">
-						<a class="footer-main__mail" href="mailto:bloom@gmail.com">bloom@gmail.com
-						</a>
-						<a class="footer-main__tel" href="tel:+89057934646">8 905 793-46-46
-						</a>
-						<div class="soc">
-							<a class="soc__item" href="#" target="_blank">
-								<svg class="icon icon-instagram ">
-									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+					<div class="footer__top-row row">
+						<div class="col-12 col-md-auto">
+							<a class="footer__logo-main" href="/">
+								<svg class="icon icon-footer-logo-sm ">
+									<use xlink:href="img/svg/sprite.svg#footer-logo-sm"></use>
 								</svg>
-							</a>
-							<a class="soc__item" href="#" target="_blank">
-								<svg class="icon icon-telegram ">
-									<use xlink:href="img/svg/sprite.svg#telegram"></use>
-								</svg>
-							</a>
-							<a class="soc__item" href="#" target="_blank">
-								<svg class="icon icon-whatsapp ">
-									<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+								<svg class="icon icon-footer-logo ">
+									<use xlink:href="img/svg/sprite.svg#footer-logo"></use>
 								</svg>
 							</a>
 						</div>
+						<div class="col-12 col-md-auto">
+							<a class="footer__link" href="mailto:bloom@gmail.com">bloom@gmail.com
+							</a>
+						</div>
+						<div class="col-12 col-md-auto">
+							<a class="footer__link" href="tel:89057934646">8 905 793-46-46
+							</a>
+						</div>
+						<div class="col-12 col-sm">
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-instagram ">
+										<use xlink:href="img/svg/sprite.svg#instagram"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom-row row">
+						<div class="col-12 col-md-auto">
+							<div class="row">
+								<div class="col-12 col-md-auto">
+									<div class="footer__copyright">© <span class="currentYear"></span> Bloom
+									</div>
+								</div>
+								<div class="col-12 col-md-auto">
+									<a class="footer__developer" href="#">
+										<svg class="icon icon-coalla-logo ">
+											<use xlink:href="img/svg/sprite.svg#coalla-logo"></use>
+										</svg><span>Сделано в Coalla Agency</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-auto">
+							<div class="footer__policy row">
+								<div class="col-auto"><a href="#">Политика конфиденциальности</a></div>
+								<div class="col-auto"><a href="#">Пользовательское соглашение</a></div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end footer-main-->
+			</footer>
 		</div>
 		<!--  start modals-->
 		<div id="modal-team" style="display: none">
@@ -245,7 +288,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 							</div>
 						</div>
 					</div>
@@ -333,7 +376,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 							</div>
 						</div>
 					</form>
@@ -450,7 +493,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+							<div class="pricing-block__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 							</div>
 						</div>
 					</form>
@@ -580,13 +623,99 @@
 						</div>
 						<button class="form-wrap__btn btn btn-primary">Задать вопрос
 						</button>
-						<div class="form-wrap__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия</span><a href="#">Пользовательского соглашения</a>
+						<div class="form-wrap__agreement"><span>Нажимая кнопку &laquo;Записаться&raquo;, вы&nbsp;принимаете условия </span><a href="#">Пользовательского соглашения</a>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 		<!-- #modal-question-auth-->
+		<div id="modal-cancel-appointment" style="display: none">
+			<div class="modal-win">
+				<div class="modal-cancel">
+					<h5>Вы&nbsp;уверены, что хотите отменить запись?</h5>
+					<div class="row">
+						<div class="col-6">
+							<button class="btn btn-outline-primary">Нет</button>
+						</div>
+						<div class="col-6">
+							<button class="btn btn-primary">Да</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-cancel-appointment-->
+		<div id="modal-delete-profile" style="display: none">
+			<div class="modal-win">
+				<div class="modal-cancel">
+					<h5>Данное действие будет невозможно отменить. Вы&nbsp;уверены, что хотите удалить свой профиль?</h5>
+					<div class="row">
+						<div class="col-6">
+							<div class="btn btn-outline-primary link-modal-js" href="#modal-miss-you">Удалить</div>
+						</div>
+						<div class="col-6">
+							<button class="btn btn-primary">Отмена</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-delete-profile-->
+		<div id="modal-miss-you" style="display: none">
+			<div class="modal-win">
+				<div class="modal-cancel">
+					<h5>Нам будет вас очень не&nbsp;хватать. Желаем вам всего наилучшего</h5>
+					<button class="btn btn-primary">До новых встреч</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-miss-you-->
+		<div id="modal-consultation" style="display: none">
+			<div class="modal-win modal-win--consult">
+				<div class="modal-consult">
+					<div class="modal-consult__content">
+						<h4>25&nbsp;сентября 18:00</h4>
+						<div class="modal-consult__subtitle">18:00 - 19:00 Онлайн-консультация
+						</div>
+						<p><span>Имя</span>Анастасия</p>
+						<p><span>Телефон</span>8 904 362 53 26</p>
+						<p><span>Тема приёма</span>Проктология</p>
+						<p><span>Комментарий</span>Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго.</p>
+						<p><span>Ссылка на&nbsp;трансляцию</span></p><a class="btn-next" href="#">Перейти к консультации
+							<svg class="icon icon-shevron-right-sm ">
+								<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
+							</svg></a>
+					</div>
+					<div class="modal-consult__footer">
+						<button class="btn">Отменить запись</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-consultation-->
+		<div id="modal-consultation-2" style="display: none">
+			<div class="modal-win modal-win--consult">
+				<div class="modal-consult">
+					<div class="modal-consult__content">
+						<h4>25&nbsp;сентября 18:00</h4>
+						<div class="modal-consult__subtitle">18:00 - 19:00 Онлайн-консультация
+						</div>
+						<p><span>Имя</span>Анастасия</p>
+						<p><span>Телефон</span>8 904 362 53 26</p>
+						<p><span>Тема приёма</span>Проктология</p>
+						<p><span>Комментарий</span>Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго.</p>
+						<p><span>Ссылка на&nbsp;трансляцию</span></p>
+						<div class="modal-consult__info">Специалист добавит ссылку на&nbsp;конференцию в&nbsp;Zoom чуть позднее, ближе ко&nbsp;времени консультации
+						</div>
+					</div>
+					<div class="modal-consult__footer">
+						<button class="btn">Отменить запись</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-consultation-2-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
