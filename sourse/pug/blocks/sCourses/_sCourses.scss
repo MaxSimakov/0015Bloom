@@ -57,6 +57,9 @@
 	}
 	.pricing-block {
 		&__btn {
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
 			&--lk {
 				width: 100%;
 				margin-top: rem(9);
@@ -219,7 +222,7 @@
 			margin-right: auto;
 		}
 		@include media-breakpoint-up(lg) {
-			margin-top: 0;
+			margin-top: rem(12);
 			padding-top: rem(7);
 			margin-right: 0;
 		}

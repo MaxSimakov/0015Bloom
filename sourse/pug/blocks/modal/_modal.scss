@@ -40,6 +40,9 @@
 		border-radius: rem(16);
 		padding: rem(48);
 	}
+	@include media-breakpoint-down(sm) {
+		min-height: 100vh;
+	}
 
 	.modal-content {
 		// max-width: 485px;
@@ -308,6 +311,13 @@ a {
 	max-width: rem(374);
 	margin-left: auto;
 	margin-right: auto;
+	@include media-breakpoint-down(sm) {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	h5 {
 		color: $primary;
 		text-align: center;
@@ -337,8 +347,13 @@ a {
 	@include media-breakpoint-up(sm) {
 		max-width: rem(310);
 	}
+	@include media-breakpoint-down(sm) {
+		height: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
 	&__footer {
-		flex-grow: 1;
+		// flex-grow: 1;
 		text-align: center;
 		margin-top: rem(24);
 		.btn {
@@ -358,7 +373,7 @@ a {
 			margin-bottom: rem(24);
 			padding-bottom: rem(16);
 			@include media-breakpoint-up(md) {
-				max-width: 8em;
+				max-width: 9em;
 			}
 			&::after {
 				content: "";
@@ -405,6 +420,29 @@ a {
 			margin-bottom: rem(8);
 			font-size: rem(17);
 		}
+	}
+	&__input-wrap {
+		position: relative;
+		margin-top: rem(4);
+		@include media-breakpoint-up(sm) {
+			margin-top: rem(8);
+		}
+		button {
+			@extend .btn, .btn-primary;
+			position: absolute;
+			padding: rem(5) rem(18);
+			height: 100%;
+			right: 0;
+			top: 0;
+			font-size: rem(16) !important;
+			line-height: 1;
+		}
+	}
+	&__input {
+		padding: rem(5) rem(15);
+		line-height: 1;
+		// height: rem(32);
+		font-size: rem(16);
 	}
 }
 
