@@ -8,7 +8,7 @@ mixin team-item(i, d, n, s, l, ...items)
 				span!= s
 		each item in items
 			p!= item
-		+e.btn(href=`#${l}`).link-modal-js
+		+e.btn(href="#" data-src=`#${l}` data-fancybox="modal")
 			+icon('popup')
 			span Подробнее
 		block

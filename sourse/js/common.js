@@ -2,30 +2,46 @@
 const JSCCommon = {
 
 	modalCall() {
-		const link = ".link-modal-js";
+		const link = '[data-fancybox="modal"], .link-modal-js';
 
 		Fancybox.bind(link, {
 			arrows: false,
 			// infobar: false,
 			touch: false,
+			trapFocus: false,
+			placeFocusBack: false,
 			infinite: false,
 			dragToClose: false,
-			// type: 'inline',
+			type: 'inline',
 			autoFocus: false,
+			groupAll: false,
+			groupAttr: false,
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
 				PREV: "Назад",
 			},
 		});
+		// Fancybox.bind('[data-fancybox]', {
+		// 	// groupAll: false,
+		// 	// arrows: false,
+		// 	// infobar: false,
+		// 	// touch: false,
+		// 	trapFocus: false,
+		// 	placeFocusBack: false,
+		// 	infinite: false,
+		// 	dragToClose: false,
+		// 	// type: 'inline',
+		// 	autoFocus: false,  
+		// });
 		document.querySelectorAll(".modal-close-js").forEach(el => {
 			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
-		Fancybox.bind('[data-fancybox]', {
-			placeFocusBack: false,
-		});
+		// Fancybox.bind('[data-fancybox]', {
+		// 	placeFocusBack: false,
+		// });
 		const linkModal = document.querySelectorAll(link);
 		function addData() {
 			linkModal.forEach(element => {
