@@ -238,12 +238,12 @@ mixin modal()
 			//- +footer
 	// #modal-miss-you
 
-	div(id="modal-consultation" style="display: none")
+	div(id="modal-client-consult" style="display: none")
 		+b.modal-win--consult
 			+b.modal-consult
 				+e.content
 					h4 25&nbsp;сентября 18:00
-					+e.subtitle 18:00 - 19:00 Онлайн-консультация
+					+e.subtitle 18:00-19:00 Онлайн-консультация
 					p #[span Имя]Анастасия
 					p #[span Телефон]8 904 362 53 26
 					p #[span Тема приёма]Проктология
@@ -255,14 +255,14 @@ mixin modal()
 				+e.footer
 					button.btn Отменить запись
 			//- +footer
-	// #modal-consultation
+	// #modal-client-consult
 
-	div(id="modal-consultation-2" style="display: none")
+	div(id="modal-client-consult-2" style="display: none")
 		+b.modal-win--consult
 			+b.modal-consult
 				+e.content
 					h4 25&nbsp;сентября 18:00
-					+e.subtitle 18:00 - 19:00 Онлайн-консультация
+					+e.subtitle 18:00-19:00 Онлайн-консультация
 					p #[span Имя]Анастасия
 					p #[span Телефон]8 904 362 53 26
 					p #[span Тема приёма]Проктология
@@ -274,6 +274,48 @@ mixin modal()
 				+e.footer
 					button.btn Отменить запись
 			//- +footer
-	// #modal-consultation-2
+	// #modal-client-consult-2
+
+	div(id="modal-doctor-consult" style="display: none")
+		+b.modal-win--consult
+			+b.modal-consult
+				+e.content
+					h4 8&nbsp;сентября 9:00
+					+e.subtitle 11:30-12:30 Онлайн-консультация
+					p #[span Имя]Анастасия
+					p #[span Телефон]8 904 362 53 26
+					//- p #[span Тема приёма]Проктология
+					p #[span Комментарий]Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели.
+					p #[span Ссылка на&nbsp;трансляцию]
+					//- +e.info Специалист добавит ссылку на&nbsp;конференцию в&nbsp;Zoom чуть позднее, ближе ко&nbsp;времени консультации
+					//- a.btn-next(href="#") Перейти к консультации
+					//- 	+icon('shevron-right-sm')
+				+input("Ссылка на трансляцию", "text")
+					button Сохранить
+				+e.footer
+					button.btn Отменить запись
+			//- +footer
+	// #modal-doctor-consult
+
+	div(id="modal-doctor-consult-2" style="display: none")
+		+b.modal-win--consult
+			+b.modal-consult
+				+e.content
+					h4 8&nbsp;сентября 9:00
+					+e.subtitle 11:30-12:30 Курс &laquo;С&nbsp;заботой о&nbsp;спине&raquo;
+					//- p #[span Имя]Анастасия
+					//- p #[span Телефон]8 904 362 53 26
+					//- p #[span Тема приёма]Проктология
+					//- p #[span Комментарий]Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию попаду через 2&nbsp;недели.
+					p #[span Ссылка на&nbsp;трансляцию]
+					//- +e.info Специалист добавит ссылку на&nbsp;конференцию в&nbsp;Zoom чуть позднее, ближе ко&nbsp;времени консультации
+					//- a.btn-next(href="#") Перейти к консультации
+					//- 	+icon('shevron-right-sm')
+				+input("Ссылка на трансляцию", "text")
+					button Сохранить
+				+e.footer
+					button.btn Отменить запись
+			//- +footer
+	// #modal-doctor-consult-2
 
 	// end modals

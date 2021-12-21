@@ -358,7 +358,7 @@ a {
 			margin-bottom: rem(24);
 			padding-bottom: rem(16);
 			@include media-breakpoint-up(md) {
-				max-width: 8em;
+				max-width: 9em;
 			}
 			&::after {
 				content: "";
@@ -405,6 +405,29 @@ a {
 			margin-bottom: rem(8);
 			font-size: rem(17);
 		}
+	}
+	&__input-wrap {
+		position: relative;
+		margin-top: rem(4);
+		@include media-breakpoint-up(sm) {
+			margin-top: rem(8);
+		}
+		button {
+			@extend .btn, .btn-primary;
+			position: absolute;
+			padding: rem(5) rem(18);
+			height: 100%;
+			right: 0;
+			top: 0;
+			font-size: rem(16) !important;
+			line-height: 1;
+		}
+	}
+	&__input {
+		padding: rem(5) rem(15);
+		line-height: 1;
+		// height: rem(32);
+		font-size: rem(16);
 	}
 }
 
