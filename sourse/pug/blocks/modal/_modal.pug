@@ -107,7 +107,9 @@ mixin modal()
 	div(id="modal-consult-auth" style="display: none")
 		+b.modal-win
 			+form-wrap
-				h3 Запись на консультацию
+				+e.heading
+					h3 Запись на консультацию
+					p Если у&nbsp;вас уже есть учетная запись, #[a(href="#") авторизуйтесь.] Если вы&nbsp;еще не&nbsp;регистрировались, то&nbsp;заполните форму ниже
 				+input("Владимир Воротников", "select", "Специалисты")
 				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
 				+e.input-wrap.form-group
