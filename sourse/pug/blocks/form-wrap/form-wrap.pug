@@ -76,3 +76,14 @@ mixin policy()
 	+e.policy
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+mixin custom-select(t)
+	.form-wrap__input-wrap.form-group
+		if t
+			span.form-wrap__input-title!= t
+		select.form-wrap__input.form-select.custom-select(name='select')
+			block
+
+mixin option(v, i, d)
+	option(value=`${v}` data-imagesrc= `img/specialist-${i}.jpg` data-description=`${d}`)!= v
+				

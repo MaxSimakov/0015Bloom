@@ -420,6 +420,8 @@ function eventHandler() {
 	);
 	wow.init();
 
+	$('.custom-select').ddslick();
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
