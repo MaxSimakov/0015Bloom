@@ -1,13 +1,14 @@
 // start .sSexEducChapter
 .sSexEducChapter {
-	--sPT: #{rem(12)};
-	--sPB: #{rem(12)};
+	--sPT: #{rem(24)};
+	--sPB: #{rem(24)};
 	--sTPB: #{rem(16)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(40)};
 		--sPB: #{rem(40)};
 		--sTPB: #{rem(24)};
 	}
+
 
 	.container {
 		@include media-breakpoint-up(xl) {
