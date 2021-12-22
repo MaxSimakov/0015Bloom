@@ -26,9 +26,9 @@
 		--slideMargin: #{rem(16)};
 		--slideWidth: #{rem(227)};
 		--arrowVertPos: calc(var(--slideWidth) * 1.211 / 2 - #{rem(20)});
-		@include media-breakpoint-up(sm) {
-			--slideWidth: #{rem(246)};
-		}
+		// @include media-breakpoint-up(sm) {
+		// 	--slideWidth: #{rem(246)};
+		// }
 		@include media-breakpoint-up(md) {
 			--slideWidth: #{rem(218.66)};
 		}
@@ -36,10 +36,10 @@
 			--slideWidth: #{rem(220)};
 		}
 		@include media-breakpoint-up(xl) {
-			--slideWidth: #{rem(227.5)};
+			--slideWidth: #{rem(227)};
 		}
 
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(md) {
 			&::before {
 				content: "";
 				position: absolute;
@@ -55,7 +55,7 @@
 				position: absolute;
 				height: 100%;
 				top: 0;
-				left: calc(100% + rem(15));
+				left: calc(100% + rem(13));
 				width: calc((100vw - 100%) / 2);
 				background-image: linear-gradient(
 					271.96deg,
@@ -71,7 +71,7 @@
 			margin-bottom: 0;
 			bottom: 0;
 			top: var(--arrowVertPos);
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				display: none;
 			}
 		}
@@ -105,6 +105,9 @@
 			}
 			img {
 				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
 				left: 0;
 				top: 0;
 				z-index: 2;
