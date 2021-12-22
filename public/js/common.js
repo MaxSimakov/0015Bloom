@@ -422,6 +422,15 @@ function eventHandler() {
 
 	$('.custom-select').ddslick();
 
+
+	$(".faq-item__btn").click(function(){
+		$(this).toggleClass("show")
+		.parents('.faq-item').find(".answer-block").slideToggle(function(){
+				$(this).toggleClass("show")
+			})
+	})
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

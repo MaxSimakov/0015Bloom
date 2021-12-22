@@ -13,10 +13,14 @@
 } // end.sConsultation
 
 .answer-block {
+
 	position: relative;
 	margin-top: rem(16);
 	font-size: rem(14);
 	color: $gray-medium;
+	&:not(.show) {
+		display: none;
+	}
 	.icon-northWestArrow {
 		font-size: rem(16);
 		color: $dark;
@@ -164,8 +168,13 @@
 		transition: $transition-base;
 		@extend .btn-outline-primary;
 		padding: rem(3.6) rem(9.6);
+		&.show{
+			--angle: 180deg;
+			--d: none;
+			--d: ' ';
+		}
 		svg {
-			transform: rotate(180deg);
+			transform: rotate(var(--angle, 0));
 			font-size: rem(5);
 			color: $dark;
 			@include media-breakpoint-up(md) {
@@ -175,6 +184,14 @@
 		span {
 			color: $primary;
 			margin-left: rem(7.2);
+			&:nth-child(2) {
+				display: var(--d, ' ');
+			}
+			
+			&:nth-child(3) {
+				display: var(--d2, none);
+			}
+
 		}
 	}
 	
