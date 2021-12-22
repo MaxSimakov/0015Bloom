@@ -19,6 +19,9 @@
 			max-width: rem(276);
 		}
 	}
+	&__btn {
+		margin-bottom: rem(24);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -33,10 +36,22 @@
 }
 
 .public-chat {
+	.scroll {
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 4px;
+			background-color: $gray-light;
+			margin-right: 4px;
+		}
+	}
 	width: rem(340);
-	// border: 1px solid $gray-light;
 	&__messages {
-		height: rem(708);
+		height: rem(759);
 		position: relative;
     overflow-x: hidden;
     overflow-y: auto;
@@ -58,7 +73,7 @@
 		}
 	}
 	&__pinned {
-		border: 1px solid $gray-light;
+		border-right: 1px solid $gray-light;
 	}
 	&__message-name {
 		margin-bottom: rem(8);
@@ -105,7 +120,10 @@
 .public-messenger {
 	padding-left: rem(20);
 	&__messages {
-		height: rem(708);
+		// display: grid;
+		// align-content: end;
+		// gap: rem(20);
+		height: rem(683);
 		position: relative;
     overflow-x: hidden;
     overflow-y: auto;
@@ -130,6 +148,21 @@
 			margin-right: auto;
 			margin-left: 0;
 		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+		&--deny {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($color: #fff, $alpha: 0.5);
+				left: 0;
+				top: 0;
+			}
+		}
 	}
 	span {
 		text-align: right;
@@ -138,8 +171,21 @@
 		align-self: flex-end;
 	}
 	.form-wrap {
+		form {
+			display: flex;
+		}
+		picture {
+			width: rem(48);
+			// height: rem(48);
+			align-self: center;
+			border-radius: rem(83);
+			overflow: hidden;
+		}
 		&__input-wrap {
+			margin-left: rem(16);
 			position: relative;
+			margin-bottom: 0;
+			width: 100%;
 		}
 		button {
 			position: absolute;
@@ -152,5 +198,19 @@
 			border: none;
 			border-radius: rem(8);
 		}
+	}
+	&__reason {
+		margin-bottom: rem(32);
+	}
+}
+
+.chat {
+	.col--main {
+		@include media-breakpoint-up(md) {
+			padding-left: 0;
+		}
+	}
+	.container--main {
+		margin-bottom: 0;
 	}
 }
