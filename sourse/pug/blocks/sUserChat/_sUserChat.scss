@@ -1,0 +1,156 @@
+// start .sUserChat
+.sUserChat {
+		--sPT: #{rem(8)};
+		--sPB: #{rem(0)};
+		// --sTPB: ;
+	.container {
+		text-align: center;
+	}
+	.container > p {
+		font-size: rem(19);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(22);
+		}
+	}
+	.container > a {
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			width: 100%;
+			max-width: rem(276);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sUserChat
+
+.profileChat {
+	border-top: 1px solid $gray-light;
+}
+
+.public-chat {
+	width: rem(340);
+	// border: 1px solid $gray-light;
+	&__messages {
+		height: rem(708);
+		position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+	}
+	&__item {
+		text-align: left;
+		padding: rem(12) rem(16) rem(16) rem(16);
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-light;
+		}
+		picture {
+			width: rem(32);
+			border-radius: rem(87);
+			overflow: hidden;
+		}
+		&.active {
+			background-color: rgba($color: #EFEAE7, $alpha: 0.3);
+
+		}
+	}
+	&__pinned {
+		border: 1px solid $gray-light;
+	}
+	&__message-name {
+		margin-bottom: rem(8);
+		span {
+			font-size: rem(14);
+			&:last-child {
+				color: $gray-medium;
+			}
+		}
+	}
+	&__time {
+		font-size: rem(14);
+		color: $gray-medium;
+	}
+	&__message-text {
+		span {
+			&:first-of-type {
+				
+			}
+			&:last-of-type {
+				font-size: rem(12);
+			}
+		}
+		p {
+			margin-bottom: 0;
+			&.unread {
+				padding-left: rem(12);
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					width: rem(8);
+					height: rem(8);
+					background-color: $primary;
+					border-radius: 50%;
+					top: 5px;
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+.public-messenger {
+	padding-left: rem(20);
+	&__messages {
+		height: rem(708);
+		position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+	}
+	&__message {
+		padding: rem(16) rem(16) rem(8) rem(16);
+		background-color: rgba($color: #E9C19D, $alpha: 0.3);
+		max-width: rem(522);
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		align-self: end;
+		border-radius: rem(8);
+		margin-left: auto;
+		p {
+			margin-bottom: rem(4);
+		}
+		&--left {
+			align-self: start;
+			background-color: $white;
+			border: 1px solid $gray-light;
+			margin-right: auto;
+			margin-left: 0;
+		}
+	}
+	span {
+		text-align: right;
+		font-size: rem(14);
+		color: $gray-medium;
+		align-self: flex-end;
+	}
+	.form-wrap {
+		&__input-wrap {
+			position: relative;
+		}
+		button {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: rem(53);
+			height: rem(53);
+			background-color: $primary;
+			color: $white;
+			border: none;
+			border-radius: rem(8);
+		}
+	}
+}
