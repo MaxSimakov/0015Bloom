@@ -212,6 +212,15 @@
 				}
 			}
 		}
+		.searchForm__formText {
+			@include media-breakpoint-down(lg) {
+				margin: 0;
+				font-size: rem(16);
+				padding-top: rem(80);
+				padding-bottom: rem(107);
+				text-align: center;
+			}
+		}
 	}
 
 	&--search-result .container {

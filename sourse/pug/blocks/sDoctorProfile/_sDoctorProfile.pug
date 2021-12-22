@@ -35,6 +35,8 @@ mixin sDoctorProfile(data)
 						+icon('visibility')
 					+input("Пароль", "password")
 				+e.btn Сохранить
+				//- +btn("modal-delete-profile", "Удалить профиль")
+				+e.btn-delete(href="#" data-src=`#modal-delete-profile` data-fancybox="modal") Удалить профиль
 				//- +e.btn-delete(href="#") Удалить профиль
 				//- +e.btn-delete(href=`#modal-delete-profile`).link-modal-js Удалить профиль
 	// end sDoctorProfile
