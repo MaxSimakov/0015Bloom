@@ -31,10 +31,14 @@
 		picture {
 			display: inline-block;
 			margin: 0 -0.2em;
+			// position: relative;
+			// top: em(1);
+			
 			img {
 				width: 0.63em;
 				height: 0.63em;
 				border-radius: 32px 0 32px 32px;
+				// vertical-align: bottom;
 			}
 		}
 	}
