@@ -76,3 +76,19 @@ mixin policy()
 	+e.policy
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+mixin option(v, i, d)
+	option(value=`${v}` data-imagesrc= `img/specialist-${i}.jpg` data-description=`${d}`)!= v
+				
+mixin custom-select(t)
+	.form-wrap__input-wrap.form-group
+		if t
+			span.form-wrap__input-title!= t
+		select.custom-select(name='select')
+			+option(`Эмиль Исагулян`, 1, `врач акушер-гинеколог`)
+			+option(`Владимир Воротников`, 2, `врач гинеколог`)
+			+option(`Игорь Орлов`, 3, `врач гинеколог`)
+			+option(`Татьяна Коваль`, 4, `врач акушер-гинеколог`)
+			+option(`Мария Бондарева`, 5, `врач гинеколог`)
+			+option(`Эмиль Исагулян`, 1, `врач акушер-гинеколог`)
+			+option(`Владимир Воротников`, 2, `врач гинеколог`)

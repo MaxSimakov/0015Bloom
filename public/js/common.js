@@ -420,6 +420,7 @@ function eventHandler() {
 	);
 	wow.init();
 
+	$('.custom-select').ddslick();
 
 
 	$(".faq-item__btn").click(function(){
