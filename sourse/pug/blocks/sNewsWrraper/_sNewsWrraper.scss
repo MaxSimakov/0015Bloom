@@ -72,10 +72,7 @@
 	&.rounded-top1 {
 		&:after {
 			@include media-breakpoint-down(lg) {
-				height: 104px;
-			}
-			@include media-breakpoint-down(sm) {
-				height: 118px;
+				height: rem(286);
 			}
 		}
 	}

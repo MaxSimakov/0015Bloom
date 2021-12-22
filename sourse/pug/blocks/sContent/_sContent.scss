@@ -102,7 +102,7 @@
 		tbody {
 			border-top: none!important;
 			& > tr {
-				&:hover {
+				&:nth-child(2n) {
 					background-color: rgba($color: #EFEAE7, $alpha: 0.5);
 				}
 			}
