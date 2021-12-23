@@ -41,3 +41,4 @@
 1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-user-question.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-user-question-deny.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-user-question-noQuestion.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-timetable.html>
