@@ -38,3 +38,6 @@
 1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-avaibleMaterials.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-avaibleMaterials-2.html>
 1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-user-consult.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-user-question.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-user-question-deny.html>
+1. <https://maxsimakov.github.io/0015Bloom/public/02-cabinet-user-question-noQuestion.html>
