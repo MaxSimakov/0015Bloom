@@ -15,7 +15,7 @@ mixin sTimetable-li(l, ...items)
 		+e.link.link-modal-js(href=`${l}`)&attributes(attributes)
 			each item in items
 				span!= item
-		+e.btn-close.link-modal-js(href="#modal-cancel-appointment")
+		+e.btn-close.link-modal-js(href="#modal-cancel-appointment" data-tippy-content="Отменить запись")
 			+icon('list-cross')
 
 mixin sTimetable-slide(t, d, c)

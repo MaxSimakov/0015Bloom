@@ -379,11 +379,9 @@ function eventHandler() {
 		});
 	});
 
-
-
-
-
-
+	tippy('[data-tippy-content]', {
+		hideOnClick: true,
+	});
 
 	$(".sAccess__btn-accordion").click(function () {
 		$(this).toggleClass('on')
@@ -440,9 +438,9 @@ function eventHandler() {
 	$('.custom-select').ddslick();
 
 
-	$(".faq-item__btn").click(function(){
+	$(".faq-item__btn").click(function () {
 		$(this).toggleClass("show")
-		.parents('.faq-item').find(".answer-block").slideToggle(function(){
+			.parents('.faq-item').find(".answer-block").slideToggle(function () {
 				$(this).toggleClass("show")
 			})
 	})
