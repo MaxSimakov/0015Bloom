@@ -339,6 +339,23 @@ function eventHandler() {
 		}
 	});
 
+	const sTimetableSlider = new Swiper('.sTimetable__slider--js', {
+
+		slidesPerView: 1,
+		watchOverflow: true,
+		spaceBetween: 0,
+		// loop: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			}
+		},
+		navigation: {
+			nextEl: '.sTimetable .swiper-button-next',
+			prevEl: '.sTimetable .swiper-button-prev',
+		}
+	});
+
 	// var sexEduc = new Typed('.page-head--sexEduc .page-head__title p', {
 	// 	strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
 	// 	typeSpeed: 50,

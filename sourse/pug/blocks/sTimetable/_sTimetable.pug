@@ -1,0 +1,29 @@
+
+mixin sTimetable(data)
+	// start sTimetable
+	+b.sTimetable.section#sTimetable&attributes(attributes)
+		.container
+			+e.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						block
+				+arrow
+	// end sTimetable
+
+mixin sTimetable-li(l, ...items)
+	li
+		+e.link.link-modal-js(href=`${l}`)&attributes(attributes)
+			each item in items
+				span!= item
+		+e.btn-close.link-modal-js(href="#modal-cancel-appointment")
+			+icon('list-cross')
+
+mixin sTimetable-slide(t, d, c)
+	+e.slide.swiper-slide
+		+e.item&attributes(attributes)
+			+e.heading
+				span!= t
+				+e.date!= d
+					span!= c
+			ul
+				block

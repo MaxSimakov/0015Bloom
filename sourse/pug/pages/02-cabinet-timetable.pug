@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sTimetable/_sTimetable.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Моё расписание'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	//- +header()
+	+top-nav()
+	//- +topLine()
+	+cabinet-body(title)
+		+sTimetable()
+			+sTimetable-slide(`пн`, `8 сентября`, `6`).current
+				+sTimetable-li(`#modal-doctor-consult`, `9:00-10:00`, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult`, `10:00-11:00`, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult-2`, `12:30-13:30`, `Курс &laquo;С&nbsp;заботой о&nbsp;спине&raquo;`).course
+				+sTimetable-li(`#modal-doctor-consult`, `15:00-16:00 `, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult`, `16:00-17:00`, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult`, `17:00-18:00 `, `Онлайн-консультация`)
+			+sTimetable-slide(`вт`, `9 сентября`, `3`)
+				+sTimetable-li(`#modal-doctor-consult`, `9:00-10:00 `, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult-2`, `10:30-11:30`, `Курс &laquo;С&nbsp;заботой о&nbsp;спине&raquo;`).course
+				+sTimetable-li(`#modal-doctor-consult`, `12:30-13:30`, `Онлайн-консультация`)
+			+sTimetable-slide(`ср`, `10 сентября`, `4`)
+				+sTimetable-li(`#modal-doctor-consult`, `9:00-10:00 `, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult`, `10:00-11:00`, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult-2`, `12:30-13:30`, `Курс &laquo;С&nbsp;заботой о&nbsp;спине&raquo;`).course
+				+sTimetable-li(`#modal-doctor-consult`, `16:00-17:00 `, `Онлайн-консультация`)
+			+sTimetable-slide(`чт`, `11 сентября`, `2`)
+				+sTimetable-li(`#modal-doctor-consult`, `9:00-10:00 `, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult`, `10:00-11:00`, `Онлайн-консультация`)
+			+sTimetable-slide(`пт`, `12 сентября`, `3`)
+				+sTimetable-li(`#modal-doctor-consult`, `9:00-10:00 `, `Онлайн-консультация`)
+				+sTimetable-li(`#modal-doctor-consult-2`, `10:00-11:00`, `Курс &laquo;С&nbsp;заботой о&nbsp;спине&raquo;`).course
+				+sTimetable-li(`#modal-doctor-consult`, `12:30-13:30`, `Онлайн-консультация`)
+
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+
