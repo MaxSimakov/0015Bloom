@@ -317,7 +317,7 @@ body.fixed {
 	}
 	.cabinet-menu {
 		@include mt;
-		position: absolute;
+		position: fixed;
 		// visibility: hidden;
 		// opacity: 0;
 		top: rem(64);
