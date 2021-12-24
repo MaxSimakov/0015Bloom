@@ -18,6 +18,23 @@ mixin publicChatItem(unread, pic, name, status, date, topic, text)
 						else
 							p!= text
 
+mixin publicChatItem2(unread, pic, name, date, text)
+	+e.item&attributes(attributes)
+		.row.g-2
+			.col-auto
+				+pic(`sTeam-${pic}.jpg`)
+			.col
+				.row.g-0
+					.col
+						+e.message-name
+							+e.SPAN.doctor!= name
+					+e.time.col-auto!= date
+					+e.message-text
+						if unread
+							p.unread!= text
+						else
+							p!= text
+
 mixin chatMessage(text, time)
 	+e.message&attributes(attributes)
 		+e.text-wrraper
@@ -31,7 +48,7 @@ mixin sUserChat(data)
 			p Здесь хранятся ваши вопросы, заданные специалистам, и&nbsp;ответы на&nbsp;них
 			+e.btn.btn.btn-primary(href="#" data-src=`#modal-question` data-fancybox="modal") Задать вопрос
 			+b.profileChat.row.g-0
-				+e.col-users.col-auto
+				+e.col-users.col-12.col-md-auto
 					+b.public-chat.d-flex.flex-column
 						+e.pinned
 							+e.messages.scroll
@@ -49,6 +66,13 @@ mixin sUserChat(data)
 								+publicChatItem('', '8', 'Светлана Юрьева', 'врач гинеколог', '12 ноя', 'Гинекология', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
 				.col 
 					+b.public-messenger
+						+e.BUTTON.back
+							+icon('chevron-left-sm')
+							+pic(`sUserConsult-1.jpg`)
+							+e.message-name
+								span Даниил Маркарьян
+								br
+								span врач акушер-гинеколог
 						+e.messages.scroll
 							+chatMessage('Врач прописал джес плюс, пью первый месяц, ни&nbsp;разу не&nbsp;пропускала и&nbsp;принимала таблетки всегда вовремя. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго. Что посоветуете делать? Сейчас принимаю цже 27&nbsp;таблетку и&nbsp;по&nbsp;идее месячные должны были начаться завтра, но&nbsp;они идут уже 9&nbsp;день(', '12 ноября 14:50')
 							+chatMessage('Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo; И&nbsp;при этом&nbsp;НЕ было пропусков и&nbsp;нарушений в&nbsp;схеме приема, не&nbsp;принимали антибиотики и&nbsp;другие курсовые препараты, то&nbsp;это как правило говорит о&nbsp;том, что препарат не&nbsp;подходит Вам ( гормоны и&nbsp;их&nbsp;дозировка в&nbsp;препарате).', '12 ноября 15:07').--left
@@ -101,3 +125,39 @@ mixin sUserChat3(data)
 		.container
 			p Здесь хранятся ваши вопросы, заданные специалистам, и&nbsp;ответы на&nbsp;них
 			+e.btn.btn.btn-primary(href="#" data-src=`#modal-question` data-fancybox="modal") Задать вопрос
+
+mixin sUserChat4(data)
+	// start sUserChat
+	+b.sUserChat.section#sUserChat&attributes(attributes)
+		.container
+			+b.profileChat.row.g-0
+				+e.col-users.col-auto
+					+b.public-chat.d-flex.flex-column
+						+e.pinned
+							+e.messages.scroll
+								+publicChatItem2('', '6', 'Анастасия Попова', '12 ноя', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+								+publicChatItem2('unread', '3', 'Татьяна Коваль', '12 ноя', 'Руки иннервируются шейным отделом позвоночника. Для...')
+								+publicChatItem2('unread', '6', 'Анастасия Грикевич', '12 ноя', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+								+publicChatItem2('', '5', 'Игорь Орлов', '15 сен', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+								+publicChatItem2('', '6', 'Анастасия Попова', '12 ноя', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+								+publicChatItem2('unread', '3', 'Татьяна Коваль', '12 ноя', 'Руки иннервируются шейным отделом позвоночника. Для...')
+								+publicChatItem2('unread', '6', 'Анастасия Грикевич', '12 ноя', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+								+publicChatItem2('', '5', 'Игорь Орлов', '15 сен', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+								+publicChatItem2('unread', '6', 'Анастасия Грикевич', '12 ноя', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+								+publicChatItem2('', '5', 'Игорь Орлов', '15 сен', 'Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo;...')
+				.col 
+					+b.public-messenger
+						+e.BUTTON.back
+							+icon('chevron-left-sm')
+							+pic(`sUserConsult-2.jpg`)
+							+e.message-name
+								span Анастасия Попова
+						+e.messages.scroll
+							+chatMessage('Врач прописал джес плюс, пью первый месяц, ни&nbsp;разу не&nbsp;пропускала и&nbsp;принимала таблетки всегда вовремя. Месячные начались на&nbsp;11&nbsp;дней раньше и&nbsp;вот уже 9&nbsp;день не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго. Что посоветуете делать? Сейчас принимаю цже 27&nbsp;таблетку и&nbsp;по&nbsp;идее месячные должны были начаться завтра, но&nbsp;они идут уже 9&nbsp;день(', '12 ноября 14:50')
+							+chatMessage('Если&nbsp;же далее&nbsp;Вы замечаете выделения &laquo;не&nbsp;по&nbsp;плану&raquo; И&nbsp;при этом&nbsp;НЕ было пропусков и&nbsp;нарушений в&nbsp;схеме приема, не&nbsp;принимали антибиотики и&nbsp;другие курсовые препараты, то&nbsp;это как правило говорит о&nbsp;том, что препарат не&nbsp;подходит Вам ( гормоны и&nbsp;их&nbsp;дозировка в&nbsp;препарате).', '12 ноября 15:07').--left
+							+chatMessage('Не&nbsp;прекращаются, сначала были мажущие тёмно-коричневые выделения, сейчас все пришло в&nbsp;норму, месячные умеренные кровь красного цвета, но&nbsp;меня все равно беспокоит то&nbsp;что они начались так рано и&nbsp;длятся очень долго.', '12 ноября 17:01')
+						+form-wrap()
+							+pic('sTeam-2.jpg')
+							+input("Напишите сообщение", "text")
+								button
+									+icon('send')
