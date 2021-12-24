@@ -30,16 +30,21 @@ mixin top-nav()
 				.col
 				+e.col--right.col-auto
 					+e.controls--right
-						+e.btn--notification(href="#")
-							+icon('notification')
-							+e.btn-count 2
-						+e.btn--cabinet(href="#") 
-							+icon('account-header')
-							+e.SPAN.btn-text Личный кабинет
-		+cabinet-menu()
-			+e.BUTTON.exit 
-				+icon('exit')
-				span Выйти
+						.dropdown.dropdown--notification
+							+e.btn(href="#").dropdown__toggle
+								+icon('notification')
+								+e.btn-count 2
+						.dropdown.dropdown--cabinet
+							+e.btn(href="#").dropdown__toggle
+								+icon('account-header')
+								+e.SPAN.btn-text Личный кабинет
+							.dropdown__block
+								+aside-menu()
+									+e.BUTTON.exit
+										+icon('exit')
+										span Выйти
+
+		
 		+mob-mnu()
 
 	// end top-nav
