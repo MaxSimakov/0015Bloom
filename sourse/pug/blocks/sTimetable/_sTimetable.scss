@@ -1,0 +1,233 @@
+// start .sTimetable
+.sTimetable {
+	--sPT: #{rem(32)};
+	--sPB: 0;
+
+	--swiperArrowSize: #{rem(24)};
+	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+	--swiperBorderColorDef: transparent;
+	--swiperColorDef: #{$white};
+	--swiperBgDef: var(--bs-primary);
+
+	--swiperBorderColorDefHover: transparent;
+	--swiperColorDefHover: #{$dark};
+	--swiperBgDefHover: var(--bs-primary);
+
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(24)};
+		--sPB: 0;
+	}
+	&.container {
+	}
+	.swiper-button-hand {
+		margin-top: rem(26);
+		@media (min-width: 1270px) {
+			--swiperArrowPosition: #{rem(-32)};
+		}
+		&-next {
+			.icon {
+				left: 2px;
+			}
+		}
+		&-prev {
+			.icon {
+				right: 2px;
+			}
+		}
+		.icon {
+			font-size: rem(10);
+		}
+		&.swiper-button-disabled {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+	}
+	&__slider-wrapper {
+		position: relative;
+		max-width: rem(400);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(md) {
+			max-width: rem(860);
+		}
+	}
+	&__slider {
+		border: 1px solid $gray-light;
+		border-radius: 16px;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 100%;
+			right: 0;
+			top: 0;
+			background-color: $white;
+			z-index: 1;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: $white;
+			z-index: 2;
+		}
+	}
+	&__slide {
+		position: relative;
+		height: auto;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: calc(100% + 1px);
+			right: 0;
+			top: 0;
+			background-color: $gray-light;
+		}
+	}
+	&__item {
+		height: 100%;
+		&.current {
+			.sTimetable__heading {
+				color: $primary;
+				border-color: $primary;
+			}
+		}
+	}
+	&__heading {
+		position: relative;
+		padding: rem(12) rem(23);
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	left: -1px;
+		// 	width: calc(100% + 2px);
+		// 	height: 1px;
+		// 	background-color: $gray-light;
+		// 	z-index: 3;
+		// }
+		border-bottom: 1px solid $gray-light;
+		@include media-breakpoint-up(md) {
+			padding: rem(11) rem(16);
+		}
+		& > span {
+			display: block;
+			margin-bottom: rem(8);
+			font-size: rem(14);
+			line-height: calc(16 / 14);
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+	&__date {
+		display: flex;
+		font-size: rem(22);
+		line-height: calc(24 / 22);
+		font-weight: 500;
+		span {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: rem(3);
+			font-size: rem(14);
+			line-height: 1;
+			width: rem(16);
+			height: rem(16);
+			border-radius: 50%;
+			background-color: $primary;
+			color: $white;
+			font-weight: 400;
+		}
+	}
+	ul {
+		list-style: none;
+		padding: rem(12) rem(16);
+		margin-bottom: 0;
+		@include media-breakpoint-up(md) {
+			padding: rem(12) rem(10);
+		}
+	}
+	li {
+		position: relative;
+		margin-bottom: rem(8);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		padding: rem(8);
+		display: block;
+		background-color: rgba($color: $yellow, $alpha: 0.4);
+		padding-right: rem(40);
+		border-radius: 8px;
+		@include media-breakpoint-up(md) {
+			padding-right: rem(32);
+		}
+		&.course {
+			background-color: rgba($color: $yellow, $alpha: 0.9);
+			padding-right: rem(8);
+			@include media-breakpoint-up(md) {
+				padding-right: rem(8);
+			}
+			& + .sTimetable__btn-close {
+				display: none;
+			}
+		}
+		span {
+			font-size: rem(12);
+			line-height: 16px;
+			display: block;
+			color: $dark;
+			&:first-child {
+				margin-bottom: rem(4);
+				font-weight: 600;
+			}
+		}
+	}
+	&__btn-close {
+		@include a-cent(y);
+		right: rem(8);
+		width: rem(24);
+		height: rem(24);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include media-breakpoint-up(md) {
+			top: rem(8);
+			transform: none;
+			margin-top: 0;
+			margin-bottom: 0;
+			width: rem(16);
+			height: rem(16);
+		}
+		&:not(:hover) {
+			color: $dark;
+		}
+		.icon {
+			font-size: rem(24);
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sTimetable

@@ -339,6 +339,23 @@ function eventHandler() {
 		}
 	});
 
+	const sTimetableSlider = new Swiper('.sTimetable__slider--js', {
+
+		slidesPerView: 1,
+		watchOverflow: true,
+		spaceBetween: 0,
+		// loop: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			}
+		},
+		navigation: {
+			nextEl: '.sTimetable .swiper-button-next',
+			prevEl: '.sTimetable .swiper-button-prev',
+		}
+	});
+
 	// var sexEduc = new Typed('.page-head--sexEduc .page-head__title p', {
 	// 	strings: ["Знакомство со своим телом", "Добавь гармонию в свою жизнь"],
 	// 	typeSpeed: 50,
@@ -362,11 +379,9 @@ function eventHandler() {
 		});
 	});
 
-
-
-
-
-
+	tippy('[data-tippy-content]', {
+		hideOnClick: true,
+	});
 
 	$(".sAccess__btn-accordion").click(function () {
 		$(this).toggleClass('on')
@@ -423,9 +438,9 @@ function eventHandler() {
 	$('.custom-select').ddslick();
 
 
-	$(".faq-item__btn").click(function(){
+	$(".faq-item__btn").click(function () {
 		$(this).toggleClass("show")
-		.parents('.faq-item').find(".answer-block").slideToggle(function(){
+			.parents('.faq-item').find(".answer-block").slideToggle(function () {
 				$(this).toggleClass("show")
 			})
 	})

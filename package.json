@@ -47,12 +47,14 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.9",
+    "@popperjs/core": "^2.11.0",
     "animate.css": "^4.1.1",
     "ddslick": "^1.0.3",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
     "litepicker": "^2.0.12",
     "swiper": "^7.2.0",
+    "tippy.js": "^6.3.7",
     "typed.js": "^2.0.12",
     "wowjs": "^1.1.3"
   }
