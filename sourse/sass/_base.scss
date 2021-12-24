@@ -668,11 +668,14 @@ h6 {
 .tippy-content {
 	background-color: $white;
 	color: $dark;
+	border-radius: 8px;
 }
-// .tippy-backdrop {
-// 	background-color: $white !important;
-// 	color: $white !important;
-// }
+
 .tippy-arrow {
 	color: $white;
+}
+
+.tippy-box {
+	background-color: $white;
+	filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
 }

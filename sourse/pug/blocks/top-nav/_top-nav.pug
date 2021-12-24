@@ -30,12 +30,16 @@ mixin top-nav()
 				.col
 				+e.col--right.col-auto
 					+e.controls--right
-						+e.btn(href="#")
+						+e.btn--notification(href="#")
 							+icon('notification')
 							+e.btn-count 2
-						+e.btn(href="#") 
+						+e.btn--cabinet(href="#") 
 							+icon('account-header')
 							+e.SPAN.btn-text Личный кабинет
+		+cabinet-menu()
+			+e.BUTTON.exit 
+				+icon('exit')
+				span Выйти
 		+mob-mnu()
 
 	// end top-nav
