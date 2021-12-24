@@ -17,7 +17,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(main) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container-fluid
@@ -31,20 +31,24 @@ mixin top-nav()
 				+e.col--right.col-auto
 					+e.controls--right
 						.dropdown.dropdown--notification
-							+e.btn(href="#").dropdown__toggle
+							+e.btn.dropdown__toggle
 								+icon('notification')
 								+e.btn-count 2
-						.dropdown.dropdown--cabinet
-							+e.btn(href="#").dropdown__toggle
+						if main
+							+e.btn(href="#")
 								+icon('account-header')
 								+e.SPAN.btn-text Личный кабинет
-							.dropdown__block
-								+aside-menu()
-									+e.BUTTON.exit
-										+icon('exit')
-										span Выйти
-
-		
+						else
+							.dropdown.dropdown--cabinet
+								+e.btn.dropdown__toggle
+									+pic('nav-avatar-1.jpg', 'bg', 0)
+									+icon('close')
+									+e.SPAN.btn-text Личный кабинет
+								.dropdown__block
+									+aside-menu()
+										+e.BUTTON.exit
+											+icon('exit')
+											span Выйти
 		+mob-mnu()
 
 	// end top-nav
