@@ -390,6 +390,7 @@ body.fixed {
 				@include mt;
 				font-size: rem(32);
 				margin-right: rem(4);
+				display: block;
 				@include media-breakpoint-up(md) {
 					font-size: rem(24);
 				}
