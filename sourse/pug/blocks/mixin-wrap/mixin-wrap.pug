@@ -234,12 +234,67 @@ mixin aside-menu()
 			+cab-menu-item(`Консультации с врачом`).new
 		block
 
-
-
 mixin cab-menu-item(t)
 	li
 		a(href="#")&attributes(attributes)!= t
 			span
+
+mixin notifications
+	+b.notification-block
+		+e.item
+			.strong Истекает срок действия вашего тарифа Base
+			+e.btn(href="#") Продлить
+		+e.item
+			.strong Истекает срок действия вашего тарифа Base
+			+e.btn(href="#") Продлить
+		+e.item
+			.strong Ваш тариф Base продлен
+		+e.item
+			.strong Истекает срок действия вашего тарифа Base 
+				a(href="#") &laquo;С&nbsp;заботой о&nbsp;вашем дне&raquo;
+			.text-gray-medium 1&nbsp;минуту назад
+		+e.item
+			.strong Через час начнется занятие по&nbsp;курсу 
+				a(href="#") &laquo;С&nbsp;заботой о&nbsp;вашем дне&raquo;
+			.text-gray-medium 15&nbsp;минут назад
+		+e.item
+			.strong На&nbsp;ваш вопрос 
+				a(href="#") &laquo;Добрый день. Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию...&raquo; 
+				| дали ответ
+			.text-gray-medium 25&nbsp;минут назад
+		+e.item
+			.strong Ваш вопрос 
+				a(href="#") &laquo;Добрый день. Мой врач в&nbsp;отпуске, на&nbsp;очную консультацию...&raquo; 
+				| был отклонен
+			.text-gray-medium 30&nbsp;минут назад
+		+e.item
+			.strong Ваша заявка на&nbsp;онлайн-консультацию к&nbsp;Татьяне Коваль получена!
+			.text-gray-medium Вчера, 10:39
+			+e.btn-icon(href="#")
+				+icon('schedule')
+				span Добавить напоминание в&nbsp;телефон
+		+e.item
+			.strong Ваша заявка на&nbsp;онлайн-консультацию к&nbsp;Татьяне Коваль была отменена, так как мы&nbsp;не&nbsp;получили ваше подтверждение
+			.text-gray-medium 10&nbsp;сентября, 16:27
+			+e.btn(href="#") Записаться повторно
+		+e.item
+			.strong Ваша заявка на&nbsp;онлайн-консультацию к&nbsp;Татьяне Коваль подтверждена
+			.text-gray-medium Вчера, 10:39
+			+e.btn-icon(href="#")
+				+icon('schedule')
+				span Добавить напоминание в&nbsp;телефон
+		+e.item
+			.strong
+				a(href="#") Онлайн-консультация с&nbsp;Татьяной Коваль 
+				| начнется через час
+			.text-gray-medium Вчера, 10:39
+		+e.item
+			.strong Пора подключиться 
+				a(href="#") к&nbsp;онлайн-консультации с&nbsp;Татьяной Коваль
+			.text-gray-medium Вчера, 10:39
+
+
+		
 
 mixin courseItem2(will, ...texts)
 		+b.courseItem--get
