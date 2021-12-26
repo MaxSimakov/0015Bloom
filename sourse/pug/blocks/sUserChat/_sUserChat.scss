@@ -132,11 +132,11 @@
 		position: static;
 	}
 	@include media-breakpoint-down(md) {
-		top: 0;
-		left: 105%;
+		top: -208px;
+		left: 0%;
 		background: #fff;
     width: 100%;
-		height: 100%;
+		height: rem(966);
 		padding-left: 0;
 	}
 	&__back {
@@ -186,6 +186,7 @@
 		@include media-breakpoint-down(md) {
 			padding-top: rem(16);
 			padding-bottom: rem(32);
+			height: rem(859 - 20);
 		}
 	}
 	&__message {
@@ -232,6 +233,7 @@
 		}
 		@include media-breakpoint-down(md) {
 			max-width: rem(296);
+
 		}
 	}
 	span {
