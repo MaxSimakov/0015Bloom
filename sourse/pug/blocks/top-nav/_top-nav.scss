@@ -8,14 +8,21 @@ body.fixed {
 			}
 			a,
 			&__logo {
-				color: #fff;
+				color: $white;
 			}
 			&__btn {
 				color: $white !important;
 			}
 			&__btn-count {
-				background-color: #fff;
+				background-color: $white;
 				color: $body-color;
+			}
+			.dropdown__block {
+				a {
+					&:not(:hover) {
+						color: $dark;
+					}
+				}
 			}
 		}
 	}
