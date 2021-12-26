@@ -10,6 +10,9 @@ body.fixed {
 			&__logo {
 				color: #fff;
 			}
+			&__btn {
+				color: $white !important;
+			}
 			&__btn-count {
 				background-color: #fff;
 				color: $body-color;
@@ -516,7 +519,7 @@ body.fixed {
 			&:hover {
 				.icon {
 					display: block;
-					color: $dark;
+					// color: $dark;
 				}
 				picture {
 					display: none;
