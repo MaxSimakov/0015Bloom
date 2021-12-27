@@ -446,6 +446,18 @@ function eventHandler() {
 	})
 
 
+
+	$(document).on("click", ".public-chat__item", function(){
+		$(this).toggleClass("active").siblings().removeClass('active');
+		$(".public-messenger").toggleClass('active');
+		$("body").toggleClass('fixed2');
+	})
+	
+	$(document).on("click", ".public-messenger__back", function(){ 
+		$(".public-chat__item, .public-messenger").removeClass('active');
+		$("body").removeClass('fixed2');
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
