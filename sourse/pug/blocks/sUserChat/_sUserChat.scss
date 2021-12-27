@@ -256,6 +256,8 @@
 	.form-wrap {
 		form {
 			display: flex;
+			padding-right: rem(16);
+    	padding-left: rem(16);
 		}
 		picture {
 			width: rem(48);
@@ -271,15 +273,17 @@
 			width: 100%;
 		}
 		button {
+			@extend .btn, .btn-primary;
 			position: absolute;
 			right: 0;
 			top: 0;
 			width: rem(53);
 			height: rem(53);
-			background-color: $primary;
-			color: $white;
-			border: none;
-			border-radius: rem(8);
+			.icon {
+				position: absolute;
+				top: 7px;
+				left: 9px;
+			}
 		}
 	}
 	&__reason {

@@ -161,3 +161,13 @@
 		font-size: rem(16);
 	}
 }
+
+.fav {
+	.sNewsWrraper {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(860);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
