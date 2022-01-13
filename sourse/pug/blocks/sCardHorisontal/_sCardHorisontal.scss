@@ -250,7 +250,8 @@
 			font-size: rem(19);
 		}
 		@include media-breakpoint-down(sm) {
-			max-width: rem(328);
+			// max-width: rem(328);
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 		}

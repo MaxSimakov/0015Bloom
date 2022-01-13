@@ -24,6 +24,7 @@
 
 	&__col {
 		height: 100%;
+		justify-content: center;
 		@include media-breakpoint-up(lg) {
 			min-height: 100vh;
 		}
