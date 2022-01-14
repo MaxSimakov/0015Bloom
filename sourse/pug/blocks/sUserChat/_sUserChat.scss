@@ -211,6 +211,9 @@
 		border-radius: rem(8);
 		margin-left: auto;
 		margin-right: rem(16);
+		&:last-child {
+			margin-bottom: rem(20);
+		}
 		@include media-breakpoint-up(md) {
 			margin-right: 0;
 		}
@@ -301,5 +304,15 @@
 	}
 	.container--main {
 		margin-bottom: 0;
+	}
+	.public-messenger {
+		&__messages {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		&__message {
+			
+		}
 	}
 }

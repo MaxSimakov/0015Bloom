@@ -327,8 +327,9 @@
 	}
 	&__who {
 		display: flex;
-		margin-top: rem(13);
-		margin-bottom: auto;
+		// margin-top: rem(13);
+		// margin-bottom: auto;
+		margin-top: auto;
 		align-items: self-start;
 		picture {
 			max-width: rem(32);

@@ -27,6 +27,7 @@ mixin sClientProfile(data)
 						+icon('visibility')
 					+input("Пароль", "password")
 				+e.btn Сохранить
+				+e.btn-delete(href=`#modal-delete-profile`).link-modal-js Удалить профиль
 				//- +e.btn-delete(href="#") Удалить профиль
 				//- +e.btn-delete(href=`#modal-delete-profile`).link-modal-js Удалить профиль
 			+socProfile()
