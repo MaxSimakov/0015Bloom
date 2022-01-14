@@ -110,7 +110,10 @@
 			color: $dark;
 		}
 		.icon {
-			font-size: inherit;
+			stroke-width: 0.8px;
+    	font-size: 10px;
+			fill: none;
+			stroke: $dark;
 		}
 	}
 	@include media-breakpoint-up(xl) {
