@@ -13,11 +13,14 @@ mixin sContact()
 							p Связаться с помощью мессенджеров
 							+soc().--contact
 								+item-sos
-									img(src="img/svg/instagram-colored.svg" alt="")
+									+icon('instagram-filled')
+									//- img(src="img/svg/instagram-filled.svg" alt="")
 								+item-sos
-									img(src="img/svg/telegram-filled.svg" alt="")
+									+icon('telegram-filled')
+									//- img(src="img/svg/telegram-filled.svg" alt="")
 								+item-sos
-									img(src="img/svg/whatsapp-filled.svg" alt="")
+									+icon('whatsapp-filled')
+									//- img(src="img/svg/whatsapp-filled.svg" alt="")
 				.col-12.col-lg-7.order-lg-first
 					picture
 						source(type='image/png' srcset='img/sContact.png' media='(min-width:992px)')
