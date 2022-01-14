@@ -274,12 +274,26 @@
 	.pricing-block {
 		.row {
 			margin-top: 0;
-			max-width: rem(344);
+			// max-width: rem(344);
+			justify-content: space-between;
+		}
+		// &__btn {
+		// 	min-width: rem(155);
+		// 	@include media-breakpoint-only(md) {
+		// 		font-size: rem(19);
+		// 	}
+		// }
+		&__num {
+			white-space: nowrap;
 		}
 		&__btn {
 			min-width: rem(155);
+			padding: rem(8) rem(20);
 			@include media-breakpoint-only(md) {
 				font-size: rem(19);
+			}
+			@include media-breakpoint-only(lg) {
+				min-width: rem(148);
 			}
 		}
 	}
