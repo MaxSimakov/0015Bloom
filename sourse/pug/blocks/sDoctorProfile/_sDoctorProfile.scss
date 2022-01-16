@@ -1,8 +1,8 @@
 // start .sDoctorProfile
 .sDoctorProfile {
-		--sPT: 0;
-		--sPB: 0;
-		// --sTPB: ;
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
 	.form-wrap {
 		form {
 			padding-bottom: rem(24);
@@ -16,6 +16,9 @@
 				@include media-breakpoint-up(lg) {
 					font-size: rem(22);
 				}
+			}
+			textarea {
+				min-height: rem(120);
 			}
 		}
 		&:not(:last-child) {
@@ -47,11 +50,18 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sDoctorProfile

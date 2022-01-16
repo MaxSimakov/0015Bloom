@@ -66,9 +66,11 @@ mixin modal()
 				h3 Запись на консультацию
 				//- +input("Владимир Воротников", "select", "Специалисты")
 				+custom-select(`Специалисты`)
-
-				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
-				+input("+7 (___) __ __", "tel", "Телефон")
+					span.required *
+				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")(required)
+					span.required *
+				+input("+7 (___) __ __", "tel", "Телефон")(required)
+					span.required *
 				+e.input-wrap.form-group
 					+e.SPAN.input-title Дата и время приёма #[span.text-gray-medium *]
 					+e.row-date.row
@@ -114,8 +116,9 @@ mixin modal()
 					p Если у&nbsp;вас уже есть учетная запись, #[a(href="#") авторизуйтесь.] Если вы&nbsp;еще не&nbsp;регистрировались, то&nbsp;заполните форму ниже
 				//- +input("Владимир Воротников", "select", "Специалисты")
 				+custom-select(`Специалисты`)
-
-				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")
+					span.required *
+				+input("Опишите кратко суть вопроса", "textarea", "Опишите кратко суть вопроса")(required)
+					span.required *
 				+e.input-wrap.form-group
 					+e.SPAN.input-title Дата и время приёма #[span.text-gray-medium *]
 					+e.row-date.row
@@ -139,20 +142,25 @@ mixin modal()
 							+in-c("radio", "15:00", "time" )
 						.col-auto
 							+in-c("radio", "16:00", "time" )
-				+input("Имя", "text", "Имя")
-				+input("Электронная почта", "email", "Электронная почта")
-				+input("+7 (___) __ __", "tel", "Телефон")
+				+input("Имя", "text", "Имя")(required)
+					span.required *
+				+input("Электронная почта", "email", "Электронная почта")(required)
+					span.required *
+				+input("+7 (___) __ __", "tel", "Телефон")(required)
+					span.required *
 				+e.SPAN.input-title Пароль
 					+help-tooltip(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim!`)
 				+e.password-wrap
 					+e.SPAN.btn-toggle-pass
 						+icon('visibility')
-					+input("Пароль", "password")
+					+input("Пароль", "password")(required)
+						span.required *
 				+e.SPAN.input-title Подтвердите пароль
 				+e.password-wrap
 					+e.SPAN.btn-toggle-pass
 						+icon('visibility')
-					+input("Подтвердите пароль", "password")
+					+input("Подтвердите пароль", "password")(required)
+						span.required *
 				+b.pricing-block
 					.row
 						+e.col.col-auto
@@ -175,7 +183,8 @@ mixin modal()
 				//- +input("Выберите специалиста", "select", "Специалисты")
 				+custom-select(`Специалисты`)
 
-				+input("Опишите кратко суть вопроса", "textarea", "Вопрос")
+				+input("Опишите кратко суть вопроса", "textarea", "Вопрос")(required)
+					span.required *
 				+e.input-wrap.form-group
 					+in-c("checkbox", "Анонимно")
 				+e.BUTTON.btn.btn.btn-primary Задать вопрос
@@ -192,21 +201,26 @@ mixin modal()
 				//- +input("Выберите специалиста", "select", "Специалисты")
 				+custom-select(`Специалисты`)
 
-				+input("Опишите кратко суть вопроса", "textarea", "Вопрос")
-				+input("Имя", "text", "Имя")
-				+input("Электронная почта", "email", "Электронная почта")
-				+input("+7 (___) __ __", "tel", "Телефон")
+				+input("Опишите кратко суть вопроса", "textarea", "Вопрос")(required)
+					span.required *
+				+input("Имя", "text", "Имя")(required)
+					span.required *
+				+input("Электронная почта", "email", "Электронная почта")(required)
+					span.required *
+				//- +input("+7 (___) __ __", "tel", "Телефон")
 				+e.SPAN.input-title Пароль
 					+help-tooltip(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, enim!`)
 				+e.password-wrap
 					+e.SPAN.btn-toggle-pass
 						+icon('visibility')
-					+input("Пароль", "password")
+					+input("Пароль", "password")(required)
+						span.required *
 				+e.SPAN.input-title Подтвердите пароль
 				+e.password-wrap
 					+e.SPAN.btn-toggle-pass
 						+icon('visibility')
-					+input("Подтвердите пароль", "password")
+					+input("Подтвердите пароль", "password")(required)
+						span.required *
 				+e.input-wrap.form-group
 					+in-c("checkbox", "Анонимно")
 				+e.BUTTON.btn.btn.btn-primary Задать вопрос

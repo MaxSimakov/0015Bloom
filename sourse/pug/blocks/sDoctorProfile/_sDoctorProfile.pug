@@ -9,10 +9,14 @@ mixin sDoctorProfile(data)
 				+input('Электронная почта', 'email', 'Электронная почта')
 			+form-wrap()
 				p Опыт работы
-				+input('Специальность', 'text', 'Специальность')
-				+input('Стаж работы', 'text', 'Стаж работы')
-				+input('Где проходили обучение', 'textarea', 'Направление деятельности')
-				+input('Опыт и время работы', 'textarea', 'Опыт и время работы')
+				+input('Специальность', 'text', 'Специальность')(required)
+					span.required *
+				+input('Стаж работы', 'text', 'Стаж работы')(required)
+					span.required *
+				+input('Где проходили обучение', 'textarea', 'Направление деятельности')(required)
+					span.required *
+				+input('Опыт и время работы', 'textarea', 'Опыт и время работы')(required)
+					span.required *
 				+input('Расскажите о своих достижениях, заслугах', 'textarea', 'Дополнительные сведения (достижения, услуги)')
 			+form-wrap()
 				p Изменение пароля

@@ -112,7 +112,7 @@
 		border-radius: 24px 0px 24px 24px;
 		background-color: #c4c4c4;
 		width: var(--imgW);
-		img{
+		img {
 			min-width: 100%;
 		}
 		@include media-breakpoint-up(lg) {

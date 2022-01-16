@@ -519,6 +519,9 @@ a {
 		input {
 			padding-right: rem(45);
 		}
+		.required {
+			top: 0;
+		}
 	}
 	&__btn-toggle-pass {
 		@include a-cent(y);
@@ -527,6 +530,7 @@ a {
 		height: rem(24);
 		cursor: pointer;
 		color: $primary;
+		z-index: 1;
 		&:hover {
 			color: $link-hover-color;
 		}

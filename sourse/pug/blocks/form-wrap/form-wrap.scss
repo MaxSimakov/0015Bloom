@@ -2,6 +2,13 @@
 	&__input-wrap {
 		// @extend .form-group;
 		margin-bottom: rem(16);
+		position: relative;
+		.required {
+			position: absolute;
+			color: $gray-medium;
+			left: calc(100% + 2px);
+			top: rem(24);
+		}
 	}
 	&__input {
 		// @extend .form-control;
@@ -10,6 +17,7 @@
 		&::placeholder {
 			color: $gray-medium;
 		}
+		
 	}
 	&__input-title {
 		display: inline-block;
