@@ -287,7 +287,9 @@
 			white-space: nowrap;
 		}
 		&__btn {
+			@include media-breakpoint-up(lg) {
 			min-width: rem(155);
+			}
 			padding: rem(8) rem(20);
 			@include media-breakpoint-only(md) {
 				font-size: rem(19);

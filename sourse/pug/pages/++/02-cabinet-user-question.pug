@@ -6,18 +6,18 @@ extends layout/main.pug
 //- include ../blocks/sCategories/_sCategories.pug
 //- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
 //- include ../blocks/sTeam/_sTeam.pug
-include ../blocks/sUserConsult/_sUserConsult.pug
+include ../blocks/sUserChat/_sUserChat.pug
 //- include ../blocks/sQuestions/_sQuestions.pug
 //- include ../blocks/sReviews/_sReviews.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 //- include ../blocks/footer-main/_footer-main.pug
 
 block variables
-	- let  mainPage= null 
+	- let  mainPage= 'cabinet-page  chat'
 	- let  bg= null
 
 block title
-	- let  title= 'Консультации с врачом'
+	- let  title= 'Мои вопросы'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -25,7 +25,7 @@ block pagecontent
 	+top-nav()
 	//- +topLine()
 	+cabinet-body(title)
-		+sUserConsult()
+		+sUserChat()
 	//- +sForm()
 	//- +sContact()
 	+footer()

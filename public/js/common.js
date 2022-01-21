@@ -198,15 +198,18 @@ const JSCCommon = {
 		}
 	},
 	datepicker() {
-		let pickers = document.querySelectorAll(".input-date-picker-js")
+		let pickers = document.querySelectorAll(".input-date-picker-js");
 		pickers.forEach(el => {
+		
+			// console.log(el);
 			new Litepicker({
 				element: el,
 				singleMode: false,
 				showTooltip: false,
 				dropdowns: true,
+				parentEl: el.parentElement,
 				// resetButton: true,
-				position: "bottom right",
+				// position: "bottom right",
 				// tooltipText: {
 				// 	one: 'night',
 				// 	other: 'nights'
@@ -217,13 +220,15 @@ const JSCCommon = {
 		});
 		let pickerSingle = document.querySelectorAll(".input-date-picker-single-js")
 		pickerSingle.forEach(el => {
+			console.log(el.parentNode);
 			new Litepicker({
 				element: el,
 				singleMode: true,
 				showTooltip: false,
 				dropdowns: true,
 				// resetButton: true,
-				position: "bottom right",
+				// position: "bottom right",
+				parentEl: el.parentElement,
 				// tooltipText: {
 				// 	one: 'night',
 				// 	other: 'nights'

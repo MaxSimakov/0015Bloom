@@ -78,7 +78,7 @@ mixin modal()
 							+in-c("radio", "Сегодня", "date" )(checked)
 						.col-auto
 							+in-c("radio", "Завтра", "date" )
-						.col-auto
+						.col-auto.date-picker-wrap
 							+e.INPUT.input.form-control.input-date-picker-single-js(name='text' type='text' placeholder='Все даты' autocomplete='off')
 				+e.input-wrap.form-group
 					+e.row-time.row
@@ -126,7 +126,7 @@ mixin modal()
 							+in-c("radio", "Сегодня", "date" )(checked)
 						.col-auto
 							+in-c("radio", "Завтра", "date" )
-						.col-auto
+						.col-auto.date-picker-wrap
 							+e.INPUT.input.form-control.input-date-picker-single-js(name='text' type='text' placeholder='Все даты' autocomplete='off')
 				+e.input-wrap.form-group
 					+e.row-time.row

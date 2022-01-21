@@ -8,17 +8,16 @@ extends layout/main.pug
 //- include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sAccess/_sAccess.pug
 //- include ../blocks/sQuestions/_sQuestions.pug
-include ../blocks/sNewsWrraper/_sNewsWrraper.pug
 //- include ../blocks/sReviews/_sReviews.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 //- include ../blocks/footer-main/_footer-main.pug
 
 block variables
-	- let  mainPage= null 
-	- let  bg= 'main.jpg'
+	- let  mainPage= 'cabinet-page  ' 
+	- let  bg= null
 
 block title
-	- let  title= 'Избранное'
+	- let  title= 'Мой тариф'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -26,11 +25,10 @@ block pagecontent
 	+top-nav()
 	//- +topLine()
 	+cabinet-body(title)
-		+favoriteTabs()
-			+favoritetabsItem('active', 'Статьи и лекции')
-			+favoritetabsItem('', 'Тренировки и реабилитация')
-			+favoritetabsItem('', 'Сексуальное образование')
-		+nothingNow('Вы пока еще ничего не добавляли в избранное', 'Посмотреть статьи и лекции')
+		+sAccess-cabinet()
+			+e.warning
+				span Тариф действует до: 
+					span 15.12.21
 	//- +sForm()
 	//- +sContact()
 	+footer()

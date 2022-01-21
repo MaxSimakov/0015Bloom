@@ -6,18 +6,19 @@ extends layout/main.pug
 //- include ../blocks/sCategories/_sCategories.pug
 //- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
 //- include ../blocks/sTeam/_sTeam.pug
-include ../blocks/sUserChat/_sUserChat.pug
+include ../blocks/sAccess/_sAccess.pug
 //- include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sNewsWrraper/_sNewsWrraper.pug
 //- include ../blocks/sReviews/_sReviews.pug
 //- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
 //- include ../blocks/footer-main/_footer-main.pug
 
 block variables
-	- let  mainPage= 'chat'
-	- let  bg= null
+	- let  mainPage= 'cabinet-page  ' 
+	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'Мои вопросы'
+	- let  title= 'Избранное'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -25,7 +26,11 @@ block pagecontent
 	+top-nav()
 	//- +topLine()
 	+cabinet-body(title)
-		+sUserChat2()
+		+favoriteTabs()
+			+favoritetabsItem('active', 'Статьи и лекции')
+			+favoritetabsItem('', 'Тренировки и реабилитация')
+			+favoritetabsItem('', 'Сексуальное образование')
+		+nothingNow('Вы пока еще ничего не добавляли в избранное', 'Посмотреть статьи и лекции')
 	//- +sForm()
 	//- +sContact()
 	+footer()

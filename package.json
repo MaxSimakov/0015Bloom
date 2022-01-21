@@ -52,6 +52,7 @@
     "ddslick": "^1.0.3",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "jshint": "^2.13.1",
     "litepicker": "^2.0.12",
     "swiper": "^7.4.1",
     "tippy.js": "^6.3.7",

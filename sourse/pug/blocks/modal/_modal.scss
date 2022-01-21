@@ -35,7 +35,7 @@
 	position: relative;
 	width: rem(565);
 	padding: 8.384vw 4.442vw;
-	overflow: hidden;
+	// overflow: hidden;
 	@include media-breakpoint-up(sm) {
 		border-radius: rem(16);
 		padding: rem(48);
