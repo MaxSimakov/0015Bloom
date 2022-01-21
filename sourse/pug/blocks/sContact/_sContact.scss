@@ -12,6 +12,9 @@
 	}
 	@include media-breakpoint-up(xl) {
 		--sTPB: #{rem(16)};
+		.container{
+			max-width: 1920px;
+		}
 	}
 	&:after {
 		content: "";
