@@ -109,12 +109,7 @@
 		&:not(:hover) {
 			color: $dark;
 		}
-		.icon {
-			stroke-width: 0.8px;
-    	font-size: 10px;
-			fill: none;
-			stroke: $dark;
-		}
+		
 	}
 	@include media-breakpoint-up(xl) {
 	}
@@ -141,6 +136,15 @@
 		color: $dark;
 	}
 	.icon {
-		font-size: inherit;
+		stroke-width: 0.8px;
+		font-size: rem(11);
+		fill: none;
+		stroke: currentColor;
+		position: relative;
+		top: em(2);
+		margin-left: rem(4);
+	}
+	.icon {
+		// font-size: inherit;
 	}
 }

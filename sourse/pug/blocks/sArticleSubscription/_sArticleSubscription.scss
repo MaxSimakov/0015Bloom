@@ -19,9 +19,9 @@
 		}
 		p {
 			font-size: rem(22);
-			margin-bottom: rem(40);
+			margin-bottom: rem(20);
 			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(76);
+				margin-bottom: rem(50);
 			}
 		}
 	}
@@ -36,6 +36,10 @@
 	}
 	&__blackout {
 		position: relative;
+		margin-top: rem(40);
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(75);
+			}
 		&:after {
 			content: '';
 			position: absolute;

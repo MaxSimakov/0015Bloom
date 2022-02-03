@@ -18,10 +18,17 @@
 		@include media-breakpoint-up(md) {
 			padding: 0;
 		} 
-	img{
-		display: block;
-		flex: 0  0 auto;
-		max-height: 70vh;
+		img{
+			display: block;
+			flex: 0  0 auto;position: relative;
+			@include media-breakpoint-up(lg) {
+			top: -3vh;
+			}
+			@include media-breakpoint-up(xxl) {
+
+				max-height: 66vh;
+			}
+			max-height: 66vh;
 		max-width: 100%;
 		// max-width: auto;
 		margin: auto;

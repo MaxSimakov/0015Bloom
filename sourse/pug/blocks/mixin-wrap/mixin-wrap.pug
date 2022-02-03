@@ -108,7 +108,7 @@ mixin pageHead-about(data)
 mixin pricing(n, l)
 	+b.pricing-block
 		.row
-			+e.col.col.col-sm-auto
+			+e.col.col.col-auto
 				+e.num= n
 					span ₽
 				span /час
@@ -119,17 +119,17 @@ mixin pricing(n, l)
 mixin pricing2(n, l, btn)
 	+b.pricing-block
 		.row
-			+e.col.col.col-sm-auto
+			+e.col.col.col-auto
 				+e.num= n
 					span ₽
-			.col-12.col-sm-auto
-				+e.btn(href=`${l}`)!= btn
+			.col-auto
+				+e.btn(href=`${l}`).mt-0!= btn
 		block
 
 mixin pricing3(n, s, l, btn)
 	+b.pricing-block
 		.row
-			+e.col.col.col-sm-auto
+			+e.col.col.col-auto
 				+e.num= n
 					span ₽
 				+e.sale= s

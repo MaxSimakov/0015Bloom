@@ -4,7 +4,10 @@
 	// --sPB: 0;
 	// --sTPB: ;
 	img{
-		max-height: 100%;
+		@include media-breakpoint-up(lg) {
+		max-height: 90vh;
+	}
+	max-height: 100%;
 		max-width: 100%;
 	}
 	display: flex;

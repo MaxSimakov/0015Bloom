@@ -5,6 +5,11 @@
 	--sTPB: #{rem(8)};
 	background-image: var(--headBg);
 	position: relative;
+	.container{
+		@media (min-width: 1920px){
+			max-width: rem(2400);
+		}
+	}
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(87)};
 		--sPB: #{rem(33)};

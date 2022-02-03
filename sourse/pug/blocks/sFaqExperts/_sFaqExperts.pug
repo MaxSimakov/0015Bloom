@@ -6,10 +6,10 @@ mixin sFaqExperts(data)
 				.swiper-wrapper
 					mixin expertsList(i, n)
 						+e.slide.swiper-slide
-							+e.item(href="#")
+							+e.item(href="#")&attributes(attributes)
 								+icon(`sFaqExperts-${i}`)
 								span!= n
-					+expertsList(1, "Проктология")
+					+expertsList(1, "Проктология").active
 					+expertsList(2, "Гинекология")
 					+expertsList(3, "Урология")
 					+expertsList(4, "Реабилитация и тренировки")

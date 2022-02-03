@@ -43,7 +43,8 @@
 			border-radius: 24px 0px 24px 24px;
 			svg {
 				fill: none;
-				stroke: $dark;
+				// stroke: $dark;
+				stroke: currentColor;
 				font-size: rem(96);
 				@include media-breakpoint-down(lg) {
 					max-height: rem(48);
@@ -51,11 +52,12 @@
 					margin-right: rem(7);
 				}
 			}
+			&.active{
+
+				color: $primary;
+			}
 			&:focus {
 				color: $primary;
-				svg {
-					stroke: currentColor;
-				}
 			}
 		}
 		img {
