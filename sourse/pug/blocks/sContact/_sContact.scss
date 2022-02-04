@@ -3,11 +3,30 @@
 	--sPT: #{rem(32)};
 	--sPB: #{rem(16)};
 	--sTPB: #{rem(8)};
+	@include media-breakpoint-up(xl) {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	.container{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		.row{
+			flex-grow: 1;
+		}
+		.col-12.col-lg-5{
+			align-self: center;
+		}
+		.col-12.col-lg-7.order-lg-first{
+			align-self: flex-end;
+		}
+	}
+	}
 	background-image: var(--headBg);
 	position: relative;
 	.container{
 		@media (min-width: 1920px){
-			max-width: rem(2400);
+			max-width: 100%;
 		}
 	}
 	@include media-breakpoint-up(md) {

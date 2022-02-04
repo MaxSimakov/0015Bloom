@@ -52,9 +52,9 @@
 		}
 		p {
 			font-size: rem(22);
-			margin-bottom: rem(40);
+			margin-bottom: rem(40) !important;
 			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(76);
+				margin-bottom: rem(76) !important;
 			}
 		}
 	}
