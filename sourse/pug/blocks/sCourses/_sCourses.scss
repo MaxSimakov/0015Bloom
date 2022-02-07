@@ -1,6 +1,15 @@
 // start .sCourses
+.cabinet-page  .sCourses {
+
+	@include media-breakpoint-down(lg) {
+		--sPT: #{rem(0)};
+		.favoriteTabs{
+			padding-bottom: 1rem;
+		}
+	}
+}
 .sCourses {
-	--sPT: #{rem(40)};
+	--sPT: #{rem(20)};
 	// --sPB: ;
 	// --sTPB: ;
 	@include media-breakpoint-up(lg) {
